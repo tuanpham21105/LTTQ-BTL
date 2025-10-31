@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using prj_LTTQ_BTL.Forms;
-using prj_LTTQ_BTL.Forms.Student;
 
 namespace prj_LTTQ_BTL
 {
@@ -18,7 +17,7 @@ namespace prj_LTTQ_BTL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StudentMenuForm());
+            Application.Run(new FormLogin());
         }
     }
 }
