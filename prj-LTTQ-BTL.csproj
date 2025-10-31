@@ -64,6 +64,8 @@
   <ItemGroup>
     <Compile Include="Data\DataProcessor.cs" />
     <Compile Include="Data\GlobalData.cs" />
+    <Compile Include="Data\repository\BaseRepository.cs" />
+    <Compile Include="Data\repository\UserRepository.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +77,12 @@
     </Compile>
     <Compile Include="Forms\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Manager\ManagerMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Manager\ManagerMenuForm.Designer.cs">
+      <DependentUpon>ManagerMenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Student\Student_CourseCRUDForm.cs">
       <SubType>Form</SubType>
@@ -90,6 +98,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\StudentMenuServices.cs" />
     <Compile Include="Utils\FormUtils.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -97,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manager\ManagerMenuForm.resx">
+      <DependentUpon>ManagerMenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Student\Student_CourseCRUDForm.resx">
       <DependentUpon>Student_CourseCRUDForm.cs</DependentUpon>
