@@ -120,14 +120,11 @@
   <metadata name="guna2AnimateWindow1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>176, 17</value>
   </metadata>
-  <metadata name="borderlessForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="picBrand.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFFSSURBVHhe7Z0J
+        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFFSSURBVHhe7Z0J
         uHbV+P+/huZ5HjQXIRopKRUyS9JkrpSMifCLH34yRKkkcxkiGRoUIlIUlQZJRYlGadI8l5L///p611Pn
         vd/7nPM859l7r3vt9f1c1+e66H3fc9Zae+299l7DfQPDsyKAdwM4HsBfAdwL4CEAtwE4H8C3AewIYCH7
         D4UQQggxFgsDeHUaaznmcuzlGMyx+FIAxwHYE8AK9h+Ow/oAfgrgYQD/bwjvAXAQgOXsDxJCCCHESHAs
@@ -478,4 +475,7 @@
         AElFTkSuQmCC
 </value>
   </data>
+  <metadata name="borderlessForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

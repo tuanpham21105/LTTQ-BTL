@@ -91,6 +91,7 @@ namespace prj_LTTQ_BTL.Forms.Student
                     activeForm = new Student_ClassCRUDForm();
                     break;
                 case "Lịch học":
+                    activeForm = new Student_ScheduleForm();
                     break;
                 case "Khóa học":
                     activeForm = new Student_CourseCRUDForm();
@@ -102,11 +103,6 @@ namespace prj_LTTQ_BTL.Forms.Student
             }
 
             FormUtils.OpenChildForm(panelMain, activeForm);
-        }
-
-        private void btnTTHV_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void panelMain_Paint(object sender, PaintEventArgs e)

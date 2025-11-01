@@ -59,15 +59,15 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnMaximize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelSidebar = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnHP = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDiemSo = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLichHoc = new Guna.UI2.WinForms.Guna2Button();
             this.btnLH = new Guna.UI2.WinForms.Guna2Button();
             this.btnKH = new Guna.UI2.WinForms.Guna2Button();
             this.btnTTHV = new Guna.UI2.WinForms.Guna2Button();
             this.brandPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.lblBrand = new AntdUI.Label();
             this.picBrand = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnLichHoc = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDiemSo = new Guna.UI2.WinForms.Guna2Button();
-            this.btnHP = new Guna.UI2.WinForms.Guna2Button();
             this.panelHeader.SuspendLayout();
             this.panelSidebar.SuspendLayout();
             this.brandPanel.SuspendLayout();
@@ -89,11 +89,11 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(280, 32);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelMain.Location = new System.Drawing.Point(210, 25);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
-            this.panelMain.Size = new System.Drawing.Size(1085, 736);
+            this.panelMain.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.panelMain.Size = new System.Drawing.Size(814, 599);
             this.panelMain.TabIndex = 0;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
@@ -108,10 +108,10 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelHeader.Controls.Add(this.btnMaximize);
             this.panelHeader.Controls.Add(this.btnClose);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeader.Location = new System.Drawing.Point(280, 0);
-            this.panelHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelHeader.Location = new System.Drawing.Point(210, 0);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1085, 32);
+            this.panelHeader.Size = new System.Drawing.Size(814, 25);
             this.panelHeader.TabIndex = 1;
             // 
             // lblTitle
@@ -123,7 +123,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(158, 32);
+            this.lblTitle.Size = new System.Drawing.Size(126, 25);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = " Student Menu";
             // 
@@ -136,10 +136,10 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnMinimize.FillColor = System.Drawing.Color.Transparent;
             this.btnMinimize.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.btnMinimize.IconColor = System.Drawing.Color.Black;
-            this.btnMinimize.Location = new System.Drawing.Point(950, 0);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMinimize.Location = new System.Drawing.Point(712, 0);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(45, 32);
+            this.btnMinimize.Size = new System.Drawing.Size(34, 25);
             this.btnMinimize.TabIndex = 1;
             // 
             // btnMaximize
@@ -151,10 +151,10 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnMaximize.FillColor = System.Drawing.Color.Transparent;
             this.btnMaximize.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.btnMaximize.IconColor = System.Drawing.Color.Black;
-            this.btnMaximize.Location = new System.Drawing.Point(995, 0);
-            this.btnMaximize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMaximize.Location = new System.Drawing.Point(746, 0);
+            this.btnMaximize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(45, 32);
+            this.btnMaximize.Size = new System.Drawing.Size(34, 25);
             this.btnMaximize.TabIndex = 2;
             // 
             // btnClose
@@ -166,10 +166,10 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
             this.btnClose.HoverState.IconColor = System.Drawing.Color.White;
             this.btnClose.IconColor = System.Drawing.Color.Black;
-            this.btnClose.Location = new System.Drawing.Point(1040, 0);
+            this.btnClose.Location = new System.Drawing.Point(780, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(45, 32);
+            this.btnClose.Size = new System.Drawing.Size(34, 25);
             this.btnClose.TabIndex = 3;
             // 
             // panelSidebar
@@ -184,13 +184,76 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelSidebar.Controls.Add(this.brandPanel);
             this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSidebar.Location = new System.Drawing.Point(0, 0);
-            this.panelSidebar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelSidebar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelSidebar.Name = "panelSidebar";
-            this.panelSidebar.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.panelSidebar.Padding = new System.Windows.Forms.Padding(11, 12, 11, 12);
             this.panelSidebar.ShadowDecoration.Depth = 10;
             this.panelSidebar.ShadowDecoration.Enabled = true;
-            this.panelSidebar.Size = new System.Drawing.Size(280, 768);
+            this.panelSidebar.Size = new System.Drawing.Size(210, 624);
             this.panelSidebar.TabIndex = 2;
+            // 
+            // btnHP
+            // 
+            this.btnHP.BorderRadius = 8;
+            this.btnHP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHP.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHP.FillColor = System.Drawing.Color.Transparent;
+            this.btnHP.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnHP.ForeColor = System.Drawing.Color.White;
+            this.btnHP.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.btnHP.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnHP.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHP.Location = new System.Drawing.Point(11, 282);
+            this.btnHP.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            this.btnHP.Name = "btnHP";
+            this.btnHP.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnHP.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.btnHP.Size = new System.Drawing.Size(188, 41);
+            this.btnHP.TabIndex = 22;
+            this.btnHP.Text = "Học phí";
+            this.btnHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnDiemSo
+            // 
+            this.btnDiemSo.BorderRadius = 8;
+            this.btnDiemSo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDiemSo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDiemSo.FillColor = System.Drawing.Color.Transparent;
+            this.btnDiemSo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnDiemSo.ForeColor = System.Drawing.Color.White;
+            this.btnDiemSo.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.btnDiemSo.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDiemSo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDiemSo.Location = new System.Drawing.Point(11, 241);
+            this.btnDiemSo.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            this.btnDiemSo.Name = "btnDiemSo";
+            this.btnDiemSo.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnDiemSo.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.btnDiemSo.Size = new System.Drawing.Size(188, 41);
+            this.btnDiemSo.TabIndex = 21;
+            this.btnDiemSo.Text = "Điểm số";
+            this.btnDiemSo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnLichHoc
+            // 
+            this.btnLichHoc.BorderRadius = 8;
+            this.btnLichHoc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLichHoc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLichHoc.FillColor = System.Drawing.Color.Transparent;
+            this.btnLichHoc.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnLichHoc.ForeColor = System.Drawing.Color.White;
+            this.btnLichHoc.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.btnLichHoc.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnLichHoc.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLichHoc.Location = new System.Drawing.Point(11, 200);
+            this.btnLichHoc.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            this.btnLichHoc.Name = "btnLichHoc";
+            this.btnLichHoc.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnLichHoc.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.btnLichHoc.Size = new System.Drawing.Size(188, 41);
+            this.btnLichHoc.TabIndex = 20;
+            this.btnLichHoc.Text = "Lịch học";
+            this.btnLichHoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnLH
             // 
@@ -203,12 +266,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnLH.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
             this.btnLH.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnLH.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLH.Location = new System.Drawing.Point(15, 195);
-            this.btnLH.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.btnLH.Location = new System.Drawing.Point(11, 159);
+            this.btnLH.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
             this.btnLH.Name = "btnLH";
-            this.btnLH.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnLH.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.btnLH.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnLH.Size = new System.Drawing.Size(250, 50);
+            this.btnLH.Size = new System.Drawing.Size(188, 41);
             this.btnLH.TabIndex = 18;
             this.btnLH.Text = "Lớp học của học viên";
             this.btnLH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -224,12 +287,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnKH.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
             this.btnKH.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnKH.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnKH.Location = new System.Drawing.Point(15, 145);
-            this.btnKH.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.btnKH.Location = new System.Drawing.Point(11, 118);
+            this.btnKH.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
             this.btnKH.Name = "btnKH";
-            this.btnKH.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnKH.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.btnKH.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnKH.Size = new System.Drawing.Size(250, 50);
+            this.btnKH.Size = new System.Drawing.Size(188, 41);
             this.btnKH.TabIndex = 16;
             this.btnKH.Text = "Khóa học";
             this.btnKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -245,16 +308,15 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnTTHV.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
             this.btnTTHV.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnTTHV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnTTHV.Location = new System.Drawing.Point(15, 95);
-            this.btnTTHV.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.btnTTHV.Location = new System.Drawing.Point(11, 77);
+            this.btnTTHV.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
             this.btnTTHV.Name = "btnTTHV";
-            this.btnTTHV.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnTTHV.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.btnTTHV.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnTTHV.Size = new System.Drawing.Size(250, 50);
+            this.btnTTHV.Size = new System.Drawing.Size(188, 41);
             this.btnTTHV.TabIndex = 8;
             this.btnTTHV.Text = "Thông tin học viên";
             this.btnTTHV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnTTHV.Click += new System.EventHandler(this.btnTTHV_Click);
             // 
             // brandPanel
             // 
@@ -262,11 +324,11 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.brandPanel.Controls.Add(this.lblBrand);
             this.brandPanel.Controls.Add(this.picBrand);
             this.brandPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.brandPanel.Location = new System.Drawing.Point(15, 15);
-            this.brandPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.brandPanel.Location = new System.Drawing.Point(11, 12);
+            this.brandPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.brandPanel.Name = "brandPanel";
-            this.brandPanel.Padding = new System.Windows.Forms.Padding(11, 15, 11, 15);
-            this.brandPanel.Size = new System.Drawing.Size(250, 80);
+            this.brandPanel.Padding = new System.Windows.Forms.Padding(8, 12, 8, 12);
+            this.brandPanel.Size = new System.Drawing.Size(188, 65);
             this.brandPanel.TabIndex = 7;
             // 
             // lblBrand
@@ -275,10 +337,10 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblBrand.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblBrand.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold);
             this.lblBrand.ForeColor = System.Drawing.Color.White;
-            this.lblBrand.Location = new System.Drawing.Point(62, 15);
-            this.lblBrand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblBrand.Location = new System.Drawing.Point(46, 12);
+            this.lblBrand.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblBrand.Name = "lblBrand";
-            this.lblBrand.Size = new System.Drawing.Size(177, 50);
+            this.lblBrand.Size = new System.Drawing.Size(134, 41);
             this.lblBrand.TabIndex = 0;
             this.lblBrand.Text = "OwlEng";
             // 
@@ -290,88 +352,24 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.picBrand.FillColor = System.Drawing.Color.Transparent;
             this.picBrand.Image = ((System.Drawing.Image)(resources.GetObject("picBrand.Image")));
             this.picBrand.ImageRotate = 0F;
-            this.picBrand.Location = new System.Drawing.Point(11, 15);
-            this.picBrand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picBrand.Location = new System.Drawing.Point(8, 12);
+            this.picBrand.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picBrand.Name = "picBrand";
-            this.picBrand.Size = new System.Drawing.Size(51, 50);
+            this.picBrand.Size = new System.Drawing.Size(38, 41);
             this.picBrand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBrand.TabIndex = 1;
             this.picBrand.TabStop = false;
             // 
-            // btnLichHoc
-            // 
-            this.btnLichHoc.BorderRadius = 8;
-            this.btnLichHoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLichHoc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLichHoc.FillColor = System.Drawing.Color.Transparent;
-            this.btnLichHoc.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnLichHoc.ForeColor = System.Drawing.Color.White;
-            this.btnLichHoc.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.btnLichHoc.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnLichHoc.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLichHoc.Location = new System.Drawing.Point(15, 245);
-            this.btnLichHoc.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.btnLichHoc.Name = "btnLichHoc";
-            this.btnLichHoc.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnLichHoc.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnLichHoc.Size = new System.Drawing.Size(250, 50);
-            this.btnLichHoc.TabIndex = 20;
-            this.btnLichHoc.Text = "Lịch học";
-            this.btnLichHoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // btnDiemSo
-            // 
-            this.btnDiemSo.BorderRadius = 8;
-            this.btnDiemSo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDiemSo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDiemSo.FillColor = System.Drawing.Color.Transparent;
-            this.btnDiemSo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnDiemSo.ForeColor = System.Drawing.Color.White;
-            this.btnDiemSo.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.btnDiemSo.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDiemSo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDiemSo.Location = new System.Drawing.Point(15, 295);
-            this.btnDiemSo.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.btnDiemSo.Name = "btnDiemSo";
-            this.btnDiemSo.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnDiemSo.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnDiemSo.Size = new System.Drawing.Size(250, 50);
-            this.btnDiemSo.TabIndex = 21;
-            this.btnDiemSo.Text = "Điểm số";
-            this.btnDiemSo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // btnHP
-            // 
-            this.btnHP.BorderRadius = 8;
-            this.btnHP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHP.FillColor = System.Drawing.Color.Transparent;
-            this.btnHP.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnHP.ForeColor = System.Drawing.Color.White;
-            this.btnHP.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.btnHP.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnHP.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHP.Location = new System.Drawing.Point(15, 345);
-            this.btnHP.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.btnHP.Name = "btnHP";
-            this.btnHP.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnHP.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnHP.Size = new System.Drawing.Size(250, 50);
-            this.btnHP.TabIndex = 22;
-            this.btnHP.Text = "Học phí";
-            this.btnHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // StudentMenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.ClientSize = new System.Drawing.Size(1365, 768);
+            this.ClientSize = new System.Drawing.Size(1024, 624);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelSidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "StudentMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student Menu";

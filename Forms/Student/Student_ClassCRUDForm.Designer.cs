@@ -93,7 +93,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Margin = new System.Windows.Forms.Padding(0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1052, 569);
+            this.panelMain.Size = new System.Drawing.Size(789, 462);
             this.panelMain.TabIndex = 0;
             // 
             // panelDetail
@@ -104,11 +104,10 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelDetail.BorderThickness = 1;
             this.panelDetail.Controls.Add(this.tableLayoutPanel2);
             this.panelDetail.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelDetail.Location = new System.Drawing.Point(0, 210);
-            this.panelDetail.Margin = new System.Windows.Forms.Padding(4);
+            this.panelDetail.Location = new System.Drawing.Point(0, 171);
             this.panelDetail.Name = "panelDetail";
-            this.panelDetail.Padding = new System.Windows.Forms.Padding(5);
-            this.panelDetail.Size = new System.Drawing.Size(1052, 306);
+            this.panelDetail.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelDetail.Size = new System.Drawing.Size(789, 248);
             this.panelDetail.TabIndex = 12;
             // 
             // tableLayoutPanel2
@@ -134,18 +133,19 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.tableLayoutPanel2.Controls.Add(this.txtLessons, 1, 6);
             this.tableLayoutPanel2.Controls.Add(this.txtFee, 1, 7);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 5);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 8;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1042, 296);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(781, 240);
             this.tableLayoutPanel2.TabIndex = 7;
             // 
             // label8
@@ -154,10 +154,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label8.Location = new System.Drawing.Point(4, 259);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(3, 210);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(304, 37);
+            this.label8.Size = new System.Drawing.Size(228, 30);
             this.label8.TabIndex = 22;
             this.label8.Text = "Course Fee:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -168,10 +167,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label7.Location = new System.Drawing.Point(4, 222);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(3, 180);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(304, 37);
+            this.label7.Size = new System.Drawing.Size(228, 30);
             this.label7.TabIndex = 21;
             this.label7.Text = "Number of Lessons:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -182,10 +180,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label6.Location = new System.Drawing.Point(4, 185);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(3, 150);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(304, 37);
+            this.label6.Size = new System.Drawing.Size(228, 30);
             this.label6.TabIndex = 20;
             this.label6.Text = "Course Description:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -196,10 +193,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label5.Location = new System.Drawing.Point(4, 148);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(3, 120);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(304, 37);
+            this.label5.Size = new System.Drawing.Size(228, 30);
             this.label5.TabIndex = 19;
             this.label5.Text = "Course Name:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -210,10 +206,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label4.Location = new System.Drawing.Point(4, 111);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(3, 90);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(304, 37);
+            this.label4.Size = new System.Drawing.Size(228, 30);
             this.label4.TabIndex = 18;
             this.label4.Text = "Teacher ID:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -224,10 +219,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label3.Location = new System.Drawing.Point(4, 74);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(3, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(304, 37);
+            this.label3.Size = new System.Drawing.Size(228, 30);
             this.label3.TabIndex = 17;
             this.label3.Text = "Start Date:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -238,10 +232,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label2.Location = new System.Drawing.Point(4, 37);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(3, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(304, 37);
+            this.label2.Size = new System.Drawing.Size(228, 30);
             this.label2.TabIndex = 16;
             this.label2.Text = "Max Students:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -252,10 +245,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label1.Location = new System.Drawing.Point(4, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(304, 37);
+            this.label1.Size = new System.Drawing.Size(228, 30);
             this.label1.TabIndex = 15;
             this.label1.Text = "Class Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -274,12 +266,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Location = new System.Drawing.Point(316, 5);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtName.Location = new System.Drawing.Point(237, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(722, 27);
+            this.txtName.Size = new System.Drawing.Size(541, 22);
             this.txtName.TabIndex = 7;
             // 
             // txtMaxStudents
@@ -296,12 +288,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtMaxStudents.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaxStudents.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMaxStudents.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaxStudents.Location = new System.Drawing.Point(316, 42);
-            this.txtMaxStudents.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMaxStudents.Location = new System.Drawing.Point(237, 34);
+            this.txtMaxStudents.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaxStudents.Name = "txtMaxStudents";
             this.txtMaxStudents.PlaceholderText = "";
             this.txtMaxStudents.SelectedText = "";
-            this.txtMaxStudents.Size = new System.Drawing.Size(722, 27);
+            this.txtMaxStudents.Size = new System.Drawing.Size(541, 22);
             this.txtMaxStudents.TabIndex = 8;
             // 
             // txtStartDate
@@ -318,12 +310,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtStartDate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtStartDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtStartDate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStartDate.Location = new System.Drawing.Point(316, 79);
-            this.txtStartDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtStartDate.Location = new System.Drawing.Point(237, 64);
+            this.txtStartDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStartDate.Name = "txtStartDate";
             this.txtStartDate.PlaceholderText = "";
             this.txtStartDate.SelectedText = "";
-            this.txtStartDate.Size = new System.Drawing.Size(722, 27);
+            this.txtStartDate.Size = new System.Drawing.Size(541, 22);
             this.txtStartDate.TabIndex = 9;
             // 
             // txtTeacherId
@@ -340,12 +332,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtTeacherId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTeacherId.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTeacherId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTeacherId.Location = new System.Drawing.Point(316, 116);
-            this.txtTeacherId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTeacherId.Location = new System.Drawing.Point(237, 94);
+            this.txtTeacherId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTeacherId.Name = "txtTeacherId";
             this.txtTeacherId.PlaceholderText = "";
             this.txtTeacherId.SelectedText = "";
-            this.txtTeacherId.Size = new System.Drawing.Size(722, 27);
+            this.txtTeacherId.Size = new System.Drawing.Size(541, 22);
             this.txtTeacherId.TabIndex = 10;
             // 
             // txtCourseName
@@ -362,12 +354,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtCourseName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCourseName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCourseName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCourseName.Location = new System.Drawing.Point(316, 153);
-            this.txtCourseName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCourseName.Location = new System.Drawing.Point(237, 124);
+            this.txtCourseName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.PlaceholderText = "";
             this.txtCourseName.SelectedText = "";
-            this.txtCourseName.Size = new System.Drawing.Size(722, 27);
+            this.txtCourseName.Size = new System.Drawing.Size(541, 22);
             this.txtCourseName.TabIndex = 11;
             // 
             // txtCourseDesc
@@ -384,12 +376,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtCourseDesc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCourseDesc.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCourseDesc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCourseDesc.Location = new System.Drawing.Point(316, 190);
-            this.txtCourseDesc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCourseDesc.Location = new System.Drawing.Point(237, 154);
+            this.txtCourseDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCourseDesc.Name = "txtCourseDesc";
             this.txtCourseDesc.PlaceholderText = "";
             this.txtCourseDesc.SelectedText = "";
-            this.txtCourseDesc.Size = new System.Drawing.Size(722, 27);
+            this.txtCourseDesc.Size = new System.Drawing.Size(541, 22);
             this.txtCourseDesc.TabIndex = 12;
             // 
             // txtLessons
@@ -406,12 +398,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtLessons.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLessons.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtLessons.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLessons.Location = new System.Drawing.Point(316, 227);
-            this.txtLessons.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtLessons.Location = new System.Drawing.Point(237, 184);
+            this.txtLessons.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLessons.Name = "txtLessons";
             this.txtLessons.PlaceholderText = "";
             this.txtLessons.SelectedText = "";
-            this.txtLessons.Size = new System.Drawing.Size(722, 27);
+            this.txtLessons.Size = new System.Drawing.Size(541, 22);
             this.txtLessons.TabIndex = 13;
             // 
             // txtFee
@@ -428,12 +420,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtFee.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFee.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFee.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFee.Location = new System.Drawing.Point(316, 264);
-            this.txtFee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFee.Location = new System.Drawing.Point(237, 214);
+            this.txtFee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFee.Name = "txtFee";
             this.txtFee.PlaceholderText = "";
             this.txtFee.SelectedText = "";
-            this.txtFee.Size = new System.Drawing.Size(722, 27);
+            this.txtFee.Size = new System.Drawing.Size(541, 22);
             this.txtFee.TabIndex = 14;
             // 
             // panelButtons
@@ -443,11 +435,10 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelButtons.Controls.Add(this.btnGrades);
             this.panelButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelButtons.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.panelButtons.Location = new System.Drawing.Point(0, 516);
-            this.panelButtons.Margin = new System.Windows.Forms.Padding(4);
+            this.panelButtons.Location = new System.Drawing.Point(0, 419);
             this.panelButtons.Name = "panelButtons";
-            this.panelButtons.Padding = new System.Windows.Forms.Padding(0, 5, 12, 5);
-            this.panelButtons.Size = new System.Drawing.Size(1052, 53);
+            this.panelButtons.Padding = new System.Windows.Forms.Padding(0, 4, 9, 4);
+            this.panelButtons.Size = new System.Drawing.Size(789, 43);
             this.panelButtons.TabIndex = 11;
             // 
             // btnAttendance
@@ -459,11 +450,11 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnAttendance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnAttendance.ForeColor = System.Drawing.Color.White;
             this.btnAttendance.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.btnAttendance.Location = new System.Drawing.Point(752, 5);
-            this.btnAttendance.Margin = new System.Windows.Forms.Padding(4, 4, 13, 4);
+            this.btnAttendance.Location = new System.Drawing.Point(539, 4);
+            this.btnAttendance.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.btnAttendance.Name = "btnAttendance";
-            this.btnAttendance.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnAttendance.Size = new System.Drawing.Size(143, 43);
+            this.btnAttendance.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.btnAttendance.Size = new System.Drawing.Size(120, 35);
             this.btnAttendance.TabIndex = 0;
             this.btnAttendance.Text = "Xem lịch học";
             // 
@@ -476,11 +467,11 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnGrades.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnGrades.ForeColor = System.Drawing.Color.White;
             this.btnGrades.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.btnGrades.Location = new System.Drawing.Point(895, 5);
-            this.btnGrades.Margin = new System.Windows.Forms.Padding(13, 4, 4, 4);
+            this.btnGrades.Location = new System.Drawing.Point(659, 4);
+            this.btnGrades.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.btnGrades.Name = "btnGrades";
-            this.btnGrades.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnGrades.Size = new System.Drawing.Size(145, 43);
+            this.btnGrades.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.btnGrades.Size = new System.Drawing.Size(121, 35);
             this.btnGrades.TabIndex = 1;
             this.btnGrades.Text = "Xem điểm số ";
             // 
@@ -490,11 +481,10 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelTableContainer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.panelTableContainer.Controls.Add(this.dgvClassList);
             this.panelTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelTableContainer.Location = new System.Drawing.Point(0, 54);
-            this.panelTableContainer.Margin = new System.Windows.Forms.Padding(4);
+            this.panelTableContainer.Location = new System.Drawing.Point(0, 44);
             this.panelTableContainer.Name = "panelTableContainer";
-            this.panelTableContainer.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.panelTableContainer.Size = new System.Drawing.Size(1052, 515);
+            this.panelTableContainer.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.panelTableContainer.Size = new System.Drawing.Size(789, 418);
             this.panelTableContainer.TabIndex = 4;
             // 
             // dgvClassList
@@ -533,15 +523,14 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.dgvClassList.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvClassList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvClassList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.dgvClassList.Location = new System.Drawing.Point(0, 5);
-            this.dgvClassList.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvClassList.Location = new System.Drawing.Point(0, 4);
             this.dgvClassList.MultiSelect = false;
             this.dgvClassList.Name = "dgvClassList";
             this.dgvClassList.ReadOnly = true;
             this.dgvClassList.RowHeadersVisible = false;
             this.dgvClassList.RowHeadersWidth = 51;
             this.dgvClassList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvClassList.Size = new System.Drawing.Size(1052, 510);
+            this.dgvClassList.Size = new System.Drawing.Size(789, 414);
             this.dgvClassList.TabIndex = 0;
             this.dgvClassList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.dgvClassList.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -643,10 +632,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.FillColor = System.Drawing.Color.White;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelHeader.Margin = new System.Windows.Forms.Padding(4);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Padding = new System.Windows.Forms.Padding(27, 6, 7, 6);
-            this.panelHeader.Size = new System.Drawing.Size(1052, 54);
+            this.panelHeader.Padding = new System.Windows.Forms.Padding(20, 5, 5, 5);
+            this.panelHeader.Size = new System.Drawing.Size(789, 44);
             this.panelHeader.TabIndex = 1;
             // 
             // lblHeader
@@ -656,10 +644,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblHeader.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblHeader.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.lblHeader.Location = new System.Drawing.Point(27, 6);
-            this.lblHeader.Margin = new System.Windows.Forms.Padding(4);
+            this.lblHeader.Location = new System.Drawing.Point(20, 5);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(100, 42);
+            this.lblHeader.Size = new System.Drawing.Size(80, 34);
             this.lblHeader.TabIndex = 4;
             this.lblHeader.Text = "Lớp học";
             this.lblHeader.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -672,22 +659,21 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtSearch.DefaultText = "";
             this.txtSearch.Dock = System.Windows.Forms.DockStyle.Right;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearch.Location = new System.Drawing.Point(645, 6);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSearch.Location = new System.Drawing.Point(484, 5);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PlaceholderText = "Search classes...";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(400, 42);
+            this.txtSearch.Size = new System.Drawing.Size(300, 34);
             this.txtSearch.TabIndex = 3;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_text_changed);
             // 
             // Student_ClassCRUDForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1052, 569);
+            this.ClientSize = new System.Drawing.Size(789, 462);
             this.Controls.Add(this.panelMain);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Student_ClassCRUDForm";
             this.Text = "Student_ClassCRUDForm";
             this.Load += new System.EventHandler(this.Student_ClassCRUDForm_Load);
