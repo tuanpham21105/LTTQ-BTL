@@ -32,32 +32,32 @@ namespace prj_LTTQ_BTL.Forms.Student
 
             btnTTHV.Click += (s, e) =>
             {
-                SidebarBtn_Click(btnTTHV, "Thông tin học viên");
+                SidebarBtn_Click(btnTTHV);
             };
 
             btnLH.Click += (s, e) =>
             {
-                SidebarBtn_Click(btnLH, "Lớp học");
+                SidebarBtn_Click(btnLH);
             };
 
-            btnDKLH.Click += (s, e) =>
+            btnLichHoc.Click += (s, e) =>
             {
-                SidebarBtn_Click(btnDKLH, "Đăng ký lớp học");
+                SidebarBtn_Click(btnLichHoc);
             };
 
             btnKH.Click += (s, e) =>
             {
-                SidebarBtn_Click(btnKH, "Khóa học");
+                SidebarBtn_Click(btnKH);
             };
 
-            btnDSGV.Click += (s, e) =>
+            btnDiemSo.Click += (s, e) =>
             {
-                SidebarBtn_Click(btnDSGV, "Danh sách giảng viên");
+                SidebarBtn_Click(btnDiemSo);
             };
 
             btnHP.Click += (s, e) =>
             {
-                SidebarBtn_Click(btnHP, "Học phí");
+                SidebarBtn_Click(btnHP);
             };
         }
 
@@ -66,13 +66,13 @@ namespace prj_LTTQ_BTL.Forms.Student
 
         }
 
-        private void SidebarBtn_Click(Guna2Button btn, string formType)
+        private void SidebarBtn_Click(Guna2Button btn)
         {
             btnTTHV.BackColor = Color.Transparent;
             btnLH.BackColor = Color.Transparent;
-            btnDKLH.BackColor = Color.Transparent;
+            btnLichHoc.BackColor = Color.Transparent;
             btnKH.BackColor = Color.Transparent;
-            btnDSGV.BackColor = Color.Transparent;
+            btnDiemSo.BackColor = Color.Transparent;
             btnHP.BackColor = Color.Transparent;
 
             btn.BackColor = secondaryColor;
@@ -82,19 +82,20 @@ namespace prj_LTTQ_BTL.Forms.Student
                 activeForm.Close();
             }
 
-            switch (formType)
+            switch (btn.Text)
             {
                 case "Thông tin học viên":
+                    activeForm = new Student_StudentInforForm();
                     break;
-                case "Lớp học":
+                case "Lớp học của học viên":
                     activeForm = new Student_ClassCRUDForm();
                     break;
-                case "Đăng ký lớp học":
+                case "Lịch học":
                     break;
                 case "Khóa học":
                     activeForm = new Student_CourseCRUDForm();
                     break;
-                case "Danh sách giảng viên":
+                case "Điểm số":
                     break;
                 case "Học phí":
                     break;
@@ -103,7 +104,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             FormUtils.OpenChildForm(panelMain, activeForm);
         }
 
-        private void btnLH_Click(object sender, EventArgs e)
+        private void btnTTHV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
         {
 
         }

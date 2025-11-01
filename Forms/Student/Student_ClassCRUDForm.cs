@@ -25,7 +25,7 @@ namespace prj_LTTQ_BTL.Forms.Student
 
         private void InitializeEvent()
         {
-            FormUtils.FillGunaDgv(dgvClassList, dataProcessor.GetDataTable($"select * from Class inner join ClassAssignment on Class.id = ClassAssignment.class_id where ClassAssignment.student_id = '{GlobalData.Id}'"));
+            //FormUtils.FillGunaDgv(dgvClassList, dataProcessor.GetDataTable($"select * from Class inner join ClassAssignment on Class.id = ClassAssignment.class_id where ClassAssignment.student_id = '{GlobalData.Id}'"));
         }
 
         private void Student_ClassCRUDForm_Load(object sender, EventArgs e)
@@ -110,6 +110,16 @@ namespace prj_LTTQ_BTL.Forms.Student
             }
 
             FormUtils.FillGunaDgv(dgvClassList, searchClasses);
+        }
+
+        private void btnAttendance_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tblDetail_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
