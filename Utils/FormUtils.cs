@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Guna.UI2.WinForms;
 using System.Windows.Forms;
+using System.Data;
 
 namespace prj_LTTQ_BTL.Utils
 {
@@ -19,6 +20,13 @@ namespace prj_LTTQ_BTL.Utils
             parentPanel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        public static void FillGunaDgv(Guna2DataGridView dgv, DataTable data)
+        {
+            dgv.DataSource = null;
+            dgv.Rows.Clear();
+            dgv.DataSource = data;
         }
     }
 }

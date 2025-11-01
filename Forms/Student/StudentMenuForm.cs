@@ -87,6 +87,7 @@ namespace prj_LTTQ_BTL.Forms.Student
                 case "Thông tin học viên":
                     break;
                 case "Lớp học":
+                    activeForm = new Student_ClassCRUDForm();
                     break;
                 case "Đăng ký lớp học":
                     break;
@@ -100,6 +101,11 @@ namespace prj_LTTQ_BTL.Forms.Student
             }
 
             FormUtils.OpenChildForm(panelMain, activeForm);
+        }
+
+        private void btnLH_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

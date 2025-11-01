@@ -64,8 +64,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblLessons = new AntdUI.Label();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblName = new AntdUI.Label();
-            this.lblId = new AntdUI.Label();
-            this.txtId = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.lblClass = new System.Windows.Forms.Label();
             this.dgvClasses = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,7 +91,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.mainLayout.Controls.Add(this.detailsPanel, 0, 2);
             this.mainLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainLayout.Location = new System.Drawing.Point(0, 0);
-            this.mainLayout.Margin = new System.Windows.Forms.Padding(2);
+            this.mainLayout.Margin = new System.Windows.Forms.Padding(0);
             this.mainLayout.Name = "mainLayout";
             this.mainLayout.RowCount = 3;
             this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
@@ -112,7 +111,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.headerPanel.FillColor = System.Drawing.Color.White;
             this.headerPanel.Location = new System.Drawing.Point(3, 3);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.headerPanel.Padding = new System.Windows.Forms.Padding(20, 5, 5, 5);
             this.headerPanel.Size = new System.Drawing.Size(872, 44);
             this.headerPanel.TabIndex = 0;
             // 
@@ -124,11 +123,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtSearch.DefaultText = "";
             this.txtSearch.Dock = System.Windows.Forms.DockStyle.Right;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearch.Location = new System.Drawing.Point(552, 10);
+            this.txtSearch.Location = new System.Drawing.Point(567, 5);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(0);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PlaceholderText = "Search courses...";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(300, 24);
+            this.txtSearch.Size = new System.Drawing.Size(300, 34);
             this.txtSearch.TabIndex = 0;
             // 
             // lblTitle
@@ -136,13 +136,13 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblTitle.AutoSizeMode = AntdUI.TAutoSize.Width;
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.Black;
-            this.lblTitle.Location = new System.Drawing.Point(20, 10);
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.lblTitle.Location = new System.Drawing.Point(20, 5);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(67, 24);
+            this.lblTitle.Size = new System.Drawing.Size(92, 34);
             this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "Course";
+            this.lblTitle.Text = "Khóa học";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvCourses
@@ -255,6 +255,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // infoContainer
             // 
+            this.infoContainer.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.infoContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.infoContainer.Controls.Add(this.tblInfo, 0, 0);
             this.infoContainer.Controls.Add(this.lblClass, 0, 1);
@@ -274,18 +275,17 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.tblInfo.ColumnCount = 2;
             this.tblInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tblInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tblInfo.Controls.Add(this.txtDesc, 1, 4);
-            this.tblInfo.Controls.Add(this.lblDesc, 0, 4);
-            this.tblInfo.Controls.Add(this.txtFee, 1, 3);
-            this.tblInfo.Controls.Add(this.lblFee, 0, 3);
-            this.tblInfo.Controls.Add(this.txtLessons, 1, 2);
-            this.tblInfo.Controls.Add(this.lblLessons, 0, 2);
-            this.tblInfo.Controls.Add(this.txtName, 1, 1);
-            this.tblInfo.Controls.Add(this.lblName, 0, 1);
-            this.tblInfo.Controls.Add(this.lblId, 0, 0);
-            this.tblInfo.Controls.Add(this.txtId, 1, 0);
+            this.tblInfo.Controls.Add(this.txtDesc, 1, 3);
+            this.tblInfo.Controls.Add(this.lblDesc, 0, 3);
+            this.tblInfo.Controls.Add(this.txtFee, 1, 2);
+            this.tblInfo.Controls.Add(this.lblFee, 0, 2);
+            this.tblInfo.Controls.Add(this.txtLessons, 1, 1);
+            this.tblInfo.Controls.Add(this.lblLessons, 0, 1);
+            this.tblInfo.Controls.Add(this.txtName, 1, 0);
+            this.tblInfo.Controls.Add(this.lblName, 0, 0);
+            this.tblInfo.Controls.Add(this.guna2Button1, 1, 4);
             this.tblInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblInfo.Location = new System.Drawing.Point(3, 3);
+            this.tblInfo.Location = new System.Drawing.Point(4, 4);
             this.tblInfo.Name = "tblInfo";
             this.tblInfo.RowCount = 5;
             this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
@@ -293,12 +293,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tblInfo.Size = new System.Drawing.Size(856, 150);
+            this.tblInfo.Size = new System.Drawing.Size(854, 150);
             this.tblInfo.TabIndex = 3;
             // 
             // txtDesc
             // 
-            this.txtDesc.BorderRadius = 12;
+            this.txtDesc.BorderRadius = 5;
             this.txtDesc.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDesc.DefaultText = "";
             this.txtDesc.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -309,11 +309,11 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtDesc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDesc.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDesc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDesc.Location = new System.Drawing.Point(259, 123);
+            this.txtDesc.Location = new System.Drawing.Point(259, 93);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.PlaceholderText = "";
             this.txtDesc.SelectedText = "";
-            this.txtDesc.Size = new System.Drawing.Size(594, 24);
+            this.txtDesc.Size = new System.Drawing.Size(592, 24);
             this.txtDesc.TabIndex = 9;
             // 
             // lblDesc
@@ -321,7 +321,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblDesc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.lblDesc.Location = new System.Drawing.Point(3, 123);
+            this.lblDesc.Location = new System.Drawing.Point(3, 93);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(250, 24);
             this.lblDesc.TabIndex = 8;
@@ -329,7 +329,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // txtFee
             // 
-            this.txtFee.BorderRadius = 12;
+            this.txtFee.BorderRadius = 5;
             this.txtFee.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFee.DefaultText = "";
             this.txtFee.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -340,11 +340,11 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtFee.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFee.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFee.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFee.Location = new System.Drawing.Point(259, 93);
+            this.txtFee.Location = new System.Drawing.Point(259, 63);
             this.txtFee.Name = "txtFee";
             this.txtFee.PlaceholderText = "";
             this.txtFee.SelectedText = "";
-            this.txtFee.Size = new System.Drawing.Size(594, 24);
+            this.txtFee.Size = new System.Drawing.Size(592, 24);
             this.txtFee.TabIndex = 7;
             // 
             // lblFee
@@ -352,7 +352,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblFee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.lblFee.Location = new System.Drawing.Point(3, 93);
+            this.lblFee.Location = new System.Drawing.Point(3, 63);
             this.lblFee.Name = "lblFee";
             this.lblFee.Size = new System.Drawing.Size(250, 24);
             this.lblFee.TabIndex = 6;
@@ -360,7 +360,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // txtLessons
             // 
-            this.txtLessons.BorderRadius = 12;
+            this.txtLessons.BorderRadius = 5;
             this.txtLessons.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLessons.DefaultText = "";
             this.txtLessons.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -371,11 +371,11 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtLessons.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLessons.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtLessons.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLessons.Location = new System.Drawing.Point(259, 63);
+            this.txtLessons.Location = new System.Drawing.Point(259, 33);
             this.txtLessons.Name = "txtLessons";
             this.txtLessons.PlaceholderText = "";
             this.txtLessons.SelectedText = "";
-            this.txtLessons.Size = new System.Drawing.Size(594, 24);
+            this.txtLessons.Size = new System.Drawing.Size(592, 24);
             this.txtLessons.TabIndex = 5;
             // 
             // lblLessons
@@ -383,7 +383,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblLessons.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblLessons.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLessons.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.lblLessons.Location = new System.Drawing.Point(3, 63);
+            this.lblLessons.Location = new System.Drawing.Point(3, 33);
             this.lblLessons.Name = "lblLessons";
             this.lblLessons.Size = new System.Drawing.Size(250, 24);
             this.lblLessons.TabIndex = 4;
@@ -391,7 +391,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // txtName
             // 
-            this.txtName.BorderRadius = 12;
+            this.txtName.BorderRadius = 5;
             this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtName.DefaultText = "";
             this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -402,11 +402,11 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Location = new System.Drawing.Point(259, 33);
+            this.txtName.Location = new System.Drawing.Point(259, 3);
             this.txtName.Name = "txtName";
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(594, 24);
+            this.txtName.Size = new System.Drawing.Size(592, 24);
             this.txtName.TabIndex = 3;
             // 
             // lblName
@@ -414,52 +414,42 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.lblName.Location = new System.Drawing.Point(3, 33);
+            this.lblName.Location = new System.Drawing.Point(3, 3);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(250, 24);
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Course Name";
             // 
-            // lblId
+            // guna2Button1
             // 
-            this.lblId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.lblId.Location = new System.Drawing.Point(3, 3);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(250, 24);
-            this.lblId.TabIndex = 0;
-            this.lblId.Text = "Course Id";
-            // 
-            // txtId
-            // 
-            this.txtId.BorderRadius = 12;
-            this.txtId.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtId.DefaultText = "";
-            this.txtId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtId.Location = new System.Drawing.Point(259, 3);
-            this.txtId.Name = "txtId";
-            this.txtId.PlaceholderText = "";
-            this.txtId.SelectedText = "";
-            this.txtId.Size = new System.Drawing.Size(594, 24);
-            this.txtId.TabIndex = 1;
+            this.guna2Button1.BorderRadius = 5;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.guna2Button1.HoverState.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(671, 123);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(180, 24);
+            this.guna2Button1.TabIndex = 10;
+            this.guna2Button1.Text = "Đăng ký khóa học";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // lblClass
             // 
             this.lblClass.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblClass.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.lblClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.lblClass.Location = new System.Drawing.Point(0, 171);
+            this.lblClass.Location = new System.Drawing.Point(1, 173);
             this.lblClass.Margin = new System.Windows.Forms.Padding(0, 15, 0, 10);
             this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(862, 23);
+            this.lblClass.Size = new System.Drawing.Size(860, 23);
             this.lblClass.TabIndex = 1;
             this.lblClass.Text = "Classes of this Course:";
             // 
@@ -497,12 +487,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.dgvClasses.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvClasses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvClasses.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.dgvClasses.Location = new System.Drawing.Point(3, 207);
+            this.dgvClasses.Location = new System.Drawing.Point(4, 210);
             this.dgvClasses.Name = "dgvClasses";
             this.dgvClasses.ReadOnly = true;
             this.dgvClasses.RowHeadersVisible = false;
             this.dgvClasses.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvClasses.Size = new System.Drawing.Size(856, 130);
+            this.dgvClasses.Size = new System.Drawing.Size(854, 126);
             this.dgvClasses.TabIndex = 2;
             this.dgvClasses.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvClasses.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -602,8 +592,6 @@ namespace prj_LTTQ_BTL.Forms.Student
         private AntdUI.Label lblLessons;
         private Guna2TextBox txtName;
         private AntdUI.Label lblName;
-        private AntdUI.Label lblId;
-        private Guna2TextBox txtId;
         private Label lblClass;
         private Guna2DataGridView dgvClasses;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
@@ -611,5 +599,6 @@ namespace prj_LTTQ_BTL.Forms.Student
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private Guna2Button guna2Button1;
     }
 }

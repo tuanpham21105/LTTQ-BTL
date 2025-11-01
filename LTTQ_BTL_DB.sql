@@ -97,6 +97,8 @@ CREATE TABLE Enrollment (
 );
 GO
 
+alter 
+
 -- ==============================
 -- Table: ClassAssignment
 -- ==============================
@@ -162,5 +164,33 @@ CREATE TABLE Score (
     created_date DATETIME DEFAULT GETDATE(),
     FOREIGN KEY (student_id) REFERENCES Student(id),
     FOREIGN KEY (class_id) REFERENCES Class(id)
+);
+GO
+
+-- ==============================
+-- Changes
+-- ==============================
+
+drop table Payment;
+drop table Enrollment;
+
+CREATE TABLE Enrollment (
+    id UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
+    student_id UNIQUEIDENTIFIER NOT NULL,
+    course_id UNIQUEIDENTIFIER NOT NULL,
+    enrollment_date DATE DEFAULT GETDATE(),
+    FOREIGN KEY (student_id) REFERENCES Student(id),
+    FOREIGN KEY (course_id) REFERENCES Course(id)
+);
+GO
+
+CREATE TABLE Payment (
+    id UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
+    enrollment_id UNIQUEIDENTIFIER NOT NULL,
+    amount DECIMAL(10,2),
+    payment_date DATE DEFAULT GETDATE(),
+    method VARCHAR(20) CHECK (method IN ('none', 'cash', 'bank_transfer', 'credit_card')),
+    status VARCHAR(20) CHECK (status IN ('paid', 'pending', 'failed')),
+    FOREIGN KEY (enrollment_id) REFERENCES Enrollment(id)
 );
 GO

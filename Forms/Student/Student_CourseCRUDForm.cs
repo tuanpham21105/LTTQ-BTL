@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using prj_LTTQ_BTL.Data;
+using prj_LTTQ_BTL.Utils;
 
 namespace prj_LTTQ_BTL.Forms.Student
 {
@@ -17,12 +18,6 @@ namespace prj_LTTQ_BTL.Forms.Student
     {
         private DataProcessor dataProcessor = new DataProcessor();
 
-        private void FillGunaDgv(Guna2DataGridView dgv, DataTable data)
-        {
-            dgv.DataSource = null;
-            dgv.Rows.Clear();
-            dgv.DataSource = data;
-        }
 
         public Student_CourseCRUDForm()
         {
@@ -32,7 +27,7 @@ namespace prj_LTTQ_BTL.Forms.Student
 
         private void InitializeEvent()
         {
-            FillGunaDgv(dgvCourses, dataProcessor.GetDataTable("select * from Course"));
+            FormUtils.FillGunaDgv(dgvCourses, dataProcessor.GetDataTable("select * from Course"));
             dgvCourses.CellClick += dgvCourses_cell_click;
             txtSearch.TextChanged += txtSearch_text_changed;
         }
@@ -124,13 +119,13 @@ namespace prj_LTTQ_BTL.Forms.Student
         {
             DataGridViewRow row = dgvCourses.CurrentRow;
 
-            txtId.Text = row.Cells["id"].Value.ToString();
+            //txtId.Text = row.Cells["id"].Value.ToString();
             txtName.Text = row.Cells["name"].Value.ToString();
             txtLessons.Text = row.Cells["number_of_lessons"].Value.ToString();
             txtDesc.Text = row.Cells["description"].Value.ToString();
             txtFee.Text = row.Cells["fee"].Value.ToString();
 
-            FillGunaDgv(dgvClasses, dataProcessor.GetDataTable($"select * from Class where course_id = '{txtId.Text}'"));
+            FormUtils.FillGunaDgv(dgvClasses, dataProcessor.GetDataTable($"select * from Class where course_id = '{row.Cells["id"].Value.ToString()}'"));
         }
 
         private void txtSearch_text_changed(object sender, EventArgs e)
@@ -163,7 +158,14 @@ namespace prj_LTTQ_BTL.Forms.Student
                 }
             }
 
-            FillGunaDgv(dgvCourses, searchCourses);
+            FormUtils.FillGunaDgv(dgvCourses, searchCourses);
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dgvCourses.CurrentRow;
+
+            dataProcessor.UpdateData($"insert into Enrollment (student_id, course_id, enrollment_date) values ('{GlobalData.Id}', '{row.Cells["id"].Value.ToString()}', '{DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString()}')");
         }
     }
 }
