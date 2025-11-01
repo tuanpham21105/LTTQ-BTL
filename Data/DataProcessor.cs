@@ -10,8 +10,7 @@ namespace prj_LTTQ_BTL.Data
 {
     internal class DataProcessor
     {
-        string strConnect = "DESKTOP-4G4NL83\\SQLEXPRESS;" +
-                "DataBase=LTTQ_BTL_DB;Integrated Security=true;Trusted_Connection=True;TrustServerCertificate=True;";
+        string strConnect = "Server=DESKTOP-4G4NL83\\SQLEXPRESS; DataBase=LTTQ_BTL_DB;Integrated Security=true;Trusted_Connection=True;TrustServerCertificate=True;";
         SqlConnection sqlConnect = null;
 
         public void OpenConnect()
