@@ -137,7 +137,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             );
 
             dataProcessor.UpdateData($"update Student set " +
-                $"full_name = N'{txtName}'," +
+                $"full_name = N'{txtName.Text}'," +
                 $"birth_date = '{dateBirthDate.Value.Year.ToString() + "-" + dateBirthDate.Value.Month.ToString() + "-" + dateBirthDate.Value.Day.ToString()}'," +
                 $"gender = N'{comboboxGender.SelectedItem.ToString()}'," +
                 $"phone_number = '{txtSdt.Text}'," +

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Guna.UI2.WinForms;
 using System.Windows.Forms;
 using System.Data;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace prj_LTTQ_BTL.Utils
 {
@@ -27,6 +28,14 @@ namespace prj_LTTQ_BTL.Utils
             dgv.DataSource = null;
             dgv.Rows.Clear();
             dgv.DataSource = data;
+        }
+
+        public static void ClearChartPoint(Chart chart)
+        {
+            foreach (var series in chart.Series)
+            {
+                series.Points.Clear();
+            }
         }
     }
 }

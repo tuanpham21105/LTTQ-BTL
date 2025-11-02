@@ -97,6 +97,7 @@ namespace prj_LTTQ_BTL.Forms.Student
                     activeForm = new Student_CourseCRUDForm();
                     break;
                 case "Điểm số":
+                    activeForm = new Student_ScoreInforForm();
                     break;
                 case "Học phí":
                     break;
