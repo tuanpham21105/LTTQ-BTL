@@ -1,10 +1,11 @@
-﻿using System;
+﻿using prj_LTTQ_BTL.Forms;
+using prj_LTTQ_BTL.Forms.Student;
+using prj_LTTQ_BTL.Teacher;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using prj_LTTQ_BTL.Forms;
-using prj_LTTQ_BTL.Forms.Student;
 
 namespace prj_LTTQ_BTL
 {
@@ -18,7 +19,7 @@ namespace prj_LTTQ_BTL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StudentMenuForm());
+            Application.Run(new TeacherMenuForm());
         }
     }
 }

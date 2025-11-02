@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4C03EB53-EDE5-4427-AA56-76B5DB0A9B35}</ProjectGuid>
+    <ProjectGuid>{6D8FA900-8518-4BCF-89DB-A3CEE3A5FACF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>prj_LTTQ_BTL</RootNamespace>
     <AssemblyName>prj-LTTQ-BTL</AssemblyName>
@@ -34,13 +34,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AntdUI, Version=2.1.13.0, Culture=neutral, PublicKeyToken=0e24e5118ea3d6af, processorArchitecture=MSIL">
-      <HintPath>..\packages\AntdUI.2.1.13\lib\net46\AntdUI.dll</HintPath>
+      <HintPath>..\..\lập trình trực quan\BTL_LTTQ\prj-LTTQ-BTL\packages\AntdUI.2.1.13\lib\net46\AntdUI.dll</HintPath>
     </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -88,6 +88,12 @@
     <Compile Include="Forms\Student\StudentMenuForm.Designer.cs">
       <DependentUpon>StudentMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Teacher\TeacherMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Teacher\TeacherMenuForm.Designer.cs">
+      <DependentUpon>TeacherMenuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\StudentMenuServices.cs" />
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Student\StudentMenuForm.resx">
       <DependentUpon>StudentMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Teacher\TeacherMenuForm.resx">
+      <DependentUpon>TeacherMenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -132,6 +141,8 @@
   <ItemGroup>
     <Content Include="bin\Debug\prj-LTTQ-BTL.exe" />
     <Content Include="bin\Debug\prj-LTTQ-BTL.pdb" />
+    <None Include="Images\Bell.png" />
+    <None Include="Images\avt.png" />
     <Content Include="Images\owl.png" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
   </ItemGroup>
