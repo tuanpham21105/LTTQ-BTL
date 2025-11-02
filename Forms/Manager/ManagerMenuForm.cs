@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using prj_LTTQ_BTL.Forms.Student;
+using prj_LTTQ_BTL.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,12 +23,46 @@ namespace prj_LTTQ_BTL.Forms.Manager
         private readonly Color textSecondary = Color.FromArgb(85, 85, 85);
         private readonly Color dangerColor = Color.FromArgb(232, 17, 35);
         private readonly Color borderColor = Color.FromArgb(204, 204, 204);
+        private Form activeForm = null;
+
         public ManagerMenuForm()
         {
             InitializeComponent();
+            InitializeEvent();
+        }
+        private void InitializeEvent()
+        {
+            btnStudentList.Click += (s, e) =>
+            {
+                SidebarBtn_Click(btnStudentList, "Danh sách học viên");
+            };
+        }
+        private void SidebarBtn_Click(Guna2Button btn, string formType)
+        {
+           
+            btnStudentList.BackColor = Color.Transparent;
+            btn.BackColor = secondaryColor;
+
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+
+            switch (formType)
+            {
+                case "Danh sách học viên":
+                    activeForm = new Manager_StudentCRUDForm();
+                    break;
+            }
+
+            FormUtils.OpenChildForm(panelMain, activeForm);
+        }
+        private void ManagerMenuForm_Load(object sender, EventArgs e)
+        {
+
         }
 
-        private void ManagerMenuForm_Load(object sender, EventArgs e)
+        private void panelHeader_Paint(object sender, PaintEventArgs e)
         {
 
         }

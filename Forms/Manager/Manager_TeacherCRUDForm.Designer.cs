@@ -1,6 +1,6 @@
-﻿namespace prj_LTTQ_BTL.Forms.Student
+﻿namespace prj_LTTQ_BTL.Forms.Manager
 {
-    partial class Student_CourseCRUDForm
+    partial class Manager_TeacherCRUDForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Student_CourseCRUDForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1215, 742);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Student_CourseCRUDForm";
-            this.Text = "FormStudent_CourseCRUD";
-            this.Load += new System.EventHandler(this.FormStudent_CourseCRUD_Load);
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "Manager_TeacherCRUDForm";
         }
 
         #endregion

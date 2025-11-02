@@ -12,21 +12,80 @@ namespace prj_LTTQ_BTL.Data.Repository
     {
         public DataRow GetUserByUsernameAndPassword(string username, string password)
         {
-            string query = @"
-                SELECT u.username, r.name AS role
-                FROM [User] u
-                INNER JOIN Role r ON u.role_id = r.id
-                WHERE u.username = @username AND u.password = @password";
-
-            SqlParameter[] parameters = new SqlParameter[]
-            {
-                new SqlParameter("@username", SqlDbType.NVarChar) { Value = username },
-                new SqlParameter("@password", SqlDbType.VarChar) { Value = password }
-            };
-
-            DataTable result = ExecuteQuery(query, parameters);
-            //DataTable result = GetDataTable(query);
+            //username = username.Replace("'", "''");
+            //password = password.Replace("'", "''");
+            string query = $"SELECT username, r.name as role from [User] u join [Role] r on u.role_name = r.name WHERE username = '{username}' AND [password] = '{password}'";
+            DataTable result = GetDataTable(query);
             return result.Rows.Count > 0 ? result.Rows[0] : null;
+        }
+        // Create a new user
+        public void CreateUser(Guid id, string username, string password, string roleName)
+        {
+            // Check if the username already exists
+            string checkQuery = $"SELECT COUNT(*) FROM [User] WHERE username = '{username}'";
+            DataTable checkResult = GetDataTable(checkQuery);
+            int count = Convert.ToInt32(checkResult.Rows[0][0]);
+
+            if (count > 0)
+            {
+                throw new Exception("The username already exists. Please choose a different username.");
+            }
+
+            // Insert the new user
+            string query = $@"
+                INSERT INTO [User] (id, username, [password], role_name)
+                VALUES ('{id}', '{username}', '{password}', '{roleName}')
+            ";
+            UpdateData(query);
+        }
+        // Read a user by ID
+        public DataRow GetUserById(Guid id)
+        {
+            string query = $"SELECT * FROM [User] WHERE id = '{id}'";
+            DataTable result = GetDataTable(query);
+            return result.Rows.Count > 0 ? result.Rows[0] : null;
+        }
+        // Read all users
+        public DataTable GetAllUsers(int page, int pageSize)
+        {
+            string query;
+            if (page == -1)
+            {
+                // Query all users without pagination
+                query = "SELECT * FROM [User] ORDER BY username";
+            }
+            else
+            {
+                // Query users with pagination
+                int offset = (page - 1) * pageSize;
+                query = $@"
+                    SELECT * 
+                    FROM [User]
+                    ORDER BY username
+                    OFFSET {offset} ROWS
+                    FETCH NEXT {pageSize} ROWS ONLY
+                ";
+            }
+            return GetDataTable(query);
+        }
+        // Update a user
+        public void UpdateUser(Guid id, string username, string password, string roleName)
+        {
+            string query = $@"
+                UPDATE [User]
+                SET username = '{username}',
+                    [password] = '{password}',
+                    role_name = '{roleName}',
+                    update_at = GETDATE()
+                WHERE id = '{id}'
+            ";
+            UpdateData(query);
+        }
+        // Delete a user
+        public void DeleteUser(Guid id)
+        {
+            string query = $"DELETE FROM [User] WHERE id = '{id}'";
+            UpdateData(query);
         }
     }
 }

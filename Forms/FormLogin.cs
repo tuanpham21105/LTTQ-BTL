@@ -1,6 +1,6 @@
 ﻿using prj_LTTQ_BTL.Data;
 using prj_LTTQ_BTL.Forms.Manager;
-//using prj_LTTQ_BTL.Forms.Student;
+using prj_LTTQ_BTL.Forms.Student;
 using prj_LTTQ_BTL.Services;
 using System;
 using System.Collections.Generic;
@@ -46,11 +46,11 @@ namespace prj_LTTQ_BTL.Forms
                     GlobalData.Role = role;
                     MessageBox.Show($"Welcome, {username}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Form nextForm;
-                    //if (role.Equals("student", StringComparison.OrdinalIgnoreCase))
-                    //{
-                    //    nextForm = new StudentMenuForm();
-                    //}
-                    if (role.Equals("admin", StringComparison.OrdinalIgnoreCase))
+                    if (role.Equals("student", StringComparison.OrdinalIgnoreCase))
+                    {
+                        nextForm = new StudentMenuForm();
+                    }
+                    else if (role.Equals("admin", StringComparison.OrdinalIgnoreCase))
                     {
                         nextForm = new ManagerMenuForm();
                     }
