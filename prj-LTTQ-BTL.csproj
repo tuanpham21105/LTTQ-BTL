@@ -198,16 +198,13 @@
     <EmbeddedResource Include="Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="Forms\Student\Student_ClassCRUDForm.resx">
       <DependentUpon>Student_ClassCRUDForm.cs</DependentUpon>
-=======
     <EmbeddedResource Include="Forms\Manager\ManagerMenuForm.resx">
       <DependentUpon>ManagerMenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Manager\Manager_StudentCRUDForm.resx">
       <DependentUpon>Manager_StudentCRUDForm.cs</DependentUpon>
->>>>>>> origin/HoTung
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Student\Student_CourseCRUDForm.resx">
       <DependentUpon>Student_CourseCRUDForm.cs</DependentUpon>
