@@ -32,14 +32,14 @@ namespace prj_LTTQ_BTL.Forms.Student
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
             this.panelDetail = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -60,7 +60,6 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtLessons = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFee = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelButtons = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnAttendance = new Guna.UI2.WinForms.Guna2Button();
             this.btnGrades = new Guna.UI2.WinForms.Guna2Button();
             this.panelTableContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvClassList = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -73,6 +72,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.lblHeader = new AntdUI.Label();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnAttendance = new Guna.UI2.WinForms.Guna2Button();
             this.panelMain.SuspendLayout();
             this.panelDetail.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -101,12 +101,13 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelDetail.AutoSize = true;
             this.panelDetail.BackColor = System.Drawing.Color.White;
             this.panelDetail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.panelDetail.BorderRadius = 12;
             this.panelDetail.BorderThickness = 1;
             this.panelDetail.Controls.Add(this.tableLayoutPanel2);
             this.panelDetail.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelDetail.Location = new System.Drawing.Point(0, 171);
             this.panelDetail.Name = "panelDetail";
-            this.panelDetail.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelDetail.Padding = new System.Windows.Forms.Padding(4);
             this.panelDetail.Size = new System.Drawing.Size(789, 248);
             this.panelDetail.TabIndex = 12;
             // 
@@ -134,7 +135,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.tableLayoutPanel2.Controls.Add(this.txtFee, 1, 7);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 8;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
@@ -440,23 +441,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelButtons.Padding = new System.Windows.Forms.Padding(0, 4, 9, 4);
             this.panelButtons.Size = new System.Drawing.Size(789, 43);
             this.panelButtons.TabIndex = 11;
-            // 
-            // btnAttendance
-            // 
-            this.btnAttendance.BorderRadius = 5;
-            this.btnAttendance.DefaultAutoSize = true;
-            this.btnAttendance.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAttendance.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnAttendance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnAttendance.ForeColor = System.Drawing.Color.White;
-            this.btnAttendance.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.btnAttendance.Location = new System.Drawing.Point(539, 4);
-            this.btnAttendance.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
-            this.btnAttendance.Name = "btnAttendance";
-            this.btnAttendance.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.btnAttendance.Size = new System.Drawing.Size(120, 35);
-            this.btnAttendance.TabIndex = 0;
-            this.btnAttendance.Text = "Xem lịch học";
+            this.panelButtons.Visible = false;
             // 
             // btnGrades
             // 
@@ -483,7 +468,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelTableContainer.Location = new System.Drawing.Point(0, 44);
             this.panelTableContainer.Name = "panelTableContainer";
-            this.panelTableContainer.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.panelTableContainer.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.panelTableContainer.Size = new System.Drawing.Size(789, 418);
             this.panelTableContainer.TabIndex = 4;
             // 
@@ -493,18 +478,18 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.dgvClassList.AllowUserToDeleteRows = false;
             this.dgvClassList.AllowUserToResizeColumns = false;
             this.dgvClassList.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.dgvClassList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.dgvClassList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvClassList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvClassList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClassList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClassList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.dgvClassList.ColumnHeadersHeight = 32;
             this.dgvClassList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colId,
@@ -513,24 +498,24 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.colMaxStudents,
             this.colStartDate,
             this.colTeacherId});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClassList.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClassList.DefaultCellStyle = dataGridViewCellStyle32;
             this.dgvClassList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvClassList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.dgvClassList.Location = new System.Drawing.Point(0, 4);
+            this.dgvClassList.Location = new System.Drawing.Point(0, 10);
             this.dgvClassList.MultiSelect = false;
             this.dgvClassList.Name = "dgvClassList";
             this.dgvClassList.ReadOnly = true;
             this.dgvClassList.RowHeadersVisible = false;
             this.dgvClassList.RowHeadersWidth = 51;
             this.dgvClassList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvClassList.Size = new System.Drawing.Size(789, 414);
+            this.dgvClassList.Size = new System.Drawing.Size(789, 408);
             this.dgvClassList.TabIndex = 0;
             this.dgvClassList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.dgvClassList.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -549,10 +534,11 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.dgvClassList.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvClassList.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvClassList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dgvClassList.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.dgvClassList.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
             this.dgvClassList.ThemeStyle.RowsStyle.Height = 22;
             this.dgvClassList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
             this.dgvClassList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvClassList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClassList_CellClick);
             // 
             // colId
             // 
@@ -566,8 +552,8 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             this.colClassName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colClassName.DataPropertyName = "name";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colClassName.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colClassName.DefaultCellStyle = dataGridViewCellStyle27;
             this.colClassName.HeaderText = "Class Name";
             this.colClassName.MinimumWidth = 6;
             this.colClassName.Name = "colClassName";
@@ -578,8 +564,8 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             this.colCourseId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colCourseId.DataPropertyName = "course_id";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colCourseId.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colCourseId.DefaultCellStyle = dataGridViewCellStyle28;
             this.colCourseId.HeaderText = "Course Id";
             this.colCourseId.MinimumWidth = 6;
             this.colCourseId.Name = "colCourseId";
@@ -590,8 +576,8 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             this.colMaxStudents.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colMaxStudents.DataPropertyName = "max_students";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colMaxStudents.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colMaxStudents.DefaultCellStyle = dataGridViewCellStyle29;
             this.colMaxStudents.HeaderText = "Max Students";
             this.colMaxStudents.MinimumWidth = 6;
             this.colMaxStudents.Name = "colMaxStudents";
@@ -602,8 +588,8 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             this.colStartDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colStartDate.DataPropertyName = "start_date";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colStartDate.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colStartDate.DefaultCellStyle = dataGridViewCellStyle30;
             this.colStartDate.HeaderText = "Start Date";
             this.colStartDate.MinimumWidth = 6;
             this.colStartDate.Name = "colStartDate";
@@ -614,8 +600,8 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             this.colTeacherId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colTeacherId.DataPropertyName = "teacher_id";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colTeacherId.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colTeacherId.DefaultCellStyle = dataGridViewCellStyle31;
             this.colTeacherId.HeaderText = "Teacher ID";
             this.colTeacherId.MinimumWidth = 6;
             this.colTeacherId.Name = "colTeacherId";
@@ -626,6 +612,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.panelHeader.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.panelHeader.BorderRadius = 12;
             this.panelHeader.BorderThickness = 1;
             this.panelHeader.Controls.Add(this.lblHeader);
             this.panelHeader.Controls.Add(this.txtSearch);
@@ -667,6 +654,24 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtSearch.Size = new System.Drawing.Size(300, 34);
             this.txtSearch.TabIndex = 3;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_text_changed);
+            // 
+            // btnAttendance
+            // 
+            this.btnAttendance.BorderRadius = 5;
+            this.btnAttendance.DefaultAutoSize = true;
+            this.btnAttendance.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAttendance.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnAttendance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAttendance.ForeColor = System.Drawing.Color.White;
+            this.btnAttendance.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.btnAttendance.Location = new System.Drawing.Point(539, 4);
+            this.btnAttendance.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.btnAttendance.Name = "btnAttendance";
+            this.btnAttendance.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.btnAttendance.Size = new System.Drawing.Size(120, 35);
+            this.btnAttendance.TabIndex = 0;
+            this.btnAttendance.Text = "Xem lịch học";
+            this.btnAttendance.Click += new System.EventHandler(this.btnAttendance_Click);
             // 
             // Student_ClassCRUDForm
             // 
@@ -726,7 +731,7 @@ namespace prj_LTTQ_BTL.Forms.Student
         private Guna2TextBox txtLessons;
         private Guna2TextBox txtFee;
         private Guna2Panel panelButtons;
-        private Guna2Button btnAttendance;
         private Guna2Button btnGrades;
+        private Guna2Button btnAttendance;
     }
 }
