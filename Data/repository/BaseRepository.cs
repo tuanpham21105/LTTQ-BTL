@@ -46,39 +46,5 @@ namespace prj_LTTQ_BTL.Data.Repository
             command.Dispose();
             CloseConnect();
         }
-        protected DataTable ExecuteQuery(string query, SqlParameter[] parameters = null)
-        {
-            DataTable dataTable = new DataTable();
-            OpenConnect();
-
-            using (SqlCommand command = new SqlCommand(query, sqlConnect))
-            {
-                if (parameters != null)
-                    command.Parameters.AddRange(parameters);
-
-                using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-                {
-                    adapter.Fill(dataTable);
-                }
-            }
-
-            CloseConnect();
-            return dataTable;
-        }
-
-        protected int ExecuteNonQuery(string query, SqlParameter[] parameters = null)
-        {
-            OpenConnect();
-
-            using (SqlCommand command = new SqlCommand(query, sqlConnect))
-            {
-                if (parameters != null)
-                    command.Parameters.AddRange(parameters);
-
-                int rowsAffected = command.ExecuteNonQuery();
-                CloseConnect();
-                return rowsAffected;
-            }
-        }
     }
 }
