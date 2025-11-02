@@ -193,6 +193,19 @@ VALUES
 (N'student03', 'stud@789', N'student');
 GO
 
+INSERT INTO [User] (username, [password], role_name)
+VALUES
+(N'student04', 'stud@100', N'student'),
+(N'student05', 'stud@101', N'student'),
+(N'student06', 'stud@102', N'student'),
+(N'student07', 'stud@103', N'student'),
+(N'student08', 'stud@104', N'student'),
+(N'student09', 'stud@105', N'student'),
+(N'student10', 'stud@106', N'student'),
+(N'student11', 'stud@107', N'student'),
+(N'student12', 'stud@108', N'student'),
+(N'student13', 'stud@109', N'student');
+GO
 -- ==============================
 -- 3. Bảng Student
 -- ==============================
@@ -222,6 +235,63 @@ SELECT id,
     N'Hà Nội'
 FROM [User]
 WHERE role_name = N'student';
+GO
+INSERT INTO Student (id, full_name, birth_date, gender, phone_number, email, address)
+SELECT id, 
+    CASE username
+        WHEN 'student04' THEN N'Phạm Minh D'
+        WHEN 'student05' THEN N'Hoàng Thị E'
+        WHEN 'student06' THEN N'Nguyễn Văn F'
+        WHEN 'student07' THEN N'Trần Thị G'
+        WHEN 'student08' THEN N'Lê Minh H'
+        WHEN 'student09' THEN N'Phan Thị I'
+        WHEN 'student10' THEN N'Vũ Văn J'
+        WHEN 'student11' THEN N'Đỗ Thị K'
+        WHEN 'student12' THEN N'Ngô Văn L'
+        WHEN 'student13' THEN N'Bùi Thị M'
+    END AS full_name,
+    CASE username
+        WHEN 'student04' THEN '2004-01-10'
+        WHEN 'student05' THEN '2003-03-22'
+        WHEN 'student06' THEN '2004-05-15'
+        WHEN 'student07' THEN '2002-11-05'
+        WHEN 'student08' THEN '2003-08-19'
+        WHEN 'student09' THEN '2004-09-01'
+        WHEN 'student10' THEN '2002-12-20'
+        WHEN 'student11' THEN '2003-06-12'
+        WHEN 'student12' THEN '2004-07-25'
+        WHEN 'student13' THEN '2003-10-30'
+    END AS birth_date,
+    CASE username
+        WHEN 'student04' THEN N'Nam'
+        WHEN 'student05' THEN N'Nữ'
+        WHEN 'student06' THEN N'Nam'
+        WHEN 'student07' THEN N'Nữ'
+        WHEN 'student08' THEN N'Nam'
+        WHEN 'student09' THEN N'Nữ'
+        WHEN 'student10' THEN N'Nam'
+        WHEN 'student11' THEN N'Nữ'
+        WHEN 'student12' THEN N'Nam'
+        WHEN 'student13' THEN N'Nữ'
+    END AS gender,
+    CASE username
+        WHEN 'student04' THEN '0901000004'
+        WHEN 'student05' THEN '0901000005'
+        WHEN 'student06' THEN '0901000006'
+        WHEN 'student07' THEN '0901000007'
+        WHEN 'student08' THEN '0901000008'
+        WHEN 'student09' THEN '0901000009'
+        WHEN 'student10' THEN '0901000010'
+        WHEN 'student11' THEN '0901000011'
+        WHEN 'student12' THEN '0901000012'
+        WHEN 'student13' THEN '0901000013'
+    END AS phone_number,
+    username + '@gmail.com',
+    N'Hà Nội'
+FROM [User]
+WHERE role_name = N'student'
+AND username IN (N'student04', N'student05', N'student06', N'student07', N'student08', 
+                 N'student09', N'student10', N'student11', N'student12', N'student13');
 GO
 
 -- ==============================
@@ -343,3 +413,10 @@ FROM Student s
 JOIN ClassAssignment ca ON s.id = ca.student_id
 JOIN Class cl ON ca.class_id = cl.id;
 GO
+
+ SELECT full_name, birth_date, gender, phone_number, email, address
+ FROM Student
+ ORDER BY full_name
+
+ select * from [User]
+ select * from Student

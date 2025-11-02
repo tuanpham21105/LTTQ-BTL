@@ -87,5 +87,11 @@ namespace prj_LTTQ_BTL.Data.Repository
             string query = $"DELETE FROM [User] WHERE id = '{id}'";
             UpdateData(query);
         }
+        public DataRow GetUserByUsername(string username)
+        {
+            string query = $"SELECT * FROM [User] WHERE username = '{username}'";
+            DataTable result = GetDataTable(query);
+            return result.Rows.Count > 0 ? result.Rows[0] : null;
+        }
     }
 }

@@ -35,5 +35,9 @@ namespace prj_LTTQ_BTL.Services
         {
             _studentRepository.DeleteStudent(id);
         }
+        public DataTable SearchStudents(string keyword)
+        {
+            return _studentRepository.SearchStudents(keyword);
+        }
     }
 }
