@@ -1,4 +1,3 @@
-
 CREATE DATABASE LTTQ_BTL_DB;
 GO
 USE LTTQ_BTL_DB;
@@ -8,7 +7,7 @@ GO
 -- Table: Role
 -- ==============================
 CREATE TABLE Role (
-    name NVARCHAR(50) NOT NULL
+    name NVARCHAR(50) PRIMARY KEY
 );
 GO
 
@@ -21,7 +20,7 @@ CREATE TABLE [User] (
     [password] VARCHAR(255) NOT NULL,
     created_at DATETIME DEFAULT GETDATE(),
     update_at DATETIME DEFAULT GETDATE(),
-    role_name UNIQUEIDENTIFIER NOT NULL,
+    role_name NVARCHAR(50) NOT NULL,
     FOREIGN KEY (role_name) REFERENCES Role(name)
 );
 GO
