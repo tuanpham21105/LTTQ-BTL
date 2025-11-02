@@ -19,7 +19,7 @@ namespace prj_LTTQ_BTL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManagerMenuForm());
+            Application.Run(new FormLogin());
         }
     }
 }
