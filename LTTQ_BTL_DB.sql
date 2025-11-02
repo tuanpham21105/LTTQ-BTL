@@ -168,6 +168,9 @@ GO
 -- Changes
 -- ==============================
 
+ALTER TABLE Score
+ADD name nvarchar(100);
+
 select * from [User]
 -- ==============================
 -- 1. Bảng Role

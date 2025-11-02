@@ -36,9 +36,9 @@ namespace prj_LTTQ_BTL.Forms.Student
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
             this.panelGraph = new Guna.UI2.WinForms.Guna2Panel();
             this.chartScore = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -91,7 +91,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(886, 513);
+            this.panelMain.Size = new System.Drawing.Size(886, 516);
             this.panelMain.TabIndex = 0;
             // 
             // panelGraph
@@ -107,36 +107,36 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelGraph.Location = new System.Drawing.Point(0, 296);
             this.panelGraph.Name = "panelGraph";
             this.panelGraph.Padding = new System.Windows.Forms.Padding(10);
-            this.panelGraph.Size = new System.Drawing.Size(886, 217);
+            this.panelGraph.Size = new System.Drawing.Size(886, 220);
             this.panelGraph.TabIndex = 21;
             // 
             // chartScore
             // 
             this.chartScore.BackColor = System.Drawing.Color.WhiteSmoke;
-            chartArea3.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea3.AxisX.Title = "Ngày kiểm tra";
-            chartArea3.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea3.AxisY.Title = "Điểm số";
-            chartArea3.Name = "MainArea";
-            this.chartScore.ChartAreas.Add(chartArea3);
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea1.AxisX.Title = "Ngày kiểm tra";
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea1.AxisY.Title = "Điểm số";
+            chartArea1.Name = "MainArea";
+            this.chartScore.ChartAreas.Add(chartArea1);
             this.chartScore.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend";
-            this.chartScore.Legends.Add(legend3);
+            legend1.Name = "Legend";
+            this.chartScore.Legends.Add(legend1);
             this.chartScore.Location = new System.Drawing.Point(10, 10);
             this.chartScore.Name = "chartScore";
-            series3.BorderWidth = 3;
-            series3.ChartArea = "MainArea";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            series3.Legend = "Legend";
-            series3.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            series3.MarkerSize = 8;
-            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series3.Name = "Score";
-            this.chartScore.Series.Add(series3);
-            this.chartScore.Size = new System.Drawing.Size(866, 197);
+            series1.BorderWidth = 3;
+            series1.ChartArea = "MainArea";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            series1.Legend = "Legend";
+            series1.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            series1.MarkerSize = 8;
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series1.Name = "Score";
+            this.chartScore.Series.Add(series1);
+            this.chartScore.Size = new System.Drawing.Size(866, 200);
             this.chartScore.TabIndex = 0;
             // 
             // panelInfor
@@ -433,19 +433,13 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblHeader.TabIndex = 4;
             this.lblHeader.Text = "Bảng điểm học viên";
             this.lblHeader.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-
-            chartScore.ChartAreas[0].AxisX.LabelStyle.Format = "dd/MM/yyyy";
-            chartScore.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Days;
-            chartScore.ChartAreas[0].AxisX.Interval = 1;
-            chartScore.ChartAreas[0].AxisX.MajorGrid.LineColor = Color.LightGray;
-            chartScore.ChartAreas[0].AxisX.LabelStyle.Angle = -45;
             // 
             // Student_ScoreInforForm
             // 
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.ClientSize = new System.Drawing.Size(886, 513);
+            this.ClientSize = new System.Drawing.Size(886, 516);
             this.Controls.Add(this.panelMain);
             this.Name = "Student_ScoreInforForm";
             this.Text = "Student_ScoreInforForm";
