@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace prj_LTTQ_BTL.Data
+namespace prj_LTTQ_BTL.Data.Repository
 {
-    internal class DataProcessor
+    internal class BaseRepository
     {
-        string strConnect = "Server=DESKTOP-4L48BIF\\SQLEXPRESS; DataBase=LTTQ_BTL_DB;Integrated Security=true;Trusted_Connection=True;TrustServerCertificate=True;";
-        SqlConnection sqlConnect = null;
-
+        public string strConnect = "Server=DESKTOP-4L48BIF\\SQLEXPRESS;" +
+                "DataBase=LTTQ_BTL_DB;Integrated Security=true;Trusted_Connection=True;TrustServerCertificate=True;";
+        public SqlConnection sqlConnect = null;
         public void OpenConnect()
         {
             sqlConnect = new SqlConnection(strConnect);
@@ -36,6 +36,7 @@ namespace prj_LTTQ_BTL.Data
             CloseConnect();
             return dt;
         }
+
 
         public void UpdateData(string cmd)
         {
