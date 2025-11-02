@@ -75,5 +75,16 @@ namespace prj_LTTQ_BTL.Data.repository
             string query = $"DELETE FROM Student WHERE id = '{id}'";
             UpdateData(query);
         }
+        public DataTable SearchStudents(string keyword)
+        {
+            string query = $@"
+        SELECT * 
+        FROM Student 
+        WHERE full_name LIKE '%{keyword}%' 
+           OR phone_number LIKE '%{keyword}%' 
+           OR email LIKE '%{keyword}%'
+        ORDER BY full_name";
+            return GetDataTable(query);
+        }
     }
 }
