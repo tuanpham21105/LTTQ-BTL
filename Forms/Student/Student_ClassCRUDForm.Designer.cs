@@ -93,7 +93,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Margin = new System.Windows.Forms.Padding(0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(693, 498);
+            this.panelMain.Size = new System.Drawing.Size(693, 494);
             this.panelMain.TabIndex = 0;
             // 
             // panelDetail
@@ -105,7 +105,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelDetail.BorderThickness = 1;
             this.panelDetail.Controls.Add(this.tableLayoutPanel2);
             this.panelDetail.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelDetail.Location = new System.Drawing.Point(0, 207);
+            this.panelDetail.Location = new System.Drawing.Point(0, 203);
             this.panelDetail.Name = "panelDetail";
             this.panelDetail.Padding = new System.Windows.Forms.Padding(4);
             this.panelDetail.Size = new System.Drawing.Size(693, 248);
@@ -431,12 +431,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // panelButtons
             // 
-            this.panelButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.panelButtons.BackColor = System.Drawing.Color.Transparent;
             this.panelButtons.Controls.Add(this.btnAttendance);
             this.panelButtons.Controls.Add(this.btnGrades);
             this.panelButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelButtons.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.panelButtons.Location = new System.Drawing.Point(0, 455);
+            this.panelButtons.Location = new System.Drawing.Point(0, 451);
             this.panelButtons.Name = "panelButtons";
             this.panelButtons.Padding = new System.Windows.Forms.Padding(0, 4, 9, 4);
             this.panelButtons.Size = new System.Drawing.Size(693, 43);
@@ -487,7 +487,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelTableContainer.Location = new System.Drawing.Point(0, 44);
             this.panelTableContainer.Name = "panelTableContainer";
             this.panelTableContainer.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.panelTableContainer.Size = new System.Drawing.Size(693, 454);
+            this.panelTableContainer.Size = new System.Drawing.Size(693, 450);
             this.panelTableContainer.TabIndex = 4;
             // 
             // dgvClassList
@@ -533,7 +533,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.dgvClassList.RowHeadersVisible = false;
             this.dgvClassList.RowHeadersWidth = 51;
             this.dgvClassList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvClassList.Size = new System.Drawing.Size(693, 444);
+            this.dgvClassList.Size = new System.Drawing.Size(693, 440);
             this.dgvClassList.TabIndex = 0;
             this.dgvClassList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.dgvClassList.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -678,7 +678,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 498);
+            this.ClientSize = new System.Drawing.Size(693, 494);
             this.Controls.Add(this.panelMain);
             this.Name = "Student_ClassCRUDForm";
             this.Text = "Student_ClassCRUDForm";
