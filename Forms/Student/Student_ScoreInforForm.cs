@@ -45,7 +45,7 @@ namespace prj_LTTQ_BTL.Forms.Student
                 return;
             }
 
-            DataTable bangdiem = dataProcessor.GetDataTable($"select * from Score where student_id = '{GlobalData.Id}' and class_id = CONVERT(uniqueidentifier,'{comboboxClasses.SelectedValue.ToString()}')");
+            DataTable bangdiem = dataProcessor.GetDataTable($"select * from Score where student_id = '{GlobalData.Id}' and class_id = CONVERT(uniqueidentifier,'{comboboxClasses.SelectedValue.ToString()}') order by created_date");
 
             if (bangdiem.Rows.Count == 0 )
             {
@@ -63,6 +63,13 @@ namespace prj_LTTQ_BTL.Forms.Student
                     DateTime ngay = Convert.ToDateTime(row["created_date"]);
                     double diem = Convert.ToDouble(row["score"]);
                     chartScore.Series["Score"].Points.AddXY(ngay, diem);
+
+                    var area = chartScore.ChartAreas[0];
+                    area.AxisX.LabelStyle.Format = "dd/MM/yyyy";
+                    area.AxisX.IntervalType = DateTimeIntervalType.Days;
+                    area.AxisX.Interval = 1;
+                    area.AxisX.LabelStyle.Angle = -45;
+                    area.AxisX.MajorGrid.LineColor = Color.LightGray;
                 }
 
                 chartScore.Update();

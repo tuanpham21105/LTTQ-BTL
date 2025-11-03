@@ -557,6 +557,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.dgvClassList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
             this.dgvClassList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgvClassList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClassList_CellClick);
+            this.dgvClassList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClassList_CellContentClick);
             // 
             // colId
             // 

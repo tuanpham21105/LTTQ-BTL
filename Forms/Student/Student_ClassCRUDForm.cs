@@ -182,5 +182,10 @@ namespace prj_LTTQ_BTL.Forms.Student
         {
 
         }
+
+        private void dgvClassList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
