@@ -59,11 +59,6 @@ namespace prj_LTTQ_BTL.Forms.Manager
             SetStudentScoreBoard();
         }
 
-        private void txtSearchScore_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void comboboxClasses_SelectedIndexChanged(object sender, EventArgs e)
         {
             SetStudentScoreBoard();
@@ -95,6 +90,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
         private void SetStudentScoreBoard()
         {
+            if (dgvStudent.CurrentRow == null)
+            {
+                return;
+            }
+
             string studentId = dgvStudent.CurrentRow.Cells["id"].Value.ToString();
             string classId = comboboxClasses.SelectedValue.ToString();
 
@@ -131,6 +131,14 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
         public void SetScoreDetails()
         {
+            if (panelWarning.Visible || panelWarning1.Visible)
+            {
+                txtTenBaiKT.Text = "";
+                txtDiemSo.Text = "";
+                dateNgayKT.Value = DateTime.Now;
+                return;
+            }
+
             DataGridViewRow row = dgvExam.CurrentRow;
             if (row == null) return;
             txtTenBaiKT.Text = row.Cells["name"].Value.ToString();
@@ -149,6 +157,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             }
             else
             {
+                FormUtils.ClearChartPoint(chartScore);
                 double avgScore = (double)bangdiem.AsEnumerable().Average(row => row.Field<decimal>("score"));
                 labelAverage.Text = avgScore.ToString();
                 labelNumbers.Text = bangdiem.Rows.Count.ToString();
@@ -183,6 +192,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            if (panelWarning.Visible)
+            {
+                MessageBox.Show("Học viên không học lớp này");
+                return;
+            }
+
             btnThem.Visible = false;
             btnXoa.Visible = false;
             btnLuu.Visible = true;
@@ -235,13 +250,19 @@ namespace prj_LTTQ_BTL.Forms.Manager
             string studentId = dgvStudent.CurrentRow.Cells["id"].Value.ToString();
             string classId = comboboxClasses.SelectedValue.ToString();
 
-            dataProcessor.UpdateData($"insert into Score values('{studentId}', '{classId}', {txtDiemSo.Text}, '{dateNgayKT.Value.Year.ToString() + "-" + dateNgayKT.Value.Month.ToString() + "-" + dateNgayKT.Value.Day.ToString() + " " + dateNgayKT.Value.Hour.ToString() + ":" + dateNgayKT.Value.Minute.ToString() + ":" + dateNgayKT.Value.Second.ToString()}', N'{txtTenBaiKT.Text}')");
+            dataProcessor.UpdateData($"insert into Score values('{studentId}', '{classId}', {txtDiemSo.Text}, '{dateNgayKT.Value.Year.ToString() + "-" + dateNgayKT.Value.Month.ToString() + "-" + dateNgayKT.Value.Day.ToString() + " " + dateNgayKT.Value.Hour.ToString() + ":" + dateNgayKT.Value.Minute.ToString() + ":00"}', N'{txtTenBaiKT.Text}')");
 
             SetStudentScoreBoard();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtTenBaiKT.Text) || string.IsNullOrEmpty(txtDiemSo.Text))
+            {
+                MessageBox.Show("Điểm bài kiểm tra không hợp lệ");
+                return;
+            }
+
             if (MessageBox.Show("Bạn có muốn xóa điểm của học viên?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.No) return;
 
             string studentId = dgvStudent.CurrentRow.Cells["id"].Value.ToString();
@@ -251,7 +272,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 $"student_id = '{studentId}' and " +
                 $"class_id = '{classId}' and " +
                 $"score = {txtDiemSo.Text} and " +
-                $"created_date = '{dateNgayKT.Value.Year.ToString() + "-" + dateNgayKT.Value.Month.ToString() + "-" + dateNgayKT.Value.Day.ToString()} + ' and " +
+                $"created_date = '{dateNgayKT.Value.Year.ToString() + "-" + dateNgayKT.Value.Month.ToString() + "-" + dateNgayKT.Value.Day.ToString() + " " + dateNgayKT.Value.Hour.ToString() + ":" + dateNgayKT.Value.Minute.ToString() + ":00"}' and " +
                 $"name = N'{txtTenBaiKT.Text}'");
 
             SetStudentScoreBoard();
@@ -271,6 +292,15 @@ namespace prj_LTTQ_BTL.Forms.Manager
             txtTenBaiKT.Text = "";
             txtDiemSo.Text = "";
             dateNgayKT.Value = DateTime.Now;
+        }
+
+        private void btnRefreshGraph_Click(object sender, EventArgs e)
+        {
+            string studentId = dgvStudent.CurrentRow.Cells["id"].Value.ToString();
+            string classId = comboboxClasses.SelectedValue.ToString();
+            DataTable bangdiem = dataProcessor.GetDataTable($"select * from Score where student_id = '{studentId}' and class_id = '{classId}' order by created_date");
+
+            SetScoreChart(bangdiem);
         }
     }
 }

@@ -107,7 +107,7 @@ namespace prj_LTTQ_BTL.Forms.Student
                 case "Học phí":
                     break;
                 case "Test":
-                    activeForm = new Manager_StudentScoreCRUDForm();
+                    activeForm = new Manager_StudentAttendanceCRUDForm();
                     break;
             }
 

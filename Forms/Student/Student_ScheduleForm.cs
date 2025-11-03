@@ -186,7 +186,7 @@ namespace prj_LTTQ_BTL.Forms.Student
                 foreach (DataRow row in day.Rows)
                 {
                     string lophoc = dataProcessor.GetDataTable($"select name from Class where id = '{row["class_id"].ToString()}'").Rows[0]["name"].ToString();
-                    DataTable diemdanh = dataProcessor.GetDataTable($"select status, note from Attendance at where at.schedule_id = '{row["id"].ToString()}'");
+                    DataTable diemdanh = dataProcessor.GetDataTable($"select status, note from Attendance at where at.schedule_id = '{row["id"].ToString()}' and at.student_id = '{GlobalData.Id}'");
                     string trangthai;
                     string note;
                     if (diemdanh.Rows.Count > 0)

@@ -66,5 +66,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
         {
 
         }
+
+        private void guna2Button12_Click(object sender, EventArgs e)
+        {
+            FormUtils.OpenChildForm(panelMain, new Manager_StudentScoreCRUDForm());
+        }
     }
 }

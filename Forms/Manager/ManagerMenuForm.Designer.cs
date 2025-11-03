@@ -129,6 +129,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Button12.TabIndex = 18;
             this.guna2Button12.Text = "Danh sách học viên";
             this.guna2Button12.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button12.Click += new System.EventHandler(this.guna2Button12_Click);
             // 
             // guna2Button13
             // 
