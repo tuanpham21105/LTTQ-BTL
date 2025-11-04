@@ -109,6 +109,7 @@
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Padding = new System.Windows.Forms.Padding(10);
             this.guna2Panel1.Size = new System.Drawing.Size(1448, 1279);
@@ -472,6 +473,38 @@
             this.btnCancel.Text = "Bỏ qua";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // lblPageInfo
+            // 
+            this.lblPageInfo.AutoSize = true;
+            this.lblPageInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblPageInfo.Location = new System.Drawing.Point(465, 17);
+            this.lblPageInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPageInfo.Name = "lblPageInfo";
+            this.lblPageInfo.Size = new System.Drawing.Size(35, 13);
+            this.lblPageInfo.TabIndex = 10;
+            this.lblPageInfo.Text = "label8";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCancel.Enabled = false;
+            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.btnCancel.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(372, 0);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(93, 30);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "Bỏ qua";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // btnSave
             // 
             this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -485,9 +518,10 @@
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.btnSave.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(420, 0);
+            this.btnSave.Location = new System.Drawing.Point(279, 0);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(140, 46);
+            this.btnSave.Size = new System.Drawing.Size(93, 30);
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Lưu";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -505,9 +539,10 @@
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.btnDelete.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(280, 0);
+            this.btnDelete.Location = new System.Drawing.Point(186, 0);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(140, 46);
+            this.btnDelete.Size = new System.Drawing.Size(93, 30);
             this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -525,9 +560,10 @@
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.btnEdit.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(140, 0);
+            this.btnEdit.Location = new System.Drawing.Point(93, 0);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(140, 46);
+            this.btnEdit.Size = new System.Drawing.Size(93, 30);
             this.btnEdit.TabIndex = 6;
             this.btnEdit.Text = "Sửa ";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -545,8 +581,9 @@
             this.btnCreate.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.btnCreate.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnCreate.Location = new System.Drawing.Point(0, 0);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(140, 46);
+            this.btnCreate.Size = new System.Drawing.Size(93, 30);
             this.btnCreate.TabIndex = 5;
             this.btnCreate.Text = "Thêm";
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
@@ -565,7 +602,7 @@
             this.btnPrev.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnPrev.Location = new System.Drawing.Point(1168, 0);
             this.btnPrev.Name = "btnPrev";
-            this.btnPrev.Size = new System.Drawing.Size(130, 46);
+            this.btnPrev.Size = new System.Drawing.Size(87, 30);
             this.btnPrev.TabIndex = 4;
             this.btnPrev.Text = "Trước";
             this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
@@ -584,7 +621,7 @@
             this.btnNext.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnNext.Location = new System.Drawing.Point(1298, 0);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(130, 46);
+            this.btnNext.Size = new System.Drawing.Size(87, 30);
             this.btnNext.TabIndex = 3;
             this.btnNext.Text = "Tiếp";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
@@ -739,9 +776,10 @@
             this.cmbGender.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbGender.ItemHeight = 30;
-            this.cmbGender.Location = new System.Drawing.Point(0, 10);
+            this.cmbGender.Location = new System.Drawing.Point(0, 6);
+            this.cmbGender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(393, 36);
+            this.cmbGender.Size = new System.Drawing.Size(263, 36);
             this.cmbGender.TabIndex = 0;
             // 
             // guna2Panel9
@@ -756,10 +794,11 @@
             // 
             // Manager_StudentCRUDForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1448, 1279);
             this.Controls.Add(this.guna2Panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Manager_StudentCRUDForm";
             this.Text = "Manager_StudentCRUDFormTrue";
             this.Load += new System.EventHandler(this.Manager_StudentCRUDFormTrue_Load);

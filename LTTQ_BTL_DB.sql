@@ -1,4 +1,4 @@
-﻿CREATE DATABASE LTTQ_BTL_DB;
+CREATE DATABASE LTTQ_BTL_DB;
 GO
 USE LTTQ_BTL_DB;
 GO
@@ -167,6 +167,9 @@ GO
 -- ==============================
 -- Changes
 -- ==============================
+
+ALTER TABLE Score
+ADD name nvarchar(100);
 
 select * from [User]
 -- ==============================
