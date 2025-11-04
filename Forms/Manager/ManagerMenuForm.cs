@@ -45,9 +45,21 @@ namespace prj_LTTQ_BTL.Forms.Manager
             {
                 SidebarBtn_Click(btnCourse, "Danh sách khóa học");
             };
+            btnStudentScore.Click += (s, e) =>
+            {
+                SidebarBtn_Click(btnStudentScore, "Danh sách điểm học viên");
+            };
+            btnStudentAttendance.Click += (s, e) =>
+            {
+                SidebarBtn_Click(btnStudentAttendance, "Danh sách điểm danh học viên");
+            };
+            btnClass.Click += (s, e) =>
+            {
+                SidebarBtn_Click(btnClass, "Danh sách lớp học");
+            };
             btnStudent.Click += (s, e) =>
             {
-                TogglePanelStudent(); // Gọi phương thức để xử lý mở/đóng panelStudent
+                TogglePanelStudent(); 
             };
 
         }
@@ -75,6 +87,15 @@ namespace prj_LTTQ_BTL.Forms.Manager
                     break;
                 case "Danh sách khóa học":
                     activeForm = new Manager_CourseCRUDForm();
+                    break;
+                case "Danh sách điểm học viên":
+                    activeForm = new Manager_StudentScoreCRUDForm();
+                    break;
+                case "Danh sách điểm danh học viên":
+                    activeForm = new Manager_StudentAttendanceCRUDForm();
+                    break;
+                case "Danh sách lớp học":
+                    activeForm = new Manager_ClassCRUDForm();
                     break;
             }
 
@@ -108,6 +129,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
         }
 
         private void btnStudent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStudentScore_Click(object sender, EventArgs e)
         {
 
         }

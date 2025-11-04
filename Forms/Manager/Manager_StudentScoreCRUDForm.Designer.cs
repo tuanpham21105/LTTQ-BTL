@@ -139,9 +139,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.lblHeader.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblHeader.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.lblHeader.Location = new System.Drawing.Point(20, 5);
+            this.lblHeader.Location = new System.Drawing.Point(30, 8);
+            this.lblHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(252, 34);
+            this.lblHeader.Size = new System.Drawing.Size(378, 52);
             this.lblHeader.TabIndex = 4;
             this.lblHeader.Text = "Quản lý điểm số học viên";
             this.lblHeader.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -153,9 +154,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.label1.Location = new System.Drawing.Point(20, 5);
+            this.label1.Location = new System.Drawing.Point(30, 8);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 34);
+            this.label1.Size = new System.Drawing.Size(186, 52);
             this.label1.TabIndex = 4;
             this.label1.Text = "Bộ lọc học viên";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -173,9 +175,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Padding = new System.Windows.Forms.Padding(20, 5, 5, 5);
-            this.guna2Panel2.Size = new System.Drawing.Size(783, 44);
+            this.guna2Panel2.Padding = new System.Windows.Forms.Padding(30, 8, 8, 8);
+            this.guna2Panel2.Size = new System.Drawing.Size(1174, 68);
             this.guna2Panel2.TabIndex = 12;
             // 
             // txtSearchStudent
@@ -186,12 +189,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.txtSearchStudent.DefaultText = "";
             this.txtSearchStudent.Dock = System.Windows.Forms.DockStyle.Right;
             this.txtSearchStudent.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearchStudent.Location = new System.Drawing.Point(478, 5);
-            this.txtSearchStudent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearchStudent.Location = new System.Drawing.Point(716, 8);
+            this.txtSearchStudent.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtSearchStudent.Name = "txtSearchStudent";
             this.txtSearchStudent.PlaceholderText = "Search students...";
             this.txtSearchStudent.SelectedText = "";
-            this.txtSearchStudent.Size = new System.Drawing.Size(300, 34);
+            this.txtSearchStudent.Size = new System.Drawing.Size(450, 52);
             this.txtSearchStudent.TabIndex = 5;
             this.txtSearchStudent.TextChanged += new System.EventHandler(this.txtSearchStudent_TextChanged);
             // 
@@ -205,9 +208,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.FillColor = System.Drawing.Color.White;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Padding = new System.Windows.Forms.Padding(20, 5, 5, 5);
-            this.panelHeader.Size = new System.Drawing.Size(783, 44);
+            this.panelHeader.Padding = new System.Windows.Forms.Padding(30, 8, 8, 8);
+            this.panelHeader.Size = new System.Drawing.Size(1174, 68);
             this.panelHeader.TabIndex = 12;
             // 
             // guna2Panel3
@@ -222,10 +226,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Panel3.CustomizableEdges.TopLeft = false;
             this.guna2Panel3.CustomizableEdges.TopRight = false;
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 98);
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 151);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Padding = new System.Windows.Forms.Padding(10);
-            this.guna2Panel3.Size = new System.Drawing.Size(783, 293);
+            this.guna2Panel3.Padding = new System.Windows.Forms.Padding(15);
+            this.guna2Panel3.Size = new System.Drawing.Size(1174, 450);
             this.guna2Panel3.TabIndex = 18;
             // 
             // tableLayoutPanel1
@@ -237,11 +242,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.tableLayoutPanel1.Controls.Add(this.comboboxClasses, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 241);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(15, 370);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(763, 42);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1144, 65);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // comboboxClasses
@@ -256,9 +262,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.comboboxClasses.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboboxClasses.ForeColor = System.Drawing.Color.Black;
             this.comboboxClasses.ItemHeight = 30;
-            this.comboboxClasses.Location = new System.Drawing.Point(231, 3);
+            this.comboboxClasses.Location = new System.Drawing.Point(347, 5);
+            this.comboboxClasses.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboboxClasses.Name = "comboboxClasses";
-            this.comboboxClasses.Size = new System.Drawing.Size(529, 36);
+            this.comboboxClasses.Size = new System.Drawing.Size(793, 36);
             this.comboboxClasses.TabIndex = 0;
             this.comboboxClasses.SelectedIndexChanged += new System.EventHandler(this.comboboxClasses_SelectedIndexChanged);
             // 
@@ -267,9 +274,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label3.Location = new System.Drawing.Point(3, 3);
+            this.label3.Location = new System.Drawing.Point(4, 5);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(222, 36);
+            this.label3.Size = new System.Drawing.Size(335, 55);
             this.label3.TabIndex = 1;
             this.label3.Text = "Chọn lớp học";
             // 
@@ -277,10 +285,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             // 
             this.guna2Panel6.Controls.Add(this.dgvStudent);
             this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel6.Location = new System.Drawing.Point(10, 10);
+            this.guna2Panel6.Location = new System.Drawing.Point(15, 15);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.guna2Panel6.Size = new System.Drawing.Size(763, 231);
+            this.guna2Panel6.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
+            this.guna2Panel6.Size = new System.Drawing.Size(1144, 355);
             this.guna2Panel6.TabIndex = 2;
             // 
             // dgvStudent
@@ -322,12 +331,13 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.dgvStudent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvStudent.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.dgvStudent.Location = new System.Drawing.Point(0, 0);
+            this.dgvStudent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvStudent.MultiSelect = false;
             this.dgvStudent.Name = "dgvStudent";
             this.dgvStudent.ReadOnly = true;
             this.dgvStudent.RowHeadersVisible = false;
             this.dgvStudent.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvStudent.Size = new System.Drawing.Size(763, 221);
+            this.dgvStudent.Size = new System.Drawing.Size(1144, 340);
             this.dgvStudent.TabIndex = 1;
             this.dgvStudent.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.dgvStudent.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -362,7 +372,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.id.Name = "id";
             this.id.ReadOnly = true;
             this.id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.id.Width = 98;
+            this.id.Width = 142;
             // 
             // full_name
             // 
@@ -389,7 +399,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.birth_date.Name = "birth_date";
             this.birth_date.ReadOnly = true;
             this.birth_date.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.birth_date.Width = 96;
+            this.birth_date.Width = 139;
             // 
             // gender
             // 
@@ -403,7 +413,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.gender.Name = "gender";
             this.gender.ReadOnly = true;
             this.gender.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.gender.Width = 78;
+            this.gender.Width = 114;
             // 
             // phone_number
             // 
@@ -417,7 +427,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.phone_number.Name = "phone_number";
             this.phone_number.ReadOnly = true;
             this.phone_number.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.phone_number.Width = 127;
+            this.phone_number.Width = 187;
             // 
             // email
             // 
@@ -450,9 +460,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Panel1.CustomizableEdges.BottomLeft = false;
             this.guna2Panel1.CustomizableEdges.BottomRight = false;
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 54);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 83);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(783, 44);
+            this.guna2Panel1.Size = new System.Drawing.Size(1174, 68);
             this.guna2Panel1.TabIndex = 17;
             // 
             // panelHeaderGap
@@ -461,9 +472,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelHeaderGap.Controls.Add(this.panelHeader);
             this.panelHeaderGap.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeaderGap.Location = new System.Drawing.Point(0, 0);
+            this.panelHeaderGap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelHeaderGap.Name = "panelHeaderGap";
-            this.panelHeaderGap.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.panelHeaderGap.Size = new System.Drawing.Size(783, 54);
+            this.panelHeaderGap.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
+            this.panelHeaderGap.Size = new System.Drawing.Size(1174, 83);
             this.panelHeaderGap.TabIndex = 16;
             // 
             // panelMain
@@ -480,8 +492,9 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelMain.Controls.Add(this.panelHeaderGap);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(800, 450);
+            this.panelMain.Size = new System.Drawing.Size(1200, 692);
             this.panelMain.TabIndex = 1;
             // 
             // panelGraph
@@ -494,10 +507,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelGraph.CustomizableEdges.TopLeft = false;
             this.panelGraph.CustomizableEdges.TopRight = false;
             this.panelGraph.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelGraph.Location = new System.Drawing.Point(0, 1124);
+            this.panelGraph.Location = new System.Drawing.Point(0, 1739);
+            this.panelGraph.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelGraph.Name = "panelGraph";
-            this.panelGraph.Padding = new System.Windows.Forms.Padding(10);
-            this.panelGraph.Size = new System.Drawing.Size(783, 361);
+            this.panelGraph.Padding = new System.Windows.Forms.Padding(15);
+            this.panelGraph.Size = new System.Drawing.Size(1174, 555);
             this.panelGraph.TabIndex = 26;
             // 
             // chartScore
@@ -514,7 +528,8 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.chartScore.Dock = System.Windows.Forms.DockStyle.Fill;
             legend1.Name = "Legend";
             this.chartScore.Legends.Add(legend1);
-            this.chartScore.Location = new System.Drawing.Point(10, 10);
+            this.chartScore.Location = new System.Drawing.Point(15, 15);
+            this.chartScore.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chartScore.Name = "chartScore";
             series1.BorderWidth = 3;
             series1.ChartArea = "MainArea";
@@ -526,7 +541,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
             series1.Name = "Score";
             this.chartScore.Series.Add(series1);
-            this.chartScore.Size = new System.Drawing.Size(763, 341);
+            this.chartScore.Size = new System.Drawing.Size(1144, 525);
             this.chartScore.TabIndex = 0;
             // 
             // panelInfor
@@ -538,11 +553,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelInfor.Controls.Add(this.guna2Panel10);
             this.panelInfor.Controls.Add(this.tableLayoutPanel2);
             this.panelInfor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelInfor.Location = new System.Drawing.Point(0, 995);
-            this.panelInfor.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.panelInfor.Location = new System.Drawing.Point(0, 1541);
+            this.panelInfor.Margin = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.panelInfor.Name = "panelInfor";
-            this.panelInfor.Padding = new System.Windows.Forms.Padding(10);
-            this.panelInfor.Size = new System.Drawing.Size(783, 129);
+            this.panelInfor.Padding = new System.Windows.Forms.Padding(15);
+            this.panelInfor.Size = new System.Drawing.Size(1174, 198);
             this.panelInfor.TabIndex = 25;
             // 
             // guna2Panel10
@@ -551,10 +566,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Panel10.Controls.Add(this.btnRefreshGraph);
             this.guna2Panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel10.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Panel10.Location = new System.Drawing.Point(10, 72);
+            this.guna2Panel10.Location = new System.Drawing.Point(15, 111);
+            this.guna2Panel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel10.Name = "guna2Panel10";
-            this.guna2Panel10.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.guna2Panel10.Size = new System.Drawing.Size(763, 47);
+            this.guna2Panel10.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
+            this.guna2Panel10.Size = new System.Drawing.Size(1144, 72);
             this.guna2Panel10.TabIndex = 16;
             this.guna2Panel10.Visible = false;
             // 
@@ -567,11 +583,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnRefreshGraph.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnRefreshGraph.ForeColor = System.Drawing.Color.White;
             this.btnRefreshGraph.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.btnRefreshGraph.Location = new System.Drawing.Point(620, 10);
-            this.btnRefreshGraph.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.btnRefreshGraph.Location = new System.Drawing.Point(942, 15);
+            this.btnRefreshGraph.Margin = new System.Windows.Forms.Padding(4, 5, 15, 5);
             this.btnRefreshGraph.Name = "btnRefreshGraph";
-            this.btnRefreshGraph.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.btnRefreshGraph.Size = new System.Drawing.Size(143, 37);
+            this.btnRefreshGraph.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.btnRefreshGraph.Size = new System.Drawing.Size(202, 57);
             this.btnRefreshGraph.TabIndex = 5;
             this.btnRefreshGraph.Text = "Làm mới biểu đồ";
             this.btnRefreshGraph.Click += new System.EventHandler(this.btnRefreshGraph_Click);
@@ -590,12 +606,13 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.tableLayoutPanel2.Controls.Add(this.lblAverage, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblProgress, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(10, 10);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(15, 15);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(763, 62);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1144, 96);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // labelTotalNumbers
@@ -603,9 +620,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.labelTotalNumbers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelTotalNumbers.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.labelTotalNumbers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.labelTotalNumbers.Location = new System.Drawing.Point(134, 34);
+            this.labelTotalNumbers.Location = new System.Drawing.Point(282, 53);
+            this.labelTotalNumbers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.labelTotalNumbers.Name = "labelTotalNumbers";
-            this.labelTotalNumbers.Size = new System.Drawing.Size(626, 25);
+            this.labelTotalNumbers.Size = new System.Drawing.Size(858, 38);
             this.labelTotalNumbers.TabIndex = 5;
             this.labelTotalNumbers.Text = "Bài kiểm tra ";
             // 
@@ -614,9 +632,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.label6.Location = new System.Drawing.Point(134, 3);
+            this.label6.Location = new System.Drawing.Point(282, 5);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(626, 25);
+            this.label6.Size = new System.Drawing.Size(858, 38);
             this.label6.TabIndex = 4;
             this.label6.Text = "/ 10  Điểm";
             // 
@@ -626,9 +645,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.labelNumbers.Dock = System.Windows.Forms.DockStyle.Right;
             this.labelNumbers.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.labelNumbers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.labelNumbers.Location = new System.Drawing.Point(120, 34);
+            this.labelNumbers.Location = new System.Drawing.Point(262, 53);
+            this.labelNumbers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.labelNumbers.Name = "labelNumbers";
-            this.labelNumbers.Size = new System.Drawing.Size(8, 25);
+            this.labelNumbers.Size = new System.Drawing.Size(12, 38);
             this.labelNumbers.TabIndex = 3;
             this.labelNumbers.Text = "0";
             this.labelNumbers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -639,9 +659,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.labelAverage.Dock = System.Windows.Forms.DockStyle.Right;
             this.labelAverage.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.labelAverage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.labelAverage.Location = new System.Drawing.Point(120, 3);
+            this.labelAverage.Location = new System.Drawing.Point(262, 5);
+            this.labelAverage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.labelAverage.Name = "labelAverage";
-            this.labelAverage.Size = new System.Drawing.Size(8, 25);
+            this.labelAverage.Size = new System.Drawing.Size(12, 38);
             this.labelAverage.TabIndex = 2;
             this.labelAverage.Text = "0";
             this.labelAverage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -652,9 +673,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.lblAverage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblAverage.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblAverage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.lblAverage.Location = new System.Drawing.Point(3, 3);
+            this.lblAverage.Location = new System.Drawing.Point(4, 5);
+            this.lblAverage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblAverage.Name = "lblAverage";
-            this.lblAverage.Size = new System.Drawing.Size(111, 25);
+            this.lblAverage.Size = new System.Drawing.Size(167, 38);
             this.lblAverage.TabIndex = 1;
             this.lblAverage.Text = "Điểm trung bình: ";
             // 
@@ -663,9 +685,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.lblProgress.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblProgress.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblProgress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.lblProgress.Location = new System.Drawing.Point(3, 34);
+            this.lblProgress.Location = new System.Drawing.Point(4, 53);
+            this.lblProgress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblProgress.Name = "lblProgress";
-            this.lblProgress.Size = new System.Drawing.Size(111, 25);
+            this.lblProgress.Size = new System.Drawing.Size(250, 38);
             this.lblProgress.TabIndex = 0;
             this.lblProgress.Text = "Đã làm: ";
             // 
@@ -674,10 +697,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Panel4.AutoSize = true;
             this.guna2Panel4.Controls.Add(this.guna2Panel5);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel4.Location = new System.Drawing.Point(0, 941);
+            this.guna2Panel4.Location = new System.Drawing.Point(0, 1458);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.guna2Panel4.Size = new System.Drawing.Size(783, 54);
+            this.guna2Panel4.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
+            this.guna2Panel4.Size = new System.Drawing.Size(1174, 83);
             this.guna2Panel4.TabIndex = 24;
             // 
             // guna2Panel5
@@ -691,10 +715,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Panel5.CustomizableEdges.BottomRight = false;
             this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel5.FillColor = System.Drawing.Color.White;
-            this.guna2Panel5.Location = new System.Drawing.Point(0, 10);
+            this.guna2Panel5.Location = new System.Drawing.Point(0, 15);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Padding = new System.Windows.Forms.Padding(20, 5, 5, 5);
-            this.guna2Panel5.Size = new System.Drawing.Size(783, 44);
+            this.guna2Panel5.Padding = new System.Windows.Forms.Padding(30, 8, 8, 8);
+            this.guna2Panel5.Size = new System.Drawing.Size(1174, 68);
             this.guna2Panel5.TabIndex = 12;
             // 
             // label2
@@ -704,9 +729,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.label2.Dock = System.Windows.Forms.DockStyle.Left;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.label2.Location = new System.Drawing.Point(20, 5);
+            this.label2.Location = new System.Drawing.Point(30, 8);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(252, 34);
+            this.label2.Size = new System.Drawing.Size(377, 52);
             this.label2.TabIndex = 4;
             this.label2.Text = "Thống kê điểm số của học viên";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -726,10 +752,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Panel9.CustomizableEdges.TopLeft = false;
             this.guna2Panel9.CustomizableEdges.TopRight = false;
             this.guna2Panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel9.Location = new System.Drawing.Point(0, 445);
+            this.guna2Panel9.Location = new System.Drawing.Point(0, 684);
+            this.guna2Panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel9.Name = "guna2Panel9";
-            this.guna2Panel9.Padding = new System.Windows.Forms.Padding(10);
-            this.guna2Panel9.Size = new System.Drawing.Size(783, 496);
+            this.guna2Panel9.Padding = new System.Windows.Forms.Padding(15);
+            this.guna2Panel9.Size = new System.Drawing.Size(1174, 774);
             this.guna2Panel9.TabIndex = 23;
             // 
             // tableLayoutPanel3
@@ -745,13 +772,14 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.tableLayoutPanel3.Controls.Add(this.txtTenBaiKT, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.dateNgayKT, 1, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(10, 317);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(15, 484);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(763, 126);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1144, 209);
             this.tableLayoutPanel3.TabIndex = 18;
             // 
             // label8
@@ -759,9 +787,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label8.Location = new System.Drawing.Point(3, 87);
+            this.label8.Location = new System.Drawing.Point(4, 149);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(222, 36);
+            this.label8.Size = new System.Drawing.Size(335, 55);
             this.label8.TabIndex = 5;
             this.label8.Text = "Ngày kiểm tra";
             // 
@@ -779,11 +808,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.txtDiemSo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiemSo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDiemSo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiemSo.Location = new System.Drawing.Point(231, 45);
+            this.txtDiemSo.Location = new System.Drawing.Point(349, 80);
+            this.txtDiemSo.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtDiemSo.Name = "txtDiemSo";
             this.txtDiemSo.PlaceholderText = "";
             this.txtDiemSo.SelectedText = "";
-            this.txtDiemSo.Size = new System.Drawing.Size(529, 36);
+            this.txtDiemSo.Size = new System.Drawing.Size(789, 56);
             this.txtDiemSo.TabIndex = 4;
             // 
             // label7
@@ -791,9 +821,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label7.Location = new System.Drawing.Point(3, 45);
+            this.label7.Location = new System.Drawing.Point(4, 77);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(222, 36);
+            this.label7.Size = new System.Drawing.Size(335, 62);
             this.label7.TabIndex = 3;
             this.label7.Text = "Điểm số";
             // 
@@ -802,9 +833,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label5.Location = new System.Drawing.Point(3, 3);
+            this.label5.Location = new System.Drawing.Point(4, 5);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(222, 36);
+            this.label5.Size = new System.Drawing.Size(335, 62);
             this.label5.TabIndex = 1;
             this.label5.Text = "Tên bài kiểm tra";
             // 
@@ -822,11 +854,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.txtTenBaiKT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenBaiKT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTenBaiKT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenBaiKT.Location = new System.Drawing.Point(231, 3);
+            this.txtTenBaiKT.Location = new System.Drawing.Point(349, 8);
+            this.txtTenBaiKT.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtTenBaiKT.Name = "txtTenBaiKT";
             this.txtTenBaiKT.PlaceholderText = "";
             this.txtTenBaiKT.SelectedText = "";
-            this.txtTenBaiKT.Size = new System.Drawing.Size(529, 36);
+            this.txtTenBaiKT.Size = new System.Drawing.Size(789, 56);
             this.txtTenBaiKT.TabIndex = 2;
             // 
             // dateNgayKT
@@ -839,12 +872,13 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.dateNgayKT.FillColor = System.Drawing.Color.White;
             this.dateNgayKT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateNgayKT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateNgayKT.Location = new System.Drawing.Point(231, 87);
+            this.dateNgayKT.Location = new System.Drawing.Point(347, 149);
+            this.dateNgayKT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateNgayKT.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateNgayKT.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateNgayKT.Name = "dateNgayKT";
             this.dateNgayKT.ShowUpDown = true;
-            this.dateNgayKT.Size = new System.Drawing.Size(529, 36);
+            this.dateNgayKT.Size = new System.Drawing.Size(793, 55);
             this.dateNgayKT.TabIndex = 6;
             this.dateNgayKT.Value = new System.DateTime(2025, 11, 3, 0, 0, 0, 0);
             // 
@@ -852,10 +886,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             // 
             this.panelDgvScores.Controls.Add(this.dgvExam);
             this.panelDgvScores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDgvScores.Location = new System.Drawing.Point(10, 86);
+            this.panelDgvScores.Location = new System.Drawing.Point(15, 129);
+            this.panelDgvScores.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelDgvScores.Name = "panelDgvScores";
-            this.panelDgvScores.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.panelDgvScores.Size = new System.Drawing.Size(763, 231);
+            this.panelDgvScores.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
+            this.panelDgvScores.Size = new System.Drawing.Size(1144, 355);
             this.panelDgvScores.TabIndex = 17;
             // 
             // dgvExam
@@ -891,14 +926,15 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.dgvExam.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvExam.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvExam.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.dgvExam.Location = new System.Drawing.Point(0, 10);
+            this.dgvExam.Location = new System.Drawing.Point(0, 15);
+            this.dgvExam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvExam.MultiSelect = false;
             this.dgvExam.Name = "dgvExam";
             this.dgvExam.ReadOnly = true;
             this.dgvExam.RowHeadersVisible = false;
             this.dgvExam.RowHeadersWidth = 51;
             this.dgvExam.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvExam.Size = new System.Drawing.Size(763, 211);
+            this.dgvExam.Size = new System.Drawing.Size(1144, 325);
             this.dgvExam.TabIndex = 1;
             this.dgvExam.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.dgvExam.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -927,6 +963,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             // 
             this.exam_name.DataPropertyName = "name";
             this.exam_name.HeaderText = "Exam Name";
+            this.exam_name.MinimumWidth = 8;
             this.exam_name.Name = "exam_name";
             this.exam_name.ReadOnly = true;
             // 
@@ -934,6 +971,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             // 
             this.exam_score.DataPropertyName = "score";
             this.exam_score.HeaderText = "Exam Score";
+            this.exam_score.MinimumWidth = 8;
             this.exam_score.Name = "exam_score";
             this.exam_score.ReadOnly = true;
             // 
@@ -941,6 +979,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             // 
             this.date.DataPropertyName = "created_date";
             this.date.HeaderText = "Exam Date";
+            this.date.MinimumWidth = 8;
             this.date.Name = "date";
             this.date.ReadOnly = true;
             // 
@@ -953,10 +992,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelWarning1.Controls.Add(this.label10);
             this.panelWarning1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelWarning1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panelWarning1.Location = new System.Drawing.Point(10, 48);
+            this.panelWarning1.Location = new System.Drawing.Point(15, 72);
+            this.panelWarning1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelWarning1.Name = "panelWarning1";
-            this.panelWarning1.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panelWarning1.Size = new System.Drawing.Size(763, 38);
+            this.panelWarning1.Padding = new System.Windows.Forms.Padding(30, 15, 30, 15);
+            this.panelWarning1.Size = new System.Drawing.Size(1144, 57);
             this.panelWarning1.TabIndex = 16;
             this.panelWarning1.Visible = false;
             // 
@@ -967,9 +1007,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.label10.Dock = System.Windows.Forms.DockStyle.Top;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(184)))), ((int)(((byte)(0)))));
-            this.label10.Location = new System.Drawing.Point(20, 10);
+            this.label10.Location = new System.Drawing.Point(30, 15);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(216, 18);
+            this.label10.Size = new System.Drawing.Size(324, 27);
             this.label10.TabIndex = 4;
             this.label10.Text = "❗ Học viên chưa có điểm trong lớp";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -983,10 +1024,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelWarning.Controls.Add(this.label9);
             this.panelWarning.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelWarning.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panelWarning.Location = new System.Drawing.Point(10, 10);
+            this.panelWarning.Location = new System.Drawing.Point(15, 15);
+            this.panelWarning.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelWarning.Name = "panelWarning";
-            this.panelWarning.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panelWarning.Size = new System.Drawing.Size(763, 38);
+            this.panelWarning.Padding = new System.Windows.Forms.Padding(30, 15, 30, 15);
+            this.panelWarning.Size = new System.Drawing.Size(1144, 57);
             this.panelWarning.TabIndex = 13;
             this.panelWarning.Visible = false;
             // 
@@ -997,9 +1039,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.label9.Dock = System.Windows.Forms.DockStyle.Top;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.label9.Location = new System.Drawing.Point(20, 10);
+            this.label9.Location = new System.Drawing.Point(30, 15);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(284, 18);
+            this.label9.Size = new System.Drawing.Size(425, 27);
             this.label9.TabIndex = 4;
             this.label9.Text = "❌ Không có thông tin của học viên trong lớp";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1013,10 +1056,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelButtons.Controls.Add(this.btnHuy);
             this.panelButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelButtons.FillColor = System.Drawing.Color.White;
-            this.panelButtons.Location = new System.Drawing.Point(10, 443);
+            this.panelButtons.Location = new System.Drawing.Point(15, 693);
+            this.panelButtons.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelButtons.Name = "panelButtons";
-            this.panelButtons.Padding = new System.Windows.Forms.Padding(0, 4, 9, 4);
-            this.panelButtons.Size = new System.Drawing.Size(763, 43);
+            this.panelButtons.Padding = new System.Windows.Forms.Padding(0, 6, 14, 6);
+            this.panelButtons.Size = new System.Drawing.Size(1144, 66);
             this.panelButtons.TabIndex = 12;
             // 
             // btnThem
@@ -1028,11 +1072,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.btnThem.Location = new System.Drawing.Point(405, 4);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.btnThem.Location = new System.Drawing.Point(658, 6);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(15, 5, 4, 5);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.btnThem.Size = new System.Drawing.Size(111, 35);
+            this.btnThem.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.btnThem.Size = new System.Drawing.Size(154, 54);
             this.btnThem.TabIndex = 13;
             this.btnThem.Text = "Thêm điểm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -1046,11 +1090,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.btnXoa.Location = new System.Drawing.Point(516, 4);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.btnXoa.Location = new System.Drawing.Point(812, 6);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 5, 15, 5);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.btnXoa.Size = new System.Drawing.Size(101, 35);
+            this.btnXoa.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.btnXoa.Size = new System.Drawing.Size(138, 54);
             this.btnXoa.TabIndex = 12;
             this.btnXoa.Text = "Xóa điểm";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -1064,11 +1108,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnLuu.ForeColor = System.Drawing.Color.White;
             this.btnLuu.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.btnLuu.Location = new System.Drawing.Point(617, 4);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.btnLuu.Location = new System.Drawing.Point(950, 6);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 5, 15, 5);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.btnLuu.Size = new System.Drawing.Size(68, 35);
+            this.btnLuu.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.btnLuu.Size = new System.Drawing.Size(89, 54);
             this.btnLuu.TabIndex = 11;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Visible = false;
@@ -1083,11 +1127,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnHuy.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnHuy.ForeColor = System.Drawing.Color.White;
             this.btnHuy.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.btnHuy.Location = new System.Drawing.Point(685, 4);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.btnHuy.Location = new System.Drawing.Point(1039, 6);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 5, 15, 5);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.btnHuy.Size = new System.Drawing.Size(69, 35);
+            this.btnHuy.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.btnHuy.Size = new System.Drawing.Size(91, 54);
             this.btnHuy.TabIndex = 5;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.Visible = false;
@@ -1098,10 +1142,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Panel7.AutoSize = true;
             this.guna2Panel7.Controls.Add(this.guna2Panel8);
             this.guna2Panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel7.Location = new System.Drawing.Point(0, 391);
+            this.guna2Panel7.Location = new System.Drawing.Point(0, 601);
+            this.guna2Panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.guna2Panel7.Size = new System.Drawing.Size(783, 54);
+            this.guna2Panel7.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
+            this.guna2Panel7.Size = new System.Drawing.Size(1174, 83);
             this.guna2Panel7.TabIndex = 22;
             // 
             // guna2Panel8
@@ -1115,10 +1160,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Panel8.CustomizableEdges.BottomRight = false;
             this.guna2Panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel8.FillColor = System.Drawing.Color.White;
-            this.guna2Panel8.Location = new System.Drawing.Point(0, 10);
+            this.guna2Panel8.Location = new System.Drawing.Point(0, 15);
+            this.guna2Panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel8.Name = "guna2Panel8";
-            this.guna2Panel8.Padding = new System.Windows.Forms.Padding(20, 5, 5, 5);
-            this.guna2Panel8.Size = new System.Drawing.Size(783, 44);
+            this.guna2Panel8.Padding = new System.Windows.Forms.Padding(30, 8, 8, 8);
+            this.guna2Panel8.Size = new System.Drawing.Size(1174, 68);
             this.guna2Panel8.TabIndex = 12;
             // 
             // label4
@@ -1128,19 +1174,21 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.label4.Dock = System.Windows.Forms.DockStyle.Left;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.label4.Location = new System.Drawing.Point(20, 5);
+            this.label4.Location = new System.Drawing.Point(30, 8);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(248, 34);
+            this.label4.Size = new System.Drawing.Size(372, 52);
             this.label4.TabIndex = 4;
             this.label4.Text = "Cập nhật điểm số của học viên";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Manager_StudentScoreCRUDForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.panelMain);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Manager_StudentScoreCRUDForm";
             this.Text = "Manager_StudentScoreCRUDFOrm";
             this.Load += new System.EventHandler(this.Manager_StudentScoreCRUDForm_Load);
