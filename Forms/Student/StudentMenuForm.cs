@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using AntdUI.Svg;
 using Guna.UI2.WinForms;
 using prj_LTTQ_BTL.Data;
+using prj_LTTQ_BTL.Forms.Manager;
 using prj_LTTQ_BTL.Services;
 using prj_LTTQ_BTL.Utils;
 
@@ -59,6 +60,10 @@ namespace prj_LTTQ_BTL.Forms.Student
             {
                 SidebarBtn_Click(btnHP);
             };
+            btnTest.Click += (s, e) =>
+            {
+                SidebarBtn_Click(btnTest);
+            };
         }
 
         private void StudentMenuForm_Load(object sender, EventArgs e)
@@ -100,6 +105,9 @@ namespace prj_LTTQ_BTL.Forms.Student
                     activeForm = new Student_ScoreInforForm();
                     break;
                 case "Học phí":
+                    break;
+                case "Test":
+                    activeForm = new Manager_ClassCRUDForm();
                     break;
             }
 

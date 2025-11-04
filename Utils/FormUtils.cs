@@ -16,7 +16,7 @@ namespace prj_LTTQ_BTL.Utils
         {
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Top;
+            childForm.Dock = DockStyle.Fill;
             parentPanel.Controls.Add(childForm);
             parentPanel.Tag = childForm;
             childForm.BringToFront();
