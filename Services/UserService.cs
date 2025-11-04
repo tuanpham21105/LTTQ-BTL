@@ -17,7 +17,6 @@ namespace prj_LTTQ_BTL.Services
             _userRepository = new UserRepository();
         }
 
-        // Tạo người dùng mới
         public void CreateUser(Guid id, string username, string password, string roleName)
         {
             _userRepository.CreateUser(id, username, password, roleName);

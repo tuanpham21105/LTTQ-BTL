@@ -23,6 +23,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
         private readonly Color textSecondary = Color.FromArgb(85, 85, 85);
         private readonly Color dangerColor = Color.FromArgb(232, 17, 35);
         private readonly Color borderColor = Color.FromArgb(204, 204, 204);
+        private bool isPanelStudentVisible = false;
         private Form activeForm = null;
 
         public ManagerMenuForm()
@@ -36,11 +37,27 @@ namespace prj_LTTQ_BTL.Forms.Manager
             {
                 SidebarBtn_Click(btnStudentList, "Danh sách học viên");
             };
+            btnTeacher.Click += (s, e) =>
+            {
+                SidebarBtn_Click(btnTeacher, "Danh sách giáo viên");
+            };
+            btnCourse.Click += (s, e) =>
+            {
+                SidebarBtn_Click(btnCourse, "Danh sách khóa học");
+            };
+            btnStudent.Click += (s, e) =>
+            {
+                TogglePanelStudent(); // Gọi phương thức để xử lý mở/đóng panelStudent
+            };
+
         }
         private void SidebarBtn_Click(Guna2Button btn, string formType)
         {
            
             btnStudentList.BackColor = Color.Transparent;
+            btnTeacher.BackColor = Color.Transparent;
+            btnCourse.BackColor = Color.Transparent;
+
             btn.BackColor = secondaryColor;
 
             if (activeForm != null)
@@ -53,6 +70,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 case "Danh sách học viên":
                     activeForm = new Manager_StudentCRUDForm();
                     break;
+                case "Danh sách giáo viên":
+                    activeForm = new Manager_TeacherCRUDForm();
+                    break;
+                case "Danh sách khóa học":
+                    activeForm = new Manager_CourseCRUDForm();
+                    break;
             }
 
             FormUtils.OpenChildForm(panelMain, activeForm);
@@ -61,15 +84,32 @@ namespace prj_LTTQ_BTL.Forms.Manager
         {
 
         }
-
+        private void TogglePanelStudent()
+        {
+            if (isPanelStudentVisible)
+            {
+                panelStudent.Visible = false;
+                isPanelStudentVisible = false;
+            }
+            else
+            {
+                panelStudent.Visible = true;
+                isPanelStudentVisible = true;
+            }
+        }
         private void panelHeader_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void guna2Button12_Click(object sender, EventArgs e)
+        private void panelMain_Paint(object sender, PaintEventArgs e)
         {
-            FormUtils.OpenChildForm(panelMain, new Manager_StudentScoreCRUDForm());
+
+        }
+
+        private void btnStudent_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
