@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.SuspendLayout();
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Padding = new System.Windows.Forms.Padding(10);
+            this.guna2Panel1.Size = new System.Drawing.Size(1211, 940);
+            this.guna2Panel1.TabIndex = 0;
+            // 
+            // Manager_ClassCRUDForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1211, 940);
+            this.Controls.Add(this.guna2Panel1);
+            this.Name = "Manager_ClassCRUDForm";
             this.Text = "Manager_ClassCRUDFOrm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

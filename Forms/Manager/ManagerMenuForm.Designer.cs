@@ -37,13 +37,17 @@ namespace prj_LTTQ_BTL.Forms.Manager
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerMenuForm));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panelSideBar = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnAccount = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button16 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnClass = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button12 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button13 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCourse = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnTeacher = new Guna.UI2.WinForms.Guna2Button();
+            this.panelStudent = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button14 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
@@ -60,9 +64,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
             this.panelSideBar.SuspendLayout();
-            this.guna2Panel3.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
+            this.panelStudent.SuspendLayout();
             this.panelBrand.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBrand)).BeginInit();
             this.panelHeader.SuspendLayout();
@@ -79,11 +81,16 @@ namespace prj_LTTQ_BTL.Forms.Manager
             // 
             this.panelSideBar.AutoScroll = true;
             this.panelSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.panelSideBar.Controls.Add(this.btnAccount);
+            this.panelSideBar.Controls.Add(this.guna2Button16);
+            this.panelSideBar.Controls.Add(this.guna2Button11);
+            this.panelSideBar.Controls.Add(this.guna2Button9);
+            this.panelSideBar.Controls.Add(this.btnClass);
             this.panelSideBar.Controls.Add(this.guna2Panel3);
-            this.panelSideBar.Controls.Add(this.guna2Button13);
+            this.panelSideBar.Controls.Add(this.btnCourse);
             this.panelSideBar.Controls.Add(this.guna2Panel2);
-            this.panelSideBar.Controls.Add(this.guna2Button8);
-            this.panelSideBar.Controls.Add(this.guna2Panel1);
+            this.panelSideBar.Controls.Add(this.btnTeacher);
+            this.panelSideBar.Controls.Add(this.panelStudent);
             this.panelSideBar.Controls.Add(this.btnStudent);
             this.panelSideBar.Controls.Add(this.btnDashboard);
             this.panelSideBar.Controls.Add(this.panelBrand);
@@ -97,127 +104,216 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelSideBar.Size = new System.Drawing.Size(347, 960);
             this.panelSideBar.TabIndex = 2;
             // 
+            // btnAccount
+            // 
+            this.btnAccount.BorderRadius = 8;
+            this.btnAccount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAccount.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAccount.FillColor = System.Drawing.Color.Transparent;
+            this.btnAccount.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnAccount.ForeColor = System.Drawing.Color.White;
+            this.btnAccount.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.btnAccount.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
+            this.btnAccount.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAccount.Location = new System.Drawing.Point(19, 895);
+            this.btnAccount.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.btnAccount.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.btnAccount.Size = new System.Drawing.Size(309, 62);
+            this.btnAccount.TabIndex = 31;
+            this.btnAccount.Text = "Học viên";
+            this.btnAccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // guna2Button16
+            // 
+            this.guna2Button16.BorderRadius = 8;
+            this.guna2Button16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Button16.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button16.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.guna2Button16.ForeColor = System.Drawing.Color.White;
+            this.guna2Button16.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.guna2Button16.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button16.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button16.Image")));
+            this.guna2Button16.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button16.Location = new System.Drawing.Point(19, 833);
+            this.guna2Button16.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.guna2Button16.Name = "guna2Button16";
+            this.guna2Button16.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.guna2Button16.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.guna2Button16.Size = new System.Drawing.Size(309, 62);
+            this.guna2Button16.TabIndex = 30;
+            this.guna2Button16.Text = "Quản lý tài khoản";
+            this.guna2Button16.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // guna2Button11
+            // 
+            this.guna2Button11.BorderRadius = 8;
+            this.guna2Button11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Button11.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.guna2Button11.ForeColor = System.Drawing.Color.White;
+            this.guna2Button11.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.guna2Button11.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button11.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button11.Image")));
+            this.guna2Button11.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button11.Location = new System.Drawing.Point(19, 771);
+            this.guna2Button11.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.guna2Button11.Name = "guna2Button11";
+            this.guna2Button11.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.guna2Button11.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.guna2Button11.Size = new System.Drawing.Size(309, 62);
+            this.guna2Button11.TabIndex = 28;
+            this.guna2Button11.Text = "Tài chính";
+            this.guna2Button11.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // guna2Button9
+            // 
+            this.guna2Button9.BorderRadius = 8;
+            this.guna2Button9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Button9.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.guna2Button9.ForeColor = System.Drawing.Color.White;
+            this.guna2Button9.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.guna2Button9.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button9.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button9.Image")));
+            this.guna2Button9.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button9.Location = new System.Drawing.Point(19, 709);
+            this.guna2Button9.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.guna2Button9.Name = "guna2Button9";
+            this.guna2Button9.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.guna2Button9.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.guna2Button9.Size = new System.Drawing.Size(309, 62);
+            this.guna2Button9.TabIndex = 26;
+            this.guna2Button9.Text = "Lịch học";
+            this.guna2Button9.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnClass
+            // 
+            this.btnClass.BorderRadius = 8;
+            this.btnClass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClass.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnClass.FillColor = System.Drawing.Color.Transparent;
+            this.btnClass.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnClass.ForeColor = System.Drawing.Color.White;
+            this.btnClass.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.btnClass.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnClass.Image = ((System.Drawing.Image)(resources.GetObject("btnClass.Image")));
+            this.btnClass.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnClass.Location = new System.Drawing.Point(19, 647);
+            this.btnClass.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.btnClass.Name = "btnClass";
+            this.btnClass.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.btnClass.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.btnClass.Size = new System.Drawing.Size(309, 62);
+            this.btnClass.TabIndex = 24;
+            this.btnClass.Text = "Lớp học";
+            this.btnClass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // guna2Panel3
             // 
             this.guna2Panel3.AutoSize = true;
-            this.guna2Panel3.Controls.Add(this.guna2Button12);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.Location = new System.Drawing.Point(19, 647);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.guna2Panel3.Size = new System.Drawing.Size(309, 50);
+            this.guna2Panel3.Size = new System.Drawing.Size(309, 0);
             this.guna2Panel3.TabIndex = 22;
             // 
-            // guna2Button12
+            // btnCourse
             // 
-            this.guna2Button12.BorderRadius = 8;
-            this.guna2Button12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button12.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2Button12.ForeColor = System.Drawing.Color.White;
-            this.guna2Button12.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.guna2Button12.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button12.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button12.Location = new System.Drawing.Point(20, 0);
-            this.guna2Button12.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
-            this.guna2Button12.Name = "guna2Button12";
-            this.guna2Button12.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
-            this.guna2Button12.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.guna2Button12.Size = new System.Drawing.Size(289, 50);
-            this.guna2Button12.TabIndex = 18;
-            this.guna2Button12.Text = "Danh sách học viên";
-            this.guna2Button12.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // guna2Button13
-            // 
-            this.guna2Button13.BorderRadius = 8;
-            this.guna2Button13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button13.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button13.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2Button13.ForeColor = System.Drawing.Color.White;
-            this.guna2Button13.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.guna2Button13.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button13.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button13.Image")));
-            this.guna2Button13.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button13.Location = new System.Drawing.Point(19, 585);
-            this.guna2Button13.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
-            this.guna2Button13.Name = "guna2Button13";
-            this.guna2Button13.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
-            this.guna2Button13.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.guna2Button13.Size = new System.Drawing.Size(309, 62);
-            this.guna2Button13.TabIndex = 21;
-            this.guna2Button13.Text = "Học viên";
-            this.guna2Button13.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCourse.BorderRadius = 8;
+            this.btnCourse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCourse.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCourse.FillColor = System.Drawing.Color.Transparent;
+            this.btnCourse.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnCourse.ForeColor = System.Drawing.Color.White;
+            this.btnCourse.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.btnCourse.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnCourse.Image = ((System.Drawing.Image)(resources.GetObject("btnCourse.Image")));
+            this.btnCourse.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCourse.Location = new System.Drawing.Point(19, 585);
+            this.btnCourse.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.btnCourse.Name = "btnCourse";
+            this.btnCourse.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.btnCourse.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.btnCourse.Size = new System.Drawing.Size(309, 62);
+            this.btnCourse.TabIndex = 21;
+            this.btnCourse.Text = "Khóa học";
+            this.btnCourse.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.AutoSize = true;
-            this.guna2Panel2.Controls.Add(this.guna2Button7);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(19, 535);
+            this.guna2Panel2.Location = new System.Drawing.Point(19, 585);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.guna2Panel2.Size = new System.Drawing.Size(309, 50);
+            this.guna2Panel2.Size = new System.Drawing.Size(309, 0);
             this.guna2Panel2.TabIndex = 20;
             // 
-            // guna2Button7
+            // btnTeacher
             // 
-            this.guna2Button7.BorderRadius = 8;
-            this.guna2Button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button7.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2Button7.ForeColor = System.Drawing.Color.White;
-            this.guna2Button7.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.guna2Button7.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button7.Location = new System.Drawing.Point(20, 0);
-            this.guna2Button7.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
-            this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
-            this.guna2Button7.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.guna2Button7.Size = new System.Drawing.Size(289, 50);
-            this.guna2Button7.TabIndex = 18;
-            this.guna2Button7.Text = "Danh sách học viên";
-            this.guna2Button7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnTeacher.BorderRadius = 8;
+            this.btnTeacher.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTeacher.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTeacher.FillColor = System.Drawing.Color.Transparent;
+            this.btnTeacher.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnTeacher.ForeColor = System.Drawing.Color.White;
+            this.btnTeacher.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.btnTeacher.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnTeacher.Image = ((System.Drawing.Image)(resources.GetObject("btnTeacher.Image")));
+            this.btnTeacher.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnTeacher.Location = new System.Drawing.Point(19, 523);
+            this.btnTeacher.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.btnTeacher.Name = "btnTeacher";
+            this.btnTeacher.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.btnTeacher.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.btnTeacher.Size = new System.Drawing.Size(309, 62);
+            this.btnTeacher.TabIndex = 19;
+            this.btnTeacher.Text = "Giáo viên";
+            this.btnTeacher.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // guna2Button8
+            // panelStudent
             // 
-            this.guna2Button8.BorderRadius = 8;
-            this.guna2Button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button8.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2Button8.ForeColor = System.Drawing.Color.White;
-            this.guna2Button8.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.guna2Button8.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button8.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button8.Image")));
-            this.guna2Button8.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button8.Location = new System.Drawing.Point(19, 473);
-            this.guna2Button8.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
-            this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
-            this.guna2Button8.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.guna2Button8.Size = new System.Drawing.Size(309, 62);
-            this.guna2Button8.TabIndex = 19;
-            this.guna2Button8.Text = "Học viên";
-            this.guna2Button8.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.panelStudent.AutoSize = true;
+            this.panelStudent.Controls.Add(this.guna2Button14);
+            this.panelStudent.Controls.Add(this.guna2Button4);
+            this.panelStudent.Controls.Add(this.guna2Button3);
+            this.panelStudent.Controls.Add(this.guna2Button2);
+            this.panelStudent.Controls.Add(this.btnStudentList);
+            this.panelStudent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelStudent.Location = new System.Drawing.Point(19, 273);
+            this.panelStudent.Name = "panelStudent";
+            this.panelStudent.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.panelStudent.Size = new System.Drawing.Size(309, 250);
+            this.panelStudent.TabIndex = 18;
+            this.panelStudent.Visible = false;
             // 
-            // guna2Panel1
+            // guna2Button14
             // 
-            this.guna2Panel1.AutoSize = true;
-            this.guna2Panel1.Controls.Add(this.guna2Button4);
-            this.guna2Panel1.Controls.Add(this.guna2Button3);
-            this.guna2Panel1.Controls.Add(this.guna2Button2);
-            this.guna2Panel1.Controls.Add(this.btnStudentList);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(19, 273);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.guna2Panel1.Size = new System.Drawing.Size(309, 200);
-            this.guna2Panel1.TabIndex = 18;
+            this.guna2Button14.BorderRadius = 8;
+            this.guna2Button14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Button14.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button14.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.guna2Button14.ForeColor = System.Drawing.Color.White;
+            this.guna2Button14.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.guna2Button14.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button14.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button14.Location = new System.Drawing.Point(20, 200);
+            this.guna2Button14.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.guna2Button14.Name = "guna2Button14";
+            this.guna2Button14.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.guna2Button14.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.guna2Button14.Size = new System.Drawing.Size(289, 50);
+            this.guna2Button14.TabIndex = 22;
+            this.guna2Button14.Text = "Điểm số học viên";
+            this.guna2Button14.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // guna2Button4
             // 
@@ -237,7 +333,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Button4.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
             this.guna2Button4.Size = new System.Drawing.Size(289, 50);
             this.guna2Button4.TabIndex = 21;
-            this.guna2Button4.Text = "Danh sách học viên";
+            this.guna2Button4.Text = "Ghi danh trong buổi";
             this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // guna2Button3
@@ -258,7 +354,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Button3.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
             this.guna2Button3.Size = new System.Drawing.Size(289, 50);
             this.guna2Button3.TabIndex = 20;
-            this.guna2Button3.Text = "Danh sách học viên";
+            this.guna2Button3.Text = "Ghi danh trong lớp";
             this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // guna2Button2
@@ -279,7 +375,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Button2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
             this.guna2Button2.Size = new System.Drawing.Size(289, 50);
             this.guna2Button2.TabIndex = 19;
-            this.guna2Button2.Text = "Danh sách học viên";
+            this.guna2Button2.Text = "Ghi danh trong lớp";
             this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnStudentList
@@ -324,6 +420,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnStudent.TabIndex = 17;
             this.btnStudent.Text = "Học viên";
             this.btnStudent.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
             // 
             // btnDashboard
             // 
@@ -468,7 +565,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             // 
             // panelMain
             // 
-            this.panelMain.AutoScroll = true;
+            this.panelMain.AutoSize = true;
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(347, 38);
@@ -477,6 +574,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelMain.Padding = new System.Windows.Forms.Padding(12, 15, 12, 15);
             this.panelMain.Size = new System.Drawing.Size(1190, 922);
             this.panelMain.TabIndex = 0;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // ManagerMenuForm
             // 
@@ -495,9 +593,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.Load += new System.EventHandler(this.ManagerMenuForm_Load);
             this.panelSideBar.ResumeLayout(false);
             this.panelSideBar.PerformLayout();
-            this.guna2Panel3.ResumeLayout(false);
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel1.ResumeLayout(false);
+            this.panelStudent.ResumeLayout(false);
             this.panelBrand.ResumeLayout(false);
             this.panelBrand.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBrand)).EndInit();
@@ -523,16 +619,20 @@ namespace prj_LTTQ_BTL.Forms.Manager
         private System.Windows.Forms.Label lblBrand;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private Guna.UI2.WinForms.Guna2Button btnStudent;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel panelStudent;
         private Guna.UI2.WinForms.Guna2Button btnStudentList;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button12;
-        private Guna.UI2.WinForms.Guna2Button guna2Button13;
+        private Guna.UI2.WinForms.Guna2Button btnCourse;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button7;
-        private Guna.UI2.WinForms.Guna2Button guna2Button8;
+        private Guna.UI2.WinForms.Guna2Button btnTeacher;
+        private Guna.UI2.WinForms.Guna2Button btnClass;
+        private Guna.UI2.WinForms.Guna2Button guna2Button11;
+        private Guna.UI2.WinForms.Guna2Button guna2Button9;
+        private Guna.UI2.WinForms.Guna2Button guna2Button14;
+        private Guna.UI2.WinForms.Guna2Button guna2Button16;
+        private Guna.UI2.WinForms.Guna2Button btnAccount;
     }
 }

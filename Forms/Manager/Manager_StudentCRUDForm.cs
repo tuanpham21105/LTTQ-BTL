@@ -89,6 +89,35 @@ namespace prj_LTTQ_BTL.Forms.Manager
             DataTable students = _studentService.GetAllStudents(_currentPage, PageSize);
             dgvStudents.DataSource = students;
             int totalRecords = GetTotalStudentCount();
+            if (dgvStudents.Columns.Contains("id"))
+            {
+                dgvStudents.Columns["id"].Visible = false;
+            }
+            if (dgvStudents.Columns.Contains("full_name"))
+            {
+                dgvStudents.Columns["full_name"].HeaderText = "Họ và Tên";
+            }
+            if (dgvStudents.Columns.Contains("birth_date"))
+            {
+                dgvStudents.Columns["birth_date"].HeaderText = "Ngày Sinh";
+            }
+            if (dgvStudents.Columns.Contains("gender"))
+            {
+                dgvStudents.Columns["gender"].HeaderText = "Giới Tính";
+            }
+            if (dgvStudents.Columns.Contains("phone_number"))
+            {
+                dgvStudents.Columns["phone_number"].HeaderText = "Số Điện Thoại";
+            }
+            if (dgvStudents.Columns.Contains("email"))
+            {
+                dgvStudents.Columns["email"].HeaderText = "Email";
+            }
+            if (dgvStudents.Columns.Contains("address"))
+            {
+                dgvStudents.Columns["address"].HeaderText = "Địa Chỉ";
+            }
+
             _totalPages = (int)Math.Ceiling((double)totalRecords / PageSize);
 
             lblPageInfo.Text = $"Trang {_currentPage} / {_totalPages}";
@@ -274,6 +303,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             lblPageInfo.Text = $"Kết quả tìm kiếm:{filteredStudents.Rows.Count}";
             btnPrev.Enabled = false;
             btnNext.Enabled = false;
+        }
+
+        private void dgvStudents_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
