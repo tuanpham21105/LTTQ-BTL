@@ -2,6 +2,7 @@
 using prj_LTTQ_BTL.Forms.Manager;
 using prj_LTTQ_BTL.Forms.Student;
 using prj_LTTQ_BTL.Services;
+using prj_LTTQ_BTL.Teacher;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,6 +51,10 @@ namespace prj_LTTQ_BTL.Forms
                     if (user.Rows[0]["role"].ToString().Equals("student", StringComparison.OrdinalIgnoreCase))
                     {
                         nextForm = new StudentMenuForm();
+                    }
+                    else if (user.Rows[0]["role"].ToString().Equals("teacher", StringComparison.OrdinalIgnoreCase))
+                    {
+                        nextForm = new TeacherMenuForm();
                     }
                     else if (user.Rows[0]["role"].ToString().Equals("admin", StringComparison.OrdinalIgnoreCase))
                     {
