@@ -39,18 +39,19 @@ namespace prj_LTTQ_BTL.Forms
             }
             try
             {
-                string role = _authService.AuthenticateUser(username, password);
+                DataTable user = _authService.AuthenticateUser(username, password);
 
-                if (role != null)
+                if (user != null)
                 {
-                    GlobalData.Role = role;
-                    MessageBox.Show($"Welcome, {username}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    GlobalData.Role = user.Rows[0]["role"].ToString();
+                    GlobalData.Id = user.Rows[0]["id"].ToString();
+                    //MessageBox.Show($"Welcome, {username}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Form nextForm;
-                    if (role.Equals("student", StringComparison.OrdinalIgnoreCase))
+                    if (user.Rows[0]["role"].ToString().Equals("student", StringComparison.OrdinalIgnoreCase))
                     {
                         nextForm = new StudentMenuForm();
                     }
-                    else if (role.Equals("admin", StringComparison.OrdinalIgnoreCase))
+                    else if (user.Rows[0]["role"].ToString().Equals("admin", StringComparison.OrdinalIgnoreCase))
                     {
                         nextForm = new ManagerMenuForm();
                     }

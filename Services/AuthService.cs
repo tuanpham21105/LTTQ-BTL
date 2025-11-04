@@ -1,6 +1,7 @@
 ﻿using prj_LTTQ_BTL.Data.Repository;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,14 +15,14 @@ namespace prj_LTTQ_BTL.Services
         {
             _userRepository = new UserRepository();
         }
-        public string AuthenticateUser(string username, string password)
+        public DataTable AuthenticateUser(string username, string password)
         {
             try
             {
-                var user = _userRepository.GetUserByUsernameAndPassword(username, password);
+                DataTable user = _userRepository.GetUserByUsernameAndPassword(username, password);
                 if (user != null)
                 {
-                    return user["role"].ToString();
+                    return user;
                 }
                 return null;
             }

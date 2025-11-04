@@ -10,13 +10,13 @@ namespace prj_LTTQ_BTL.Data.Repository
 {
     internal class UserRepository: BaseRepository
     {
-        public DataRow GetUserByUsernameAndPassword(string username, string password)
+        public DataTable GetUserByUsernameAndPassword(string username, string password)
         {
             //username = username.Replace("'", "''");
             //password = password.Replace("'", "''");
-            string query = $"SELECT username, r.name as role from [User] u join [Role] r on u.role_name = r.name WHERE username = '{username}' AND [password] = '{password}'";
+            string query = $"SELECT id, username, r.name as role from [User] u join [Role] r on u.role_name = r.name WHERE username = '{username}' AND [password] = '{password}'";
             DataTable result = GetDataTable(query);
-            return result.Rows.Count > 0 ? result.Rows[0] : null;
+            return result.Rows.Count > 0 ? result : null;
         }
         // Create a new user
         public void CreateUser(Guid id, string username, string password, string roleName)

@@ -357,9 +357,6 @@
     <EmbeddedResource Include="Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Manager\Manager_ClassCRUDForm.resx">
-      <DependentUpon>Manager_ClassCRUDForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Manager\Manager_StudentAttendanceCRUDForm.resx">
       <DependentUpon>Manager_StudentAttendanceCRUDForm.cs</DependentUpon>
     </EmbeddedResource>
