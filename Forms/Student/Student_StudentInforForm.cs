@@ -81,6 +81,12 @@ namespace prj_LTTQ_BTL.Forms.Student
                 return;
             }
 
+            if (dataProcessor.GetDataTable($"select * from [User] where username = '{txtUsername.Text}'").Rows.Count > 0)
+            {
+                MessageBox.Show("Username đã được sử dụng");
+                return;
+            }
+
             if (string.IsNullOrWhiteSpace(txtPassword.Text))
             {
                 MessageBox.Show("Mật khẩu không được để trống");

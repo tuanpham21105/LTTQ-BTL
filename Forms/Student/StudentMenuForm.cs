@@ -80,7 +80,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             btnDiemSo.BackColor = Color.Transparent;
             btnHP.BackColor = Color.Transparent;
 
-            btn.BackColor = secondaryColor;
+            btn.FillColor = secondaryColor;
 
             if (activeForm != null)
             {

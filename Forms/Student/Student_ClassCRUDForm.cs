@@ -36,7 +36,7 @@ namespace prj_LTTQ_BTL.Forms.Student
 
             dgvClassList.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                HeaderText = "Class Id",
+                HeaderText = "Mã lớp học",
                 DataPropertyName = "id",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
                 Name = "colClassId"
@@ -44,7 +44,7 @@ namespace prj_LTTQ_BTL.Forms.Student
 
             dgvClassList.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                HeaderText = "Class Name",
+                HeaderText = "Tên lớp học",
                 DataPropertyName = "name",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
                 Name = "colClassName"
@@ -52,7 +52,7 @@ namespace prj_LTTQ_BTL.Forms.Student
 
             dgvClassList.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                HeaderText = "Ccourse Id",
+                HeaderText = "Mã khóa học",
                 DataPropertyName = "course_id",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
                 Name = "colCourseId"
@@ -60,7 +60,7 @@ namespace prj_LTTQ_BTL.Forms.Student
 
             dgvClassList.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                HeaderText = "Max Students",
+                HeaderText = "Số lượng tối đa",
                 DataPropertyName = "max_students",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
                 Name = "colMaxStudents"
@@ -68,7 +68,7 @@ namespace prj_LTTQ_BTL.Forms.Student
 
             dgvClassList.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                HeaderText = "Start Date",
+                HeaderText = "Ngày bắt đầu",
                 DataPropertyName = "start_date",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
                 Name = "colStartDate"
@@ -76,7 +76,7 @@ namespace prj_LTTQ_BTL.Forms.Student
 
             dgvClassList.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                HeaderText = "Teacher Id",
+                HeaderText = "Mã giáo viên",
                 DataPropertyName = "teacher_id",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
                 Name = "colTeacherId"

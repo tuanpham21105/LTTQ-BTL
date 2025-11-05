@@ -92,11 +92,11 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelMain.AutoSize = true;
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(210, 25);
+            this.panelMain.Location = new System.Drawing.Point(210, 32);
             this.panelMain.Margin = new System.Windows.Forms.Padding(2);
             this.panelMain.Name = "panelMain";
             this.panelMain.Padding = new System.Windows.Forms.Padding(8);
-            this.panelMain.Size = new System.Drawing.Size(814, 599);
+            this.panelMain.Size = new System.Drawing.Size(814, 592);
             this.panelMain.TabIndex = 0;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
@@ -114,7 +114,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelHeader.Location = new System.Drawing.Point(210, 0);
             this.panelHeader.Margin = new System.Windows.Forms.Padding(2);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(814, 25);
+            this.panelHeader.Size = new System.Drawing.Size(814, 32);
             this.panelHeader.TabIndex = 1;
             // 
             // lblTitle
@@ -126,7 +126,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(126, 25);
+            this.lblTitle.Size = new System.Drawing.Size(158, 32);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = " Student Menu";
             // 
@@ -142,7 +142,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnMinimize.Location = new System.Drawing.Point(712, 0);
             this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(34, 25);
+            this.btnMinimize.Size = new System.Drawing.Size(34, 32);
             this.btnMinimize.TabIndex = 1;
             // 
             // btnMaximize
@@ -157,7 +157,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnMaximize.Location = new System.Drawing.Point(746, 0);
             this.btnMaximize.Margin = new System.Windows.Forms.Padding(2);
             this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(34, 25);
+            this.btnMaximize.Size = new System.Drawing.Size(34, 32);
             this.btnMaximize.TabIndex = 2;
             // 
             // btnClose
@@ -172,7 +172,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnClose.Location = new System.Drawing.Point(780, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(34, 25);
+            this.btnClose.Size = new System.Drawing.Size(34, 32);
             this.btnClose.TabIndex = 3;
             // 
             // panelSidebar
@@ -198,6 +198,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // btnHP
             // 
+            this.btnHP.BackColor = System.Drawing.Color.Transparent;
             this.btnHP.BorderRadius = 8;
             this.btnHP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHP.Dock = System.Windows.Forms.DockStyle.Top;
@@ -219,6 +220,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // btnDiemSo
             // 
+            this.btnDiemSo.BackColor = System.Drawing.Color.Transparent;
             this.btnDiemSo.BorderRadius = 8;
             this.btnDiemSo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDiemSo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -240,6 +242,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // btnLichHoc
             // 
+            this.btnLichHoc.BackColor = System.Drawing.Color.Transparent;
             this.btnLichHoc.BorderRadius = 8;
             this.btnLichHoc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLichHoc.Dock = System.Windows.Forms.DockStyle.Top;
@@ -261,6 +264,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // btnLH
             // 
+            this.btnLH.BackColor = System.Drawing.Color.Transparent;
             this.btnLH.BorderRadius = 8;
             this.btnLH.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLH.Dock = System.Windows.Forms.DockStyle.Top;
@@ -282,6 +286,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // btnKH
             // 
+            this.btnKH.BackColor = System.Drawing.Color.Transparent;
             this.btnKH.BorderRadius = 8;
             this.btnKH.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKH.Dock = System.Windows.Forms.DockStyle.Top;
@@ -303,6 +308,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // btnTTHV
             // 
+            this.btnTTHV.BackColor = System.Drawing.Color.Transparent;
             this.btnTTHV.BorderRadius = 8;
             this.btnTTHV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTTHV.Dock = System.Windows.Forms.DockStyle.Top;
@@ -366,6 +372,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // btnTest
             // 
+            this.btnTest.BackColor = System.Drawing.Color.Transparent;
             this.btnTest.BorderRadius = 8;
             this.btnTest.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTest.Dock = System.Windows.Forms.DockStyle.Top;
@@ -384,6 +391,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnTest.TabIndex = 23;
             this.btnTest.Text = "Test";
             this.btnTest.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnTest.Visible = false;
             // 
             // StudentMenuForm
             // 

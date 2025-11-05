@@ -41,7 +41,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             dgvCourses.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 Name = "id",
-                HeaderText = "Course Id",
+                HeaderText = "Mã khóa học",
                 DataPropertyName = "id",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             });
@@ -49,28 +49,28 @@ namespace prj_LTTQ_BTL.Forms.Student
             dgvCourses.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 Name = "name",
-                HeaderText = "Course Name",
+                HeaderText = "Tên lớp học",
                 DataPropertyName = "name",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             });
             dgvCourses.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 Name = "number_of_lessons",
-                HeaderText = "Lessons",
+                HeaderText = "Số buổi học",
                 DataPropertyName = "number_of_lessons",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             });
             dgvCourses.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 Name = "fee",
-                HeaderText = "Fee",
+                HeaderText = "Học phí",
                 DataPropertyName = "fee",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             });
             dgvCourses.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 Name = "description",
-                HeaderText = "Description",
+                HeaderText = "Mô tả",
                 DataPropertyName = "description",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             });
@@ -81,35 +81,35 @@ namespace prj_LTTQ_BTL.Forms.Student
 
             dgvClasses.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                HeaderText = "Class Id",
+                HeaderText = "Mã lớp",
                 DataPropertyName = "id",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             });
 
             dgvClasses.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                HeaderText = "Class Name",
+                HeaderText = "Tên lớp",
                 DataPropertyName = "name",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             });
 
             dgvClasses.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                HeaderText = "Max Students",
+                HeaderText = "Học viên tối đa",
                 DataPropertyName = "max_students",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             });
 
             dgvClasses.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                HeaderText = "Start Date",
+                HeaderText = "Ngày bắt đầu",
                 DataPropertyName = "start_date",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             });
 
             dgvClasses.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                HeaderText = "Teacher Id",
+                HeaderText = "Mã giáo viên",
                 DataPropertyName = "teacher_id",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             });
