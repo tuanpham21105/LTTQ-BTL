@@ -26,7 +26,10 @@ namespace prj_LTTQ_BTL.Services
         {
             return _userRepository.GetUserById(id);
         }
-
+        public DataTable GetAllUsersJoin(int page, int pageSize)
+        {
+            return _userRepository.GetAllUserJoin(page, pageSize);
+        }
         public DataTable GetAllUsers(int page, int pageSize)
         {
             return _userRepository.GetAllUsers(page, pageSize);
@@ -45,6 +48,10 @@ namespace prj_LTTQ_BTL.Services
         public DataRow GetUserByUsername(string username)
         {
             return _userRepository.GetUserByUsername(username);
+        }
+        public DataTable SearchUsers(string keywword)
+        {
+            return _userRepository.SearchUsers(keywword);
         }
     }
 }

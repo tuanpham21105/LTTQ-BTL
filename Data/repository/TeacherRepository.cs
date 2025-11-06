@@ -64,7 +64,6 @@ namespace prj_LTTQ_BTL.Data.repository
             ";
             UpdateData(query);
         }
-        // Delete a teacher
         public void DeleteTeacher(Guid id)
         {
             string query = $"DELETE FROM Teacher WHERE id = '{id}'";
