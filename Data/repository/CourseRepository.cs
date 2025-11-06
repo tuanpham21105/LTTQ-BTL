@@ -63,6 +63,9 @@ namespace prj_LTTQ_BTL.Data.repository
 
         public void DeleteCourse(Guid id)
         {
+            string deleteClassesQuery = $"DELETE FROM Class WHERE course_id = '{id}'";
+            UpdateData(deleteClassesQuery);
+
             string query = $"DELETE FROM Course WHERE id = '{id}'";
             UpdateData(query);
         }

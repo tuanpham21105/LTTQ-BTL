@@ -148,6 +148,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnAccount.TabIndex = 31;
             this.btnAccount.Text = "Chi tiết tài khoản";
             this.btnAccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
             // btnUser
             // 
@@ -170,6 +171,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnUser.TabIndex = 30;
             this.btnUser.Text = "Quản lý tài khoản";
             this.btnUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // guna2Button11
             // 
