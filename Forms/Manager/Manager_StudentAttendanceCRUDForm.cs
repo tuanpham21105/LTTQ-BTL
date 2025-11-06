@@ -148,7 +148,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             DataTable searchStudents = new DataTable();
             DataTable sStudents = new DataTable();
 
-            string classFilter;
+            //string classFilter;
 
             if (comboboxClasses.SelectedIndex == -1)
             {

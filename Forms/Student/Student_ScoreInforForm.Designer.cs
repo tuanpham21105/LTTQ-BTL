@@ -181,9 +181,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.labelTotalNumbers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelTotalNumbers.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.labelTotalNumbers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.labelTotalNumbers.Location = new System.Drawing.Point(134, 34);
+            this.labelTotalNumbers.Location = new System.Drawing.Point(194, 34);
             this.labelTotalNumbers.Name = "labelTotalNumbers";
-            this.labelTotalNumbers.Size = new System.Drawing.Size(729, 25);
+            this.labelTotalNumbers.Size = new System.Drawing.Size(669, 25);
             this.labelTotalNumbers.TabIndex = 5;
             this.labelTotalNumbers.Text = "Bài kiểm tra ";
             // 
@@ -192,9 +192,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.label6.Location = new System.Drawing.Point(134, 3);
+            this.label6.Location = new System.Drawing.Point(194, 3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(729, 25);
+            this.label6.Size = new System.Drawing.Size(669, 25);
             this.label6.TabIndex = 4;
             this.label6.Text = "/ 10  Điểm";
             // 
@@ -204,9 +204,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.labelNumbers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelNumbers.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.labelNumbers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.labelNumbers.Location = new System.Drawing.Point(120, 34);
+            this.labelNumbers.Location = new System.Drawing.Point(176, 34);
             this.labelNumbers.Name = "labelNumbers";
-            this.labelNumbers.Size = new System.Drawing.Size(8, 25);
+            this.labelNumbers.Size = new System.Drawing.Size(12, 25);
             this.labelNumbers.TabIndex = 3;
             this.labelNumbers.Text = "0";
             this.labelNumbers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -217,9 +217,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.labelAverage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelAverage.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.labelAverage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.labelAverage.Location = new System.Drawing.Point(120, 3);
+            this.labelAverage.Location = new System.Drawing.Point(176, 3);
             this.labelAverage.Name = "labelAverage";
-            this.labelAverage.Size = new System.Drawing.Size(8, 25);
+            this.labelAverage.Size = new System.Drawing.Size(12, 25);
             this.labelAverage.TabIndex = 2;
             this.labelAverage.Text = "0";
             this.labelAverage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -232,7 +232,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblAverage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
             this.lblAverage.Location = new System.Drawing.Point(3, 3);
             this.lblAverage.Name = "lblAverage";
-            this.lblAverage.Size = new System.Drawing.Size(111, 25);
+            this.lblAverage.Size = new System.Drawing.Size(167, 25);
             this.lblAverage.TabIndex = 1;
             this.lblAverage.Text = "Điểm trung bình: ";
             // 
@@ -243,7 +243,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblProgress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
             this.lblProgress.Location = new System.Drawing.Point(3, 34);
             this.lblProgress.Name = "lblProgress";
-            this.lblProgress.Size = new System.Drawing.Size(111, 25);
+            this.lblProgress.Size = new System.Drawing.Size(167, 25);
             this.lblProgress.TabIndex = 0;
             this.lblProgress.Text = "Đã làm: ";
             // 
@@ -284,7 +284,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.label2.Location = new System.Drawing.Point(20, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 34);
+            this.label2.Size = new System.Drawing.Size(99, 34);
             this.label2.TabIndex = 4;
             this.label2.Text = "Điểm số";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -389,7 +389,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.label1.Location = new System.Drawing.Point(20, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 34);
+            this.label1.Size = new System.Drawing.Size(76, 34);
             this.label1.TabIndex = 4;
             this.label1.Text = "Bộ lọc";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -429,7 +429,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.lblHeader.Location = new System.Drawing.Point(20, 5);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(198, 34);
+            this.lblHeader.Size = new System.Drawing.Size(297, 34);
             this.lblHeader.TabIndex = 4;
             this.lblHeader.Text = "Bảng điểm học viên";
             this.lblHeader.TextAlign = System.Drawing.ContentAlignment.TopCenter;

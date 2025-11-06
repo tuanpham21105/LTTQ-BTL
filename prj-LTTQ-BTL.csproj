@@ -54,6 +54,10 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Primitives.1.1.1\lib\netstandard1.0\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.16.0.18925.20022\lib\net40\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
       <Private>True</Private>
@@ -212,6 +216,7 @@
     <Compile Include="Data\GlobalData.cs" />
     <Compile Include="Data\repository\BaseRepository.cs" />
     <Compile Include="Data\repository\CourseRepository.cs" />
+    <Compile Include="Data\repository\DashboardRepository.cs" />
     <Compile Include="Data\repository\StudentRepository.cs" />
     <Compile Include="Data\repository\TeacherRepository.cs" />
     <Compile Include="Data\repository\UserRepository.cs" />
@@ -250,6 +255,12 @@
     </Compile>
     <Compile Include="Forms\Manager\Manager_DashboardForm.Designer.cs">
       <DependentUpon>Manager_DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Manager\Manager_InfoCRUDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Manager\Manager_InfoCRUDForm.Designer.cs">
+      <DependentUpon>Manager_InfoCRUDForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Manager\Manager_PaymentCRUDForm.cs">
       <SubType>Form</SubType>
@@ -347,10 +358,12 @@
     <Compile Include="Forms\Teacher\TeacherMenuForm.Designer.cs">
       <DependentUpon>TeacherMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\CourseService.cs" />
+    <Compile Include="Services\DashboardService.cs" />
     <Compile Include="Services\StudentMenuServices.cs" />
     <Compile Include="Services\StudentService.cs" />
     <Compile Include="Services\TeacherService.cs" />
@@ -375,11 +388,17 @@
     <EmbeddedResource Include="Forms\Manager\Manager_DashboardForm.resx">
       <DependentUpon>Manager_DashboardForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manager\Manager_InfoCRUDForm.resx">
+      <DependentUpon>Manager_InfoCRUDForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Manager\Manager_StudentAttendanceCRUDForm.resx">
       <DependentUpon>Manager_StudentAttendanceCRUDForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Manager\Manager_StudentCRUDForm.resx">
       <DependentUpon>Manager_StudentCRUDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manager\Manager_StudentEnrollmentCRUDForm.resx">
+      <DependentUpon>Manager_StudentEnrollmentCRUDForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Manager\Manager_StudentScoreCRUDForm.resx">
       <DependentUpon>Manager_StudentScoreCRUDForm.cs</DependentUpon>
@@ -411,6 +430,18 @@
     <EmbeddedResource Include="Forms\Teacher\TeacherMenuForm.resx">
       <DependentUpon>TeacherMenuForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\prj_LTTQ_BTL.Form1.resources" />
+    <EmbeddedResource Include="obj\Debug\prj_LTTQ_BTL.Forms.FormLogin.resources" />
+    <EmbeddedResource Include="obj\Debug\prj_LTTQ_BTL.Forms.Manager.ManagerMenuForm.resources" />
+    <EmbeddedResource Include="obj\Debug\prj_LTTQ_BTL.Forms.Manager.Manager_ClassCRUDForm.resources" />
+    <EmbeddedResource Include="obj\Debug\prj_LTTQ_BTL.Forms.Manager.Manager_CourseCRUDForm.resources" />
+    <EmbeddedResource Include="obj\Debug\prj_LTTQ_BTL.Forms.Manager.Manager_DashboardForm.resources" />
+    <EmbeddedResource Include="obj\Debug\prj_LTTQ_BTL.Forms.Manager.Manager_StudentCRUDForm.resources" />
+    <EmbeddedResource Include="obj\Debug\prj_LTTQ_BTL.Forms.Manager.Manager_TeacherCRUDForm.resources" />
+    <EmbeddedResource Include="obj\Debug\prj_LTTQ_BTL.Forms.Manager.Manager_UserCRUDForm.resources" />
+    <EmbeddedResource Include="obj\Debug\prj_LTTQ_BTL.Forms.Student.StudentMenuForm.resources" />
+    <EmbeddedResource Include="obj\Debug\prj_LTTQ_BTL.Forms.Student.Student_CourseCRUDForm.resources" />
+    <EmbeddedResource Include="obj\Debug\prj_LTTQ_BTL.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -424,7 +455,13 @@
     <None Include=".env">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="bin\Debug\prj-LTTQ-BTL.exe.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\prj-LTTQ-BTL.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\prj-LTTQ-BTL.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\prj-LTTQ-BTL.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\prj-LTTQ-BTL.exe.config" />
+    <None Include="obj\Debug\prj-LTTQ.08AF4959.Up2Date" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -440,8 +477,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\prj-LTTQ-BTL.exe" />
-    <Content Include="bin\Debug\prj-LTTQ-BTL.pdb" />
+    <Content Include=".gitignore" />
     <Content Include="Images\avt.png" />
     <Content Include="Images\Bell.png" />
     <Content Include="Images\Bell1.png" />
@@ -462,6 +498,9 @@
     <Content Include="Images\settings.png" />
     <Content Include="Images\teachings.png" />
     <Content Include="LTTQ_BTL_DB.sql" />
+    <Content Include="obj\Debug\prj-LTTQ-BTL.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\prj-LTTQ-BTL.exe" />
+    <Content Include="obj\Debug\prj-LTTQ-BTL.pdb" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
   </ItemGroup>
   <ItemGroup>

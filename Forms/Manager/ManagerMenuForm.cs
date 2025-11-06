@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -30,6 +31,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
         {
             InitializeComponent();
             InitializeEvent();
+
         }
         private void InitializeEvent()
         {
@@ -61,6 +63,18 @@ namespace prj_LTTQ_BTL.Forms.Manager
             {
                 TogglePanelStudent(); 
             };
+            btnUser.Click += (s, e) =>
+            {
+                SidebarBtn_Click(btnUser, "Danh sách người dùng");
+            };
+            btnDashboard.Click += (s, e) =>
+            {
+                SidebarBtn_Click(btnDashboard, "Danh sách thống kê");
+            };
+            btnAccount.Click += (s, e) =>
+            {
+                SidebarBtn_Click(btnAccount, "Tài khoản quản lí");
+            };
 
         }
         private void SidebarBtn_Click(Guna2Button btn, string formType)
@@ -69,7 +83,14 @@ namespace prj_LTTQ_BTL.Forms.Manager
             btnStudentList.BackColor = Color.Transparent;
             btnTeacher.BackColor = Color.Transparent;
             btnCourse.BackColor = Color.Transparent;
-
+            btnStudentScore.BackColor = Color.Transparent;
+            btnStudentAttendance.BackColor = Color.Transparent;
+            btnClass.BackColor = Color.Transparent;
+            btnStudent.BackColor = Color.Transparent;
+            btnStudentAttendance.BackColor = Color.Transparent;
+            btnUser.BackColor = Color.Transparent;
+            btnDashboard.BackColor = Color.Transparent;
+            btnAccount.BackColor = Color.Transparent;
             btn.BackColor = secondaryColor;
 
             if (activeForm != null)
@@ -97,12 +118,22 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 case "Danh sách lớp học":
                     activeForm = new Manager_ClassCRUDForm();
                     break;
+                case "Danh sách người dùng":
+                    activeForm = new Manager_UserCRUDForm();
+                    break;
+                case "Danh sách thống kê":
+                    activeForm = new Manager_DashboardForm();
+                    break;
+                case "Tài khoản quản lí":
+                    activeForm = new Manager_InfoCRUDForm();
+                    break;
             }
 
             FormUtils.OpenChildForm(panelMain, activeForm);
         }
         private void ManagerMenuForm_Load(object sender, EventArgs e)
         {
+            SidebarBtn_Click(btnDashboard, "Danh sách thống kê");
 
         }
         private void TogglePanelStudent()
@@ -136,6 +167,18 @@ namespace prj_LTTQ_BTL.Forms.Manager
         private void btnStudentScore_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (confirmResult == DialogResult.Yes)
+            {
+                this.Hide(); 
+                FormLogin loginForm = new FormLogin();
+                loginForm.ShowDialog(); 
+                this.Close(); 
+            }
         }
     }
 }

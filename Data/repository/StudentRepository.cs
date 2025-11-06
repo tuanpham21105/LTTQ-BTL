@@ -49,7 +49,6 @@ namespace prj_LTTQ_BTL.Data.repository
                     OFFSET {offset} ROWS
                     FETCH NEXT {pageSize} ROWS ONLY
                 ";
-                //full_name as 'Họ và tên', birth_date as 'Ngày sinh', gender as 'Giới tính', phone_number as 'Số điện thoại', email as 'Email', address as 'Địa chỉ'
             }
 
             return GetDataTable(query);
@@ -69,7 +68,6 @@ namespace prj_LTTQ_BTL.Data.repository
             ";
             UpdateData(query);
         }
-        // Delete a student
         public void DeleteStudent(Guid id)
         {
             string query = $"DELETE FROM Student WHERE id = '{id}'";
