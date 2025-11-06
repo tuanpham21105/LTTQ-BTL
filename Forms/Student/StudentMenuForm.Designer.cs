@@ -59,6 +59,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnMaximize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelSidebar = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnTest = new Guna.UI2.WinForms.Guna2Button();
             this.btnHP = new Guna.UI2.WinForms.Guna2Button();
             this.btnDiemSo = new Guna.UI2.WinForms.Guna2Button();
             this.btnLichHoc = new Guna.UI2.WinForms.Guna2Button();
@@ -68,7 +69,6 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.brandPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.lblBrand = new AntdUI.Label();
             this.picBrand = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnTest = new Guna.UI2.WinForms.Guna2Button();
             this.panelHeader.SuspendLayout();
             this.panelSidebar.SuspendLayout();
             this.brandPanel.SuspendLayout();
@@ -92,11 +92,11 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelMain.AutoSize = true;
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(210, 32);
+            this.panelMain.Location = new System.Drawing.Point(210, 25);
             this.panelMain.Margin = new System.Windows.Forms.Padding(2);
             this.panelMain.Name = "panelMain";
             this.panelMain.Padding = new System.Windows.Forms.Padding(8);
-            this.panelMain.Size = new System.Drawing.Size(814, 592);
+            this.panelMain.Size = new System.Drawing.Size(814, 599);
             this.panelMain.TabIndex = 0;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
@@ -114,7 +114,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelHeader.Location = new System.Drawing.Point(210, 0);
             this.panelHeader.Margin = new System.Windows.Forms.Padding(2);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(814, 32);
+            this.panelHeader.Size = new System.Drawing.Size(814, 25);
             this.panelHeader.TabIndex = 1;
             // 
             // lblTitle
@@ -126,7 +126,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(158, 32);
+            this.lblTitle.Size = new System.Drawing.Size(126, 25);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = " Student Menu";
             // 
@@ -142,7 +142,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnMinimize.Location = new System.Drawing.Point(712, 0);
             this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(34, 32);
+            this.btnMinimize.Size = new System.Drawing.Size(34, 25);
             this.btnMinimize.TabIndex = 1;
             // 
             // btnMaximize
@@ -157,7 +157,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnMaximize.Location = new System.Drawing.Point(746, 0);
             this.btnMaximize.Margin = new System.Windows.Forms.Padding(2);
             this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(34, 32);
+            this.btnMaximize.Size = new System.Drawing.Size(34, 25);
             this.btnMaximize.TabIndex = 2;
             // 
             // btnClose
@@ -172,7 +172,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnClose.Location = new System.Drawing.Point(780, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(34, 32);
+            this.btnClose.Size = new System.Drawing.Size(34, 25);
             this.btnClose.TabIndex = 3;
             // 
             // panelSidebar
@@ -195,6 +195,28 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelSidebar.ShadowDecoration.Enabled = true;
             this.panelSidebar.Size = new System.Drawing.Size(210, 624);
             this.panelSidebar.TabIndex = 2;
+            // 
+            // btnTest
+            // 
+            this.btnTest.BackColor = System.Drawing.Color.Transparent;
+            this.btnTest.BorderRadius = 8;
+            this.btnTest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTest.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTest.FillColor = System.Drawing.Color.Transparent;
+            this.btnTest.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnTest.ForeColor = System.Drawing.Color.White;
+            this.btnTest.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.btnTest.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnTest.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnTest.Location = new System.Drawing.Point(11, 323);
+            this.btnTest.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnTest.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.btnTest.Size = new System.Drawing.Size(188, 41);
+            this.btnTest.TabIndex = 23;
+            this.btnTest.Text = "Test";
+            this.btnTest.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnHP
             // 
@@ -369,29 +391,6 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.picBrand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBrand.TabIndex = 1;
             this.picBrand.TabStop = false;
-            // 
-            // btnTest
-            // 
-            this.btnTest.BackColor = System.Drawing.Color.Transparent;
-            this.btnTest.BorderRadius = 8;
-            this.btnTest.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTest.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTest.FillColor = System.Drawing.Color.Transparent;
-            this.btnTest.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnTest.ForeColor = System.Drawing.Color.White;
-            this.btnTest.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.btnTest.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnTest.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnTest.Location = new System.Drawing.Point(11, 323);
-            this.btnTest.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnTest.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnTest.Size = new System.Drawing.Size(188, 41);
-            this.btnTest.TabIndex = 23;
-            this.btnTest.Text = "Test";
-            this.btnTest.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnTest.Visible = false;
             // 
             // StudentMenuForm
             // 

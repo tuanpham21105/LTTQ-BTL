@@ -21,6 +21,7 @@ CREATE TABLE [User] (
     created_at DATETIME DEFAULT GETDATE(),
     update_at DATETIME DEFAULT GETDATE(),
     role_name NVARCHAR(50) NOT NULL,
+    avatar NVARCHAR(100),
     FOREIGN KEY (role_name) REFERENCES Role(name)
 );
 GO
@@ -128,7 +129,7 @@ GO
 CREATE TABLE Attendance (
     student_id UNIQUEIDENTIFIER NOT NULL,
     schedule_id UNIQUEIDENTIFIER NOT NULL,
-    status VARCHAR(20) CHECK (status IN ('present', 'absent', 'late', 'excused')),
+    status VARCHAR(20) CHECK (status IN ('Present', 'Absent', 'Late', 'Excused')),
     note NVARCHAR(255),
     PRIMARY KEY (student_id, schedule_id),
     FOREIGN KEY (student_id) REFERENCES Student(id),
@@ -141,12 +142,16 @@ GO
 -- ==============================
 CREATE TABLE Payment (
     id UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
-    enrollment_id UNIQUEIDENTIFIER NOT NULL,
+    enrollment_id UNIQUEIDENTIFIER,
     amount DECIMAL(10,2),
     payment_date DATE DEFAULT GETDATE(),
-    method VARCHAR(20) CHECK (method IN ('none', 'cash', 'bank_transfer', 'credit_card')),
-    status VARCHAR(20) CHECK (status IN ('paid', 'pending', 'failed')),
-    FOREIGN KEY (enrollment_id) REFERENCES Enrollment(id)
+    method VARCHAR(20) CHECK (method IN ('None', 'Cash', 'Bank transfer', 'Credit card')),
+    status VARCHAR(20) CHECK (status IN ('Paid', 'Pending', 'Cancelled')),
+    fee_collector_id UNIQUEIDENTIFIER,
+    payer_id UNIQUEIDENTIFIER,
+    FOREIGN KEY (enrollment_id) REFERENCES Enrollment(id),
+    FOREIGN KEY (fee_collector_id) REFERENCES [User](id),
+    FOREIGN KEY (payer_id) REFERENCES [User](id),
 );
 GO
 
@@ -348,13 +353,6 @@ GO
 -- ==============================
 -- 7. Bảng Enrollment
 -- ==============================
-INSERT INTO Enrollment (student_id, course_id)
-SELECT s.id, c.id
-FROM Student s CROSS JOIN Course c
-WHERE (s.full_name = N'Nguyễn Văn A' AND c.name = N'Khóa học Tiếng Anh giao tiếp')
-   OR (s.full_name = N'Trần Thị B' AND c.name = N'Lập trình C# cơ bản')
-   OR (s.full_name = N'Lê Văn C' AND c.name = N'Tin học văn phòng');
-GO
 
 -- ==============================
 -- 8. Bảng ClassAssignment
@@ -385,7 +383,7 @@ GO
 -- 10. Bảng Attendance
 -- ==============================
 INSERT INTO Attendance (student_id, schedule_id, status, note)
-SELECT s.id, sch.id, 'present', N'Học tốt'
+SELECT s.id, sch.id, 'Present', N'Học tốt'
 FROM Student s, Schedule sch
 WHERE (s.full_name = N'Nguyễn Văn A' AND sch.room = N'Phòng 101')
    OR (s.full_name = N'Trần Thị B' AND sch.room = N'Phòng 202')
@@ -395,11 +393,6 @@ GO
 -- ==============================
 -- 11. Bảng Payment
 -- ==============================
-INSERT INTO Payment (enrollment_id, amount, method, status)
-SELECT e.id, c.fee, 'bank_transfer', 'paid'
-FROM Enrollment e
-JOIN Course c ON e.course_id = c.id;
-GO
 
 -- ==============================
 -- 12. Bảng Score
@@ -422,3 +415,4 @@ GO
 
  select * from [User]
  select * from Student
+ select * from Payment

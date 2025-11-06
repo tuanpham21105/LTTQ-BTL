@@ -23,7 +23,7 @@ namespace prj_LTTQ_BTL.Forms.Student
         {
             InitializeComponent();
             comboboxClasses.DataSource = dataProcessor.GetDataTable($"select Class.* from Class inner join ClassAssignment on Class.id = ClassAssignment.class_id where ClassAssignment.student_id = '{GlobalData.Id}'");
-            comboboxClasses.DisplayMember = "id";
+            comboboxClasses.DisplayMember = "name";
             comboboxClasses.ValueMember = "id";
             comboboxClasses.SelectedIndex = -1;
         }

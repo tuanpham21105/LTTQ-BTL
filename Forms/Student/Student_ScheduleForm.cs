@@ -150,16 +150,16 @@ namespace prj_LTTQ_BTL.Forms.Student
 
             switch (trangthai)
             {
-                case "present":
+                case "Present":
                     lblTrangThai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(255)))), ((int)(((byte)(193)))));
                     break;
-                case "absent":
+                case "Absent":
                     lblTrangThai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
                     break;
-                case "late":
+                case "Late":
                     lblTrangThai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(168)))));
                     break;
-                case "excused":
+                case "Excused":
                     lblTrangThai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(216)))), ((int)(((byte)(255)))));
                     break;
                 case "Chưa học":

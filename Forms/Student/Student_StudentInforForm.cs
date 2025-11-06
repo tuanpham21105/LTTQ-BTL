@@ -28,6 +28,8 @@ namespace prj_LTTQ_BTL.Forms.Student
         Color dangerColor = Color.FromArgb(232, 17, 35);
         Color borderColor = Color.FromArgb(204, 204, 204);
 
+        private string usernameTemp;
+
         public Student_StudentInforForm()
         {
             InitializeComponent();
@@ -71,6 +73,8 @@ namespace prj_LTTQ_BTL.Forms.Student
             ToggleInfor(true);
             btnSave.Visible = true;
             btnEdit.Visible = false;
+
+            usernameTemp = txtUsername.Text;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -81,7 +85,7 @@ namespace prj_LTTQ_BTL.Forms.Student
                 return;
             }
 
-            if (dataProcessor.GetDataTable($"select * from [User] where username = '{txtUsername.Text}'").Rows.Count > 0)
+            if (dataProcessor.GetDataTable($"select * from [User] where username = '{txtUsername.Text}'").Rows.Count > 0 && txtUsername.Text != usernameTemp)
             {
                 MessageBox.Show("Username đã được sử dụng");
                 return;

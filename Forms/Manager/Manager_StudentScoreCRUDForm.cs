@@ -30,7 +30,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
             DataTable searchStudents = new DataTable();
             DataTable sStudents = new DataTable();
 
-            string classFilter;
+            string classId = comboboxClasses.SelectedValue.ToString();
+
+            if (classId.Length == 0 || !Guid.TryParse(classId, out Guid r))
+            {
+                return;
+            }
 
             if (comboboxClasses.SelectedIndex == -1)
             {
@@ -39,18 +44,18 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
             foreach (string keyword in keywords)
             {
-                sStudents = dataProcessor.GetDataTable($"select * from Student where full_name collate Latin1_General_CI_AI like '%{keyword}%'");
+                sStudents = dataProcessor.GetDataTable($"select s.* from Student s inner join ClassAssignment c on s.id = c.student_id where s.full_name collate Latin1_General_CI_AI like '%{keyword}%' and c.class_id = '{classId}'");
                 sStudents.PrimaryKey = new DataColumn[] { sStudents.Columns["id"] };
                 searchStudents.PrimaryKey = new DataColumn[] { searchStudents.Columns["id"] };
                 searchStudents.Merge(sStudents, false);
 
-                sStudents = dataProcessor.GetDataTable($"select * from Student where email collate Latin1_General_CI_AI like '%{keyword}%'");
+                sStudents = dataProcessor.GetDataTable($"select s.* from Student s inner join ClassAssignment c on s.id = c.student_id where email collate Latin1_General_CI_AI like '%{keyword}%' and c.class_id = '{classId}'");
                 searchStudents.Merge(sStudents, false);
 
-                sStudents = dataProcessor.GetDataTable($"select * from Student where address collate Latin1_General_CI_AI like '%{keyword}%'");
+                sStudents = dataProcessor.GetDataTable($"select s.* from Student s inner join ClassAssignment c on s.id = c.student_id where address collate Latin1_General_CI_AI like '%{keyword}%' and c.class_id = '{classId}'");
                 searchStudents.Merge(sStudents, false);
 
-                sStudents = dataProcessor.GetDataTable($"select * from Student where phone_number collate Latin1_General_CI_AI like '%{keyword}%'");
+                sStudents = dataProcessor.GetDataTable($"select s.* from Student s inner join ClassAssignment c on s.id = c.student_id where phone_number collate Latin1_General_CI_AI like '%{keyword}%' and c.class_id = '{classId}'");
                 searchStudents.Merge(sStudents, false);
             }
 
@@ -61,19 +66,24 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
         private void comboboxClasses_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtSearchStudent_TextChanged(sender, e);
+
             SetStudentScoreBoard();
         }
 
         private void Manager_StudentScoreCRUDForm_Load(object sender, EventArgs e)
         {
+            dgvStudent.AutoGenerateColumns = false;
+            dgvExam.AutoGenerateColumns=false;
+
             DataTable scores = dataProcessor.GetDataTable($"select * from Score where score = -1");
             FormUtils.FillGunaDgv(dgvExam, scores);
-
-            FormUtils.FillGunaDgv(dgvStudent, dataProcessor.GetDataTable($"select * from Student"));
 
             comboboxClasses.DataSource = dataProcessor.GetDataTable($"select * from Class");
             comboboxClasses.DisplayMember = "name";
             comboboxClasses.ValueMember = "id";
+
+            txtSearchStudent_TextChanged(sender, e);
 
             dgvExam.DataSourceChanged += dgvExam_DataSourceChanged;
 
@@ -92,6 +102,8 @@ namespace prj_LTTQ_BTL.Forms.Manager
         {
             if (dgvStudent.CurrentRow == null)
             {
+                panelWarning.Visible = false;
+                panelWarning1.Visible = false;
                 return;
             }
 
@@ -100,6 +112,8 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
             if (string.IsNullOrEmpty(studentId) || string.IsNullOrEmpty(classId) || !Guid.TryParse(classId, out Guid guidValue))
             {
+                panelWarning.Visible = false;
+                panelWarning1.Visible = false;
                 return;
             }
 
@@ -141,9 +155,9 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
             DataGridViewRow row = dgvExam.CurrentRow;
             if (row == null) return;
-            txtTenBaiKT.Text = row.Cells["name"].Value.ToString();
-            txtDiemSo.Text = row.Cells["score"].Value.ToString();
-            DateTime.TryParse(row.Cells["created_date"].Value.ToString(), out DateTime d);
+            txtTenBaiKT.Text = row.Cells["exam_name"].Value.ToString();
+            txtDiemSo.Text = row.Cells["exam_score"].Value.ToString();
+            DateTime.TryParse(row.Cells["date"].Value.ToString(), out DateTime d);
             dateNgayKT.Value = d;
         }
 
@@ -198,6 +212,22 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 return;
             }
 
+            DataGridViewRow student = dgvStudent.CurrentRow;
+
+            if (student == null)
+            {
+                MessageBox.Show("Bạn chưa chọn học viên");
+                return;
+            }
+
+            string classId = comboboxClasses.SelectedValue.ToString();
+
+            if (classId == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa chọn lớp học");
+                return;
+            }
+
             btnThem.Visible = false;
             btnXoa.Visible = false;
             btnLuu.Visible = true;
@@ -206,6 +236,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             txtTenBaiKT.Enabled = true;
             txtDiemSo.Enabled = true;
             dateNgayKT.Enabled = true;
+
+            comboboxClasses.Enabled = false;
+            dgvStudent.Enabled = false;
+            dgvExam.Enabled = false;  
 
             txtTenBaiKT.Text = "";
             txtDiemSo.Text = "";
@@ -247,6 +281,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             txtDiemSo.Enabled = false;
             dateNgayKT.Enabled = false;
 
+            comboboxClasses.Enabled = true;
+            dgvStudent.Enabled = true;
+            dgvExam.Enabled = true;
+
             string studentId = dgvStudent.CurrentRow.Cells["id"].Value.ToString();
             string classId = comboboxClasses.SelectedValue.ToString();
 
@@ -259,7 +297,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
         {
             if (string.IsNullOrEmpty(txtTenBaiKT.Text) || string.IsNullOrEmpty(txtDiemSo.Text))
             {
-                MessageBox.Show("Điểm bài kiểm tra không hợp lệ");
+                MessageBox.Show("Điểm kiểm tra không hợp lệ");
                 return;
             }
 
@@ -288,6 +326,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             txtTenBaiKT.Enabled = false;
             txtDiemSo.Enabled = false;
             dateNgayKT.Enabled = false;
+
+            comboboxClasses.Enabled = true;
+            dgvStudent.Enabled = true;
+            dgvExam.Enabled = true;
 
             txtTenBaiKT.Text = "";
             txtDiemSo.Text = "";

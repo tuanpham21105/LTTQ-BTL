@@ -18,7 +18,7 @@ namespace prj_LTTQ_BTL
             Env.Load();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Manager_StudentAttendanceCRUDForm());
+            Application.Run(new StudentMenuForm());
         }
     }
 }
