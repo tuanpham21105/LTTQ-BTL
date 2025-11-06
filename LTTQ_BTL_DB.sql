@@ -168,9 +168,6 @@ GO
 -- Changes
 -- ==============================
 
-ALTER TABLE Score
-ADD name nvarchar(100);
-
 select * from [User]
 -- ==============================
 -- 1. Bảng Role
@@ -399,6 +396,10 @@ INSERT INTO Payment (enrollment_id, amount, method, status)
 SELECT e.id, c.fee, 'bank_transfer', 'paid'
 FROM Enrollment e
 JOIN Course c ON e.course_id = c.id;
+INSERT INTO Payment (enrollment_id, amount, method, status)
+SELECT e.id, c.fee, 'bank_transfer', 'pending'
+FROM Enrollment e
+JOIN Course c ON e.course_id = c.id;
 GO
 
 -- ==============================
@@ -419,6 +420,273 @@ GO
  SELECT full_name, birth_date, gender, phone_number, email, address
  FROM Student
  ORDER BY full_name
-
+ select * from Teacher
  select * from [User]
  select * from Student
+
+ select * from Course
+ select * from [User] 
+ join Teacher on [User].id = Teacher.id
+ select * from [User]
+ select * from Class join Teacher on Class.teacher_id = Teacher.id join [User] on [User].id = Teacher.id
+SELECT id, username, r.name as role from [User] u join [Role] r on u.role_name = r.name WHERE username = 'admin01' AND [password] = 'admin@123'
+
+SELECT 
+    *
+FROM [User] u
+LEFT JOIN Student s ON u.id = s.id AND u.role_name = N'student'
+LEFT JOIN Teacher t ON u.id = t.id AND u.role_name = N'teacher'
+ORDER BY u.role_name, u.username;
+
+select * from [User] join Teacher on [User].id = Teacher.id
+
+SELECT 
+    u.id,
+    u.username,
+    u.role_name,
+    ISNULL(s.full_name, t.full_name) AS full_name,
+    ISNULL(s.email, t.email) AS email,
+    ISNULL(s.phone_number, t.phone_number) AS phone_number,
+    ISNULL(s.address, t.address) AS address,
+    s.birth_date,
+    s.gender,
+    t.specialization,
+    t.qualification,
+    t.start_date
+FROM [User] u
+LEFT JOIN Student s ON u.id = s.id AND u.role_name = N'student'
+LEFT JOIN Teacher t ON u.id = t.id AND u.role_name = N'teacher'
+ORDER BY u.username
+OFFSET 1 ROWS
+FETCH NEXT 10 ROWS ONLY
+
+SELECT * 
+FROM [User]
+ORDER BY username
+OFFSET 1 ROWS
+FETCH NEXT 10 ROWS ONLY
+
+select * from Student 
+select * from [User]
+SELECT COUNT(*) AS TotalCourses FROM Course
+SELECT ISNULL(SUM(P.amount), 0) AS TotalRevenue
+FROM Payment P
+
+select * from Enrollment
+
+SELECT COUNT(*) AS TotalEnrollments
+FROM Enrollment
+WHERE YEAR(enrollment_date) = 2024
+
+SELECT 
+    YEAR(S.session_date) AS Year,
+    COUNT(A.student_id) AS TotalStudents,
+    SUM(CASE WHEN A.status = 'present' THEN 1 ELSE 0 END) AS Present,
+    SUM(CASE WHEN A.status = 'absent' THEN 1 ELSE 0 END) AS Absent,
+    SUM(CASE WHEN A.status = 'late' THEN 1 ELSE 0 END) AS Late,
+    SUM(CASE WHEN A.status = 'excused' THEN 1 ELSE 0 END) AS Excused
+FROM Schedule S
+LEFT JOIN Attendance A ON S.id = A.schedule_id
+WHERE S.class_id = '8404521C-71C2-4797-B31C-E7FAE80DC135' AND YEAR(S.session_date) = 2024
+GROUP BY YEAR(S.session_date)
+select * from Class
+select * from Schedule join Attendance on Schedule.id = Attendance.schedule_id
+select * from Attendance
+
+SELECT 
+    C.name AS CourseName,
+    COUNT(E.id) AS TotalEnrollments
+FROM Enrollment E
+JOIN Course C ON E.course_id = C.id
+WHERE YEAR(E.enrollment_date) = 2025
+GROUP BY C.name
+ORDER BY TotalEnrollments DESC
+
+
+SELECT 
+    C.name AS CourseName,
+    COUNT(E.id) AS TotalEnrollments
+FROM Enrollment E
+JOIN Course C ON E.course_id = C.id
+WHERE YEAR(E.enrollment_date) = 2025
+GROUP BY C.name
+ORDER BY TotalEnrollments DESC
+
+select * from Payment
+
+SELECT ISNULL(SUM(P.amount), 0) AS TotalRevenue
+FROM Payment P
+WHERE CAST(P.payment_date AS DATE) = '2025-11-01' AND P.status = 'paid'
+
+select * from Enrollment
+SELECT 
+    C.name AS CourseName,
+    COUNT(E.id) AS TotalEnrollments
+FROM Enrollment E
+JOIN Course C ON E.course_id = C.id
+WHERE CAST(E.enrollment_date AS DATE) = '2025-11-03'
+GROUP BY C.name
+ORDER BY TotalEnrollments DESC;
+select * from Schedule
+select * from Attendance
+
+SELECT 
+    S.session_date AS SessionDate,
+    COUNT(A.student_id) AS TotalStudents,
+    SUM(CASE WHEN A.status = 'present' THEN 1 ELSE 0 END) AS Present,
+    SUM(CASE WHEN A.status = 'absent' THEN 1 ELSE 0 END) AS Absent,
+    SUM(CASE WHEN A.status = 'late' THEN 1 ELSE 0 END) AS Late,
+    SUM(CASE WHEN A.status = 'excused' THEN 1 ELSE 0 END) AS Excused
+FROM Schedule S
+LEFT JOIN Attendance A ON S.id = A.schedule_id
+WHERE S.class_id = '8404521C-71C2-4797-B31C-E7FAE80DC135' 
+GROUP BY S.session_date;
+SELECT 
+    C.name AS ClassName,
+    COUNT(A.student_id) AS TotalStudents,
+    SUM(CASE WHEN A.status = 'present' THEN 1 ELSE 0 END) AS Present,
+    SUM(CASE WHEN A.status = 'absent' THEN 1 ELSE 0 END) AS Absent,
+    SUM(CASE WHEN A.status = 'late' THEN 1 ELSE 0 END) AS Late,
+    SUM(CASE WHEN A.status = 'excused' THEN 1 ELSE 0 END) AS Excused
+FROM Schedule S
+LEFT JOIN Attendance A ON S.id = A.schedule_id
+left JOIN Class C ON S.class_id = C.id
+WHERE CAST(S.session_date AS DATE) = '2024-09-10'
+GROUP BY C.name
+ORDER BY C.name
+
+SELECT 
+    C.name AS CourseName,
+    COUNT(E.id) AS TotalEnrollments
+FROM Enrollment E
+left JOIN Course C ON E.course_id = C.id
+WHERE YEAR(E.enrollment_date) = 2024
+GROUP BY C.name
+ORDER BY TotalEnrollments DESC
+
+select * from Class
+select * from Class
+left join Schedule on Class.id = Schedule.class_id
+WHERE CAST(session_date AS DATE) = '2024-09-10'
+DECLARE @schedule_id UNIQUEIDENTIFIER;
+SELECT @schedule_id = id FROM Schedule WHERE room = N'Phòng 101';
+
+select * from Schedule
+DECLARE @target_date DATE = '2024-09-10';
+
+SELECT 
+    C.name AS ClassName,
+    @target_date AS TargetDate,
+    COUNT(A.student_id) AS TotalStudents,
+    SUM(CASE WHEN A.status = 'present' THEN 1 ELSE 0 END) AS Present,
+    SUM(CASE WHEN A.status = 'absent' THEN 1 ELSE 0 END) AS Absent,
+    SUM(CASE WHEN A.status = 'late' THEN 1 ELSE 0 END) AS Late,
+    SUM(CASE WHEN A.status = 'excused' THEN 1 ELSE 0 END) AS Excused
+FROM Class C
+LEFT JOIN Schedule S 
+    ON C.id = S.class_id AND CAST(S.session_date AS DATE) = @target_date
+LEFT JOIN Attendance A 
+    ON S.id = A.schedule_id
+GROUP BY C.name
+ORDER BY C.name;
+
+SELECT 
+    C.name AS ClassName,
+    COUNT(A.student_id) AS TotalStudents,
+    SUM(CASE WHEN A.status = 'present' THEN 1 ELSE 0 END) AS Present,
+    SUM(CASE WHEN A.status = 'absent' THEN 1 ELSE 0 END) AS Absent,
+    SUM(CASE WHEN A.status = 'late' THEN 1 ELSE 0 END) AS Late,
+    SUM(CASE WHEN A.status = 'excused' THEN 1 ELSE 0 END) AS Excused
+FROM Class C
+LEFT JOIN Schedule S ON C.id = S.class_id AND YEAR(S.session_date) = 2024
+LEFT JOIN Attendance A ON S.id = A.schedule_id
+GROUP BY C.name
+ORDER BY C.name
+
+select * from Class left join Schedule ON Class.id = Schedule.class_id
+-- Thêm nhiều học viên vào buổi học này
+INSERT INTO Attendance (student_id, schedule_id, status, note)
+SELECT s.id, @schedule_id, v.status, v.note
+FROM Student s
+JOIN (VALUES
+    (N'Nguyễn Văn A', 'present', N'Đi học đúng giờ'),
+    (N'Trần Thị B', 'absent',  N'Xin nghỉ có phép'),
+    (N'Lê Văn C',    'late',   N'Đến muộn 10 phút'),
+    (N'Phạm Minh D', 'excused',N'Nghỉ do ốm')
+) AS v(full_name, status, note)
+    ON s.full_name = v.full_name;
+
+	select * from score
+
+	 SELECT 
+     id AS ClassId,
+     name AS ClassName
+ FROM Class
+ ORDER BY name
+
+  SELECT id, name FROM Class;
+
+
+  SELECT 
+    C.name AS ClassName,
+    ISNULL(AVG(S.score), 0) AS AverageScore
+FROM Class C
+LEFT JOIN Score S ON C.id = S.class_id AND YEAR(S.created_date) =2025
+GROUP BY C.name
+ORDER BY C.name
+
+SELECT 
+    ISNULL(COUNT(*), 0) AS TotalScores,
+    ISNULL(SUM(CASE WHEN score >= 9 THEN 1 ELSE 0 END), 0) AS N'Xuất sắc',
+    ISNULL(SUM(CASE WHEN score >= 7 AND score < 9 THEN 1 ELSE 0 END), 0) AS N'Tốt',
+    ISNULL(SUM(CASE WHEN score >= 5 AND score < 7 THEN 1 ELSE 0 END), 0) AS N'Trung bình',
+    ISNULL(SUM(CASE WHEN score < 5 THEN 1 ELSE 0 END), 0) AS N'Yếu'
+FROM Score
+WHERE class_id = '{classId}' AND YEAR(created_date) = 2025
+
+ SELECT 
+     id AS ClassId,
+     name AS ClassName
+ FROM Class
+ ORDER BY name
+
+ select * from Payment
+ join Enrollment on Enrollment.id = Payment.enrollment_id
+ join Student on Student.id = Enrollment.student_id
+
+ select * from Enrollment
+
+ SELECT 
+    S.full_name AS StudentName,
+    C.name AS CourseName,
+    P.payment_date AS PaymentDate,
+    P.amount AS Amount,
+    P.status AS Status
+FROM Payment P
+JOIN Enrollment E ON P.enrollment_id = E.id
+JOIN Student S ON E.student_id = S.id
+JOIN Course C ON E.course_id = C.id
+WHERE YEAR(P.payment_date) = 2025
+ORDER BY P.payment_date DESC
+
+select * from Enrollment
+
+select * from Attendance join Schedule on Schedule.id = Attendance.schedule_id 
+select * from Class 
+join Schedule on Schedule.class_id = Class.id
+
+
+select * from Score join Student on Student.id = Score.student_id
+select * from Score
+SELECT 
+    C.name AS ClassName,
+    St.full_name AS StudentName,
+    S.score AS ScoreValue,
+    S.created_date AS ScoreDate
+FROM Score S
+JOIN Class C ON S.class_id = C.id
+JOIN Student St ON S.student_id = St.id
+WHERE YEAR(S.created_date) = 2025
+ORDER BY C.name, St.full_name, S.created_date
+
+select * from [User]
