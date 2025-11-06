@@ -41,6 +41,7 @@
             this.btnNhapDiem = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PanelLeftTop = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PanelCenter = new Guna.UI2.WinForms.Guna2Panel();
             this.PnMain = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutMain = new System.Windows.Forms.TableLayoutPanel();
@@ -80,17 +81,17 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTime = new System.Windows.Forms.Label();
             this.flowRight = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnNotification = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.flowLeft = new System.Windows.Forms.FlowLayoutPanel();
+            this.picAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblHello = new System.Windows.Forms.Label();
             this.guna2PanelBot = new Guna.UI2.WinForms.Guna2Panel();
             this.timerClock = new System.Windows.Forms.Timer(this.components);
-            this.btnNotification = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.picAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PanelLeft.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.guna2PanelLeftTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2PanelCenter.SuspendLayout();
             this.PnMain.SuspendLayout();
             this.tableLayoutMain.SuspendLayout();
@@ -109,7 +110,6 @@
             this.flowRight.SuspendLayout();
             this.flowLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2PanelLeft
@@ -348,6 +348,19 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "OwlEng";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(15, 25);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 4;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // guna2PanelCenter
             // 
@@ -830,6 +843,27 @@
             this.flowRight.TabIndex = 5;
             this.flowRight.WrapContents = false;
             // 
+            // btnNotification
+            // 
+            this.btnNotification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNotification.BackColor = System.Drawing.Color.Transparent;
+            this.btnNotification.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnNotification.HoverState.Image = global::prj_LTTQ_BTL.Properties.Resources.Bell1;
+            this.btnNotification.HoverState.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
+            this.btnNotification.HoverState.ImageSize = new System.Drawing.Size(28, 28);
+            this.btnNotification.Image = global::prj_LTTQ_BTL.Properties.Resources.Bell;
+            this.btnNotification.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnNotification.ImageRotate = 0F;
+            this.btnNotification.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnNotification.Location = new System.Drawing.Point(10, 15);
+            this.btnNotification.Margin = new System.Windows.Forms.Padding(0, 5, 50, 0);
+            this.btnNotification.Name = "btnNotification";
+            this.btnNotification.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.btnNotification.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnNotification.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btnNotification.Size = new System.Drawing.Size(30, 30);
+            this.btnNotification.TabIndex = 3;
+            // 
             // btnLogOut
             // 
             this.btnLogOut.BorderRadius = 8;
@@ -847,6 +881,7 @@
             this.btnLogOut.Size = new System.Drawing.Size(95, 29);
             this.btnLogOut.TabIndex = 4;
             this.btnLogOut.Text = "Logout";
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // flowLeft
             // 
@@ -861,6 +896,20 @@
             this.flowLeft.Size = new System.Drawing.Size(340, 60);
             this.flowLeft.TabIndex = 0;
             this.flowLeft.WrapContents = false;
+            // 
+            // picAvatar
+            // 
+            this.picAvatar.Image = global::prj_LTTQ_BTL.Properties.Resources.avt;
+            this.picAvatar.ImageRotate = 0F;
+            this.picAvatar.InitialImage = ((System.Drawing.Image)(resources.GetObject("picAvatar.InitialImage")));
+            this.picAvatar.Location = new System.Drawing.Point(70, 15);
+            this.picAvatar.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.picAvatar.Size = new System.Drawing.Size(40, 40);
+            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAvatar.TabIndex = 2;
+            this.picAvatar.TabStop = false;
             // 
             // lblHello
             // 
@@ -888,54 +937,6 @@
             this.timerClock.Interval = 1000;
             this.timerClock.Tick += new System.EventHandler(this.timerClock_Tick);
             // 
-            // btnNotification
-            // 
-            this.btnNotification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNotification.BackColor = System.Drawing.Color.Transparent;
-            this.btnNotification.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnNotification.HoverState.Image = global::prj_LTTQ_BTL.Properties.Resources.Bell1;
-            this.btnNotification.HoverState.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
-            this.btnNotification.HoverState.ImageSize = new System.Drawing.Size(28, 28);
-            this.btnNotification.Image = global::prj_LTTQ_BTL.Properties.Resources.Bell;
-            this.btnNotification.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnNotification.ImageRotate = 0F;
-            this.btnNotification.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnNotification.Location = new System.Drawing.Point(10, 15);
-            this.btnNotification.Margin = new System.Windows.Forms.Padding(0, 5, 50, 0);
-            this.btnNotification.Name = "btnNotification";
-            this.btnNotification.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.btnNotification.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnNotification.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.btnNotification.Size = new System.Drawing.Size(30, 30);
-            this.btnNotification.TabIndex = 3;
-            // 
-            // picAvatar
-            // 
-            this.picAvatar.Image = global::prj_LTTQ_BTL.Properties.Resources.avt;
-            this.picAvatar.ImageRotate = 0F;
-            this.picAvatar.InitialImage = ((System.Drawing.Image)(resources.GetObject("picAvatar.InitialImage")));
-            this.picAvatar.Location = new System.Drawing.Point(70, 15);
-            this.picAvatar.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.picAvatar.Name = "picAvatar";
-            this.picAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.picAvatar.Size = new System.Drawing.Size(40, 40);
-            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picAvatar.TabIndex = 2;
-            this.picAvatar.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(15, 25);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 4;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // TeacherMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -954,6 +955,7 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.guna2PanelLeftTop.ResumeLayout(false);
             this.guna2PanelLeftTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2PanelCenter.ResumeLayout(false);
             this.PnMain.ResumeLayout(false);
             this.tableLayoutMain.ResumeLayout(false);
@@ -975,7 +977,6 @@
             this.flowLeft.ResumeLayout(false);
             this.flowLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

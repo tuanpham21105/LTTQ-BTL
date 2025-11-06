@@ -91,7 +91,6 @@ namespace prj_LTTQ_BTL.Forms.Teacher
                 }
 
 
-                // 🟦 Card lớp học
                 var card = new Guna2Panel
                 {
                     Size = new Size(300, 160),
@@ -102,7 +101,6 @@ namespace prj_LTTQ_BTL.Forms.Teacher
                     Cursor = Cursors.Hand
                 };
 
-                // 📘 Tên lớp
                 var lblName = new Label
                 {
                     Text = tenLop,
@@ -110,8 +108,6 @@ namespace prj_LTTQ_BTL.Forms.Teacher
                     Location = new Point(15, 10),
                     AutoSize = true
                 };
-
-                // 🧾 Môn học
                 var lblSubject = new Label
                 {
                     Text = monHoc,
@@ -121,7 +117,6 @@ namespace prj_LTTQ_BTL.Forms.Teacher
                     AutoSize = true
                 };
 
-                // 👨‍🏫 Giáo viên
                 var lblTeacher = new Label
                 {
                     Text = $"👨‍🏫 GV: {gv}",
@@ -130,7 +125,6 @@ namespace prj_LTTQ_BTL.Forms.Teacher
                     AutoSize = true
                 };
 
-                // 🗓 Ngày bắt đầu
                 var lblDate = new Label
                 {
                     Text = $"📅 Bắt đầu: {ngayBD}",
@@ -139,7 +133,6 @@ namespace prj_LTTQ_BTL.Forms.Teacher
                     AutoSize = true
                 };
 
-                // 👥 Số học viên
                 var lblCount = new Label
                 {
                     Text = $"👥 Số HV: {soHV}",
@@ -148,7 +141,6 @@ namespace prj_LTTQ_BTL.Forms.Teacher
                     AutoSize = true
                 };
 
-                // 🔵 Chấm trạng thái
                 var dot = new Guna2CircleButton
                 {
                     Size = new Size(12, 12),
@@ -169,7 +161,6 @@ namespace prj_LTTQ_BTL.Forms.Teacher
                     AutoSize = true
                 };
 
-                // 🧩 Gắn control vào card
                 card.Controls.Add(lblName);
                 card.Controls.Add(lblSubject);
                 card.Controls.Add(lblTeacher);
@@ -178,7 +169,6 @@ namespace prj_LTTQ_BTL.Forms.Teacher
                 card.Controls.Add(dot);
                 card.Controls.Add(lblStatus);
 
-                // 🔗 Khi click card → mở chi tiết lớp
                 card.Click += (s, e) =>
                 {
                     var detailForm = new Teacher_ClassDetailForm(classId, tenLop);

@@ -59,7 +59,23 @@ namespace prj_LTTQ_BTL.Forms.Teacher
         WHERE id = '{teacherId}'";
 
             dtBase.UpdateData(query);
-            MessageBox.Show("✅ Cập nhật thông tin thành công!", "Thông báo");
+            MessageBox.Show(" Cập nhật thông tin thành công!", "Thông báo");
+        }
+
+        private void btnChangeAvatar_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Title = "Chọn ảnh đại diện";
+                ofd.Filter = "Ảnh (*.jpg; *.jpeg; *.png)|*.jpg;*.jpeg;*.png";
+
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    guna2CirclePictureBox1.Image = Image.FromFile(ofd.FileName);
+
+                   
+                }
+            }
         }
     }
 }

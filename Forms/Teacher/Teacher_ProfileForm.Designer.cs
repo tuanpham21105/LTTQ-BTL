@@ -71,7 +71,9 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.label1.Size = new System.Drawing.Size(193, 51);
             this.label1.TabIndex = 0;
             this.label1.Text = "Hồ sơ cá nhân";
@@ -334,6 +336,7 @@
             this.btnChangeAvatar.Size = new System.Drawing.Size(93, 27);
             this.btnChangeAvatar.TabIndex = 0;
             this.btnChangeAvatar.Text = "đổi ảnh";
+            this.btnChangeAvatar.Click += new System.EventHandler(this.btnChangeAvatar_Click);
             // 
             // guna2CirclePictureBox1
             // 

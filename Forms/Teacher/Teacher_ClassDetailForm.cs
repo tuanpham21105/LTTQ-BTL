@@ -14,7 +14,6 @@ namespace prj_LTTQ_BTL.Forms.Teacher
         private readonly string classId;
         private readonly string className;
 
-        // Constructor nhận classId và className
         public Teacher_ClassDetailForm(string _classId, string _className)
         {
             InitializeComponent();
@@ -22,7 +21,6 @@ namespace prj_LTTQ_BTL.Forms.Teacher
             className = _className;
         }
 
-        // Khi load form
         private void Teacher_ClassDetailForm_Load(object sender, EventArgs e)
         {
             LoadClassInfoFromDB();
@@ -31,7 +29,6 @@ namespace prj_LTTQ_BTL.Forms.Teacher
         }
 
 
-        // =============== HEADER ===============
         private void LoadClassInfoFromDB()
         {
             string query = $@"
@@ -57,26 +54,23 @@ namespace prj_LTTQ_BTL.Forms.Teacher
             if (dt.Rows.Count > 0)
             {
                 var row = dt.Rows[0];
-                lblClassTitle.Text = $"🏫 LỚP HỌC: {row["ClassName"]}";
-                lblSubject.Text = $"📘 Môn học: {row["CourseName"]}";
-                lblTeacher.Text = $"👨‍🏫 Giáo viên: {row["TeacherName"]}";
-                lblStartDate.Text = $"🗓️ Ngày bắt đầu: {row["StartDate"]}";
-                lblStudentCount.Text = $"👥 Số HV: {row["StudentCount"]}";
+                lblClassTitle.Text = $" LỚP HỌC: {row["ClassName"]}";
+                lblSubject.Text = $" Môn học: {row["CourseName"]}";
+                lblTeacher.Text = $" Giáo viên: {row["TeacherName"]}";
+                lblStartDate.Text = $" Ngày bắt đầu: {row["StartDate"]}";
+                lblStudentCount.Text = $" Số HV: {row["StudentCount"]}";
 
                 string status = row["TrangThai"].ToString();
-                lblStatus.Text = (status == "Đang học") ? "🟢 Đang học" : "🟠 Chưa bắt đầu";
+                lblStatus.Text = (status == "Đang học") ? " Đang học" : " Chưa bắt đầu";
             }
         }
 
 
-        // =============== DGV SETUP ===============
         private void SetupDataGridView()
         {
             dgvStudents.Dock = DockStyle.Fill;
             dgvStudents.AutoGenerateColumns = true;
             dgvStudents.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            // Header
             dgvStudents.ThemeStyle.HeaderStyle.Height = 45;
 
             dgvStudents.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(33, 150, 243);
@@ -84,10 +78,9 @@ namespace prj_LTTQ_BTL.Forms.Teacher
             dgvStudents.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
             dgvStudents.EnableHeadersVisualStyles = false;
 
-            // Rows
             dgvStudents.DefaultCellStyle.Font = new Font("Segoe UI", 10);
-            dgvStudents.RowTemplate.Height = 45;          // ✅ tăng chiều cao
-            dgvStudents.RowTemplate.MinimumHeight = 40;   // đảm bảo không co nhỏ
+            dgvStudents.RowTemplate.Height = 45;         
+            dgvStudents.RowTemplate.MinimumHeight = 40;  
             dgvStudents.DefaultCellStyle.Padding = new Padding(5, 8, 5, 8);
             dgvStudents.RowHeadersVisible = false;
 
@@ -101,10 +94,8 @@ namespace prj_LTTQ_BTL.Forms.Teacher
         }
 
 
-        // =============== LOAD STUDENTS ===============
         private void LoadStudents()
         {
-            // ✅ Truy vấn theo DB mới (ClassAssignment)
             string query = $@"
                 SELECT 
                     S.full_name AS [Họ tên],
@@ -123,7 +114,6 @@ namespace prj_LTTQ_BTL.Forms.Teacher
             dgvStudents.DataSource = dt;
         }
 
-        // =============== SEARCH ===============
         private void btnSearchStudent_Click(object sender, EventArgs e)
         {
 
@@ -133,7 +123,6 @@ namespace prj_LTTQ_BTL.Forms.Teacher
         {
             string keyword = txtSearchStudent.Text.Trim();
 
-            // ✅ Sử dụng đúng bảng ClassAssignment
             string query = string.IsNullOrEmpty(keyword)
                 ? $@"
                     SELECT 
@@ -172,7 +161,6 @@ namespace prj_LTTQ_BTL.Forms.Teacher
         }
         private void LoadScheduleGridVisual()
         {
-            // Xóa các buổi học cũ (chỉ giữ label thứ + giờ)
             for (int row = 1; row < tblSchedule.RowCount; row++)
             {
                 for (int col = 1; col < tblSchedule.ColumnCount; col++)
@@ -183,7 +171,7 @@ namespace prj_LTTQ_BTL.Forms.Teacher
                 }
             }
 
-            // Lấy dữ liệu lịch học từ DB
+            
             string query = $@"
         SELECT session_date, start_time, room
         FROM Schedule
@@ -194,11 +182,11 @@ namespace prj_LTTQ_BTL.Forms.Teacher
             {
                 DateTime date = Convert.ToDateTime(row["session_date"]);
                 int weekday = (int)date.DayOfWeek;
-                if (weekday == 0) weekday = 7; // CN
+                if (weekday == 0) weekday = 7;  
                 TimeSpan start = TimeSpan.Parse(row["start_time"].ToString());
-                int rowIndex = start.Hours - 6; // vì hàng đầu tiên là tiêu đề
+                int rowIndex = start.Hours - 6;  
 
-                // Tạo panel hiển thị buổi học
+                 
                 var card = new Guna.UI2.WinForms.Guna2Panel
                 {
                     BorderRadius = 8,
@@ -221,18 +209,18 @@ namespace prj_LTTQ_BTL.Forms.Teacher
             }
         }
 
-        // Replace the switch expression in GetColorByDay with a switch statement for C# 7.3 compatibility
+         
         private Color GetColorByDay(int weekday)
         {
             switch (weekday)
             {
-                case 2: return Color.FromArgb(33, 150, 243); // T2
-                case 3: return Color.FromArgb(76, 175, 80);  // T3
-                case 4: return Color.FromArgb(156, 39, 176); // T4
-                case 5: return Color.FromArgb(244, 67, 54);  // T5
-                case 6: return Color.FromArgb(255, 152, 0);  // T6
-                case 7: return Color.FromArgb(0, 188, 212);  // T7
-                default: return Color.FromArgb(96, 125, 139); // CN
+                case 2: return Color.FromArgb(33, 150, 243);  
+                case 3: return Color.FromArgb(76, 175, 80);   
+                case 4: return Color.FromArgb(156, 39, 176);  
+                case 5: return Color.FromArgb(244, 67, 54);   
+                case 6: return Color.FromArgb(255, 152, 0);   
+                case 7: return Color.FromArgb(0, 188, 212);   
+                default: return Color.FromArgb(96, 125, 139);  
             }
         }
         private void guna2TabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -254,7 +242,7 @@ namespace prj_LTTQ_BTL.Forms.Teacher
 
         private void LoadAttendanceDates()
         {
-            // Lấy danh sách ngày học của lớp
+             
             string query = $@"
 SELECT 
     CONVERT(VARCHAR(10), session_date, 103) AS NgayHoc,
@@ -270,13 +258,13 @@ ORDER BY session_date";
             cboSessionDate.DisplayMember = "NgayHoc";
             cboSessionDate.ValueMember = "session_date";
 
-            // Chọn dòng đầu tiên để tránh SelectedValue bị null
+             
             if (cboSessionDate.Items.Count > 0)
                 cboSessionDate.SelectedIndex = 0;
         }
         private void LoadSessionTimes()
         {
-            // Lấy danh sách giờ bắt đầu trong ngày (buổi học)
+             
             string query = $@"
 SELECT 
     CONVERT(VARCHAR(5), start_time, 108) AS BuoiHoc,
@@ -302,7 +290,7 @@ ORDER BY start_time";
             if (cboSessionDate.SelectedItem == null || cboSessionTime.SelectedItem == null)
                 return;
 
-            // Lấy giá trị ngày và buổi được chọn
+             
             DataRowView drvDate = cboSessionDate.SelectedItem as DataRowView;
             DataRowView drvTime = cboSessionTime.SelectedItem as DataRowView;
             if (drvDate == null || drvTime == null)
@@ -312,7 +300,7 @@ ORDER BY start_time";
             string formattedDate = selectedDate.ToString("yyyy-MM-dd");
             string selectedTime = drvTime["BuoiHoc"].ToString();
 
-            // Truy vấn danh sách học viên và ghi chú (bỏ cột trạng thái)
+             
             string query = $@"
         SELECT 
             S.id AS [Mã HV],
@@ -333,19 +321,19 @@ ORDER BY start_time";
             dgvAttendance.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvAttendance.ThemeStyle.HeaderStyle.Height = 45;
 
-            // Xóa các cột checkbox cũ (nếu có)
+             
             string[] colNames = { "ColPresent", "ColAbsent", "ColLate", "ColExcused" };
             foreach (var name in colNames)
                 if (dgvAttendance.Columns.Contains(name))
                     dgvAttendance.Columns.Remove(name);
 
-            // Thêm 4 cột checkbox
+             
             dgvAttendance.Columns.Add(new DataGridViewCheckBoxColumn() { Name = "ColPresent", HeaderText = "Có mặt", Width = 90 });
             dgvAttendance.Columns.Add(new DataGridViewCheckBoxColumn() { Name = "ColAbsent", HeaderText = "Vắng", Width = 90 });
             dgvAttendance.Columns.Add(new DataGridViewCheckBoxColumn() { Name = "ColLate", HeaderText = "Đi trễ", Width = 90 });
             dgvAttendance.Columns.Add(new DataGridViewCheckBoxColumn() { Name = "ColExcused", HeaderText = "Có phép", Width = 90 });
 
-            // Đặt cột "Ghi chú" ở cuối
+             
             if (dgvAttendance.Columns.Contains("Ghi chú"))
             {
                 dgvAttendance.Columns["Ghi chú"].Width = 200;
@@ -354,7 +342,7 @@ ORDER BY start_time";
             }
             dgvAttendance.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvAttendance.GridColor = Color.LightGray;
-            // Cho phép chỉnh sửa ghi chú
+             
             dgvAttendance.ReadOnly = false;
             foreach (DataGridViewColumn col in dgvAttendance.Columns)
             {
@@ -362,7 +350,7 @@ ORDER BY start_time";
                     col.ReadOnly = true;
             }
 
-            // Gán giá trị cho checkbox dựa trên cột status
+             
             foreach (DataGridViewRow row in dgvAttendance.Rows)
             {
                 if (row.IsNewRow) continue;
@@ -373,23 +361,23 @@ ORDER BY start_time";
                 row.Cells["ColExcused"].Value = (status == "excused");
             }
 
-            // Ẩn cột status gốc (vẫn giữ dữ liệu)
+             
             dgvAttendance.Columns["status"].Visible = false;
-            dgvAttendance.AllowUserToAddRows = false; // ❌ Không cho tạo dòng mới
+            dgvAttendance.AllowUserToAddRows = false;  
 
 
-            // ✅ Gắn sự kiện CellContentClick để chỉ cho phép tick 1 checkbox mỗi dòng
-            dgvAttendance.CellContentClick -= dgvAttendance_CellContentClick; // tránh trùng event
+             
+            dgvAttendance.CellContentClick -= dgvAttendance_CellContentClick;  
             dgvAttendance.CellContentClick += dgvAttendance_CellContentClick;
         }
         private void dgvAttendance_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) return; // bỏ header
+            if (e.RowIndex < 0) return;  
             string[] cols = { "ColPresent", "ColAbsent", "ColLate", "ColExcused" };
 
             if (cols.Contains(dgvAttendance.Columns[e.ColumnIndex].Name))
             {
-                // Bỏ tick các ô khác cùng dòng
+                 
                 foreach (string colName in cols)
                 {
                     if (colName != dgvAttendance.Columns[e.ColumnIndex].Name)
@@ -419,11 +407,11 @@ ORDER BY start_time";
                     return;
                 }
 
-                // Lấy ngày được chọn
+                 
                 DateTime selectedDate = Convert.ToDateTime(cboSessionDate.SelectedValue);
                 string formattedDate = selectedDate.ToString("yyyy-MM-dd");
 
-                // Lấy schedule_id
+                 
                 string querySchedule = $@"
             SELECT TOP 1 id FROM Schedule
             WHERE class_id = '{classId}' AND session_date = '{formattedDate}'";
@@ -435,7 +423,7 @@ ORDER BY start_time";
                 }
                 string scheduleId = dtSchedule.Rows[0]["id"].ToString();
 
-                // Duyệt từng dòng trong DataGridView
+                 
                 foreach (DataGridViewRow row in dgvAttendance.Rows)
                 {
 
@@ -453,9 +441,9 @@ ORDER BY start_time";
                     if (!hasAnyChecked)
                     {
                         MessageBox.Show($"⚠️ Học viên '{row.Cells["Họ và tên"].Value}' chưa được chọn trạng thái điểm danh!", "Thông báo");
-                        return; // Dừng lại, không lưu nữa
+                        return;  
                     }
-                    string status = "absent"; // mặc định
+                    string status = "absent";  
                     if (present) status = "present";
                     else if (absent) status = "absent";
                     else if (late) status = "late";
@@ -496,16 +484,16 @@ ORDER BY start_time";
             DataTable dt = dtBase.GetDataTable(query);
             dgvScores.DataSource = dt;
 
-            // Cấu hình DataGridView
+             
             dgvScores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvScores.ThemeStyle.HeaderStyle.Height = 45;
 
             dgvScores.Columns["Mã HV"].ReadOnly = true;
             dgvScores.Columns["Họ và tên"].ReadOnly = true;
 
-            // Chỉ cho phép nhập cột Điểm
+             
             dgvScores.Columns["Điểm"].ReadOnly = false;
-            dgvScores.AllowUserToAddRows = false; // ❌ Không cho tạo dòng mới
+            dgvScores.AllowUserToAddRows = false;  
 
         }
 
@@ -518,14 +506,14 @@ ORDER BY start_time";
                 string studentId = row.Cells["Mã HV"].Value.ToString();
                 string scoreValue = row.Cells["Điểm"].Value?.ToString().Trim();
 
-                // Nếu rỗng thì bỏ qua
+                 
                 if (string.IsNullOrEmpty(scoreValue))
                     continue;
 
-                // Thay dấu phẩy (,) bằng dấu chấm (.) cho SQL hiểu đúng kiểu decimal
+                 
                 scoreValue = scoreValue.Replace(",", ".");
 
-                // Kiểm tra hợp lệ
+                 
                 if (!decimal.TryParse(scoreValue, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out decimal score))
                 {
                     MessageBox.Show($"⚠️ Điểm của học viên {row.Cells["Họ và tên"].Value} không hợp lệ!", "Lỗi");
@@ -538,7 +526,7 @@ ORDER BY start_time";
                     return;
                 }
 
-                // ⚙️ Dòng SQL chuẩn, không gây lỗi
+                 
                 string cmd = $@"
             IF EXISTS (SELECT * FROM Score WHERE student_id='{studentId}' AND class_id='{classId}')
                 UPDATE Score 

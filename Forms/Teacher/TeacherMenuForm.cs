@@ -496,9 +496,11 @@ namespace prj_LTTQ_BTL.Teacher
 
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
-           
-
-            // Gọi lại các hàm load dữ liệu chính
+            foreach (Control ctrl in PnMain.Controls.OfType<Form>().ToList())
+            {
+                ctrl.Dispose(); 
+            }
+            PnMain.Tag = null; 
             LoadScheduleToday();
             LoadTeachingClasses();
             LoadQuickStats();
@@ -508,6 +510,13 @@ namespace prj_LTTQ_BTL.Teacher
         private void btnHoSo_Click(object sender, EventArgs e)
         {
             FormUtils.OpenChildForm(PnMain, new Teacher_ProfileForm());
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Thoát ứng dụng?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+                this.Close();
         }
     }
 }
