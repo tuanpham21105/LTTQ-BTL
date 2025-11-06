@@ -370,6 +370,7 @@
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Utils\DropDownMenu.cs" />
     <Compile Include="Utils\FormUtils.cs" />
+    <Compile Include="Utils\Logout.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

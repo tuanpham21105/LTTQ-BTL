@@ -171,14 +171,17 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (confirmResult == DialogResult.Yes)
-            {
-                this.Hide(); 
-                FormLogin loginForm = new FormLogin();
-                loginForm.ShowDialog(); 
-                this.Close(); 
-            }
+            Logout.PerformLogout(this);
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
