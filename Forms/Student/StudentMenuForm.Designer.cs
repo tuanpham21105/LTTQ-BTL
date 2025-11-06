@@ -311,6 +311,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnTTHV.TabIndex = 8;
             this.btnTTHV.Text = "Thông tin học viên";
             this.btnTTHV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnTTHV.Click += new System.EventHandler(this.btnTTHV_Click);
             // 
             // brandPanel
             // 

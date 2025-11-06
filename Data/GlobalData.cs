@@ -11,8 +11,8 @@ namespace prj_LTTQ_BTL.Data
 {
     internal static class GlobalData
     {
-        public static string Role= "Teacher";
-        public static string Id= "D0F67506-A3E6-40DB-B9F0-5887E777C444y";
+        public static string Role= "teacher";
+        public static string Id= "A515EDE5-0A63-4983-9916-344A71A301DC";
 
         public static readonly Color primaryColor = Color.FromArgb(0, 120, 215);
         public static readonly Color secondaryColor = Color.FromArgb(43, 136, 216);

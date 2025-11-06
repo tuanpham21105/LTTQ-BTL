@@ -101,5 +101,10 @@ namespace prj_LTTQ_BTL.Forms.Student
 
             FormUtils.OpenChildForm(panelMain, activeForm);
         }
+
+        private void btnTTHV_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
