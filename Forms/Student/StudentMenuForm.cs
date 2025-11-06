@@ -20,6 +20,8 @@ namespace prj_LTTQ_BTL.Forms.Student
 {
     public partial class StudentMenuForm : Form
     {
+        private DataProcessor dataProcessor = new DataProcessor();
+
         private Form activeForm = null;
 
         public StudentMenuForm()
@@ -68,7 +70,9 @@ namespace prj_LTTQ_BTL.Forms.Student
 
         private void StudentMenuForm_Load(object sender, EventArgs e)
         {
+            string hocvienname = dataProcessor.GetDataTable($"select full_name from Student where id = '{GlobalData.Id}'").Rows[0]["full_name"].ToString();
 
+            lblXinChao.Text = "Xin chào " + hocvienname;
         }
 
         private void SidebarBtn_Click(Guna2Button btn)
@@ -116,6 +120,11 @@ namespace prj_LTTQ_BTL.Forms.Student
         }
 
         private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
         {
 
         }

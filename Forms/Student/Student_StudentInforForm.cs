@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using prj_LTTQ_BTL.Data;
+using prj_LTTQ_BTL.Utils;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace prj_LTTQ_BTL.Forms.Student
@@ -54,6 +55,10 @@ namespace prj_LTTQ_BTL.Forms.Student
                 txtEmail.Text = infor2.Rows[0]["email"].ToString();
                 txtAddress.Text = infor2.Rows[0]["address"].ToString();
             }
+
+            if (infor1.Rows[0]["avatar"].ToString() != string.Empty)
+                FormUtils.LoadImage(avatar, infor1.Rows[0]["avatar"].ToString());
+
         }
 
         private void ToggleInfor(bool mode)
@@ -155,6 +160,15 @@ namespace prj_LTTQ_BTL.Forms.Student
                 $"address = N'{txtAddress.Text}'" +
                 $"where id = '{txtId.Text}'"
             );
+        }
+
+        private void avatarBtn_Click(object sender, EventArgs e)
+        {
+            string path = FormUtils.UploadImage();
+
+            dataProcessor.UpdateData($"update [User] set avatar = '{path}' where id = '{GlobalData.Id}'");
+
+            FormUtils.LoadImage(avatar, path);  
         }
     }
 }

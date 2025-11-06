@@ -410,6 +410,7 @@
     <None Include=".env">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="bin\Debug\.env" />
     <None Include="bin\Debug\prj-LTTQ-BTL.exe.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -426,8 +427,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\AntdUI.dll" />
+    <Content Include="bin\Debug\AntdUI.xml" />
+    <Content Include="bin\Debug\DotNetEnv.dll" />
+    <Content Include="bin\Debug\FontAwesome.Sharp.dll" />
+    <Content Include="bin\Debug\Guna.UI2.dll" />
+    <Content Include="bin\Debug\Images\owl.png" />
+    <Content Include="bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll" />
+    <Content Include="bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml" />
+    <Content Include="bin\Debug\Microsoft.Extensions.Configuration.dll" />
+    <Content Include="bin\Debug\Microsoft.Extensions.Configuration.xml" />
+    <Content Include="bin\Debug\Microsoft.Extensions.Primitives.dll" />
+    <Content Include="bin\Debug\Microsoft.Extensions.Primitives.xml" />
     <Content Include="bin\Debug\prj-LTTQ-BTL.exe" />
     <Content Include="bin\Debug\prj-LTTQ-BTL.pdb" />
+    <Content Include="bin\Debug\Sprache.dll" />
+    <Content Include="bin\Debug\Sprache.xml" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.xml" />
     <Content Include="Images\owl.png" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
   </ItemGroup>

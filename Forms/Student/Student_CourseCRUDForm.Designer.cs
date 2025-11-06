@@ -109,7 +109,6 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.panelMain.Size = new System.Drawing.Size(706, 542);
             this.panelMain.TabIndex = 1;
             // 
@@ -119,7 +118,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.guna2Panel3.Controls.Add(this.guna2Panel4);
             this.guna2Panel3.Controls.Add(this.guna2Panel6);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 562);
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 552);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.guna2Panel3.Size = new System.Drawing.Size(689, 392);
@@ -391,7 +390,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelKhoaHoc.Controls.Add(this.panel);
             this.panelKhoaHoc.Controls.Add(this.guna2Panel1);
             this.panelKhoaHoc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelKhoaHoc.Location = new System.Drawing.Point(0, 50);
+            this.panelKhoaHoc.Location = new System.Drawing.Point(0, 40);
             this.panelKhoaHoc.Name = "panelKhoaHoc";
             this.panelKhoaHoc.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.panelKhoaHoc.Size = new System.Drawing.Size(689, 512);
@@ -777,7 +776,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.headerPanel.Controls.Add(this.lblTitle);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.FillColor = System.Drawing.Color.White;
-            this.headerPanel.Location = new System.Drawing.Point(0, 10);
+            this.headerPanel.Location = new System.Drawing.Point(0, 0);
             this.headerPanel.Margin = new System.Windows.Forms.Padding(0);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Padding = new System.Windows.Forms.Padding(20, 5, 5, 5);

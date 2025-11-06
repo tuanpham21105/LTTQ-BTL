@@ -428,6 +428,7 @@
             this.checkBoxCancelled.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.checkBoxCancelled.UncheckedState.InnerBorderRadius = 12;
             this.checkBoxCancelled.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.checkBoxCancelled.CheckedChanged += new System.EventHandler(this.SetFilters);
             // 
             // label6
             // 
@@ -462,6 +463,7 @@
             this.checkBoxPending.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.checkBoxPending.UncheckedState.InnerBorderRadius = 12;
             this.checkBoxPending.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.checkBoxPending.CheckedChanged += new System.EventHandler(this.SetFilters);
             // 
             // label4
             // 
@@ -496,6 +498,7 @@
             this.checkBoxPaid.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.checkBoxPaid.UncheckedState.InnerBorderRadius = 12;
             this.checkBoxPaid.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.checkBoxPaid.CheckedChanged += new System.EventHandler(this.SetFilters);
             // 
             // label3
             // 
