@@ -76,7 +76,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                _userService.UpdateUser(_currentUserId, username, password, "admin");
+                _userService.UpdateUser(_currentUserId, username, password, "admin", "active");
 
                 MessageBox.Show("Cập nhật thông tin thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

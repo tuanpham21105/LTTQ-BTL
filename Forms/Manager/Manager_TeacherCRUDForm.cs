@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace prj_LTTQ_BTL.Forms.Manager
 {
@@ -117,6 +118,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             {
                 dgvTeachers.Columns["start_date"].HeaderText = "Ngày Bắt Đầu";
             }
+            if (dgvTeachers.Columns.Contains("status"))
+            {
+                dgvTeachers.Columns["status"].HeaderText = "Trạng Thái";
+            }
 
             _totalPages = (int)Math.Ceiling((double)totalRecords / PageSize);
 
@@ -210,6 +215,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 string phoneNumber = txtPhoneNumber.Text.Trim();
                 string email = txtEmail.Text.Trim();
                 string address = txtAddress.Text.Trim();
+                string status = checkBoxStatus.Checked ? "Active" : "Inactive";
                 DateTime startDate = dtpStartDate.Value;
                 if (string.IsNullOrEmpty(fullName) || string.IsNullOrEmpty(specialization) || string.IsNullOrEmpty(qualification) ||
                     string.IsNullOrEmpty(phoneNumber) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(address))
@@ -230,7 +236,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 }
                 else
                 {
-                    _teacherService.UpdateTeacher(_selectedTeacherId.Value, fullName, specialization, qualification, phoneNumber, email, address, startDate);
+                    _teacherService.UpdateTeacher(_selectedTeacherId.Value, fullName, specialization, qualification, phoneNumber, email, address, startDate, status);
                     MessageBox.Show("Cập nhật giáo viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
@@ -280,6 +286,8 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 txtAddress.Text = row.Cells["address"].Value.ToString();
                 dtpStartDate.Value = DateTime.Parse(row.Cells["start_date"].Value.ToString());
                 txtId.Text = row.Cells["id"].Value.ToString();
+                string status = row.Cells["status"].Value.ToString();
+                checkBoxStatus.Checked = status == "Active";
                 btnEdit.Enabled = true;
                 btnDelete.Enabled = true;
                 btnCreate.Enabled = false;
