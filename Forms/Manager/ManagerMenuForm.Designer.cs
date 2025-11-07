@@ -49,7 +49,6 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelStudent = new Guna.UI2.WinForms.Guna2Panel();
             this.btnStudentScore = new Guna.UI2.WinForms.Guna2Button();
             this.btnStudentAttendance = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.btnStudentCourse = new Guna.UI2.WinForms.Guna2Button();
             this.btnStudentList = new Guna.UI2.WinForms.Guna2Button();
             this.btnStudent = new Guna.UI2.WinForms.Guna2Button();
@@ -57,12 +56,14 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelBrand = new Guna.UI2.WinForms.Guna2Panel();
             this.lblBrand = new System.Windows.Forms.Label();
             this.picBrand = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnMaximize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnStudentClass = new Guna.UI2.WinForms.Guna2Button();
             this.panelSideBar.SuspendLayout();
             this.panelStudent.SuspendLayout();
             this.panelBrand.SuspendLayout();
@@ -96,12 +97,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelSideBar.Controls.Add(this.panelBrand);
             this.panelSideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideBar.Location = new System.Drawing.Point(0, 0);
-            this.panelSideBar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panelSideBar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panelSideBar.Name = "panelSideBar";
-            this.panelSideBar.Padding = new System.Windows.Forms.Padding(13, 16, 13, 16);
+            this.panelSideBar.Padding = new System.Windows.Forms.Padding(20, 25, 20, 25);
             this.panelSideBar.ShadowDecoration.Depth = 10;
             this.panelSideBar.ShadowDecoration.Enabled = true;
-            this.panelSideBar.Size = new System.Drawing.Size(281, 598);
+            this.panelSideBar.Size = new System.Drawing.Size(422, 920);
             this.panelSideBar.TabIndex = 2;
             // 
             // btnLogout
@@ -116,12 +117,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnLogout.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogout.Location = new System.Drawing.Point(13, 585);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.btnLogout.Location = new System.Drawing.Point(20, 904);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(0, 18, 0, 18);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnLogout.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnLogout.Size = new System.Drawing.Size(238, 40);
+            this.btnLogout.Size = new System.Drawing.Size(356, 62);
             this.btnLogout.TabIndex = 33;
             this.btnLogout.Text = "Đăng xuất";
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -139,12 +140,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnAccount.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
             this.btnAccount.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAccount.Location = new System.Drawing.Point(13, 545);
-            this.btnAccount.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.btnAccount.Location = new System.Drawing.Point(20, 842);
+            this.btnAccount.Margin = new System.Windows.Forms.Padding(0, 18, 0, 18);
             this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnAccount.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnAccount.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnAccount.Size = new System.Drawing.Size(238, 40);
+            this.btnAccount.Size = new System.Drawing.Size(356, 62);
             this.btnAccount.TabIndex = 31;
             this.btnAccount.Text = "Chi tiết tài khoản";
             this.btnAccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -162,12 +163,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnUser.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnUser.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.Image")));
             this.btnUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnUser.Location = new System.Drawing.Point(13, 505);
-            this.btnUser.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.btnUser.Location = new System.Drawing.Point(20, 780);
+            this.btnUser.Margin = new System.Windows.Forms.Padding(0, 18, 0, 18);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnUser.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnUser.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnUser.Size = new System.Drawing.Size(238, 40);
+            this.btnUser.Size = new System.Drawing.Size(356, 62);
             this.btnUser.TabIndex = 30;
             this.btnUser.Text = "Quản lý tài khoản";
             this.btnUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -185,12 +186,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnPayment.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnPayment.Image = ((System.Drawing.Image)(resources.GetObject("btnPayment.Image")));
             this.btnPayment.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPayment.Location = new System.Drawing.Point(13, 465);
-            this.btnPayment.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.btnPayment.Location = new System.Drawing.Point(20, 718);
+            this.btnPayment.Margin = new System.Windows.Forms.Padding(0, 18, 0, 18);
             this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnPayment.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnPayment.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnPayment.Size = new System.Drawing.Size(238, 40);
+            this.btnPayment.Size = new System.Drawing.Size(356, 62);
             this.btnPayment.TabIndex = 28;
             this.btnPayment.Text = "Tài chính";
             this.btnPayment.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -207,12 +208,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnClass.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnClass.Image = ((System.Drawing.Image)(resources.GetObject("btnClass.Image")));
             this.btnClass.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnClass.Location = new System.Drawing.Point(13, 425);
-            this.btnClass.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.btnClass.Location = new System.Drawing.Point(20, 656);
+            this.btnClass.Margin = new System.Windows.Forms.Padding(0, 18, 0, 18);
             this.btnClass.Name = "btnClass";
-            this.btnClass.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnClass.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnClass.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnClass.Size = new System.Drawing.Size(238, 40);
+            this.btnClass.Size = new System.Drawing.Size(356, 62);
             this.btnClass.TabIndex = 24;
             this.btnClass.Text = "Lớp học, lịch học";
             this.btnClass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -221,11 +222,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             // 
             this.guna2Panel3.AutoSize = true;
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.Location = new System.Drawing.Point(13, 425);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel3.Location = new System.Drawing.Point(20, 656);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.guna2Panel3.Size = new System.Drawing.Size(238, 0);
+            this.guna2Panel3.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.guna2Panel3.Size = new System.Drawing.Size(356, 0);
             this.guna2Panel3.TabIndex = 22;
             // 
             // btnCourse
@@ -240,12 +240,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnCourse.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnCourse.Image = ((System.Drawing.Image)(resources.GetObject("btnCourse.Image")));
             this.btnCourse.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCourse.Location = new System.Drawing.Point(13, 385);
-            this.btnCourse.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.btnCourse.Location = new System.Drawing.Point(20, 594);
+            this.btnCourse.Margin = new System.Windows.Forms.Padding(0, 18, 0, 18);
             this.btnCourse.Name = "btnCourse";
-            this.btnCourse.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnCourse.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnCourse.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnCourse.Size = new System.Drawing.Size(238, 40);
+            this.btnCourse.Size = new System.Drawing.Size(356, 62);
             this.btnCourse.TabIndex = 21;
             this.btnCourse.Text = "Khóa học";
             this.btnCourse.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -254,10 +254,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             // 
             this.guna2Panel2.AutoSize = true;
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(13, 385);
+            this.guna2Panel2.Location = new System.Drawing.Point(20, 594);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.guna2Panel2.Size = new System.Drawing.Size(238, 0);
+            this.guna2Panel2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.guna2Panel2.Size = new System.Drawing.Size(356, 0);
             this.guna2Panel2.TabIndex = 20;
             // 
             // btnTeacher
@@ -272,12 +273,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnTeacher.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnTeacher.Image = ((System.Drawing.Image)(resources.GetObject("btnTeacher.Image")));
             this.btnTeacher.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnTeacher.Location = new System.Drawing.Point(13, 345);
-            this.btnTeacher.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.btnTeacher.Location = new System.Drawing.Point(20, 532);
+            this.btnTeacher.Margin = new System.Windows.Forms.Padding(0, 18, 0, 18);
             this.btnTeacher.Name = "btnTeacher";
-            this.btnTeacher.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnTeacher.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnTeacher.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnTeacher.Size = new System.Drawing.Size(238, 40);
+            this.btnTeacher.Size = new System.Drawing.Size(356, 62);
             this.btnTeacher.TabIndex = 19;
             this.btnTeacher.Text = "Giáo viên";
             this.btnTeacher.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -285,16 +286,17 @@ namespace prj_LTTQ_BTL.Forms.Manager
             // panelStudent
             // 
             this.panelStudent.AutoSize = true;
+            this.panelStudent.Controls.Add(this.btnStudentClass);
             this.panelStudent.Controls.Add(this.btnStudentScore);
             this.panelStudent.Controls.Add(this.btnStudentAttendance);
-            this.panelStudent.Controls.Add(this.guna2Button3);
             this.panelStudent.Controls.Add(this.btnStudentCourse);
             this.panelStudent.Controls.Add(this.btnStudentList);
             this.panelStudent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelStudent.Location = new System.Drawing.Point(13, 177);
+            this.panelStudent.Location = new System.Drawing.Point(20, 274);
+            this.panelStudent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelStudent.Name = "panelStudent";
-            this.panelStudent.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.panelStudent.Size = new System.Drawing.Size(238, 168);
+            this.panelStudent.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.panelStudent.Size = new System.Drawing.Size(356, 258);
             this.panelStudent.TabIndex = 18;
             this.panelStudent.Visible = false;
             // 
@@ -309,12 +311,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnStudentScore.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
             this.btnStudentScore.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnStudentScore.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnStudentScore.Location = new System.Drawing.Point(20, 128);
-            this.btnStudentScore.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.btnStudentScore.Location = new System.Drawing.Point(30, 147);
+            this.btnStudentScore.Margin = new System.Windows.Forms.Padding(0, 18, 0, 18);
             this.btnStudentScore.Name = "btnStudentScore";
-            this.btnStudentScore.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnStudentScore.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnStudentScore.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnStudentScore.Size = new System.Drawing.Size(218, 40);
+            this.btnStudentScore.Size = new System.Drawing.Size(326, 62);
             this.btnStudentScore.TabIndex = 22;
             this.btnStudentScore.Text = "Điểm số học viên";
             this.btnStudentScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -331,57 +333,36 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnStudentAttendance.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
             this.btnStudentAttendance.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnStudentAttendance.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnStudentAttendance.Location = new System.Drawing.Point(20, 96);
-            this.btnStudentAttendance.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            this.btnStudentAttendance.Location = new System.Drawing.Point(30, 98);
+            this.btnStudentAttendance.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.btnStudentAttendance.Name = "btnStudentAttendance";
-            this.btnStudentAttendance.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnStudentAttendance.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnStudentAttendance.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnStudentAttendance.Size = new System.Drawing.Size(218, 32);
+            this.btnStudentAttendance.Size = new System.Drawing.Size(326, 49);
             this.btnStudentAttendance.TabIndex = 21;
             this.btnStudentAttendance.Text = "Ghi danh trong buổi";
             this.btnStudentAttendance.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // guna2Button3
+            // btnStudentCourse
             // 
-            this.guna2Button3.BorderRadius = 8;
-            this.guna2Button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.guna2Button3.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.Location = new System.Drawing.Point(20, 64);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.guna2Button3.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.guna2Button3.Size = new System.Drawing.Size(218, 32);
-            this.guna2Button3.TabIndex = 20;
-            this.guna2Button3.Text = "Ghi danh trong lớp";
-            this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.BorderRadius = 8;
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.Location = new System.Drawing.Point(20, 32);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.guna2Button2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.guna2Button2.Size = new System.Drawing.Size(218, 32);
-            this.guna2Button2.TabIndex = 19;
-            this.guna2Button2.Text = "Ghi danh trong khóa";
-            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStudentCourse.BorderRadius = 8;
+            this.btnStudentCourse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStudentCourse.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStudentCourse.FillColor = System.Drawing.Color.Transparent;
+            this.btnStudentCourse.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnStudentCourse.ForeColor = System.Drawing.Color.White;
+            this.btnStudentCourse.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.btnStudentCourse.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnStudentCourse.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStudentCourse.Location = new System.Drawing.Point(30, 49);
+            this.btnStudentCourse.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.btnStudentCourse.Name = "btnStudentCourse";
+            this.btnStudentCourse.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnStudentCourse.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.btnStudentCourse.Size = new System.Drawing.Size(326, 49);
+            this.btnStudentCourse.TabIndex = 20;
+            this.btnStudentCourse.Text = "Ghi danh trong khóa học";
+            this.btnStudentCourse.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnStudentList
             // 
@@ -394,12 +375,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnStudentList.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
             this.btnStudentList.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnStudentList.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnStudentList.Location = new System.Drawing.Point(20, 0);
-            this.btnStudentList.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            this.btnStudentList.Location = new System.Drawing.Point(30, 0);
+            this.btnStudentList.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.btnStudentList.Name = "btnStudentList";
-            this.btnStudentList.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnStudentList.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnStudentList.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnStudentList.Size = new System.Drawing.Size(218, 32);
+            this.btnStudentList.Size = new System.Drawing.Size(326, 49);
             this.btnStudentList.TabIndex = 18;
             this.btnStudentList.Text = "Danh sách học viên";
             this.btnStudentList.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -416,12 +397,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnStudent.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnStudent.Image")));
             this.btnStudent.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnStudent.Location = new System.Drawing.Point(13, 137);
-            this.btnStudent.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            this.btnStudent.Location = new System.Drawing.Point(20, 212);
+            this.btnStudent.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.btnStudent.Name = "btnStudent";
-            this.btnStudent.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnStudent.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnStudent.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnStudent.Size = new System.Drawing.Size(238, 40);
+            this.btnStudent.Size = new System.Drawing.Size(356, 62);
             this.btnStudent.TabIndex = 17;
             this.btnStudent.Text = "Học viên";
             this.btnStudent.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -439,12 +420,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnDashboard.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
             this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDashboard.Location = new System.Drawing.Point(13, 97);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            this.btnDashboard.Location = new System.Drawing.Point(20, 150);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnDashboard.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnDashboard.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnDashboard.Size = new System.Drawing.Size(238, 40);
+            this.btnDashboard.Size = new System.Drawing.Size(356, 62);
             this.btnDashboard.TabIndex = 16;
             this.btnDashboard.Text = "Thống kê";
             this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -455,11 +436,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelBrand.Controls.Add(this.lblBrand);
             this.panelBrand.Controls.Add(this.picBrand);
             this.panelBrand.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBrand.Location = new System.Drawing.Point(13, 16);
-            this.panelBrand.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panelBrand.Location = new System.Drawing.Point(20, 25);
+            this.panelBrand.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panelBrand.Name = "panelBrand";
-            this.panelBrand.Padding = new System.Windows.Forms.Padding(8, 16, 8, 16);
-            this.panelBrand.Size = new System.Drawing.Size(238, 81);
+            this.panelBrand.Padding = new System.Windows.Forms.Padding(12, 25, 12, 25);
+            this.panelBrand.Size = new System.Drawing.Size(356, 125);
             this.panelBrand.TabIndex = 0;
             // 
             // lblBrand
@@ -469,10 +450,9 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.lblBrand.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblBrand.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold);
             this.lblBrand.ForeColor = System.Drawing.Color.White;
-            this.lblBrand.Location = new System.Drawing.Point(50, 16);
-            this.lblBrand.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBrand.Location = new System.Drawing.Point(75, 25);
             this.lblBrand.Name = "lblBrand";
-            this.lblBrand.Size = new System.Drawing.Size(118, 37);
+            this.lblBrand.Size = new System.Drawing.Size(173, 54);
             this.lblBrand.TabIndex = 0;
             this.lblBrand.Text = "OwlEng";
             this.lblBrand.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -485,13 +465,22 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.picBrand.FillColor = System.Drawing.Color.Transparent;
             this.picBrand.Image = ((System.Drawing.Image)(resources.GetObject("picBrand.Image")));
             this.picBrand.ImageRotate = 0F;
-            this.picBrand.Location = new System.Drawing.Point(8, 16);
-            this.picBrand.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.picBrand.Location = new System.Drawing.Point(12, 25);
+            this.picBrand.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.picBrand.Name = "picBrand";
-            this.picBrand.Size = new System.Drawing.Size(42, 49);
+            this.picBrand.Size = new System.Drawing.Size(63, 75);
             this.picBrand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBrand.TabIndex = 1;
             this.picBrand.TabStop = false;
+            // 
+            // Guna2Button2
+            // 
+            this.Guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.Guna2Button2.Location = new System.Drawing.Point(0, 0);
+            this.Guna2Button2.Name = "Guna2Button2";
+            this.Guna2Button2.Size = new System.Drawing.Size(180, 45);
+            this.Guna2Button2.TabIndex = 0;
             // 
             // panelHeader
             // 
@@ -504,10 +493,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelHeader.Controls.Add(this.btnClose);
             this.panelHeader.Controls.Add(this.lblTitle);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeader.Location = new System.Drawing.Point(281, 0);
-            this.panelHeader.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panelHeader.Location = new System.Drawing.Point(422, 0);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(744, 25);
+            this.panelHeader.Size = new System.Drawing.Size(1116, 38);
             this.panelHeader.TabIndex = 1;
             this.panelHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHeader_Paint);
             // 
@@ -520,10 +509,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnMinimize.FillColor = System.Drawing.Color.Transparent;
             this.btnMinimize.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.btnMinimize.IconColor = System.Drawing.Color.Black;
-            this.btnMinimize.Location = new System.Drawing.Point(630, 0);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMinimize.Location = new System.Drawing.Point(945, 0);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(38, 25);
+            this.btnMinimize.Size = new System.Drawing.Size(57, 38);
             this.btnMinimize.TabIndex = 0;
             // 
             // btnMaximize
@@ -535,10 +524,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnMaximize.FillColor = System.Drawing.Color.Transparent;
             this.btnMaximize.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.btnMaximize.IconColor = System.Drawing.Color.Black;
-            this.btnMaximize.Location = new System.Drawing.Point(668, 0);
-            this.btnMaximize.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMaximize.Location = new System.Drawing.Point(1002, 0);
+            this.btnMaximize.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(38, 25);
+            this.btnMaximize.Size = new System.Drawing.Size(57, 38);
             this.btnMaximize.TabIndex = 1;
             // 
             // btnClose
@@ -549,10 +538,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
             this.btnClose.HoverState.IconColor = System.Drawing.Color.White;
             this.btnClose.IconColor = System.Drawing.Color.Black;
-            this.btnClose.Location = new System.Drawing.Point(706, 0);
+            this.btnClose.Location = new System.Drawing.Point(1059, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(38, 25);
+            this.btnClose.Size = new System.Drawing.Size(57, 38);
             this.btnClose.TabIndex = 2;
             // 
             // lblTitle
@@ -564,7 +553,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(166, 25);
+            this.lblTitle.Size = new System.Drawing.Size(251, 38);
             this.lblTitle.TabIndex = 3;
             this.lblTitle.Text = "🧑‍💼Manager Menu";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -574,25 +563,46 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelMain.AutoSize = true;
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(281, 25);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panelMain.Location = new System.Drawing.Point(422, 38);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Padding = new System.Windows.Forms.Padding(8, 10, 8, 10);
-            this.panelMain.Size = new System.Drawing.Size(744, 573);
+            this.panelMain.Padding = new System.Windows.Forms.Padding(12, 15, 12, 15);
+            this.panelMain.Size = new System.Drawing.Size(1116, 882);
             this.panelMain.TabIndex = 0;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
+            // btnStudentClass
+            // 
+            this.btnStudentClass.BorderRadius = 8;
+            this.btnStudentClass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStudentClass.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStudentClass.FillColor = System.Drawing.Color.Transparent;
+            this.btnStudentClass.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnStudentClass.ForeColor = System.Drawing.Color.White;
+            this.btnStudentClass.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.btnStudentClass.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnStudentClass.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStudentClass.Location = new System.Drawing.Point(30, 209);
+            this.btnStudentClass.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.btnStudentClass.Name = "btnStudentClass";
+            this.btnStudentClass.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnStudentClass.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.btnStudentClass.Size = new System.Drawing.Size(326, 49);
+            this.btnStudentClass.TabIndex = 24;
+            this.btnStudentClass.Text = "Ghi danh trong lớp";
+            this.btnStudentClass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // ManagerMenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.ClientSize = new System.Drawing.Size(1025, 598);
+            this.ClientSize = new System.Drawing.Size(1538, 920);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelSideBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.Name = "ManagerMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manager Menu";
@@ -628,9 +638,9 @@ namespace prj_LTTQ_BTL.Forms.Manager
         private Guna.UI2.WinForms.Guna2Panel panelStudent;
         private Guna.UI2.WinForms.Guna2Button btnStudentList;
         private Guna.UI2.WinForms.Guna2Button btnStudentAttendance;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button btnStudentCourse;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2Button Guna2Button2;
         private Guna.UI2.WinForms.Guna2Button btnCourse;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button btnTeacher;
@@ -640,5 +650,6 @@ namespace prj_LTTQ_BTL.Forms.Manager
         private Guna.UI2.WinForms.Guna2Button btnUser;
         private Guna.UI2.WinForms.Guna2Button btnAccount;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
+        private Guna.UI2.WinForms.Guna2Button btnStudentClass;
     }
 }

@@ -83,6 +83,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             {
                 SidebarBtn_Click(btnStudentCourse, "Danh sách đăng ký khóa học");
             };
+            btnStudentClass.Click += (s, e) =>
+            {
+                SidebarBtn_Click(btnAccount, "Danh sách gán lớp học");
+            };
 
         }
         private void SidebarBtn_Click(Guna2Button btn, string formType)
@@ -102,6 +106,8 @@ namespace prj_LTTQ_BTL.Forms.Manager
             btn.BackColor = secondaryColor;
             btnPayment.BackColor = Color.Transparent;
             btnStudentCourse.BackColor = Color.Transparent;
+            btnStudentClass.BackColor = Color.Transparent;
+
             if (activeForm != null)
             {
                 activeForm.Close();
@@ -141,6 +147,9 @@ namespace prj_LTTQ_BTL.Forms.Manager
                     break;
                 case "Danh sách đăng ký khóa học":
                     activeForm = new Manager_StudentEnrollmentCRUDForm();
+                    break;
+                case "Danh sách gán lớp học":
+                    activeForm = new Manager_StudentClassAssigmentForm();
                     break;
             }
 
