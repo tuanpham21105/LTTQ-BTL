@@ -42,11 +42,13 @@ namespace prj_LTTQ_BTL.Forms.Manager
         {
             DataTable classTable = dataProcessor.GetDataTable($"select * from Class");
             FormUtils.FillGunaDgv(dgvClass, classTable);
+
+            txtSearchClass_TextChanged(null, null);
         }
 
         private void ResetDgvCourse()
         {
-            DataTable courseTable = dataProcessor.GetDataTable($"select * from Course");
+            DataTable courseTable = dataProcessor.GetDataTable($"select * from Course where status = 'Active'");
             FormUtils.FillGunaDgv(dgvCourse, courseTable);
         }
 
@@ -87,10 +89,6 @@ namespace prj_LTTQ_BTL.Forms.Manager
             txtTongSoHocVien.Text = string.Empty;
             dateNgayBatDau.Value = DateTime.Now;
             comboboxMaGiaoVien.SelectedValue = string.Empty;
-        }
-
-        private void dgvClass_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
         }
 
         private void txtSearchClass_TextChanged(object sender, EventArgs e)
@@ -183,7 +181,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
         {
             if (txtSearchCourse.Text == string.Empty)
             {
-                FormUtils.FillGunaDgv(dgvCourse, dataProcessor.GetDataTable("select * from Course"));
+                FormUtils.FillGunaDgv(dgvCourse, dataProcessor.GetDataTable("select * from Course where status = 'Active'"));
                 return;
             }
 
@@ -194,23 +192,23 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
             foreach (string keyword in keywords)
             {
-                sCourses = dataProcessor.GetDataTable($"select * from Course where name collate Latin1_General_CI_AI like '%{keyword}%'");
+                sCourses = dataProcessor.GetDataTable($"select * from Course where name collate Latin1_General_CI_AI like '%{keyword}%' and status = 'Active'");
                 sCourses.PrimaryKey = new DataColumn[] { sCourses.Columns["id"] };
                 searchCourses.PrimaryKey = new DataColumn[] { searchCourses.Columns["id"] };
                 searchCourses.Merge(sCourses, false);
 
-                sCourses = dataProcessor.GetDataTable($"select * from Course where description collate Latin1_General_CI_AI like '%{keyword}%'");
+                sCourses = dataProcessor.GetDataTable($"select * from Course where description collate Latin1_General_CI_AI like '%{keyword}%' and status = 'Active'");
                 searchCourses.Merge(sCourses, false);
 
                 if (int.TryParse(keyword, out int lesson))
                 {
-                    sCourses = dataProcessor.GetDataTable($"select * from Course where number_of_lessons = {keyword}");
+                    sCourses = dataProcessor.GetDataTable($"select * from Course where number_of_lessons = {keyword} and status = 'Active'");
                     searchCourses.Merge(sCourses, false);
                 }
 
                 if (double.TryParse(keyword, out double fee))
                 {
-                    sCourses = dataProcessor.GetDataTable($"select * from Course where fee = {keyword}");
+                    sCourses = dataProcessor.GetDataTable($"select * from Course where fee = {keyword} and status = 'Active'");
                     searchCourses.Merge(sCourses, false);
                 }
             }
@@ -334,7 +332,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             dateNgayBatDau.Value = DateTime.Now;
 
             comboboxMaGiaoVien.Enabled = false;
-            comboboxMaGiaoVien.SelectedIndex = 0;
+            comboboxMaGiaoVien.SelectedValue = "";
 
             txtSearchCourse.Visible = false;
             txtSearchCourse.Text = "";
@@ -405,7 +403,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             dateNgayBatDau.Value = DateTime.Now;
 
             comboboxMaGiaoVien.Enabled = true;
-            comboboxMaGiaoVien.SelectedIndex = 0;
+            comboboxMaGiaoVien.SelectedValue = "";
 
             txtSearchCourse.Visible = true;
             txtSearchCourse.Text = "";
@@ -490,7 +488,14 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 return;
             }
 
+            if (comboboxMaGiaoVien.SelectedValue == null)
+            {
+                MessageBox.Show("Không có giáo viên");
+                return;
+            }
+
             string magiaovien = comboboxMaGiaoVien.SelectedValue.ToString();
+
 
             if (magiaovien == string.Empty)
             {
@@ -508,16 +513,26 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
             if (malophoc == string.Empty)
             {
-                dataProcessor.UpdateData($"insert into Class(course_id, name, max_students, start_date, teacher_id) values ('{makhoahoc}', N'{tenlophoc}', {tongsohocvien}, '{ngaybatdau}', '{magiaovien}')");
+                malophoc = Guid.NewGuid().ToString();
+
+                txtMaLopHoc.Text = malophoc;
+
+                dataProcessor.UpdateData($"insert into Class(id, course_id, name, max_students, start_date, teacher_id, status) values ('{malophoc}', '{makhoahoc}', N'{tenlophoc}', {tongsohocvien}, '{ngaybatdau}', '{magiaovien}', 'Active')");
             }
             else
             {
+                if (dataProcessor.GetDataTable($"select * from Course where id = '{makhoahoc}'").Rows[0]["status"].ToString() == "Inactive")
+                {
+                    MessageBox.Show("Khóa học của lớp đã bị hủy, không thể chỉnh sửa lớp học");
+                    return;
+                }
                 dataProcessor.UpdateData($"update Class set" +
                     $" course_id = '{makhoahoc}'," +
                     $" name = N'{tenlophoc}'," +
                     $" max_students = {tongsohocvien}," +
                     $" start_date = '{ngaybatdau}'," +
-                    $" teacher_id = '{magiaovien}'" +
+                    $" teacher_id = '{magiaovien}'," +
+                    $" status = 'Active'" +
                     $" where id = '{malophoc}'");
             }
 
@@ -531,6 +546,8 @@ namespace prj_LTTQ_BTL.Forms.Manager
             SetClassDetails();
 
             XemLopUI();
+
+            txtSearchClass_TextChanged(sender, e);
         }
 
         private void btnHuyLopHoc_Click(object sender, EventArgs e)
@@ -538,6 +555,8 @@ namespace prj_LTTQ_BTL.Forms.Manager
             ResetDgvClass();
 
             XemLopUI();
+
+            txtSearchClass_TextChanged(sender, e);
         }
 
         private void btnChinhSuaLop_Click(object sender, EventArgs e)
@@ -621,9 +640,9 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
             if (MessageBox.Show("Bạn có muốn xóa lớp học này?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                dataProcessor.UpdateData($"delete from Schedule where class_id = '{malophoc}'");
+                //dataProcessor.UpdateData($"delete from Schedule where class_id = '{malophoc}'");
 
-                dataProcessor.UpdateData($"delete from Class where id = '{malophoc}'");
+                dataProcessor.UpdateData($"update Class set status = 'Inactive' where id = '{malophoc}'");
             }
 
             ResetDgvClass();
@@ -735,8 +754,6 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
             DateTime ngaybatdau = dateNgayBatDau.Value;
 
-            dataProcessor.UpdateData($"delete from Schedule where class_id = '{malophoc}'");
-
             Queue<DateTime> dates = new Queue<DateTime>();
 
             int datedayofweek = DayOfWeekToInt(ngaybatdau.DayOfWeek);
@@ -776,9 +793,13 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 dates.Enqueue(ngaybatdau.AddDays(1 - datedayofweek));
             }
 
+            dataProcessor.UpdateData($"delete from Schedule where class_id = '{malophoc}'");
+
             while (sobuoihoc > 0)
             {
                 DateTime currentDate = dates.Dequeue();
+
+                dates.Enqueue(currentDate.AddDays(7));
 
                 if (currentDate < ngaybatdau)
                 {
@@ -788,8 +809,6 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 dataProcessor.UpdateData($"insert into Schedule(class_id, session_date, start_time, room) values ('{malophoc}', '{currentDate.Year.ToString() + "-" + currentDate.Month.ToString() + "-" + currentDate.Day.ToString()}', '{giobatdau}', '{phonghoc}')");
 
                 sobuoihoc--;
-
-                dates.Enqueue(currentDate.AddDays(7));
             }
 
             return true;

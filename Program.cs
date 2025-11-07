@@ -18,7 +18,7 @@ namespace prj_LTTQ_BTL
             Env.Load();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLogin());
+            Application.Run(new Manager_StudentClassAssigmentForm());
         }
     }
 }

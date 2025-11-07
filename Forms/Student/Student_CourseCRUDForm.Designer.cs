@@ -37,12 +37,12 @@ namespace prj_LTTQ_BTL.Forms.Student
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
@@ -63,16 +63,6 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelKhoaHoc = new Guna.UI2.WinForms.Guna2Panel();
             this.panel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.tblInfo = new System.Windows.Forms.TableLayoutPanel();
-            this.txtMoTa = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblDesc = new AntdUI.Label();
-            this.txtHocPhi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblFee = new AntdUI.Label();
-            this.txtSoBuoiHoc = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblLessons = new AntdUI.Label();
-            this.txtTenKhoaHoc = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblName = new AntdUI.Label();
-            this.btnDangKy = new Guna.UI2.WinForms.Guna2Button();
             this.dgvCourse = new Guna.UI2.WinForms.Guna2DataGridView();
             this.course_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.course_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,6 +74,16 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label1 = new AntdUI.Label();
             this.headerPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTitle = new AntdUI.Label();
+            this.btnDangKy = new Guna.UI2.WinForms.Guna2Button();
+            this.lblName = new AntdUI.Label();
+            this.txtTenKhoaHoc = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblLessons = new AntdUI.Label();
+            this.txtSoBuoiHoc = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblFee = new AntdUI.Label();
+            this.txtHocPhi = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblDesc = new AntdUI.Label();
+            this.txtMoTa = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tblInfo = new System.Windows.Forms.TableLayoutPanel();
             this.panelMain.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
@@ -94,10 +94,10 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelKhoaHoc.SuspendLayout();
             this.panel.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            this.tblInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCourse)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.headerPanel.SuspendLayout();
+            this.tblInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMain
@@ -231,18 +231,18 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.dgvEnrollment.AllowUserToAddRows = false;
             this.dgvEnrollment.AllowUserToDeleteRows = false;
             this.dgvEnrollment.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvEnrollment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.dgvEnrollment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvEnrollment.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvEnrollment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEnrollment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEnrollment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvEnrollment.ColumnHeadersHeight = 35;
             this.dgvEnrollment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.enrollment_id,
@@ -250,14 +250,14 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.enrollment_course_id,
             this.enrollment_course_name,
             this.enrollment_date});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEnrollment.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEnrollment.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvEnrollment.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvEnrollment.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.dgvEnrollment.Location = new System.Drawing.Point(1, 10);
@@ -426,203 +426,23 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.guna2Panel2.Size = new System.Drawing.Size(687, 210);
             this.guna2Panel2.TabIndex = 2;
             // 
-            // tblInfo
-            // 
-            this.tblInfo.AutoSize = true;
-            this.tblInfo.ColumnCount = 2;
-            this.tblInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tblInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tblInfo.Controls.Add(this.txtMoTa, 1, 3);
-            this.tblInfo.Controls.Add(this.lblDesc, 0, 3);
-            this.tblInfo.Controls.Add(this.txtHocPhi, 1, 2);
-            this.tblInfo.Controls.Add(this.lblFee, 0, 2);
-            this.tblInfo.Controls.Add(this.txtSoBuoiHoc, 1, 1);
-            this.tblInfo.Controls.Add(this.lblLessons, 0, 1);
-            this.tblInfo.Controls.Add(this.txtTenKhoaHoc, 1, 0);
-            this.tblInfo.Controls.Add(this.lblName, 0, 0);
-            this.tblInfo.Controls.Add(this.btnDangKy, 1, 4);
-            this.tblInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tblInfo.Location = new System.Drawing.Point(10, 10);
-            this.tblInfo.Name = "tblInfo";
-            this.tblInfo.RowCount = 5;
-            this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tblInfo.Size = new System.Drawing.Size(667, 200);
-            this.tblInfo.TabIndex = 4;
-            // 
-            // txtMoTa
-            // 
-            this.txtMoTa.BorderRadius = 5;
-            this.txtMoTa.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMoTa.DefaultText = "";
-            this.txtMoTa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMoTa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMoTa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMoTa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMoTa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtMoTa.Enabled = false;
-            this.txtMoTa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMoTa.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMoTa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMoTa.Location = new System.Drawing.Point(203, 124);
-            this.txtMoTa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.PlaceholderText = "";
-            this.txtMoTa.SelectedText = "";
-            this.txtMoTa.Size = new System.Drawing.Size(461, 32);
-            this.txtMoTa.TabIndex = 9;
-            // 
-            // lblDesc
-            // 
-            this.lblDesc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.lblDesc.Location = new System.Drawing.Point(3, 123);
-            this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(194, 34);
-            this.lblDesc.TabIndex = 8;
-            this.lblDesc.Text = "Mô tả khóa học";
-            // 
-            // txtHocPhi
-            // 
-            this.txtHocPhi.BorderRadius = 5;
-            this.txtHocPhi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHocPhi.DefaultText = "";
-            this.txtHocPhi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtHocPhi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtHocPhi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHocPhi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHocPhi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtHocPhi.Enabled = false;
-            this.txtHocPhi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHocPhi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtHocPhi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHocPhi.Location = new System.Drawing.Point(203, 84);
-            this.txtHocPhi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtHocPhi.Name = "txtHocPhi";
-            this.txtHocPhi.PlaceholderText = "";
-            this.txtHocPhi.SelectedText = "";
-            this.txtHocPhi.Size = new System.Drawing.Size(461, 32);
-            this.txtHocPhi.TabIndex = 7;
-            // 
-            // lblFee
-            // 
-            this.lblFee.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.lblFee.Location = new System.Drawing.Point(3, 83);
-            this.lblFee.Name = "lblFee";
-            this.lblFee.Size = new System.Drawing.Size(194, 34);
-            this.lblFee.TabIndex = 6;
-            this.lblFee.Text = "Học phí";
-            // 
-            // txtSoBuoiHoc
-            // 
-            this.txtSoBuoiHoc.BorderRadius = 5;
-            this.txtSoBuoiHoc.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSoBuoiHoc.DefaultText = "";
-            this.txtSoBuoiHoc.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSoBuoiHoc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSoBuoiHoc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSoBuoiHoc.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSoBuoiHoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSoBuoiHoc.Enabled = false;
-            this.txtSoBuoiHoc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoBuoiHoc.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSoBuoiHoc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoBuoiHoc.Location = new System.Drawing.Point(203, 44);
-            this.txtSoBuoiHoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSoBuoiHoc.Name = "txtSoBuoiHoc";
-            this.txtSoBuoiHoc.PlaceholderText = "";
-            this.txtSoBuoiHoc.SelectedText = "";
-            this.txtSoBuoiHoc.Size = new System.Drawing.Size(461, 32);
-            this.txtSoBuoiHoc.TabIndex = 5;
-            // 
-            // lblLessons
-            // 
-            this.lblLessons.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblLessons.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLessons.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.lblLessons.Location = new System.Drawing.Point(3, 43);
-            this.lblLessons.Name = "lblLessons";
-            this.lblLessons.Size = new System.Drawing.Size(194, 34);
-            this.lblLessons.TabIndex = 4;
-            this.lblLessons.Text = "Số lượng buổi";
-            // 
-            // txtTenKhoaHoc
-            // 
-            this.txtTenKhoaHoc.BorderRadius = 5;
-            this.txtTenKhoaHoc.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenKhoaHoc.DefaultText = "";
-            this.txtTenKhoaHoc.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTenKhoaHoc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTenKhoaHoc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenKhoaHoc.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenKhoaHoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTenKhoaHoc.Enabled = false;
-            this.txtTenKhoaHoc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenKhoaHoc.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTenKhoaHoc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenKhoaHoc.Location = new System.Drawing.Point(203, 4);
-            this.txtTenKhoaHoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtTenKhoaHoc.Name = "txtTenKhoaHoc";
-            this.txtTenKhoaHoc.PlaceholderText = "";
-            this.txtTenKhoaHoc.SelectedText = "";
-            this.txtTenKhoaHoc.Size = new System.Drawing.Size(461, 32);
-            this.txtTenKhoaHoc.TabIndex = 3;
-            // 
-            // lblName
-            // 
-            this.lblName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.lblName.Location = new System.Drawing.Point(3, 3);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(194, 34);
-            this.lblName.TabIndex = 2;
-            this.lblName.Text = "Tên khóa học";
-            // 
-            // btnDangKy
-            // 
-            this.btnDangKy.BorderRadius = 5;
-            this.btnDangKy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDangKy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDangKy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDangKy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDangKy.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnDangKy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangKy.ForeColor = System.Drawing.Color.White;
-            this.btnDangKy.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.btnDangKy.HoverState.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangKy.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDangKy.Location = new System.Drawing.Point(484, 163);
-            this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(180, 34);
-            this.btnDangKy.TabIndex = 10;
-            this.btnDangKy.Text = "Đăng ký khóa học";
-            this.btnDangKy.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
             // dgvCourse
             // 
             this.dgvCourse.AllowUserToAddRows = false;
             this.dgvCourse.AllowUserToDeleteRows = false;
             this.dgvCourse.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvCourse.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.dgvCourse.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvCourse.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvCourse.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCourse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCourse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvCourse.ColumnHeadersHeight = 35;
             this.dgvCourse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.course_id,
@@ -630,14 +450,14 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.course_description,
             this.number_of_lessons,
             this.course_fee});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCourse.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCourse.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvCourse.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvCourse.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.dgvCourse.Location = new System.Drawing.Point(1, 10);
@@ -797,6 +617,186 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblTitle.Text = "Khóa học";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnDangKy
+            // 
+            this.btnDangKy.BorderRadius = 5;
+            this.btnDangKy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangKy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangKy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDangKy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDangKy.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnDangKy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangKy.ForeColor = System.Drawing.Color.White;
+            this.btnDangKy.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.btnDangKy.HoverState.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangKy.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDangKy.Location = new System.Drawing.Point(484, 163);
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.Size = new System.Drawing.Size(180, 34);
+            this.btnDangKy.TabIndex = 10;
+            this.btnDangKy.Text = "Đăng ký khóa học";
+            this.btnDangKy.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // lblName
+            // 
+            this.lblName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            this.lblName.Location = new System.Drawing.Point(3, 3);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(194, 34);
+            this.lblName.TabIndex = 2;
+            this.lblName.Text = "Tên khóa học";
+            // 
+            // txtTenKhoaHoc
+            // 
+            this.txtTenKhoaHoc.BorderRadius = 5;
+            this.txtTenKhoaHoc.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenKhoaHoc.DefaultText = "";
+            this.txtTenKhoaHoc.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenKhoaHoc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenKhoaHoc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenKhoaHoc.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenKhoaHoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTenKhoaHoc.Enabled = false;
+            this.txtTenKhoaHoc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenKhoaHoc.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTenKhoaHoc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenKhoaHoc.Location = new System.Drawing.Point(203, 4);
+            this.txtTenKhoaHoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTenKhoaHoc.Name = "txtTenKhoaHoc";
+            this.txtTenKhoaHoc.PlaceholderText = "";
+            this.txtTenKhoaHoc.SelectedText = "";
+            this.txtTenKhoaHoc.Size = new System.Drawing.Size(461, 32);
+            this.txtTenKhoaHoc.TabIndex = 3;
+            // 
+            // lblLessons
+            // 
+            this.lblLessons.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblLessons.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLessons.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            this.lblLessons.Location = new System.Drawing.Point(3, 43);
+            this.lblLessons.Name = "lblLessons";
+            this.lblLessons.Size = new System.Drawing.Size(194, 34);
+            this.lblLessons.TabIndex = 4;
+            this.lblLessons.Text = "Số lượng buổi";
+            // 
+            // txtSoBuoiHoc
+            // 
+            this.txtSoBuoiHoc.BorderRadius = 5;
+            this.txtSoBuoiHoc.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSoBuoiHoc.DefaultText = "";
+            this.txtSoBuoiHoc.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSoBuoiHoc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSoBuoiHoc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSoBuoiHoc.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSoBuoiHoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSoBuoiHoc.Enabled = false;
+            this.txtSoBuoiHoc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSoBuoiHoc.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSoBuoiHoc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSoBuoiHoc.Location = new System.Drawing.Point(203, 44);
+            this.txtSoBuoiHoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSoBuoiHoc.Name = "txtSoBuoiHoc";
+            this.txtSoBuoiHoc.PlaceholderText = "";
+            this.txtSoBuoiHoc.SelectedText = "";
+            this.txtSoBuoiHoc.Size = new System.Drawing.Size(461, 32);
+            this.txtSoBuoiHoc.TabIndex = 5;
+            // 
+            // lblFee
+            // 
+            this.lblFee.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            this.lblFee.Location = new System.Drawing.Point(3, 83);
+            this.lblFee.Name = "lblFee";
+            this.lblFee.Size = new System.Drawing.Size(194, 34);
+            this.lblFee.TabIndex = 6;
+            this.lblFee.Text = "Học phí";
+            // 
+            // txtHocPhi
+            // 
+            this.txtHocPhi.BorderRadius = 5;
+            this.txtHocPhi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHocPhi.DefaultText = "";
+            this.txtHocPhi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtHocPhi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtHocPhi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHocPhi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHocPhi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtHocPhi.Enabled = false;
+            this.txtHocPhi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHocPhi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtHocPhi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHocPhi.Location = new System.Drawing.Point(203, 84);
+            this.txtHocPhi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtHocPhi.Name = "txtHocPhi";
+            this.txtHocPhi.PlaceholderText = "";
+            this.txtHocPhi.SelectedText = "";
+            this.txtHocPhi.Size = new System.Drawing.Size(461, 32);
+            this.txtHocPhi.TabIndex = 7;
+            // 
+            // lblDesc
+            // 
+            this.lblDesc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            this.lblDesc.Location = new System.Drawing.Point(3, 123);
+            this.lblDesc.Name = "lblDesc";
+            this.lblDesc.Size = new System.Drawing.Size(194, 34);
+            this.lblDesc.TabIndex = 8;
+            this.lblDesc.Text = "Mô tả khóa học";
+            // 
+            // txtMoTa
+            // 
+            this.txtMoTa.BorderRadius = 5;
+            this.txtMoTa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMoTa.DefaultText = "";
+            this.txtMoTa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMoTa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMoTa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMoTa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMoTa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtMoTa.Enabled = false;
+            this.txtMoTa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMoTa.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMoTa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMoTa.Location = new System.Drawing.Point(203, 124);
+            this.txtMoTa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMoTa.Name = "txtMoTa";
+            this.txtMoTa.PlaceholderText = "";
+            this.txtMoTa.SelectedText = "";
+            this.txtMoTa.Size = new System.Drawing.Size(461, 32);
+            this.txtMoTa.TabIndex = 9;
+            // 
+            // tblInfo
+            // 
+            this.tblInfo.AutoSize = true;
+            this.tblInfo.ColumnCount = 2;
+            this.tblInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tblInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tblInfo.Controls.Add(this.txtMoTa, 1, 3);
+            this.tblInfo.Controls.Add(this.lblDesc, 0, 3);
+            this.tblInfo.Controls.Add(this.txtHocPhi, 1, 2);
+            this.tblInfo.Controls.Add(this.lblFee, 0, 2);
+            this.tblInfo.Controls.Add(this.txtSoBuoiHoc, 1, 1);
+            this.tblInfo.Controls.Add(this.lblLessons, 0, 1);
+            this.tblInfo.Controls.Add(this.txtTenKhoaHoc, 1, 0);
+            this.tblInfo.Controls.Add(this.lblName, 0, 0);
+            this.tblInfo.Controls.Add(this.btnDangKy, 1, 4);
+            this.tblInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tblInfo.Location = new System.Drawing.Point(10, 10);
+            this.tblInfo.Name = "tblInfo";
+            this.tblInfo.RowCount = 5;
+            this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tblInfo.Size = new System.Drawing.Size(667, 200);
+            this.tblInfo.TabIndex = 4;
+            // 
             // Student_CourseCRUDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -827,12 +827,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panel.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            this.tblInfo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCourse)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
+            this.tblInfo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -859,16 +859,6 @@ namespace prj_LTTQ_BTL.Forms.Student
         private Guna2Panel panelKhoaHoc;
         private Guna2Panel panel;
         private Guna2Panel guna2Panel2;
-        private TableLayoutPanel tblInfo;
-        private Guna2TextBox txtMoTa;
-        private AntdUI.Label lblDesc;
-        private Guna2TextBox txtHocPhi;
-        private AntdUI.Label lblFee;
-        private Guna2TextBox txtSoBuoiHoc;
-        private AntdUI.Label lblLessons;
-        private Guna2TextBox txtTenKhoaHoc;
-        private AntdUI.Label lblName;
-        private Guna2Button btnDangKy;
         private Guna2DataGridView dgvCourse;
         private DataGridViewTextBoxColumn course_id;
         private DataGridViewTextBoxColumn course_name;
@@ -880,5 +870,15 @@ namespace prj_LTTQ_BTL.Forms.Student
         private AntdUI.Label label1;
         private Guna2Panel headerPanel;
         private AntdUI.Label lblTitle;
+        private TableLayoutPanel tblInfo;
+        private Guna2TextBox txtMoTa;
+        private AntdUI.Label lblDesc;
+        private Guna2TextBox txtHocPhi;
+        private AntdUI.Label lblFee;
+        private Guna2TextBox txtSoBuoiHoc;
+        private AntdUI.Label lblLessons;
+        private Guna2TextBox txtTenKhoaHoc;
+        private AntdUI.Label lblName;
+        private Guna2Button btnDangKy;
     }
 }

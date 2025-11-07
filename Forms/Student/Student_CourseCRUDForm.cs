@@ -26,13 +26,13 @@ namespace prj_LTTQ_BTL.Forms.Student
 
         private void InitializeEvent()
         {
-            FormUtils.FillGunaDgv(dgvCourse, dataProcessor.GetDataTable("select * from Course"));
+            FormUtils.FillGunaDgv(dgvCourse, dataProcessor.GetDataTable("select * from Course where status = 'Active'"));
             dgvCourse.CellClick += dgvCourses_cell_click;
             txtSearchKhoaHoc.TextChanged += txtSearch_text_changed;
 
             string id = GlobalData.Id;
 
-            FormUtils.FillGunaDgv(dgvEnrollment, dataProcessor.GetDataTable($"select e.*, c.name from Enrollment e inner join Course c on e.course_id = c.id where e.student_id = '{id}'"));
+            FormUtils.FillGunaDgv(dgvEnrollment, dataProcessor.GetDataTable($"select e.*, c.name from Enrollment e inner join Course c on e.course_id = c.id where e.student_id = '{id}' and e.status = 'Enrolled'"));
         }
 
         private void FormStudent_CourseCRUD_Load(object sender, EventArgs e)
@@ -76,23 +76,23 @@ namespace prj_LTTQ_BTL.Forms.Student
 
             foreach (string keyword in keywords)
             {
-                sCourses = dataProcessor.GetDataTable($"select * from Course where name collate Latin1_General_CI_AI like '%{keyword}%'");
+                sCourses = dataProcessor.GetDataTable($"select * from Course where name collate Latin1_General_CI_AI like '%{keyword}%' and status = 'Active'");
                 sCourses.PrimaryKey = new DataColumn[] { sCourses.Columns["id"] };
                 searchCourses.PrimaryKey = new DataColumn[] { searchCourses.Columns["id"] };
                 searchCourses.Merge(sCourses, false);
 
-                sCourses = dataProcessor.GetDataTable($"select * from Course where description collate Latin1_General_CI_AI like '%{keyword}%'");
+                sCourses = dataProcessor.GetDataTable($"select * from Course where description collate Latin1_General_CI_AI like '%{keyword}%' and status = 'Active'");
                 searchCourses.Merge(sCourses, false);
 
                 if (int.TryParse(keyword, out int lesson))
                 {
-                    sCourses = dataProcessor.GetDataTable($"select * from Course where number_of_lessons = {keyword}");
+                    sCourses = dataProcessor.GetDataTable($"select * from Course where number_of_lessons = {keyword} and status = 'Active'");
                     searchCourses.Merge(sCourses, false);
                 }
 
                 if (double.TryParse(keyword, out double fee))
                 {
-                    sCourses = dataProcessor.GetDataTable($"select * from Course where fee = {keyword}");
+                    sCourses = dataProcessor.GetDataTable($"select * from Course where fee = {keyword} and status = 'Active'");
                     searchCourses.Merge(sCourses, false);
                 }
             }
@@ -106,13 +106,13 @@ namespace prj_LTTQ_BTL.Forms.Student
 
             string madangky = Guid.NewGuid().ToString();
 
-            dataProcessor.UpdateData($"insert into Enrollment (id, student_id, course_id, enrollment_date) values ('{madangky}', '{GlobalData.Id}', '{row.Cells["course_id"].Value.ToString()}', '{DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString()}')");
-
-            if (madangky.Length == 0)
+            if (row == null)
             {
                 MessageBox.Show("Bạn chưa chọn một khóa học");
                 return;
-            } 
+            }
+
+            dataProcessor.UpdateData($"insert into Enrollment (id, student_id, course_id, enrollment_date, status) values ('{madangky}', '{GlobalData.Id}', '{row.Cells["course_id"].Value.ToString()}', '{DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString()}', 'Enrolled')");
 
             float hocphi = float.Parse(txtHocPhi.Text);
 
@@ -139,7 +139,7 @@ namespace prj_LTTQ_BTL.Forms.Student
 
             foreach (string keyword in keywords)
             {
-                searchEnrollments = dataProcessor.GetDataTable($"select e.*, c.name from Enrollment e inner join Course c on e.course_id = c.id where c.name collate Latin1_General_CI_AI like '%{keyword}%' and e.student_id = '{GlobalData.Id}'");
+                searchEnrollments = dataProcessor.GetDataTable($"select e.*, c.name from Enrollment e inner join Course c on e.course_id = c.id where c.name collate Latin1_General_CI_AI like '%{keyword}%' and e.student_id = '{GlobalData.Id}' and e.status = 'Enrolled'");
             }
 
             FormUtils.FillGunaDgv(dgvEnrollment, searchEnrollments);
@@ -182,9 +182,9 @@ namespace prj_LTTQ_BTL.Forms.Student
                 return;
             }
 
-            dataProcessor.UpdateData($"update Payment set status = 'Cancelled', enrollment_id = null where enrollment_id = '{madangky}'");
+            dataProcessor.UpdateData($"update Payment set status = 'Cancelled' where enrollment_id = '{madangky}'");
 
-            dataProcessor.UpdateData($"delete from Enrollment where id = '{madangky}'");
+            dataProcessor.UpdateData($"update Enrollment set status = 'Cancelled' where id = '{madangky}'");
 
             txtSearchDangKy_TextChanged(sender, e);
         }
@@ -193,7 +193,7 @@ namespace prj_LTTQ_BTL.Forms.Student
         {
             string id = GlobalData.Id;
 
-            FormUtils.FillGunaDgv(dgvEnrollment, dataProcessor.GetDataTable($"select e.*, c.name from Enrollment e inner join Course c on e.course_id = c.id where e.student_id = '{id}'"));
+            FormUtils.FillGunaDgv(dgvEnrollment, dataProcessor.GetDataTable($"select e.*, c.name from Enrollment e inner join Course c on e.course_id = c.id where e.student_id = '{id}' and c.status = 'Active'"));
         }
     }
 }

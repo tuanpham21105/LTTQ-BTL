@@ -166,9 +166,10 @@
             this.panelMain.Controls.Add(this.guna2Panel1);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(2);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.panelMain.Size = new System.Drawing.Size(1397, 1907);
+            this.panelMain.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.panelMain.Size = new System.Drawing.Size(931, 573);
             this.panelMain.TabIndex = 0;
             // 
             // guna2Panel26
@@ -1178,10 +1179,11 @@
             // 
             // Manager_DashboardForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1397, 1907);
+            this.ClientSize = new System.Drawing.Size(931, 573);
             this.Controls.Add(this.panelMain);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Manager_DashboardForm";
             this.Text = "Manager_DashboardForm";
             this.Load += new System.EventHandler(this.Manager_DashboardForm_Load);
