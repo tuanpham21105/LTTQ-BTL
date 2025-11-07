@@ -168,6 +168,7 @@ CREATE TABLE Score (
     class_id UNIQUEIDENTIFIER NOT NULL,
     score DECIMAL(5,2) CHECK (score >= 0 AND score <= 10),
     created_date DATETIME DEFAULT GETDATE(),
+    name NVARCHAR(100),
     FOREIGN KEY (student_id) REFERENCES Student(id),
     FOREIGN KEY (class_id) REFERENCES Class(id)
 );
@@ -176,6 +177,9 @@ GO
 -- ==============================
 -- Changes
 -- ==============================
+
+ALTER TABLE Score
+add name NVARCHAR(100)
 
 select * from [User]
 -- ==============================

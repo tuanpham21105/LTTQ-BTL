@@ -1,5 +1,7 @@
-﻿using prj_LTTQ_BTL.Data;
+﻿using AntdUI;
+using prj_LTTQ_BTL.Data;
 using prj_LTTQ_BTL.Services;
+using prj_LTTQ_BTL.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +17,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
 {
     public partial class Manager_InfoCRUDForm : Form
     {
+        private DataProcessor dataProcessor = new DataProcessor();
         private readonly UserService _userService;
         private string _selectedImagePath;
         private Guid _currentUserId;
@@ -57,6 +60,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
                 ToggleInfor(false);
                 btnSave.Visible = false;
+
+                DataTable infor1 = dataProcessor.GetDataTable($"select * from [User] where id = '{GlobalData.Id}'");
+                if (infor1.Rows[0]["avatar"].ToString() != string.Empty)
+                    FormUtils.LoadImage(picUser, infor1.Rows[0]["avatar"].ToString());
             }
             catch (Exception ex)
             {
@@ -107,6 +114,14 @@ namespace prj_LTTQ_BTL.Forms.Manager
             ToggleInfor(true);
             btnSave.Visible = true;
             btnEdit.Visible = false;
+        }
+        private void avatarBtn_Click(object sender, EventArgs e)
+        {
+            string path = FormUtils.UploadImage();
+
+            dataProcessor.UpdateData($"update [User] set avatar = '{path}' where id = '{GlobalData.Id}'");
+
+            FormUtils.LoadImage(picUser, path);
         }
     }
 }

@@ -68,7 +68,12 @@ namespace prj_LTTQ_BTL.Utils
 
         public static void LoadImage(PictureBox pictureBox, string path)
         {
-            pictureBox.Image = Image.FromFile(Path.Combine(Application.StartupPath, path));
+            string fullPath = Path.Combine(Application.StartupPath, path);
+            if (!File.Exists(fullPath))
+            {
+                return;
+            }
+            pictureBox.Image = Image.FromFile(fullPath);
         }
     }
 }

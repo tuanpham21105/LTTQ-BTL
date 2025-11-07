@@ -155,7 +155,14 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
             DataGridViewRow row = dgvExam.CurrentRow;
             if (row == null) return;
-            txtTenBaiKT.Text = row.Cells["exam_name"].Value.ToString();
+            if (row.Cells["exam_name"].Value != null)
+            {
+                txtTenBaiKT.Text = row.Cells["exam_name"].Value.ToString();
+            }
+            else
+            {
+                txtTenBaiKT.Text = "";
+            }
             txtDiemSo.Text = row.Cells["exam_score"].Value.ToString();
             DateTime.TryParse(row.Cells["date"].Value.ToString(), out DateTime d);
             dateNgayKT.Value = d;
@@ -171,14 +178,16 @@ namespace prj_LTTQ_BTL.Forms.Manager
             }
             else
             {
-                FormUtils.ClearChartPoint(chartScore);
-                double avgScore = (double)bangdiem.AsEnumerable().Average(row => row.Field<decimal>("score"));
+                FormUtils.ClearChartPoint(chartScore); double avgScore = bangdiem.AsEnumerable()
+                .Select(row => row.IsNull("score") ? 0m : row.Field<decimal>("score"))
+                .DefaultIfEmpty(0)
+                .Average(x => (double)x);
                 labelAverage.Text = avgScore.ToString();
                 labelNumbers.Text = bangdiem.Rows.Count.ToString();
                 foreach (DataRow row in bangdiem.Rows)
                 {
                     DateTime ngay = Convert.ToDateTime(row["created_date"]);
-                    double diem = Convert.ToDouble(row["score"]);
+                    double diem = row["score"] == DBNull.Value ? 0 : Convert.ToDouble(row["score"]);
                     chartScore.Series["Score"].Points.AddXY(ngay, diem);
 
                     var area = chartScore.ChartAreas[0];

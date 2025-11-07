@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manager_InfoCRUDForm));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panelButtons = new Guna.UI2.WinForms.Guna2Panel();
             this.btnEditPicture = new Guna.UI2.WinForms.Guna2Button();
@@ -48,6 +49,7 @@
             this.label2 = new AntdUI.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new AntdUI.Label();
+            this.avatarBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.panelButtons.SuspendLayout();
             this.panelInfor.SuspendLayout();
@@ -79,7 +81,7 @@
             this.panelButtons.Controls.Add(this.btnEdit);
             this.panelButtons.Controls.Add(this.btnSave);
             this.panelButtons.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelButtons.Location = new System.Drawing.Point(7, 366);
+            this.panelButtons.Location = new System.Drawing.Point(7, 436);
             this.panelButtons.Margin = new System.Windows.Forms.Padding(2);
             this.panelButtons.Name = "panelButtons";
             this.panelButtons.Padding = new System.Windows.Forms.Padding(0, 4, 8, 4);
@@ -153,15 +155,17 @@
             this.panelInfor.Margin = new System.Windows.Forms.Padding(2);
             this.panelInfor.Name = "panelInfor";
             this.panelInfor.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.panelInfor.Size = new System.Drawing.Size(766, 316);
+            this.panelInfor.Size = new System.Drawing.Size(766, 386);
             this.panelInfor.TabIndex = 16;
             // 
             // guna2Panel4
             // 
+            this.guna2Panel4.AutoSize = true;
             this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.guna2Panel4.BorderRadius = 12;
             this.guna2Panel4.BorderThickness = 1;
+            this.guna2Panel4.Controls.Add(this.avatarBtn);
             this.guna2Panel4.Controls.Add(this.guna2TextBox1);
             this.guna2Panel4.Controls.Add(this.picUser);
             this.guna2Panel4.Controls.Add(this.tblInfo);
@@ -173,7 +177,7 @@
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Padding = new System.Windows.Forms.Padding(8);
-            this.guna2Panel4.Size = new System.Drawing.Size(766, 265);
+            this.guna2Panel4.Size = new System.Drawing.Size(766, 335);
             this.guna2Panel4.TabIndex = 19;
             // 
             // guna2TextBox1
@@ -199,12 +203,15 @@
             // picUser
             // 
             this.picUser.FillColor = System.Drawing.Color.LightGray;
+            this.picUser.Image = ((System.Drawing.Image)(resources.GetObject("picUser.Image")));
             this.picUser.ImageRotate = 0F;
             this.picUser.Location = new System.Drawing.Point(197, 125);
             this.picUser.Margin = new System.Windows.Forms.Padding(2);
+            this.picUser.MaximumSize = new System.Drawing.Size(150, 200);
+            this.picUser.MinimumSize = new System.Drawing.Size(150, 200);
             this.picUser.Name = "picUser";
-            this.picUser.Size = new System.Drawing.Size(200, 130);
-            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUser.Size = new System.Drawing.Size(150, 200);
+            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picUser.TabIndex = 21;
             this.picUser.TabStop = false;
             // 
@@ -393,6 +400,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin quản lý";
             // 
+            // avatarBtn
+            // 
+            this.avatarBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.avatarBtn.BorderRadius = 5;
+            this.avatarBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.avatarBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.avatarBtn.ForeColor = System.Drawing.Color.White;
+            this.avatarBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.avatarBtn.Location = new System.Drawing.Point(350, 150);
+            this.avatarBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.avatarBtn.Name = "avatarBtn";
+            this.avatarBtn.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.avatarBtn.Size = new System.Drawing.Size(67, 35);
+            this.avatarBtn.TabIndex = 23;
+            this.avatarBtn.Text = "Ảnh";
+            this.avatarBtn.Click += new System.EventHandler(this.avatarBtn_Click);
+            // 
             // Manager_InfoCRUDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -408,6 +432,7 @@
             this.panelButtons.ResumeLayout(false);
             this.panelButtons.PerformLayout();
             this.panelInfor.ResumeLayout(false);
+            this.panelInfor.PerformLayout();
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
@@ -442,5 +467,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox picUser;
         private Guna.UI2.WinForms.Guna2Button btnEditPicture;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2Button avatarBtn;
     }
 }

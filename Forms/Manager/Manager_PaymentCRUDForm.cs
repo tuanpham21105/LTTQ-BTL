@@ -193,7 +193,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             {
                 sPayment = dataProcessor.GetDataTable(
                     baseQuery +
-                    $"where c.name collate Latin1_General_CI_AI like '%{keyword}%'" + SetFilters()
+                    $"where c.name collate Latin1_General_CI_AI like '%{keyword}%'" + SetFilters("p.")
                 );
 
                 sPayment.PrimaryKey = new DataColumn[] { sPayment.Columns["id"] };
@@ -202,13 +202,13 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
                 sPayment = dataProcessor.GetDataTable(
                     baseQuery +
-                    $"where s.phone_number collate Latin1_General_CI_AI like '%{keyword}%'" + SetFilters()
+                    $"where s.phone_number collate Latin1_General_CI_AI like '%{keyword}%'" + SetFilters("p.")
                 );
                 searchPayment.Merge(sPayment, false);
 
                 sPayment = dataProcessor.GetDataTable(
                     baseQuery +
-                    $"where s.full_name collate Latin1_General_CI_AI like '%{keyword}%'" + SetFilters()
+                    $"where s.full_name collate Latin1_General_CI_AI like '%{keyword}%'" + SetFilters("p.")
                 );
                 searchPayment.Merge(sPayment, false);
 
@@ -216,7 +216,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 {
                     sPayment = dataProcessor.GetDataTable(
                     baseQuery +
-                        $"where p.amount = {keyword}" + SetFilters()
+                        $"where p.amount = {keyword}" + SetFilters("p.")
                     );
                     searchPayment.Merge(sPayment, false);
                 }
@@ -281,7 +281,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             txtSoDienThoai.Text = hocvien.Rows[0]["phone_number"].ToString();
         }
 
-        private string SetFilters()
+        private string SetFilters(string first)
         {
             string query = "";
 
@@ -291,7 +291,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
                 if (checkBoxPending.Checked)
                 {
-                    condition += "status = 'Pending'";
+                    condition += $"{first}status = 'Pending'";
                 }
 
                 if (checkBoxPaid.Checked)
@@ -301,7 +301,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
                         condition += " or ";
                     }
 
-                    condition += "status = 'Paid'";
+                    condition += $"{first}status = 'Paid'";
                 }
 
                 if (checkBoxCancelled.Checked)
@@ -311,7 +311,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
                         condition += " or ";
                     }
 
-                    condition += "status = 'Cancelled'";
+                    condition += $"{first}status = 'Cancelled'";
                 }
 
                 condition += ")";

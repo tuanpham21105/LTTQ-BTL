@@ -66,7 +66,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
             dgvClassStudent.DataSource = classStudent;
 
-            DataTable enrollmentStudent = dataProcessor.GetDataTable($"select s.* from Student s inner join Enrollment e on s.id = e.student_id where e.course_id = '{course.Rows[0]["id"].ToString()}'");
+            DataTable enrollmentStudent = dataProcessor.GetDataTable($"select s.*, e.id as enrollment_id from Student s inner join Enrollment e on s.id = e.student_id where e.course_id = '{course.Rows[0]["id"].ToString()}' and e.status != 'Enrolled'");
 
             dgvEnrollmentStudent.DataSource = enrollmentStudent;    
         }
@@ -87,7 +87,9 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 return;
             }
 
-            dataProcessor.UpdateData($"insert into ClassAssignment(student_id, class_id) values ('{row.Cells[0].Value.ToString()}', '{comboboxClasses.SelectedValue.ToString()}')");
+            dataProcessor.UpdateData($"update Enrollment set status = 'Enrolled' where id = '{row.Cells[0].Value.ToString()}'");
+
+            dataProcessor.UpdateData($"insert into ClassAssignment(student_id, class_id) values ('{row.Cells[1].Value.ToString()}', '{comboboxClasses.SelectedValue.ToString()}')");
 
             comboboxClasses_SelectedIndexChanged(sender, e);
         }
