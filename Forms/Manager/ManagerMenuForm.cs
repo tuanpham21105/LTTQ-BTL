@@ -75,6 +75,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             {
                 SidebarBtn_Click(btnAccount, "Tài khoản quản lí");
             };
+            btnPayment.Click += (s, e) =>
+            {
+                SidebarBtn_Click(btnPayment, "Danh sách tài chính");
+            };
 
         }
         private void SidebarBtn_Click(Guna2Button btn, string formType)
@@ -126,6 +130,9 @@ namespace prj_LTTQ_BTL.Forms.Manager
                     break;
                 case "Tài khoản quản lí":
                     activeForm = new Manager_InfoCRUDForm();
+                    break;
+                case "Danh sách tài chính":
+                    activeForm = new Manager_PaymentCRUDForm();
                     break;
             }
 

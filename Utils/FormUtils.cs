@@ -7,6 +7,8 @@ using Guna.UI2.WinForms;
 using System.Windows.Forms;
 using System.Data;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Drawing;
+using System.IO;
 
 namespace prj_LTTQ_BTL.Utils
 {
@@ -36,6 +38,37 @@ namespace prj_LTTQ_BTL.Utils
             {
                 series.Points.Clear();
             }
+        }
+
+        public static string UploadImage()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string sourceFilePath = openFileDialog.FileName;
+
+                string fileName = Path.GetFileName(sourceFilePath);
+
+                string destFolder = Path.Combine(Application.StartupPath, "Images");
+
+                if (!Directory.Exists(destFolder))
+                    Directory.CreateDirectory(destFolder);
+
+                string destFilePath = Path.Combine(destFolder, fileName);
+
+                File.Copy(sourceFilePath, destFilePath, true);
+
+                return Path.Combine("Images", fileName);
+            }
+
+            return "";
+        }
+
+        public static void LoadImage(PictureBox pictureBox, string path)
+        {
+            pictureBox.Image = Image.FromFile(Path.Combine(Application.StartupPath, path));
         }
     }
 }

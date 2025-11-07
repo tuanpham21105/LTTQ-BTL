@@ -96,7 +96,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // panelGraph
             // 
-            this.panelGraph.BackColor = System.Drawing.Color.White;
+            this.panelGraph.BackColor = System.Drawing.Color.Transparent;
             this.panelGraph.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.panelGraph.BorderRadius = 12;
             this.panelGraph.BorderThickness = 1;
@@ -260,7 +260,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // guna2Panel5
             // 
-            this.guna2Panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.guna2Panel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.guna2Panel5.BorderRadius = 12;
             this.guna2Panel5.BorderThickness = 1;
@@ -365,7 +365,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.guna2Panel2.BorderRadius = 12;
             this.guna2Panel2.BorderThickness = 1;
@@ -407,7 +407,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // panelHeader
             // 
-            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.panelHeader.BackColor = System.Drawing.Color.Transparent;
             this.panelHeader.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.panelHeader.BorderRadius = 12;
             this.panelHeader.BorderThickness = 1;

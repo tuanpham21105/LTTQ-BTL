@@ -54,11 +54,14 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.borderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
             this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblTitle = new AntdUI.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblXinChao = new AntdUI.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnMaximize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelSidebar = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnTest = new Guna.UI2.WinForms.Guna2Button();
             this.btnHP = new Guna.UI2.WinForms.Guna2Button();
             this.btnDiemSo = new Guna.UI2.WinForms.Guna2Button();
@@ -70,6 +73,8 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblBrand = new AntdUI.Label();
             this.picBrand = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelHeader.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelSidebar.SuspendLayout();
             this.brandPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBrand)).BeginInit();
@@ -106,7 +111,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelHeader.BackColor = System.Drawing.Color.White;
             this.panelHeader.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.panelHeader.BorderThickness = 1;
-            this.panelHeader.Controls.Add(this.lblTitle);
+            this.panelHeader.Controls.Add(this.guna2Panel1);
             this.panelHeader.Controls.Add(this.btnMinimize);
             this.panelHeader.Controls.Add(this.btnMaximize);
             this.panelHeader.Controls.Add(this.btnClose);
@@ -117,18 +122,44 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelHeader.Size = new System.Drawing.Size(814, 38);
             this.panelHeader.TabIndex = 1;
             // 
-            // lblTitle
+            // guna2Panel1
             // 
-            this.lblTitle.AutoSizeMode = AntdUI.TAutoSize.Auto;
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.lblTitle.Location = new System.Drawing.Point(0, 0);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(189, 38);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = " Student Menu";
+            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.lblXinChao);
+            this.guna2Panel1.Controls.Add(this.pictureBox1);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(712, 25);
+            this.guna2Panel1.TabIndex = 0;
+            // 
+            // lblXinChao
+            // 
+            this.lblXinChao.AutoSizeMode = AntdUI.TAutoSize.Width;
+            this.lblXinChao.BackColor = System.Drawing.Color.Transparent;
+            this.lblXinChao.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblXinChao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblXinChao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.lblXinChao.Location = new System.Drawing.Point(30, 0);
+            this.lblXinChao.Name = "lblXinChao";
+            this.lblXinChao.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.lblXinChao.Size = new System.Drawing.Size(65, 25);
+            this.lblXinChao.TabIndex = 23;
+            this.lblXinChao.Text = "Xin chào";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
             // 
             // btnMinimize
             // 
@@ -178,6 +209,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // panelSidebar
             // 
             this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.panelSidebar.Controls.Add(this.btnLogout);
             this.panelSidebar.Controls.Add(this.btnTest);
             this.panelSidebar.Controls.Add(this.btnHP);
             this.panelSidebar.Controls.Add(this.btnDiemSo);
@@ -196,8 +228,32 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelSidebar.Size = new System.Drawing.Size(210, 624);
             this.panelSidebar.TabIndex = 2;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.BorderRadius = 8;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout.FillColor = System.Drawing.Color.Transparent;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.btnLogout.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.Location = new System.Drawing.Point(11, 571);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.btnLogout.Size = new System.Drawing.Size(188, 41);
+            this.btnLogout.TabIndex = 24;
+            this.btnLogout.Text = "Đăng xuất";
+            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // btnTest
             // 
+            this.btnTest.BackColor = System.Drawing.Color.Transparent;
             this.btnTest.BorderRadius = 8;
             this.btnTest.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTest.Dock = System.Windows.Forms.DockStyle.Top;
@@ -210,15 +266,16 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnTest.Location = new System.Drawing.Point(11, 323);
             this.btnTest.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
             this.btnTest.Name = "btnTest";
-            this.btnTest.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.btnTest.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
             this.btnTest.Size = new System.Drawing.Size(188, 41);
             this.btnTest.TabIndex = 23;
             this.btnTest.Text = "Test";
             this.btnTest.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnTest.Visible = false;
             // 
             // btnHP
             // 
+            this.btnHP.BackColor = System.Drawing.Color.Transparent;
             this.btnHP.BorderRadius = 8;
             this.btnHP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHP.Dock = System.Windows.Forms.DockStyle.Top;
@@ -227,11 +284,11 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnHP.ForeColor = System.Drawing.Color.White;
             this.btnHP.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
             this.btnHP.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnHP.Image = ((System.Drawing.Image)(resources.GetObject("btnHP.Image")));
             this.btnHP.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHP.Location = new System.Drawing.Point(11, 282);
             this.btnHP.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
             this.btnHP.Name = "btnHP";
-            this.btnHP.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.btnHP.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
             this.btnHP.Size = new System.Drawing.Size(188, 41);
             this.btnHP.TabIndex = 22;
@@ -240,6 +297,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // btnDiemSo
             // 
+            this.btnDiemSo.BackColor = System.Drawing.Color.Transparent;
             this.btnDiemSo.BorderRadius = 8;
             this.btnDiemSo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDiemSo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -248,11 +306,11 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnDiemSo.ForeColor = System.Drawing.Color.White;
             this.btnDiemSo.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
             this.btnDiemSo.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDiemSo.Image = ((System.Drawing.Image)(resources.GetObject("btnDiemSo.Image")));
             this.btnDiemSo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDiemSo.Location = new System.Drawing.Point(11, 241);
             this.btnDiemSo.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
             this.btnDiemSo.Name = "btnDiemSo";
-            this.btnDiemSo.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.btnDiemSo.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
             this.btnDiemSo.Size = new System.Drawing.Size(188, 41);
             this.btnDiemSo.TabIndex = 21;
@@ -261,6 +319,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // btnLichHoc
             // 
+            this.btnLichHoc.BackColor = System.Drawing.Color.Transparent;
             this.btnLichHoc.BorderRadius = 8;
             this.btnLichHoc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLichHoc.Dock = System.Windows.Forms.DockStyle.Top;
@@ -269,11 +328,11 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnLichHoc.ForeColor = System.Drawing.Color.White;
             this.btnLichHoc.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
             this.btnLichHoc.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnLichHoc.Image = ((System.Drawing.Image)(resources.GetObject("btnLichHoc.Image")));
             this.btnLichHoc.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLichHoc.Location = new System.Drawing.Point(11, 200);
             this.btnLichHoc.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
             this.btnLichHoc.Name = "btnLichHoc";
-            this.btnLichHoc.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.btnLichHoc.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
             this.btnLichHoc.Size = new System.Drawing.Size(188, 41);
             this.btnLichHoc.TabIndex = 20;
@@ -282,6 +341,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // btnLH
             // 
+            this.btnLH.BackColor = System.Drawing.Color.Transparent;
             this.btnLH.BorderRadius = 8;
             this.btnLH.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLH.Dock = System.Windows.Forms.DockStyle.Top;
@@ -290,11 +350,11 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnLH.ForeColor = System.Drawing.Color.White;
             this.btnLH.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
             this.btnLH.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnLH.Image = ((System.Drawing.Image)(resources.GetObject("btnLH.Image")));
             this.btnLH.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLH.Location = new System.Drawing.Point(11, 159);
             this.btnLH.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
             this.btnLH.Name = "btnLH";
-            this.btnLH.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.btnLH.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
             this.btnLH.Size = new System.Drawing.Size(188, 41);
             this.btnLH.TabIndex = 18;
@@ -303,6 +363,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // btnKH
             // 
+            this.btnKH.BackColor = System.Drawing.Color.Transparent;
             this.btnKH.BorderRadius = 8;
             this.btnKH.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKH.Dock = System.Windows.Forms.DockStyle.Top;
@@ -311,11 +372,11 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnKH.ForeColor = System.Drawing.Color.White;
             this.btnKH.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
             this.btnKH.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnKH.Image = ((System.Drawing.Image)(resources.GetObject("btnKH.Image")));
             this.btnKH.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnKH.Location = new System.Drawing.Point(11, 118);
             this.btnKH.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
             this.btnKH.Name = "btnKH";
-            this.btnKH.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.btnKH.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
             this.btnKH.Size = new System.Drawing.Size(188, 41);
             this.btnKH.TabIndex = 16;
@@ -324,6 +385,7 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             // btnTTHV
             // 
+            this.btnTTHV.BackColor = System.Drawing.Color.Transparent;
             this.btnTTHV.BorderRadius = 8;
             this.btnTTHV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTTHV.Dock = System.Windows.Forms.DockStyle.Top;
@@ -332,11 +394,11 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnTTHV.ForeColor = System.Drawing.Color.White;
             this.btnTTHV.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
             this.btnTTHV.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnTTHV.Image = ((System.Drawing.Image)(resources.GetObject("btnTTHV.Image")));
             this.btnTTHV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTTHV.Location = new System.Drawing.Point(11, 77);
             this.btnTTHV.Margin = new System.Windows.Forms.Padding(0, 8, 0, 8);
             this.btnTTHV.Name = "btnTTHV";
-            this.btnTTHV.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.btnTTHV.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
             this.btnTTHV.Size = new System.Drawing.Size(188, 41);
             this.btnTTHV.TabIndex = 8;
@@ -398,7 +460,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.Text = "Student Menu";
             this.Load += new System.EventHandler(this.StudentMenuForm_Load);
             this.panelHeader.ResumeLayout(false);
-            this.panelHeader.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelSidebar.ResumeLayout(false);
             this.brandPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBrand)).EndInit();
@@ -412,7 +476,6 @@ namespace prj_LTTQ_BTL.Forms.Student
         private Guna2BorderlessForm borderlessForm;
         private Guna2Panel panelSidebar, panelHeader, panelMain;
         private Guna2ControlBox btnMinimize, btnMaximize, btnClose;
-        private Label lblTitle;
         private PictureBox logoBox;
         private Guna2Button btnLH;
         private Guna2Button btnKH;
@@ -424,5 +487,9 @@ namespace prj_LTTQ_BTL.Forms.Student
         private Guna2Button btnLichHoc;
         private Guna2Button btnHP;
         private Guna2Button btnTest;
+        private Guna2Button btnLogout;
+        private Guna2Panel guna2Panel1;
+        private Label lblXinChao;
+        private PictureBox pictureBox1;
     }
 }

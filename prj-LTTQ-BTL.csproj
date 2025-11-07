@@ -334,6 +334,12 @@
     <Compile Include="Forms\Student\Student_CourseCRUDForm.Designer.cs">
       <DependentUpon>Student_CourseCRUDForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Student\Student_PaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Student\Student_PaymentForm.Designer.cs">
+      <DependentUpon>Student_PaymentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Student\Student_ScheduleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -392,6 +398,9 @@
     <EmbeddedResource Include="Forms\Manager\Manager_InfoCRUDForm.resx">
       <DependentUpon>Manager_InfoCRUDForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manager\Manager_PaymentCRUDForm.resx">
+      <DependentUpon>Manager_PaymentCRUDForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Manager\Manager_StudentAttendanceCRUDForm.resx">
       <DependentUpon>Manager_StudentAttendanceCRUDForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -410,14 +419,20 @@
     <EmbeddedResource Include="Forms\Manager\Manager_UserCRUDForm.resx">
       <DependentUpon>Manager_UserCRUDForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Student\StudentMenuForm.resx">
+    <!-- <EmbeddedResource Include="Forms\Student\StudentMenuForm.resx">
       <DependentUpon>StudentMenuForm.cs</DependentUpon>
-    </EmbeddedResource>
+    </EmbeddedResource> -->
     <EmbeddedResource Include="Forms\Student\Student_ClassCRUDForm.resx">
       <DependentUpon>Student_ClassCRUDForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Student\Student_CourseCRUDForm.resx">
       <DependentUpon>Student_CourseCRUDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student\StudentMenuForm.resx">
+      <DependentUpon>StudentMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student\Student_PaymentForm.resx">
+      <DependentUpon>Student_PaymentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Student\Student_ScheduleForm.resx">
       <DependentUpon>Student_ScheduleForm.cs</DependentUpon>
@@ -456,13 +471,14 @@
     <None Include=".env">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <!-- <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\prj-LTTQ-BTL.csproj.AssemblyReference.cache" />
     <None Include="obj\Debug\prj-LTTQ-BTL.csproj.CoreCompileInputs.cache" />
     <None Include="obj\Debug\prj-LTTQ-BTL.csproj.GenerateResource.cache" />
-    <None Include="obj\Debug\prj-LTTQ-BTL.exe.config" />
     <None Include="obj\Debug\prj-LTTQ.08AF4959.Up2Date" />
+    <None Include="bin\Debug\.env" />
+    <None Include="bin\Debug\prj-LTTQ-BTL.exe.config" /> -->
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -20,6 +20,8 @@ namespace prj_LTTQ_BTL.Forms.Student
 {
     public partial class StudentMenuForm : Form
     {
+        private DataProcessor dataProcessor = new DataProcessor();
+
         private Form activeForm = null;
 
         public StudentMenuForm()
@@ -68,19 +70,21 @@ namespace prj_LTTQ_BTL.Forms.Student
 
         private void StudentMenuForm_Load(object sender, EventArgs e)
         {
+            string hocvienname = dataProcessor.GetDataTable($"select full_name from Student where id = '{GlobalData.Id}'").Rows[0]["full_name"].ToString();
 
+            lblXinChao.Text = "Xin chào " + hocvienname;
         }
 
         private void SidebarBtn_Click(Guna2Button btn)
         {
-            btnTTHV.BackColor = Color.Transparent;
-            btnLH.BackColor = Color.Transparent;
-            btnLichHoc.BackColor = Color.Transparent;
-            btnKH.BackColor = Color.Transparent;
-            btnDiemSo.BackColor = Color.Transparent;
-            btnHP.BackColor = Color.Transparent;
+            btnTTHV.FillColor = Color.Transparent;
+            btnLH.FillColor = Color.Transparent;
+            btnLichHoc.FillColor = Color.Transparent;
+            btnKH.FillColor = Color.Transparent;
+            btnDiemSo.FillColor = Color.Transparent;
+            btnHP.FillColor = Color.Transparent;
 
-            btn.BackColor = secondaryColor;
+            btn.FillColor = secondaryColor;
 
             if (activeForm != null)
             {
@@ -105,9 +109,10 @@ namespace prj_LTTQ_BTL.Forms.Student
                     activeForm = new Student_ScoreInforForm();
                     break;
                 case "Học phí":
+                    activeForm = new Student_PaymentForm();
                     break;
                 case "Test":
-                    activeForm = new Manager_ClassCRUDForm();
+                    activeForm = new Manager_PaymentCRUDForm();
                     break;
             }
 
@@ -117,6 +122,11 @@ namespace prj_LTTQ_BTL.Forms.Student
         private void panelMain_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Logout.PerformLogout(this);
         }
     }
 }

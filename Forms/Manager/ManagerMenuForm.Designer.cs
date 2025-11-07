@@ -40,7 +40,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnAccount = new Guna.UI2.WinForms.Guna2Button();
             this.btnUser = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPayment = new Guna.UI2.WinForms.Guna2Button();
             this.btnClass = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnCourse = new Guna.UI2.WinForms.Guna2Button();
@@ -84,7 +84,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelSideBar.Controls.Add(this.btnLogout);
             this.panelSideBar.Controls.Add(this.btnAccount);
             this.panelSideBar.Controls.Add(this.btnUser);
-            this.panelSideBar.Controls.Add(this.guna2Button11);
+            this.panelSideBar.Controls.Add(this.btnPayment);
             this.panelSideBar.Controls.Add(this.btnClass);
             this.panelSideBar.Controls.Add(this.guna2Panel3);
             this.panelSideBar.Controls.Add(this.btnCourse);
@@ -173,27 +173,27 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
-            // guna2Button11
+            // btnPayment
             // 
-            this.guna2Button11.BorderRadius = 8;
-            this.guna2Button11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button11.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2Button11.ForeColor = System.Drawing.Color.White;
-            this.guna2Button11.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.guna2Button11.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button11.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button11.Image")));
-            this.guna2Button11.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button11.Location = new System.Drawing.Point(20, 718);
-            this.guna2Button11.Margin = new System.Windows.Forms.Padding(0, 18, 0, 18);
-            this.guna2Button11.Name = "guna2Button11";
-            this.guna2Button11.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.guna2Button11.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.guna2Button11.Size = new System.Drawing.Size(356, 62);
-            this.guna2Button11.TabIndex = 28;
-            this.guna2Button11.Text = "Tài chính";
-            this.guna2Button11.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPayment.BorderRadius = 8;
+            this.btnPayment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPayment.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPayment.FillColor = System.Drawing.Color.Transparent;
+            this.btnPayment.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnPayment.ForeColor = System.Drawing.Color.White;
+            this.btnPayment.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.btnPayment.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnPayment.Image = ((System.Drawing.Image)(resources.GetObject("btnPayment.Image")));
+            this.btnPayment.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPayment.Location = new System.Drawing.Point(20, 718);
+            this.btnPayment.Margin = new System.Windows.Forms.Padding(0, 18, 0, 18);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnPayment.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.btnPayment.Size = new System.Drawing.Size(356, 62);
+            this.btnPayment.TabIndex = 28;
+            this.btnPayment.Text = "Tài chính";
+            this.btnPayment.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnClass
             // 
@@ -635,7 +635,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button btnTeacher;
         private Guna.UI2.WinForms.Guna2Button btnClass;
-        private Guna.UI2.WinForms.Guna2Button guna2Button11;
+        private Guna.UI2.WinForms.Guna2Button btnPayment;
         private Guna.UI2.WinForms.Guna2Button btnStudentScore;
         private Guna.UI2.WinForms.Guna2Button btnUser;
         private Guna.UI2.WinForms.Guna2Button btnAccount;

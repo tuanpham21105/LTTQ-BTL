@@ -30,6 +30,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,12 +44,6 @@ namespace prj_LTTQ_BTL.Forms.Manager
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblHeader = new AntdUI.Label();
             this.label1 = new AntdUI.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -53,15 +53,6 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.comboboxClasses = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new AntdUI.Label();
-            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.dgvStudent = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.full_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birth_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panelHeaderGap = new Guna.UI2.WinForms.Guna2Panel();
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
@@ -90,9 +81,6 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.dateNgayKT = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panelDgvScores = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvExam = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.exam_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exam_score = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelWarning1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label10 = new AntdUI.Label();
             this.panelWarning = new Guna.UI2.WinForms.Guna2Panel();
@@ -105,12 +93,22 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new AntdUI.Label();
+            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.dgvStudent = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.full_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birth_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exam_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exam_score = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel2.SuspendLayout();
             this.panelHeader.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.guna2Panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.panelHeaderGap.SuspendLayout();
             this.panelMain.SuspendLayout();
@@ -130,6 +128,8 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelButtons.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
             this.guna2Panel8.SuspendLayout();
+            this.guna2Panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
             this.SuspendLayout();
             // 
             // lblHeader
@@ -221,8 +221,8 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.guna2Panel3.BorderRadius = 12;
             this.guna2Panel3.BorderThickness = 1;
-            this.guna2Panel3.Controls.Add(this.tableLayoutPanel1);
             this.guna2Panel3.Controls.Add(this.guna2Panel6);
+            this.guna2Panel3.Controls.Add(this.tableLayoutPanel1);
             this.guna2Panel3.CustomizableEdges.TopLeft = false;
             this.guna2Panel3.CustomizableEdges.TopRight = false;
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -242,8 +242,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.tableLayoutPanel1.Controls.Add(this.comboboxClasses, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(15, 370);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 10);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -280,178 +279,6 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.label3.Size = new System.Drawing.Size(335, 55);
             this.label3.TabIndex = 1;
             this.label3.Text = "Chọn lớp học";
-            // 
-            // guna2Panel6
-            // 
-            this.guna2Panel6.Controls.Add(this.dgvStudent);
-            this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel6.Location = new System.Drawing.Point(15, 15);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.guna2Panel6.Size = new System.Drawing.Size(1144, 355);
-            this.guna2Panel6.TabIndex = 2;
-            // 
-            // dgvStudent
-            // 
-            this.dgvStudent.AllowUserToAddRows = false;
-            this.dgvStudent.AllowUserToDeleteRows = false;
-            this.dgvStudent.AllowUserToResizeColumns = false;
-            this.dgvStudent.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.dgvStudent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvStudent.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dgvStudent.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvStudent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStudent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvStudent.ColumnHeadersHeight = 32;
-            this.dgvStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.full_name,
-            this.birth_date,
-            this.gender,
-            this.phone_number,
-            this.email,
-            this.address});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStudent.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvStudent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvStudent.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.dgvStudent.Location = new System.Drawing.Point(0, 0);
-            this.dgvStudent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dgvStudent.MultiSelect = false;
-            this.dgvStudent.Name = "dgvStudent";
-            this.dgvStudent.ReadOnly = true;
-            this.dgvStudent.RowHeadersVisible = false;
-            this.dgvStudent.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvStudent.Size = new System.Drawing.Size(1144, 340);
-            this.dgvStudent.TabIndex = 1;
-            this.dgvStudent.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.dgvStudent.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvStudent.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvStudent.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvStudent.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvStudent.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvStudent.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.dgvStudent.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.dgvStudent.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvStudent.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.dgvStudent.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvStudent.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvStudent.ThemeStyle.HeaderStyle.Height = 32;
-            this.dgvStudent.ThemeStyle.ReadOnly = true;
-            this.dgvStudent.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvStudent.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvStudent.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dgvStudent.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.dgvStudent.ThemeStyle.RowsStyle.Height = 22;
-            this.dgvStudent.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.dgvStudent.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvStudent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudent_CellClick);
-            // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.id.DataPropertyName = "id";
-            this.id.FillWeight = 23.81392F;
-            this.id.HeaderText = "Student Id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.id.Width = 142;
-            // 
-            // full_name
-            // 
-            this.full_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.full_name.DataPropertyName = "full_name";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.full_name.DefaultCellStyle = dataGridViewCellStyle3;
-            this.full_name.FillWeight = 23.81392F;
-            this.full_name.HeaderText = "Name";
-            this.full_name.MinimumWidth = 6;
-            this.full_name.Name = "full_name";
-            this.full_name.ReadOnly = true;
-            this.full_name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // birth_date
-            // 
-            this.birth_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.birth_date.DataPropertyName = "birth_date";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.birth_date.DefaultCellStyle = dataGridViewCellStyle4;
-            this.birth_date.FillWeight = 23.81392F;
-            this.birth_date.HeaderText = "Birth Date";
-            this.birth_date.MinimumWidth = 6;
-            this.birth_date.Name = "birth_date";
-            this.birth_date.ReadOnly = true;
-            this.birth_date.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.birth_date.Width = 139;
-            // 
-            // gender
-            // 
-            this.gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.gender.DataPropertyName = "gender";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.gender.DefaultCellStyle = dataGridViewCellStyle5;
-            this.gender.FillWeight = 23.81392F;
-            this.gender.HeaderText = "Gender";
-            this.gender.MinimumWidth = 6;
-            this.gender.Name = "gender";
-            this.gender.ReadOnly = true;
-            this.gender.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.gender.Width = 114;
-            // 
-            // phone_number
-            // 
-            this.phone_number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.phone_number.DataPropertyName = "phone_number";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.phone_number.DefaultCellStyle = dataGridViewCellStyle6;
-            this.phone_number.FillWeight = 147.3026F;
-            this.phone_number.HeaderText = "Phone Number";
-            this.phone_number.MinimumWidth = 6;
-            this.phone_number.Name = "phone_number";
-            this.phone_number.ReadOnly = true;
-            this.phone_number.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.phone_number.Width = 187;
-            // 
-            // email
-            // 
-            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.email.DataPropertyName = "email";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.email.DefaultCellStyle = dataGridViewCellStyle7;
-            this.email.FillWeight = 23.81392F;
-            this.email.HeaderText = "Email";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            this.email.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // address
-            // 
-            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.address.DataPropertyName = "address";
-            this.address.FillWeight = 23.81392F;
-            this.address.HeaderText = "Address";
-            this.address.MinimumWidth = 6;
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
-            this.address.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // guna2Panel1
             // 
@@ -507,8 +334,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelGraph.CustomizableEdges.TopLeft = false;
             this.panelGraph.CustomizableEdges.TopRight = false;
             this.panelGraph.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelGraph.Location = new System.Drawing.Point(0, 1739);
-            this.panelGraph.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelGraph.Location = new System.Drawing.Point(0, 1130);
             this.panelGraph.Name = "panelGraph";
             this.panelGraph.Padding = new System.Windows.Forms.Padding(15);
             this.panelGraph.Size = new System.Drawing.Size(1174, 555);
@@ -553,8 +379,8 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelInfor.Controls.Add(this.guna2Panel10);
             this.panelInfor.Controls.Add(this.tableLayoutPanel2);
             this.panelInfor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelInfor.Location = new System.Drawing.Point(0, 1541);
-            this.panelInfor.Margin = new System.Windows.Forms.Padding(0, 15, 0, 0);
+            this.panelInfor.Location = new System.Drawing.Point(0, 1001);
+            this.panelInfor.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.panelInfor.Name = "panelInfor";
             this.panelInfor.Padding = new System.Windows.Forms.Padding(15);
             this.panelInfor.Size = new System.Drawing.Size(1174, 198);
@@ -620,10 +446,9 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.labelTotalNumbers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelTotalNumbers.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.labelTotalNumbers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.labelTotalNumbers.Location = new System.Drawing.Point(282, 53);
-            this.labelTotalNumbers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelTotalNumbers.Location = new System.Drawing.Point(162, 34);
             this.labelTotalNumbers.Name = "labelTotalNumbers";
-            this.labelTotalNumbers.Size = new System.Drawing.Size(858, 38);
+            this.labelTotalNumbers.Size = new System.Drawing.Size(598, 25);
             this.labelTotalNumbers.TabIndex = 5;
             this.labelTotalNumbers.Text = "Bài kiểm tra ";
             // 
@@ -632,10 +457,9 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.label6.Location = new System.Drawing.Point(282, 5);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.label6.Location = new System.Drawing.Point(162, 3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(858, 38);
+            this.label6.Size = new System.Drawing.Size(598, 25);
             this.label6.TabIndex = 4;
             this.label6.Text = "/ 10  Điểm";
             // 
@@ -645,8 +469,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.labelNumbers.Dock = System.Windows.Forms.DockStyle.Right;
             this.labelNumbers.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.labelNumbers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.labelNumbers.Location = new System.Drawing.Point(262, 53);
-            this.labelNumbers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelNumbers.Location = new System.Drawing.Point(148, 34);
             this.labelNumbers.Name = "labelNumbers";
             this.labelNumbers.Size = new System.Drawing.Size(12, 38);
             this.labelNumbers.TabIndex = 3;
@@ -659,8 +482,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.labelAverage.Dock = System.Windows.Forms.DockStyle.Right;
             this.labelAverage.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.labelAverage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.labelAverage.Location = new System.Drawing.Point(262, 5);
-            this.labelAverage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelAverage.Location = new System.Drawing.Point(148, 3);
             this.labelAverage.Name = "labelAverage";
             this.labelAverage.Size = new System.Drawing.Size(12, 38);
             this.labelAverage.TabIndex = 2;
@@ -688,7 +510,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.lblProgress.Location = new System.Drawing.Point(4, 53);
             this.lblProgress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblProgress.Name = "lblProgress";
-            this.lblProgress.Size = new System.Drawing.Size(250, 38);
+            this.lblProgress.Size = new System.Drawing.Size(139, 25);
             this.lblProgress.TabIndex = 0;
             this.lblProgress.Text = "Đã làm: ";
             // 
@@ -697,8 +519,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Panel4.AutoSize = true;
             this.guna2Panel4.Controls.Add(this.guna2Panel5);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel4.Location = new System.Drawing.Point(0, 1458);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Panel4.Location = new System.Drawing.Point(0, 947);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.guna2Panel4.Size = new System.Drawing.Size(1174, 83);
@@ -755,8 +576,8 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Panel9.Location = new System.Drawing.Point(0, 684);
             this.guna2Panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel9.Name = "guna2Panel9";
-            this.guna2Panel9.Padding = new System.Windows.Forms.Padding(15);
-            this.guna2Panel9.Size = new System.Drawing.Size(1174, 774);
+            this.guna2Panel9.Padding = new System.Windows.Forms.Padding(10);
+            this.guna2Panel9.Size = new System.Drawing.Size(783, 502);
             this.guna2Panel9.TabIndex = 23;
             // 
             // tableLayoutPanel3
@@ -779,7 +600,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1144, 209);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(763, 132);
             this.tableLayoutPanel3.TabIndex = 18;
             // 
             // label8
@@ -787,8 +608,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label8.Location = new System.Drawing.Point(4, 149);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.label8.Location = new System.Drawing.Point(3, 93);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(335, 55);
             this.label8.TabIndex = 5;
@@ -808,12 +628,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.txtDiemSo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiemSo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDiemSo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiemSo.Location = new System.Drawing.Point(349, 80);
-            this.txtDiemSo.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtDiemSo.Location = new System.Drawing.Point(231, 49);
+            this.txtDiemSo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDiemSo.Name = "txtDiemSo";
             this.txtDiemSo.PlaceholderText = "";
             this.txtDiemSo.SelectedText = "";
-            this.txtDiemSo.Size = new System.Drawing.Size(789, 56);
+            this.txtDiemSo.Size = new System.Drawing.Size(529, 37);
             this.txtDiemSo.TabIndex = 4;
             // 
             // label7
@@ -821,10 +641,9 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.label7.Location = new System.Drawing.Point(4, 77);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.label7.Location = new System.Drawing.Point(3, 48);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(335, 62);
+            this.label7.Size = new System.Drawing.Size(222, 39);
             this.label7.TabIndex = 3;
             this.label7.Text = "Điểm số";
             // 
@@ -836,7 +655,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.label5.Location = new System.Drawing.Point(4, 5);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(335, 62);
+            this.label5.Size = new System.Drawing.Size(222, 39);
             this.label5.TabIndex = 1;
             this.label5.Text = "Tên bài kiểm tra";
             // 
@@ -854,12 +673,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.txtTenBaiKT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenBaiKT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTenBaiKT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenBaiKT.Location = new System.Drawing.Point(349, 8);
-            this.txtTenBaiKT.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtTenBaiKT.Location = new System.Drawing.Point(231, 4);
+            this.txtTenBaiKT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenBaiKT.Name = "txtTenBaiKT";
             this.txtTenBaiKT.PlaceholderText = "";
             this.txtTenBaiKT.SelectedText = "";
-            this.txtTenBaiKT.Size = new System.Drawing.Size(789, 56);
+            this.txtTenBaiKT.Size = new System.Drawing.Size(529, 37);
             this.txtTenBaiKT.TabIndex = 2;
             // 
             // dateNgayKT
@@ -872,8 +691,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.dateNgayKT.FillColor = System.Drawing.Color.White;
             this.dateNgayKT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateNgayKT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateNgayKT.Location = new System.Drawing.Point(347, 149);
-            this.dateNgayKT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateNgayKT.Location = new System.Drawing.Point(231, 93);
             this.dateNgayKT.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateNgayKT.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateNgayKT.Name = "dateNgayKT";
@@ -959,30 +777,6 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.dgvExam.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgvExam.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExam_CellClick);
             // 
-            // exam_name
-            // 
-            this.exam_name.DataPropertyName = "name";
-            this.exam_name.HeaderText = "Exam Name";
-            this.exam_name.MinimumWidth = 8;
-            this.exam_name.Name = "exam_name";
-            this.exam_name.ReadOnly = true;
-            // 
-            // exam_score
-            // 
-            this.exam_score.DataPropertyName = "score";
-            this.exam_score.HeaderText = "Exam Score";
-            this.exam_score.MinimumWidth = 8;
-            this.exam_score.Name = "exam_score";
-            this.exam_score.ReadOnly = true;
-            // 
-            // date
-            // 
-            this.date.DataPropertyName = "created_date";
-            this.date.HeaderText = "Exam Date";
-            this.date.MinimumWidth = 8;
-            this.date.Name = "date";
-            this.date.ReadOnly = true;
-            // 
             // panelWarning1
             // 
             this.panelWarning1.AutoSize = true;
@@ -1056,8 +850,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelButtons.Controls.Add(this.btnHuy);
             this.panelButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelButtons.FillColor = System.Drawing.Color.White;
-            this.panelButtons.Location = new System.Drawing.Point(15, 693);
-            this.panelButtons.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelButtons.Location = new System.Drawing.Point(10, 449);
             this.panelButtons.Name = "panelButtons";
             this.panelButtons.Padding = new System.Windows.Forms.Padding(0, 6, 14, 6);
             this.panelButtons.Size = new System.Drawing.Size(1144, 66);
@@ -1182,6 +975,199 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.label4.Text = "Cập nhật điểm số của học viên";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // guna2Panel6
+            // 
+            this.guna2Panel6.Controls.Add(this.dgvStudent);
+            this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel6.Location = new System.Drawing.Point(10, 52);
+            this.guna2Panel6.Name = "guna2Panel6";
+            this.guna2Panel6.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.guna2Panel6.Size = new System.Drawing.Size(763, 231);
+            this.guna2Panel6.TabIndex = 4;
+            // 
+            // dgvStudent
+            // 
+            this.dgvStudent.AllowUserToAddRows = false;
+            this.dgvStudent.AllowUserToDeleteRows = false;
+            this.dgvStudent.AllowUserToResizeColumns = false;
+            this.dgvStudent.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.dgvStudent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvStudent.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvStudent.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvStudent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStudent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvStudent.ColumnHeadersHeight = 32;
+            this.dgvStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.full_name,
+            this.birth_date,
+            this.gender,
+            this.phone_number,
+            this.email,
+            this.address});
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStudent.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvStudent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvStudent.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.dgvStudent.Location = new System.Drawing.Point(0, 10);
+            this.dgvStudent.MultiSelect = false;
+            this.dgvStudent.Name = "dgvStudent";
+            this.dgvStudent.ReadOnly = true;
+            this.dgvStudent.RowHeadersVisible = false;
+            this.dgvStudent.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvStudent.Size = new System.Drawing.Size(763, 221);
+            this.dgvStudent.TabIndex = 1;
+            this.dgvStudent.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.dgvStudent.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvStudent.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvStudent.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvStudent.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvStudent.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvStudent.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.dgvStudent.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.dgvStudent.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvStudent.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.dgvStudent.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvStudent.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvStudent.ThemeStyle.HeaderStyle.Height = 32;
+            this.dgvStudent.ThemeStyle.ReadOnly = true;
+            this.dgvStudent.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvStudent.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvStudent.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dgvStudent.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.dgvStudent.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvStudent.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.dgvStudent.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvStudent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudent_CellClick);
+            // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.id.DataPropertyName = "id";
+            this.id.FillWeight = 23.81392F;
+            this.id.HeaderText = "Mã học viên";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.id.Width = 110;
+            // 
+            // full_name
+            // 
+            this.full_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.full_name.DataPropertyName = "full_name";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.full_name.DefaultCellStyle = dataGridViewCellStyle3;
+            this.full_name.FillWeight = 23.81392F;
+            this.full_name.HeaderText = "Tên học viên";
+            this.full_name.MinimumWidth = 6;
+            this.full_name.Name = "full_name";
+            this.full_name.ReadOnly = true;
+            this.full_name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.full_name.Width = 112;
+            // 
+            // birth_date
+            // 
+            this.birth_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.birth_date.DataPropertyName = "birth_date";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.birth_date.DefaultCellStyle = dataGridViewCellStyle4;
+            this.birth_date.FillWeight = 23.81392F;
+            this.birth_date.HeaderText = "Ngày sinh";
+            this.birth_date.MinimumWidth = 6;
+            this.birth_date.Name = "birth_date";
+            this.birth_date.ReadOnly = true;
+            this.birth_date.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.birth_date.Width = 96;
+            // 
+            // gender
+            // 
+            this.gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.gender.DataPropertyName = "gender";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.gender.DefaultCellStyle = dataGridViewCellStyle5;
+            this.gender.FillWeight = 23.81392F;
+            this.gender.HeaderText = "Giới tính";
+            this.gender.MinimumWidth = 6;
+            this.gender.Name = "gender";
+            this.gender.ReadOnly = true;
+            this.gender.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.gender.Width = 89;
+            // 
+            // phone_number
+            // 
+            this.phone_number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.phone_number.DataPropertyName = "phone_number";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.phone_number.DefaultCellStyle = dataGridViewCellStyle6;
+            this.phone_number.HeaderText = "Số điện thoại";
+            this.phone_number.MinimumWidth = 6;
+            this.phone_number.Name = "phone_number";
+            this.phone_number.ReadOnly = true;
+            this.phone_number.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // email
+            // 
+            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.email.DataPropertyName = "email";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.email.DefaultCellStyle = dataGridViewCellStyle7;
+            this.email.HeaderText = "Email";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            this.email.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // address
+            // 
+            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.address.DataPropertyName = "address";
+            this.address.FillWeight = 23.81392F;
+            this.address.HeaderText = "Địa chỉ";
+            this.address.MinimumWidth = 6;
+            this.address.Name = "address";
+            this.address.ReadOnly = true;
+            this.address.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.address.Width = 77;
+            // 
+            // exam_name
+            // 
+            this.exam_name.DataPropertyName = "name";
+            this.exam_name.HeaderText = "Tên bài kiểm tra";
+            this.exam_name.MinimumWidth = 6;
+            this.exam_name.Name = "exam_name";
+            this.exam_name.ReadOnly = true;
+            // 
+            // exam_score
+            // 
+            this.exam_score.DataPropertyName = "score";
+            this.exam_score.HeaderText = "Điểm số";
+            this.exam_score.MinimumWidth = 6;
+            this.exam_score.Name = "exam_score";
+            this.exam_score.ReadOnly = true;
+            // 
+            // date
+            // 
+            this.date.DataPropertyName = "created_date";
+            this.date.HeaderText = "Ngày thực hiện";
+            this.date.MinimumWidth = 6;
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
+            // 
             // Manager_StudentScoreCRUDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1199,8 +1185,6 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.guna2Panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.panelHeaderGap.ResumeLayout(false);
             this.panelMain.ResumeLayout(false);
@@ -1230,6 +1214,8 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Panel7.ResumeLayout(false);
             this.guna2Panel8.ResumeLayout(false);
             this.guna2Panel8.PerformLayout();
+            this.guna2Panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1247,8 +1233,6 @@ namespace prj_LTTQ_BTL.Forms.Manager
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Guna.UI2.WinForms.Guna2ComboBox comboboxClasses;
         private AntdUI.Label label3;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvStudent;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchStudent;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
@@ -1264,13 +1248,6 @@ namespace prj_LTTQ_BTL.Forms.Manager
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private AntdUI.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn full_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn birth_date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phone_number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
         private Guna.UI2.WinForms.Guna2Panel panelDgvScores;
         private Guna.UI2.WinForms.Guna2DataGridView dgvExam;
@@ -1290,9 +1267,6 @@ namespace prj_LTTQ_BTL.Forms.Manager
         private System.Windows.Forms.DataGridViewTextBoxColumn score;
         private System.Windows.Forms.DataGridViewTextBoxColumn created_date;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn exam_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn exam_score;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date;
         private Guna2Button btnThem;
         private Guna2Button btnXoa;
         private Guna2Button btnLuu;
@@ -1300,5 +1274,17 @@ namespace prj_LTTQ_BTL.Forms.Manager
         private System.Windows.Forms.DataVisualization.Charting.Chart chartScore;
         private Guna2Panel guna2Panel10;
         private Guna2Button btnRefreshGraph;
+        private Guna2Panel guna2Panel6;
+        private Guna2DataGridView dgvStudent;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn full_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn birth_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone_number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exam_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exam_score;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date;
     }
 }
