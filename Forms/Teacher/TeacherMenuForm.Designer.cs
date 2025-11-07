@@ -35,10 +35,6 @@
             this.btnTrangChu = new Guna.UI2.WinForms.Guna2Button();
             this.btnHoSo = new Guna.UI2.WinForms.Guna2Button();
             this.btnLopHoc = new Guna.UI2.WinForms.Guna2Button();
-            this.btnHocVien = new Guna.UI2.WinForms.Guna2Button();
-            this.btnKhoaHoc = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDiemDanh = new Guna.UI2.WinForms.Guna2Button();
-            this.btnNhapDiem = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PanelLeftTop = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -133,10 +129,6 @@
             this.flowLayoutPanel1.Controls.Add(this.btnTrangChu);
             this.flowLayoutPanel1.Controls.Add(this.btnHoSo);
             this.flowLayoutPanel1.Controls.Add(this.btnLopHoc);
-            this.flowLayoutPanel1.Controls.Add(this.btnHocVien);
-            this.flowLayoutPanel1.Controls.Add(this.btnKhoaHoc);
-            this.flowLayoutPanel1.Controls.Add(this.btnDiemDanh);
-            this.flowLayoutPanel1.Controls.Add(this.btnNhapDiem);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 100);
@@ -223,106 +215,6 @@
             this.btnLopHoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLopHoc.TextOffset = new System.Drawing.Point(10, 0);
             this.btnLopHoc.Click += new System.EventHandler(this.btnLopHoc_Click_1);
-            // 
-            // btnHocVien
-            // 
-            this.btnHocVien.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnHocVien.BorderRadius = 18;
-            this.btnHocVien.BorderThickness = 1;
-            this.btnHocVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnHocVien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnHocVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHocVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnHocVien.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnHocVien.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHocVien.ForeColor = System.Drawing.Color.White;
-            this.btnHocVien.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(215)))));
-            this.btnHocVien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHocVien.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnHocVien.Location = new System.Drawing.Point(13, 166);
-            this.btnHocVien.Name = "btnHocVien";
-            this.btnHocVien.PressedColor = System.Drawing.Color.White;
-            this.btnHocVien.ShadowDecoration.Color = System.Drawing.Color.White;
-            this.btnHocVien.Size = new System.Drawing.Size(190, 45);
-            this.btnHocVien.TabIndex = 4;
-            this.btnHocVien.Text = "Học viên";
-            this.btnHocVien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHocVien.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // btnKhoaHoc
-            // 
-            this.btnKhoaHoc.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnKhoaHoc.BorderRadius = 18;
-            this.btnKhoaHoc.BorderThickness = 1;
-            this.btnKhoaHoc.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKhoaHoc.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKhoaHoc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKhoaHoc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKhoaHoc.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnKhoaHoc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhoaHoc.ForeColor = System.Drawing.Color.White;
-            this.btnKhoaHoc.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(215)))));
-            this.btnKhoaHoc.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnKhoaHoc.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnKhoaHoc.Location = new System.Drawing.Point(13, 217);
-            this.btnKhoaHoc.Name = "btnKhoaHoc";
-            this.btnKhoaHoc.PressedColor = System.Drawing.Color.White;
-            this.btnKhoaHoc.ShadowDecoration.Color = System.Drawing.Color.White;
-            this.btnKhoaHoc.Size = new System.Drawing.Size(190, 45);
-            this.btnKhoaHoc.TabIndex = 5;
-            this.btnKhoaHoc.Text = "Khóa học";
-            this.btnKhoaHoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnKhoaHoc.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // btnDiemDanh
-            // 
-            this.btnDiemDanh.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnDiemDanh.BorderRadius = 18;
-            this.btnDiemDanh.BorderThickness = 1;
-            this.btnDiemDanh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDiemDanh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDiemDanh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDiemDanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDiemDanh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnDiemDanh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDiemDanh.ForeColor = System.Drawing.Color.White;
-            this.btnDiemDanh.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(215)))));
-            this.btnDiemDanh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDiemDanh.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnDiemDanh.Location = new System.Drawing.Point(13, 268);
-            this.btnDiemDanh.Name = "btnDiemDanh";
-            this.btnDiemDanh.PressedColor = System.Drawing.Color.White;
-            this.btnDiemDanh.ShadowDecoration.Color = System.Drawing.Color.White;
-            this.btnDiemDanh.Size = new System.Drawing.Size(190, 45);
-            this.btnDiemDanh.TabIndex = 6;
-            this.btnDiemDanh.Text = "Điểm danh";
-            this.btnDiemDanh.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDiemDanh.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // btnNhapDiem
-            // 
-            this.btnNhapDiem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnNhapDiem.BorderRadius = 18;
-            this.btnNhapDiem.BorderThickness = 1;
-            this.btnNhapDiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNhapDiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNhapDiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNhapDiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNhapDiem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnNhapDiem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhapDiem.ForeColor = System.Drawing.Color.White;
-            this.btnNhapDiem.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(215)))));
-            this.btnNhapDiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnNhapDiem.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnNhapDiem.Location = new System.Drawing.Point(13, 319);
-            this.btnNhapDiem.Name = "btnNhapDiem";
-            this.btnNhapDiem.PressedColor = System.Drawing.Color.White;
-            this.btnNhapDiem.ShadowDecoration.Color = System.Drawing.Color.White;
-            this.btnNhapDiem.Size = new System.Drawing.Size(190, 45);
-            this.btnNhapDiem.TabIndex = 7;
-            this.btnNhapDiem.Text = "Nhập Điểm";
-            this.btnNhapDiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnNhapDiem.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // guna2PanelLeftTop
             // 
@@ -990,8 +882,6 @@
         private Guna.UI2.WinForms.Guna2Button btnTrangChu;
         private Guna.UI2.WinForms.Guna2Button btnHoSo;
         private Guna.UI2.WinForms.Guna2Button btnLopHoc;
-        private Guna.UI2.WinForms.Guna2Button btnHocVien;
-        private Guna.UI2.WinForms.Guna2Button btnKhoaHoc;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2PanelCenterTop;
         private Guna.UI2.WinForms.Guna2Panel guna2PanelBot;
@@ -1039,7 +929,5 @@
         private AntdUI.In.FlowLayoutPanel flowLichDay;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private AntdUI.Label label2;
-        private Guna.UI2.WinForms.Guna2Button btnDiemDanh;
-        private Guna.UI2.WinForms.Guna2Button btnNhapDiem;
     }
 }

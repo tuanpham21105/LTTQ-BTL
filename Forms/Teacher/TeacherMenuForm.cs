@@ -49,11 +49,11 @@ namespace prj_LTTQ_BTL.Teacher
                 if (dt.Rows.Count > 0)
                 {
                     string name = dt.Rows[0]["full_name"].ToString();
-                    lblHello.Text = $"Chào, {name} ";
+                    lblHello.Text = $"Xin Chào, {name} ";
                 }
                 else
                 {
-                    lblHello.Text = "Chào, Giáo viên ";
+                    lblHello.Text = "Xin Chào, Giáo viên ";
                 }
             }
             catch (Exception ex)

@@ -22,30 +22,39 @@ namespace prj_LTTQ_BTL.Forms.Teacher
             LoadClassCards();
         }
 
-        // ====================== LOAD DANH SÁCH LỚP ======================
         private void LoadClassCards()
-        {
+        {   
             flowLayoutPanel1.Controls.Clear();
 
-            string query = @"
+                Guid teacherGuid = Guid.Parse(GlobalData.Id);
+
+                string query = $@"
                 SELECT 
-                    C.id AS ClassId,
-                    C.name AS ClassName,
-                    CR.name AS CourseName,
-                    ISNULL(T.full_name, N'Chưa phân công') AS TeacherName,
-                    CONVERT(VARCHAR(10), C.start_date, 103) AS StartDate,
-                    COUNT(CA.student_id) AS StudentCount,
-                    CASE 
-                        WHEN C.start_date > GETDATE() THEN N'Chưa bắt đầu'
-                        WHEN C.start_date <= GETDATE() THEN N'Đang học'
-                        ELSE N'Đã kết thúc'
-                    END AS TrangThai
+                C.id AS ClassId,
+                C.name AS ClassName,
+                CR.name AS CourseName,
+                ISNULL(T.full_name, N'Chưa phân công') AS TeacherName,
+                CONVERT(VARCHAR(10), C.start_date, 103) AS StartDate,
+                COUNT(CA.student_id) AS StudentCount,
+                CASE 
+                WHEN C.start_date > GETDATE() THEN N'Chưa bắt đầu'
+                WHEN C.start_date <= GETDATE() THEN N'Đang học'
+                ELSE N'Đã kết thúc'
+                END AS TrangThai
                 FROM Class C
                 INNER JOIN Course CR ON C.course_id = CR.id
                 LEFT JOIN Teacher T ON C.teacher_id = T.id
                 LEFT JOIN ClassAssignment CA ON CA.class_id = C.id
-                GROUP BY C.id, C.name, CR.name, C.start_date, T.full_name
-                ORDER BY C.start_date DESC;";
+                WHERE 
+                C.status = 'Active' 
+                AND CR.status = 'Active'
+                AND C.teacher_id = '{teacherGuid}'
+                GROUP BY 
+                C.id, C.name, CR.name, C.start_date, T.full_name
+                ORDER BY 
+                C.start_date DESC;";
+
+
 
             DataTable dt = dtBase.GetDataTable(query);
 
@@ -180,6 +189,11 @@ namespace prj_LTTQ_BTL.Forms.Teacher
                 flowLayoutPanel1.WrapContents = true;     
 
             }
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
