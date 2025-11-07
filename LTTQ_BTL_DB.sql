@@ -22,6 +22,7 @@ CREATE TABLE [User] (
     update_at DATETIME DEFAULT GETDATE(),
     role_name NVARCHAR(50) NOT NULL,
     avatar NVARCHAR(100),
+    status VARCHAR(20) DEFAULT 'Active' CHECK (status IN ('Active', 'Inactive')),
     FOREIGN KEY (role_name) REFERENCES Role(name)
 );
 GO
@@ -65,7 +66,8 @@ CREATE TABLE Course (
     name NVARCHAR(100) NOT NULL,
     description NVARCHAR(255),
     number_of_lessons INT,
-    fee DECIMAL(10,2)
+    fee DECIMAL(10,2),
+    status VARCHAR(20) DEFAULT 'Active' CHECK (status IN ('Active', 'Inactive')),
 );
 GO
 
@@ -80,7 +82,8 @@ CREATE TABLE Class (
     start_date DATE,
     teacher_id UNIQUEIDENTIFIER,
     FOREIGN KEY (course_id) REFERENCES Course(id),
-    FOREIGN KEY (teacher_id) REFERENCES Teacher(id)
+    FOREIGN KEY (teacher_id) REFERENCES Teacher(id),
+    status VARCHAR(20) DEFAULT 'Active' CHECK (status IN ('Active', 'Inactive')),
 );
 GO
 
@@ -93,7 +96,8 @@ CREATE TABLE Enrollment (
     course_id UNIQUEIDENTIFIER NOT NULL,
     enrollment_date DATE DEFAULT GETDATE(),
     FOREIGN KEY (student_id) REFERENCES Student(id),
-    FOREIGN KEY (course_id) REFERENCES Course(id)
+    FOREIGN KEY (course_id) REFERENCES Course(id),
+    status VARCHAR(20) DEFAULT 'Enrolled' CHECK (status IN ('Enrolled', 'Cancelled')),
 );
 GO
 

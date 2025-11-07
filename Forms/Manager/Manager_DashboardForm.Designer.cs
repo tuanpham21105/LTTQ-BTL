@@ -28,19 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel26 = new Guna.UI2.WinForms.Guna2Panel();
+            this.chartClassScore = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.guna2Panel23 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel24 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel25 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cmbClass = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label12 = new AntdUI.Label();
+            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel22 = new Guna.UI2.WinForms.Guna2Panel();
+            this.chartAverageClassesScore = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.guna2Panel19 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel20 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel21 = new Guna.UI2.WinForms.Guna2Panel();
+            this.dtpScore = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label10 = new AntdUI.Label();
+            this.btnScoreByYear = new Guna.UI2.WinForms.Guna2Button();
+            this.btnScorebyDate = new Guna.UI2.WinForms.Guna2Button();
+            this.btnScoreByMonth = new Guna.UI2.WinForms.Guna2Button();
+            this.btnScoreExport = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel18 = new Guna.UI2.WinForms.Guna2Panel();
+            this.GeneralAttendanceChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.guna2Panel14 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel17 = new Guna.UI2.WinForms.Guna2Panel();
+            this.dtpAttendance = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label4 = new AntdUI.Label();
+            this.btnAttendanceByYear = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAttendanceByDate = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAttendanceByMonth = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAttendanceExport = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
             this.GeneralEnrollmentChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
@@ -86,37 +116,22 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.labelCountCourse = new System.Windows.Forms.Label();
-            this.guna2Panel14 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel17 = new Guna.UI2.WinForms.Guna2Panel();
-            this.dtpAttendance = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label4 = new AntdUI.Label();
-            this.btnAttendanceByYear = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAttendanceByDate = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAttendanceByMonth = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAttendanceExport = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel18 = new Guna.UI2.WinForms.Guna2Panel();
-            this.GeneralAttendanceChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.guna2Panel19 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel20 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel21 = new Guna.UI2.WinForms.Guna2Panel();
-            this.dtpScore = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label10 = new AntdUI.Label();
-            this.btnScoreByYear = new Guna.UI2.WinForms.Guna2Button();
-            this.btnScorebyDate = new Guna.UI2.WinForms.Guna2Button();
-            this.btnScoreByMonth = new Guna.UI2.WinForms.Guna2Button();
-            this.btnScoreExport = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel22 = new Guna.UI2.WinForms.Guna2Panel();
-            this.chartAverageClassesScore = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.guna2Panel23 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel24 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel25 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label12 = new AntdUI.Label();
-            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel26 = new Guna.UI2.WinForms.Guna2Panel();
-            this.chartClassScore = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.cmbClass = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panelMain.SuspendLayout();
+            this.guna2Panel26.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartClassScore)).BeginInit();
+            this.guna2Panel23.SuspendLayout();
+            this.guna2Panel24.SuspendLayout();
+            this.guna2Panel25.SuspendLayout();
+            this.guna2Panel22.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartAverageClassesScore)).BeginInit();
+            this.guna2Panel19.SuspendLayout();
+            this.guna2Panel20.SuspendLayout();
+            this.guna2Panel21.SuspendLayout();
+            this.guna2Panel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GeneralAttendanceChart)).BeginInit();
+            this.guna2Panel14.SuspendLayout();
+            this.guna2Panel16.SuspendLayout();
+            this.guna2Panel17.SuspendLayout();
             this.guna2Panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GeneralEnrollmentChart)).BeginInit();
             this.guna2Panel7.SuspendLayout();
@@ -133,21 +148,6 @@
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            this.guna2Panel14.SuspendLayout();
-            this.guna2Panel16.SuspendLayout();
-            this.guna2Panel17.SuspendLayout();
-            this.guna2Panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GeneralAttendanceChart)).BeginInit();
-            this.guna2Panel19.SuspendLayout();
-            this.guna2Panel20.SuspendLayout();
-            this.guna2Panel21.SuspendLayout();
-            this.guna2Panel22.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartAverageClassesScore)).BeginInit();
-            this.guna2Panel23.SuspendLayout();
-            this.guna2Panel24.SuspendLayout();
-            this.guna2Panel25.SuspendLayout();
-            this.guna2Panel26.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartClassScore)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMain
@@ -170,6 +170,441 @@
             this.panelMain.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.panelMain.Size = new System.Drawing.Size(1397, 1907);
             this.panelMain.TabIndex = 0;
+            // 
+            // guna2Panel26
+            // 
+            this.guna2Panel26.BackColor = System.Drawing.Color.White;
+            this.guna2Panel26.Controls.Add(this.chartClassScore);
+            this.guna2Panel26.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel26.Location = new System.Drawing.Point(0, 2056);
+            this.guna2Panel26.Name = "guna2Panel26";
+            this.guna2Panel26.Padding = new System.Windows.Forms.Padding(10);
+            this.guna2Panel26.Size = new System.Drawing.Size(1371, 333);
+            this.guna2Panel26.TabIndex = 11;
+            this.guna2Panel26.Visible = false;
+            // 
+            // chartClassScore
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartClassScore.ChartAreas.Add(chartArea1);
+            this.chartClassScore.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chartClassScore.Legends.Add(legend1);
+            this.chartClassScore.Location = new System.Drawing.Point(10, 10);
+            this.chartClassScore.Name = "chartClassScore";
+            this.chartClassScore.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartClassScore.Series.Add(series1);
+            this.chartClassScore.Size = new System.Drawing.Size(1351, 313);
+            this.chartClassScore.TabIndex = 1;
+            this.chartClassScore.Text = "chart2";
+            // 
+            // guna2Panel23
+            // 
+            this.guna2Panel23.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2Panel23.Controls.Add(this.guna2Panel24);
+            this.guna2Panel23.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel23.Location = new System.Drawing.Point(0, 1956);
+            this.guna2Panel23.Name = "guna2Panel23";
+            this.guna2Panel23.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.guna2Panel23.Size = new System.Drawing.Size(1371, 100);
+            this.guna2Panel23.TabIndex = 10;
+            this.guna2Panel23.Visible = false;
+            // 
+            // guna2Panel24
+            // 
+            this.guna2Panel24.BackColor = System.Drawing.Color.White;
+            this.guna2Panel24.Controls.Add(this.guna2Panel25);
+            this.guna2Panel24.Controls.Add(this.guna2Button8);
+            this.guna2Panel24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel24.Location = new System.Drawing.Point(0, 10);
+            this.guna2Panel24.Name = "guna2Panel24";
+            this.guna2Panel24.Padding = new System.Windows.Forms.Padding(10);
+            this.guna2Panel24.Size = new System.Drawing.Size(1371, 80);
+            this.guna2Panel24.TabIndex = 6;
+            // 
+            // guna2Panel25
+            // 
+            this.guna2Panel25.Controls.Add(this.cmbClass);
+            this.guna2Panel25.Controls.Add(this.label12);
+            this.guna2Panel25.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel25.Location = new System.Drawing.Point(10, 10);
+            this.guna2Panel25.Name = "guna2Panel25";
+            this.guna2Panel25.Size = new System.Drawing.Size(428, 60);
+            this.guna2Panel25.TabIndex = 6;
+            // 
+            // cmbClass
+            // 
+            this.cmbClass.BackColor = System.Drawing.Color.Transparent;
+            this.cmbClass.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cmbClass.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbClass.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbClass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbClass.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbClass.ItemHeight = 30;
+            this.cmbClass.Location = new System.Drawing.Point(175, 0);
+            this.cmbClass.Name = "cmbClass";
+            this.cmbClass.Size = new System.Drawing.Size(250, 36);
+            this.cmbClass.TabIndex = 1;
+            this.cmbClass.SelectedIndexChanged += new System.EventHandler(this.cmbClass_SelectedIndexChanged);
+            // 
+            // label12
+            // 
+            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label12.Location = new System.Drawing.Point(0, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(175, 60);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Báo cáo điểm theo lớp";
+            // 
+            // guna2Button8
+            // 
+            this.guna2Button8.BorderRadius = 5;
+            this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2Button8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.guna2Button8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.guna2Button8.ForeColor = System.Drawing.Color.White;
+            this.guna2Button8.Location = new System.Drawing.Point(1214, 10);
+            this.guna2Button8.Name = "guna2Button8";
+            this.guna2Button8.Size = new System.Drawing.Size(147, 60);
+            this.guna2Button8.TabIndex = 3;
+            this.guna2Button8.Text = "Xuất ra file";
+            // 
+            // guna2Panel22
+            // 
+            this.guna2Panel22.BackColor = System.Drawing.Color.White;
+            this.guna2Panel22.Controls.Add(this.chartAverageClassesScore);
+            this.guna2Panel22.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel22.Location = new System.Drawing.Point(0, 1623);
+            this.guna2Panel22.Name = "guna2Panel22";
+            this.guna2Panel22.Padding = new System.Windows.Forms.Padding(10);
+            this.guna2Panel22.Size = new System.Drawing.Size(1371, 333);
+            this.guna2Panel22.TabIndex = 9;
+            // 
+            // chartAverageClassesScore
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chartAverageClassesScore.ChartAreas.Add(chartArea2);
+            this.chartAverageClassesScore.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend2.Name = "Legend1";
+            this.chartAverageClassesScore.Legends.Add(legend2);
+            this.chartAverageClassesScore.Location = new System.Drawing.Point(10, 10);
+            this.chartAverageClassesScore.Name = "chartAverageClassesScore";
+            this.chartAverageClassesScore.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartAverageClassesScore.Series.Add(series2);
+            this.chartAverageClassesScore.Size = new System.Drawing.Size(1351, 313);
+            this.chartAverageClassesScore.TabIndex = 1;
+            this.chartAverageClassesScore.Text = "chart2";
+            // 
+            // guna2Panel19
+            // 
+            this.guna2Panel19.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2Panel19.Controls.Add(this.guna2Panel20);
+            this.guna2Panel19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel19.Location = new System.Drawing.Point(0, 1523);
+            this.guna2Panel19.Name = "guna2Panel19";
+            this.guna2Panel19.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.guna2Panel19.Size = new System.Drawing.Size(1371, 100);
+            this.guna2Panel19.TabIndex = 8;
+            // 
+            // guna2Panel20
+            // 
+            this.guna2Panel20.BackColor = System.Drawing.Color.White;
+            this.guna2Panel20.Controls.Add(this.guna2Panel21);
+            this.guna2Panel20.Controls.Add(this.btnScoreByYear);
+            this.guna2Panel20.Controls.Add(this.btnScorebyDate);
+            this.guna2Panel20.Controls.Add(this.btnScoreByMonth);
+            this.guna2Panel20.Controls.Add(this.btnScoreExport);
+            this.guna2Panel20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel20.Location = new System.Drawing.Point(0, 10);
+            this.guna2Panel20.Name = "guna2Panel20";
+            this.guna2Panel20.Padding = new System.Windows.Forms.Padding(10);
+            this.guna2Panel20.Size = new System.Drawing.Size(1371, 80);
+            this.guna2Panel20.TabIndex = 6;
+            // 
+            // guna2Panel21
+            // 
+            this.guna2Panel21.Controls.Add(this.dtpScore);
+            this.guna2Panel21.Controls.Add(this.label10);
+            this.guna2Panel21.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel21.Location = new System.Drawing.Point(10, 10);
+            this.guna2Panel21.Name = "guna2Panel21";
+            this.guna2Panel21.Size = new System.Drawing.Size(428, 60);
+            this.guna2Panel21.TabIndex = 6;
+            // 
+            // dtpScore
+            // 
+            this.dtpScore.Checked = true;
+            this.dtpScore.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dtpScore.FillColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dtpScore.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpScore.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpScore.Location = new System.Drawing.Point(142, 0);
+            this.dtpScore.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpScore.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpScore.Name = "dtpScore";
+            this.dtpScore.Size = new System.Drawing.Size(286, 60);
+            this.dtpScore.TabIndex = 5;
+            this.dtpScore.Value = new System.DateTime(2025, 11, 5, 21, 9, 8, 698);
+            this.dtpScore.ValueChanged += new System.EventHandler(this.dtpAverageScore_ValueChanged);
+            // 
+            // label10
+            // 
+            this.label10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(142, 60);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Báo cáo điểm";
+            // 
+            // btnScoreByYear
+            // 
+            this.btnScoreByYear.BorderRadius = 5;
+            this.btnScoreByYear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnScoreByYear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnScoreByYear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnScoreByYear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnScoreByYear.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnScoreByYear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnScoreByYear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScoreByYear.ForeColor = System.Drawing.Color.White;
+            this.btnScoreByYear.Location = new System.Drawing.Point(773, 10);
+            this.btnScoreByYear.Name = "btnScoreByYear";
+            this.btnScoreByYear.Size = new System.Drawing.Size(147, 60);
+            this.btnScoreByYear.TabIndex = 2;
+            this.btnScoreByYear.Text = "Theo năm";
+            this.btnScoreByYear.Click += new System.EventHandler(this.btnScoreByYear_Click);
+            // 
+            // btnScorebyDate
+            // 
+            this.btnScorebyDate.BorderRadius = 5;
+            this.btnScorebyDate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnScorebyDate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnScorebyDate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnScorebyDate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnScorebyDate.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnScorebyDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnScorebyDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScorebyDate.ForeColor = System.Drawing.Color.White;
+            this.btnScorebyDate.Location = new System.Drawing.Point(920, 10);
+            this.btnScorebyDate.Name = "btnScorebyDate";
+            this.btnScorebyDate.Size = new System.Drawing.Size(147, 60);
+            this.btnScorebyDate.TabIndex = 4;
+            this.btnScorebyDate.Text = "Theo ngày";
+            this.btnScorebyDate.Click += new System.EventHandler(this.btnScorebyDate_Click);
+            // 
+            // btnScoreByMonth
+            // 
+            this.btnScoreByMonth.BorderRadius = 5;
+            this.btnScoreByMonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnScoreByMonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnScoreByMonth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnScoreByMonth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnScoreByMonth.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnScoreByMonth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnScoreByMonth.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScoreByMonth.ForeColor = System.Drawing.Color.White;
+            this.btnScoreByMonth.Location = new System.Drawing.Point(1067, 10);
+            this.btnScoreByMonth.Name = "btnScoreByMonth";
+            this.btnScoreByMonth.Size = new System.Drawing.Size(147, 60);
+            this.btnScoreByMonth.TabIndex = 1;
+            this.btnScoreByMonth.Text = "Theo tháng";
+            this.btnScoreByMonth.Click += new System.EventHandler(this.btnScoreByMonth_Click);
+            // 
+            // btnScoreExport
+            // 
+            this.btnScoreExport.BorderRadius = 5;
+            this.btnScoreExport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnScoreExport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnScoreExport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnScoreExport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnScoreExport.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnScoreExport.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnScoreExport.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnScoreExport.ForeColor = System.Drawing.Color.White;
+            this.btnScoreExport.Location = new System.Drawing.Point(1214, 10);
+            this.btnScoreExport.Name = "btnScoreExport";
+            this.btnScoreExport.Size = new System.Drawing.Size(147, 60);
+            this.btnScoreExport.TabIndex = 3;
+            this.btnScoreExport.Text = "Xuất ra file";
+            this.btnScoreExport.Click += new System.EventHandler(this.btnScoreExport_Click);
+            // 
+            // guna2Panel18
+            // 
+            this.guna2Panel18.BackColor = System.Drawing.Color.White;
+            this.guna2Panel18.Controls.Add(this.GeneralAttendanceChart);
+            this.guna2Panel18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel18.Location = new System.Drawing.Point(0, 1190);
+            this.guna2Panel18.Name = "guna2Panel18";
+            this.guna2Panel18.Padding = new System.Windows.Forms.Padding(10);
+            this.guna2Panel18.Size = new System.Drawing.Size(1371, 333);
+            this.guna2Panel18.TabIndex = 7;
+            // 
+            // GeneralAttendanceChart
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.GeneralAttendanceChart.ChartAreas.Add(chartArea3);
+            this.GeneralAttendanceChart.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend3.Name = "Legend1";
+            this.GeneralAttendanceChart.Legends.Add(legend3);
+            this.GeneralAttendanceChart.Location = new System.Drawing.Point(10, 10);
+            this.GeneralAttendanceChart.Name = "GeneralAttendanceChart";
+            this.GeneralAttendanceChart.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.GeneralAttendanceChart.Series.Add(series3);
+            this.GeneralAttendanceChart.Size = new System.Drawing.Size(1351, 313);
+            this.GeneralAttendanceChart.TabIndex = 1;
+            this.GeneralAttendanceChart.Text = "chart2";
+            this.GeneralAttendanceChart.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GeneralAttendanceChart_MouseMove);
+            // 
+            // guna2Panel14
+            // 
+            this.guna2Panel14.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2Panel14.Controls.Add(this.guna2Panel16);
+            this.guna2Panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel14.Location = new System.Drawing.Point(0, 1090);
+            this.guna2Panel14.Name = "guna2Panel14";
+            this.guna2Panel14.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.guna2Panel14.Size = new System.Drawing.Size(1371, 100);
+            this.guna2Panel14.TabIndex = 6;
+            // 
+            // guna2Panel16
+            // 
+            this.guna2Panel16.BackColor = System.Drawing.Color.White;
+            this.guna2Panel16.Controls.Add(this.guna2Panel17);
+            this.guna2Panel16.Controls.Add(this.btnAttendanceByYear);
+            this.guna2Panel16.Controls.Add(this.btnAttendanceByDate);
+            this.guna2Panel16.Controls.Add(this.btnAttendanceByMonth);
+            this.guna2Panel16.Controls.Add(this.btnAttendanceExport);
+            this.guna2Panel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel16.Location = new System.Drawing.Point(0, 10);
+            this.guna2Panel16.Name = "guna2Panel16";
+            this.guna2Panel16.Padding = new System.Windows.Forms.Padding(10);
+            this.guna2Panel16.Size = new System.Drawing.Size(1371, 80);
+            this.guna2Panel16.TabIndex = 6;
+            // 
+            // guna2Panel17
+            // 
+            this.guna2Panel17.Controls.Add(this.dtpAttendance);
+            this.guna2Panel17.Controls.Add(this.label4);
+            this.guna2Panel17.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel17.Location = new System.Drawing.Point(10, 10);
+            this.guna2Panel17.Name = "guna2Panel17";
+            this.guna2Panel17.Size = new System.Drawing.Size(428, 60);
+            this.guna2Panel17.TabIndex = 6;
+            // 
+            // dtpAttendance
+            // 
+            this.dtpAttendance.Checked = true;
+            this.dtpAttendance.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dtpAttendance.FillColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dtpAttendance.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpAttendance.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpAttendance.Location = new System.Drawing.Point(142, 0);
+            this.dtpAttendance.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpAttendance.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpAttendance.Name = "dtpAttendance";
+            this.dtpAttendance.Size = new System.Drawing.Size(286, 60);
+            this.dtpAttendance.TabIndex = 5;
+            this.dtpAttendance.Value = new System.DateTime(2025, 11, 5, 21, 9, 8, 698);
+            this.dtpAttendance.ValueChanged += new System.EventHandler(this.dtpAttendance_ValueChanged);
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(142, 60);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Báo cáo điểm danh";
+            // 
+            // btnAttendanceByYear
+            // 
+            this.btnAttendanceByYear.BorderRadius = 5;
+            this.btnAttendanceByYear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAttendanceByYear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAttendanceByYear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAttendanceByYear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAttendanceByYear.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAttendanceByYear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnAttendanceByYear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAttendanceByYear.ForeColor = System.Drawing.Color.White;
+            this.btnAttendanceByYear.Location = new System.Drawing.Point(773, 10);
+            this.btnAttendanceByYear.Name = "btnAttendanceByYear";
+            this.btnAttendanceByYear.Size = new System.Drawing.Size(147, 60);
+            this.btnAttendanceByYear.TabIndex = 2;
+            this.btnAttendanceByYear.Text = "Theo năm";
+            this.btnAttendanceByYear.Click += new System.EventHandler(this.btnAttendanceByYear_Click);
+            // 
+            // btnAttendanceByDate
+            // 
+            this.btnAttendanceByDate.BorderRadius = 5;
+            this.btnAttendanceByDate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAttendanceByDate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAttendanceByDate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAttendanceByDate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAttendanceByDate.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAttendanceByDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnAttendanceByDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAttendanceByDate.ForeColor = System.Drawing.Color.White;
+            this.btnAttendanceByDate.Location = new System.Drawing.Point(920, 10);
+            this.btnAttendanceByDate.Name = "btnAttendanceByDate";
+            this.btnAttendanceByDate.Size = new System.Drawing.Size(147, 60);
+            this.btnAttendanceByDate.TabIndex = 4;
+            this.btnAttendanceByDate.Text = "Theo ngày";
+            this.btnAttendanceByDate.Click += new System.EventHandler(this.btnAttendanceByDate_Click);
+            // 
+            // btnAttendanceByMonth
+            // 
+            this.btnAttendanceByMonth.BorderRadius = 5;
+            this.btnAttendanceByMonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAttendanceByMonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAttendanceByMonth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAttendanceByMonth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAttendanceByMonth.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAttendanceByMonth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnAttendanceByMonth.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAttendanceByMonth.ForeColor = System.Drawing.Color.White;
+            this.btnAttendanceByMonth.Location = new System.Drawing.Point(1067, 10);
+            this.btnAttendanceByMonth.Name = "btnAttendanceByMonth";
+            this.btnAttendanceByMonth.Size = new System.Drawing.Size(147, 60);
+            this.btnAttendanceByMonth.TabIndex = 1;
+            this.btnAttendanceByMonth.Text = "Theo tháng";
+            this.btnAttendanceByMonth.Click += new System.EventHandler(this.btnAttendanceByMonth_Click);
+            // 
+            // btnAttendanceExport
+            // 
+            this.btnAttendanceExport.BorderRadius = 5;
+            this.btnAttendanceExport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAttendanceExport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAttendanceExport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAttendanceExport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAttendanceExport.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAttendanceExport.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnAttendanceExport.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAttendanceExport.ForeColor = System.Drawing.Color.White;
+            this.btnAttendanceExport.Location = new System.Drawing.Point(1214, 10);
+            this.btnAttendanceExport.Name = "btnAttendanceExport";
+            this.btnAttendanceExport.Size = new System.Drawing.Size(147, 60);
+            this.btnAttendanceExport.TabIndex = 3;
+            this.btnAttendanceExport.Text = "Xuất ra file";
+            this.btnAttendanceExport.Click += new System.EventHandler(this.btnAttendanceExport_Click);
             // 
             // guna2Panel15
             // 
@@ -741,441 +1176,6 @@
             this.labelCountCourse.TabIndex = 2;
             this.labelCountCourse.Text = "label7";
             // 
-            // guna2Panel14
-            // 
-            this.guna2Panel14.BackColor = System.Drawing.SystemColors.Control;
-            this.guna2Panel14.Controls.Add(this.guna2Panel16);
-            this.guna2Panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel14.Location = new System.Drawing.Point(0, 1090);
-            this.guna2Panel14.Name = "guna2Panel14";
-            this.guna2Panel14.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.guna2Panel14.Size = new System.Drawing.Size(1371, 100);
-            this.guna2Panel14.TabIndex = 6;
-            // 
-            // guna2Panel16
-            // 
-            this.guna2Panel16.BackColor = System.Drawing.Color.White;
-            this.guna2Panel16.Controls.Add(this.guna2Panel17);
-            this.guna2Panel16.Controls.Add(this.btnAttendanceByYear);
-            this.guna2Panel16.Controls.Add(this.btnAttendanceByDate);
-            this.guna2Panel16.Controls.Add(this.btnAttendanceByMonth);
-            this.guna2Panel16.Controls.Add(this.btnAttendanceExport);
-            this.guna2Panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel16.Location = new System.Drawing.Point(0, 10);
-            this.guna2Panel16.Name = "guna2Panel16";
-            this.guna2Panel16.Padding = new System.Windows.Forms.Padding(10);
-            this.guna2Panel16.Size = new System.Drawing.Size(1371, 80);
-            this.guna2Panel16.TabIndex = 6;
-            // 
-            // guna2Panel17
-            // 
-            this.guna2Panel17.Controls.Add(this.dtpAttendance);
-            this.guna2Panel17.Controls.Add(this.label4);
-            this.guna2Panel17.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel17.Location = new System.Drawing.Point(10, 10);
-            this.guna2Panel17.Name = "guna2Panel17";
-            this.guna2Panel17.Size = new System.Drawing.Size(428, 60);
-            this.guna2Panel17.TabIndex = 6;
-            // 
-            // dtpAttendance
-            // 
-            this.dtpAttendance.Checked = true;
-            this.dtpAttendance.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dtpAttendance.FillColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dtpAttendance.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpAttendance.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpAttendance.Location = new System.Drawing.Point(142, 0);
-            this.dtpAttendance.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpAttendance.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpAttendance.Name = "dtpAttendance";
-            this.dtpAttendance.Size = new System.Drawing.Size(286, 60);
-            this.dtpAttendance.TabIndex = 5;
-            this.dtpAttendance.Value = new System.DateTime(2025, 11, 5, 21, 9, 8, 698);
-            this.dtpAttendance.ValueChanged += new System.EventHandler(this.dtpAttendance_ValueChanged);
-            // 
-            // label4
-            // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 60);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Báo cáo điểm danh";
-            // 
-            // btnAttendanceByYear
-            // 
-            this.btnAttendanceByYear.BorderRadius = 5;
-            this.btnAttendanceByYear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAttendanceByYear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAttendanceByYear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAttendanceByYear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAttendanceByYear.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAttendanceByYear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnAttendanceByYear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAttendanceByYear.ForeColor = System.Drawing.Color.White;
-            this.btnAttendanceByYear.Location = new System.Drawing.Point(773, 10);
-            this.btnAttendanceByYear.Name = "btnAttendanceByYear";
-            this.btnAttendanceByYear.Size = new System.Drawing.Size(147, 60);
-            this.btnAttendanceByYear.TabIndex = 2;
-            this.btnAttendanceByYear.Text = "Theo năm";
-            this.btnAttendanceByYear.Click += new System.EventHandler(this.btnAttendanceByYear_Click);
-            // 
-            // btnAttendanceByDate
-            // 
-            this.btnAttendanceByDate.BorderRadius = 5;
-            this.btnAttendanceByDate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAttendanceByDate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAttendanceByDate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAttendanceByDate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAttendanceByDate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAttendanceByDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnAttendanceByDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAttendanceByDate.ForeColor = System.Drawing.Color.White;
-            this.btnAttendanceByDate.Location = new System.Drawing.Point(920, 10);
-            this.btnAttendanceByDate.Name = "btnAttendanceByDate";
-            this.btnAttendanceByDate.Size = new System.Drawing.Size(147, 60);
-            this.btnAttendanceByDate.TabIndex = 4;
-            this.btnAttendanceByDate.Text = "Theo ngày";
-            this.btnAttendanceByDate.Click += new System.EventHandler(this.btnAttendanceByDate_Click);
-            // 
-            // btnAttendanceByMonth
-            // 
-            this.btnAttendanceByMonth.BorderRadius = 5;
-            this.btnAttendanceByMonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAttendanceByMonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAttendanceByMonth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAttendanceByMonth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAttendanceByMonth.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAttendanceByMonth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnAttendanceByMonth.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAttendanceByMonth.ForeColor = System.Drawing.Color.White;
-            this.btnAttendanceByMonth.Location = new System.Drawing.Point(1067, 10);
-            this.btnAttendanceByMonth.Name = "btnAttendanceByMonth";
-            this.btnAttendanceByMonth.Size = new System.Drawing.Size(147, 60);
-            this.btnAttendanceByMonth.TabIndex = 1;
-            this.btnAttendanceByMonth.Text = "Theo tháng";
-            this.btnAttendanceByMonth.Click += new System.EventHandler(this.btnAttendanceByMonth_Click);
-            // 
-            // btnAttendanceExport
-            // 
-            this.btnAttendanceExport.BorderRadius = 5;
-            this.btnAttendanceExport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAttendanceExport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAttendanceExport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAttendanceExport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAttendanceExport.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAttendanceExport.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnAttendanceExport.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnAttendanceExport.ForeColor = System.Drawing.Color.White;
-            this.btnAttendanceExport.Location = new System.Drawing.Point(1214, 10);
-            this.btnAttendanceExport.Name = "btnAttendanceExport";
-            this.btnAttendanceExport.Size = new System.Drawing.Size(147, 60);
-            this.btnAttendanceExport.TabIndex = 3;
-            this.btnAttendanceExport.Text = "Xuất ra file";
-            this.btnAttendanceExport.Click += new System.EventHandler(this.btnAttendanceExport_Click);
-            // 
-            // guna2Panel18
-            // 
-            this.guna2Panel18.BackColor = System.Drawing.Color.White;
-            this.guna2Panel18.Controls.Add(this.GeneralAttendanceChart);
-            this.guna2Panel18.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel18.Location = new System.Drawing.Point(0, 1190);
-            this.guna2Panel18.Name = "guna2Panel18";
-            this.guna2Panel18.Padding = new System.Windows.Forms.Padding(10);
-            this.guna2Panel18.Size = new System.Drawing.Size(1371, 333);
-            this.guna2Panel18.TabIndex = 7;
-            // 
-            // GeneralAttendanceChart
-            // 
-            chartArea3.Name = "ChartArea1";
-            this.GeneralAttendanceChart.ChartAreas.Add(chartArea3);
-            this.GeneralAttendanceChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.GeneralAttendanceChart.Legends.Add(legend3);
-            this.GeneralAttendanceChart.Location = new System.Drawing.Point(10, 10);
-            this.GeneralAttendanceChart.Name = "GeneralAttendanceChart";
-            this.GeneralAttendanceChart.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.GeneralAttendanceChart.Series.Add(series3);
-            this.GeneralAttendanceChart.Size = new System.Drawing.Size(1351, 313);
-            this.GeneralAttendanceChart.TabIndex = 1;
-            this.GeneralAttendanceChart.Text = "chart2";
-            this.GeneralAttendanceChart.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GeneralAttendanceChart_MouseMove);
-            // 
-            // guna2Panel19
-            // 
-            this.guna2Panel19.BackColor = System.Drawing.SystemColors.Control;
-            this.guna2Panel19.Controls.Add(this.guna2Panel20);
-            this.guna2Panel19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel19.Location = new System.Drawing.Point(0, 1523);
-            this.guna2Panel19.Name = "guna2Panel19";
-            this.guna2Panel19.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.guna2Panel19.Size = new System.Drawing.Size(1371, 100);
-            this.guna2Panel19.TabIndex = 8;
-            // 
-            // guna2Panel20
-            // 
-            this.guna2Panel20.BackColor = System.Drawing.Color.White;
-            this.guna2Panel20.Controls.Add(this.guna2Panel21);
-            this.guna2Panel20.Controls.Add(this.btnScoreByYear);
-            this.guna2Panel20.Controls.Add(this.btnScorebyDate);
-            this.guna2Panel20.Controls.Add(this.btnScoreByMonth);
-            this.guna2Panel20.Controls.Add(this.btnScoreExport);
-            this.guna2Panel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel20.Location = new System.Drawing.Point(0, 10);
-            this.guna2Panel20.Name = "guna2Panel20";
-            this.guna2Panel20.Padding = new System.Windows.Forms.Padding(10);
-            this.guna2Panel20.Size = new System.Drawing.Size(1371, 80);
-            this.guna2Panel20.TabIndex = 6;
-            // 
-            // guna2Panel21
-            // 
-            this.guna2Panel21.Controls.Add(this.dtpScore);
-            this.guna2Panel21.Controls.Add(this.label10);
-            this.guna2Panel21.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel21.Location = new System.Drawing.Point(10, 10);
-            this.guna2Panel21.Name = "guna2Panel21";
-            this.guna2Panel21.Size = new System.Drawing.Size(428, 60);
-            this.guna2Panel21.TabIndex = 6;
-            // 
-            // dtpScore
-            // 
-            this.dtpScore.Checked = true;
-            this.dtpScore.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dtpScore.FillColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dtpScore.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpScore.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpScore.Location = new System.Drawing.Point(142, 0);
-            this.dtpScore.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpScore.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpScore.Name = "dtpScore";
-            this.dtpScore.Size = new System.Drawing.Size(286, 60);
-            this.dtpScore.TabIndex = 5;
-            this.dtpScore.Value = new System.DateTime(2025, 11, 5, 21, 9, 8, 698);
-            this.dtpScore.ValueChanged += new System.EventHandler(this.dtpAverageScore_ValueChanged);
-            // 
-            // label10
-            // 
-            this.label10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label10.Location = new System.Drawing.Point(0, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(142, 60);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Báo cáo điểm";
-            // 
-            // btnScoreByYear
-            // 
-            this.btnScoreByYear.BorderRadius = 5;
-            this.btnScoreByYear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnScoreByYear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnScoreByYear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnScoreByYear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnScoreByYear.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnScoreByYear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnScoreByYear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnScoreByYear.ForeColor = System.Drawing.Color.White;
-            this.btnScoreByYear.Location = new System.Drawing.Point(773, 10);
-            this.btnScoreByYear.Name = "btnScoreByYear";
-            this.btnScoreByYear.Size = new System.Drawing.Size(147, 60);
-            this.btnScoreByYear.TabIndex = 2;
-            this.btnScoreByYear.Text = "Theo năm";
-            this.btnScoreByYear.Click += new System.EventHandler(this.btnScoreByYear_Click);
-            // 
-            // btnScorebyDate
-            // 
-            this.btnScorebyDate.BorderRadius = 5;
-            this.btnScorebyDate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnScorebyDate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnScorebyDate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnScorebyDate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnScorebyDate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnScorebyDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnScorebyDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnScorebyDate.ForeColor = System.Drawing.Color.White;
-            this.btnScorebyDate.Location = new System.Drawing.Point(920, 10);
-            this.btnScorebyDate.Name = "btnScorebyDate";
-            this.btnScorebyDate.Size = new System.Drawing.Size(147, 60);
-            this.btnScorebyDate.TabIndex = 4;
-            this.btnScorebyDate.Text = "Theo ngày";
-            this.btnScorebyDate.Click += new System.EventHandler(this.btnScorebyDate_Click);
-            // 
-            // btnScoreByMonth
-            // 
-            this.btnScoreByMonth.BorderRadius = 5;
-            this.btnScoreByMonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnScoreByMonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnScoreByMonth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnScoreByMonth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnScoreByMonth.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnScoreByMonth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnScoreByMonth.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnScoreByMonth.ForeColor = System.Drawing.Color.White;
-            this.btnScoreByMonth.Location = new System.Drawing.Point(1067, 10);
-            this.btnScoreByMonth.Name = "btnScoreByMonth";
-            this.btnScoreByMonth.Size = new System.Drawing.Size(147, 60);
-            this.btnScoreByMonth.TabIndex = 1;
-            this.btnScoreByMonth.Text = "Theo tháng";
-            this.btnScoreByMonth.Click += new System.EventHandler(this.btnScoreByMonth_Click);
-            // 
-            // btnScoreExport
-            // 
-            this.btnScoreExport.BorderRadius = 5;
-            this.btnScoreExport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnScoreExport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnScoreExport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnScoreExport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnScoreExport.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnScoreExport.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnScoreExport.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnScoreExport.ForeColor = System.Drawing.Color.White;
-            this.btnScoreExport.Location = new System.Drawing.Point(1214, 10);
-            this.btnScoreExport.Name = "btnScoreExport";
-            this.btnScoreExport.Size = new System.Drawing.Size(147, 60);
-            this.btnScoreExport.TabIndex = 3;
-            this.btnScoreExport.Text = "Xuất ra file";
-            this.btnScoreExport.Click += new System.EventHandler(this.btnScoreExport_Click);
-            // 
-            // guna2Panel22
-            // 
-            this.guna2Panel22.BackColor = System.Drawing.Color.White;
-            this.guna2Panel22.Controls.Add(this.chartAverageClassesScore);
-            this.guna2Panel22.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel22.Location = new System.Drawing.Point(0, 1623);
-            this.guna2Panel22.Name = "guna2Panel22";
-            this.guna2Panel22.Padding = new System.Windows.Forms.Padding(10);
-            this.guna2Panel22.Size = new System.Drawing.Size(1371, 333);
-            this.guna2Panel22.TabIndex = 9;
-            // 
-            // chartAverageClassesScore
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.chartAverageClassesScore.ChartAreas.Add(chartArea2);
-            this.chartAverageClassesScore.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chartAverageClassesScore.Legends.Add(legend2);
-            this.chartAverageClassesScore.Location = new System.Drawing.Point(10, 10);
-            this.chartAverageClassesScore.Name = "chartAverageClassesScore";
-            this.chartAverageClassesScore.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartAverageClassesScore.Series.Add(series2);
-            this.chartAverageClassesScore.Size = new System.Drawing.Size(1351, 313);
-            this.chartAverageClassesScore.TabIndex = 1;
-            this.chartAverageClassesScore.Text = "chart2";
-            // 
-            // guna2Panel23
-            // 
-            this.guna2Panel23.BackColor = System.Drawing.SystemColors.Control;
-            this.guna2Panel23.Controls.Add(this.guna2Panel24);
-            this.guna2Panel23.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel23.Location = new System.Drawing.Point(0, 1956);
-            this.guna2Panel23.Name = "guna2Panel23";
-            this.guna2Panel23.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.guna2Panel23.Size = new System.Drawing.Size(1371, 100);
-            this.guna2Panel23.TabIndex = 10;
-            this.guna2Panel23.Visible = false;
-            // 
-            // guna2Panel24
-            // 
-            this.guna2Panel24.BackColor = System.Drawing.Color.White;
-            this.guna2Panel24.Controls.Add(this.guna2Panel25);
-            this.guna2Panel24.Controls.Add(this.guna2Button8);
-            this.guna2Panel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel24.Location = new System.Drawing.Point(0, 10);
-            this.guna2Panel24.Name = "guna2Panel24";
-            this.guna2Panel24.Padding = new System.Windows.Forms.Padding(10);
-            this.guna2Panel24.Size = new System.Drawing.Size(1371, 80);
-            this.guna2Panel24.TabIndex = 6;
-            // 
-            // guna2Panel25
-            // 
-            this.guna2Panel25.Controls.Add(this.cmbClass);
-            this.guna2Panel25.Controls.Add(this.label12);
-            this.guna2Panel25.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel25.Location = new System.Drawing.Point(10, 10);
-            this.guna2Panel25.Name = "guna2Panel25";
-            this.guna2Panel25.Size = new System.Drawing.Size(428, 60);
-            this.guna2Panel25.TabIndex = 6;
-            // 
-            // label12
-            // 
-            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label12.Location = new System.Drawing.Point(0, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(175, 60);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Báo cáo điểm theo lớp";
-            // 
-            // guna2Button8
-            // 
-            this.guna2Button8.BorderRadius = 5;
-            this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Button8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.guna2Button8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button8.ForeColor = System.Drawing.Color.White;
-            this.guna2Button8.Location = new System.Drawing.Point(1214, 10);
-            this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(147, 60);
-            this.guna2Button8.TabIndex = 3;
-            this.guna2Button8.Text = "Xuất ra file";
-            // 
-            // guna2Panel26
-            // 
-            this.guna2Panel26.BackColor = System.Drawing.Color.White;
-            this.guna2Panel26.Controls.Add(this.chartClassScore);
-            this.guna2Panel26.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel26.Location = new System.Drawing.Point(0, 2056);
-            this.guna2Panel26.Name = "guna2Panel26";
-            this.guna2Panel26.Padding = new System.Windows.Forms.Padding(10);
-            this.guna2Panel26.Size = new System.Drawing.Size(1371, 333);
-            this.guna2Panel26.TabIndex = 11;
-            this.guna2Panel26.Visible = false;
-            // 
-            // chartClassScore
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chartClassScore.ChartAreas.Add(chartArea1);
-            this.chartClassScore.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartClassScore.Legends.Add(legend1);
-            this.chartClassScore.Location = new System.Drawing.Point(10, 10);
-            this.chartClassScore.Name = "chartClassScore";
-            this.chartClassScore.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartClassScore.Series.Add(series1);
-            this.chartClassScore.Size = new System.Drawing.Size(1351, 313);
-            this.chartClassScore.TabIndex = 1;
-            this.chartClassScore.Text = "chart2";
-            // 
-            // cmbClass
-            // 
-            this.cmbClass.BackColor = System.Drawing.Color.Transparent;
-            this.cmbClass.Dock = System.Windows.Forms.DockStyle.Left;
-            this.cmbClass.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbClass.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbClass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbClass.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbClass.ItemHeight = 30;
-            this.cmbClass.Location = new System.Drawing.Point(175, 0);
-            this.cmbClass.Name = "cmbClass";
-            this.cmbClass.Size = new System.Drawing.Size(250, 36);
-            this.cmbClass.TabIndex = 1;
-            this.cmbClass.SelectedIndexChanged += new System.EventHandler(this.cmbClass_SelectedIndexChanged);
-            // 
             // Manager_DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1186,6 +1186,21 @@
             this.Text = "Manager_DashboardForm";
             this.Load += new System.EventHandler(this.Manager_DashboardForm_Load);
             this.panelMain.ResumeLayout(false);
+            this.guna2Panel26.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartClassScore)).EndInit();
+            this.guna2Panel23.ResumeLayout(false);
+            this.guna2Panel24.ResumeLayout(false);
+            this.guna2Panel25.ResumeLayout(false);
+            this.guna2Panel22.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartAverageClassesScore)).EndInit();
+            this.guna2Panel19.ResumeLayout(false);
+            this.guna2Panel20.ResumeLayout(false);
+            this.guna2Panel21.ResumeLayout(false);
+            this.guna2Panel18.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GeneralAttendanceChart)).EndInit();
+            this.guna2Panel14.ResumeLayout(false);
+            this.guna2Panel16.ResumeLayout(false);
+            this.guna2Panel17.ResumeLayout(false);
             this.guna2Panel15.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GeneralEnrollmentChart)).EndInit();
             this.guna2Panel7.ResumeLayout(false);
@@ -1208,21 +1223,6 @@
             this.guna2Panel3.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            this.guna2Panel14.ResumeLayout(false);
-            this.guna2Panel16.ResumeLayout(false);
-            this.guna2Panel17.ResumeLayout(false);
-            this.guna2Panel18.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GeneralAttendanceChart)).EndInit();
-            this.guna2Panel19.ResumeLayout(false);
-            this.guna2Panel20.ResumeLayout(false);
-            this.guna2Panel21.ResumeLayout(false);
-            this.guna2Panel22.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartAverageClassesScore)).EndInit();
-            this.guna2Panel23.ResumeLayout(false);
-            this.guna2Panel24.ResumeLayout(false);
-            this.guna2Panel25.ResumeLayout(false);
-            this.guna2Panel26.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartClassScore)).EndInit();
             this.ResumeLayout(false);
 
         }

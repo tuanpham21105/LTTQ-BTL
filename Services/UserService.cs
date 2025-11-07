@@ -35,9 +35,9 @@ namespace prj_LTTQ_BTL.Services
             return _userRepository.GetAllUsers(page, pageSize);
         }
 
-        public void UpdateUser(Guid id, string username, string password, string roleName)
+        public void UpdateUser(Guid id, string username, string password, string roleName, string status)
         {
-            _userRepository.UpdateUser(id, username, password, roleName);
+            _userRepository.UpdateUser(id, username, password, roleName, status);
         }
 
         public void DeleteUser(Guid id)

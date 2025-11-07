@@ -117,7 +117,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             {
                 dgvStudents.Columns["address"].HeaderText = "Địa Chỉ";
             }
-
+            if (dgvStudents.Columns.Contains("status"))
+            {
+                dgvStudents.Columns["status"].HeaderText = "Trạng thái";
+            }
             _totalPages = (int)Math.Ceiling((double)totalRecords / PageSize);
 
             lblPageInfo.Text = $"Trang {_currentPage} / {_totalPages}";
@@ -203,7 +206,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 if (confirmResult == DialogResult.Yes)
                 {
                     _studentService.DeleteStudent(_selectedStudentId.Value);
-                    MessageBox.Show("Xóa học viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Người dùng đã được vô hiệu hóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadStudents();
                 }
             }
@@ -223,8 +226,8 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 string phoneNumber = txtPhoneNumber.Text.Trim();
                 string email = txtEmail.Text.Trim();
                 string address = txtAddress.Text.Trim();
+                string status = checkBoxStatus.Checked ? "Active" : "Inactive";
 
-               
                 if (string.IsNullOrEmpty(fullName) || string.IsNullOrEmpty(gender) || string.IsNullOrEmpty(phoneNumber) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(address))
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -243,7 +246,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 }
                 else
                 {
-                    _studentService.UpdateStudent(_selectedStudentId.Value, fullName, birthDate, gender, phoneNumber, email, address);
+                    _studentService.UpdateStudent(_selectedStudentId.Value, fullName, birthDate, gender, phoneNumber, email, address, status);
                     MessageBox.Show("Cập nhật học viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 LoadStudents();
@@ -278,6 +281,8 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 txtEmail.Text = row.Cells["email"].Value.ToString();
                 txtAddress.Text = row.Cells["address"].Value.ToString();
                 txtId.Text = row.Cells["id"].Value.ToString();
+                string status = row.Cells["status"].Value.ToString();
+                checkBoxStatus.Checked = status == "Active";
 
                 btnEdit.Enabled = true;
                 btnDelete.Enabled = true;

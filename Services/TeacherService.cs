@@ -27,9 +27,9 @@ namespace prj_LTTQ_BTL.Services
         {
             return _teacherRepository.GetAllTeachers(pageNumber, pageSize);
         }
-        public void UpdateTeacher(Guid id, string fullName, string specialization, string qualification, string phoneNumber, string email, string address, DateTime startDate)
+        public void UpdateTeacher(Guid id, string fullName, string specialization, string qualification, string phoneNumber, string email, string address, DateTime startDate, string status)
         {
-            _teacherRepository.UpdateTeacher(id, fullName, specialization, qualification, phoneNumber, email, address, startDate);
+            _teacherRepository.UpdateTeacher(id, fullName, specialization, qualification, phoneNumber, email, address, startDate, status);
         }
         public void DeleteTeacher(Guid id)
         {

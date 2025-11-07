@@ -62,6 +62,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             {
                 dgvUsers.Columns["start_date"].Visible = false;
             }
+            if (dgvUsers.Columns.Contains("status"))
+            {
+                dgvUsers.Columns["status"].HeaderText = "Trạng thái";
+            }
             int totalRecords = users.Rows.Count;
             _totalPages = (int)Math.Ceiling((double)totalRecords / PageSize);
 
@@ -256,17 +260,17 @@ namespace prj_LTTQ_BTL.Forms.Manager
             {
                 try
                 {
-                    DataRow studentRow = _studentService.GetStudentById(_selectedUserId.Value);
-                    if (studentRow != null)
-                    {
-                        _studentService.DeleteStudent(_selectedUserId.Value);
-                    }
+                    //DataRow studentRow = _studentService.GetStudentById(_selectedUserId.Value);
+                    //if (studentRow != null)
+                    //{
+                    //    _studentService.DeleteStudent(_selectedUserId.Value);
+                    //}
 
-                    DataRow teacherRow = _teacherService.GetTeacherById(_selectedUserId.Value);
-                    if (teacherRow != null)
-                    {
-                        _teacherService.DeleteTeacher(_selectedUserId.Value);
-                    }
+                    //DataRow teacherRow = _teacherService.GetTeacherById(_selectedUserId.Value);
+                    //if (teacherRow != null)
+                    //{
+                    //    _teacherService.DeleteTeacher(_selectedUserId.Value);
+                    //}
 
                     _userService.DeleteUser(_selectedUserId.Value);
 
@@ -314,6 +318,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 DateTime startDate = dtpStartDate.Value;
                 string specialization = txtSpecialization.Text.Trim();
                 string qualification = txtQualification.Text.Trim();
+                string status = checkBoxStatus.Checked ? "Active" : "Inactive";
 
                 string username = _selectedUserId == null ? GenerateUsername(fullName) : txtusername.Text.Trim();
                 if (role.Equals("admin"))
@@ -330,13 +335,12 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
                 if (_selectedUserId == null)
                 {
-                    // Thêm vào bảng User
                     string defaultPassword = string.IsNullOrEmpty(password) ? "default123" : password;
                     _userService.CreateUser(newId, username, defaultPassword, role);
                 }
                 else
                 {
-                    _userService.UpdateUser(newId, username, password, role);
+                    _userService.UpdateUser(newId, username, password, role, status);
                 }
 
                 if (role.Equals("student", StringComparison.OrdinalIgnoreCase))
@@ -354,7 +358,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
                     }
                     else
                     {
-                        _studentService.UpdateStudent(newId, fullName, birthDate, gender, phoneNumber, email, address);
+                        _studentService.UpdateStudent(newId, fullName, birthDate, gender, phoneNumber, email, address, status);
                     }
                 }
                 else if (role.Equals("teacher", StringComparison.OrdinalIgnoreCase))
@@ -372,7 +376,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
                     }
                     else
                     {
-                        _teacherService.UpdateTeacher(newId, fullName, specialization, qualification, phoneNumber, email, address, startDate);
+                        _teacherService.UpdateTeacher(newId, fullName, specialization, qualification, phoneNumber, email, address, startDate, status);
                     }
                 }
 
@@ -455,6 +459,8 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 txtPassword.Text = row.Cells["password"].Value.ToString();
                 //cmbRole.Text = row.Cells["role_name"].Value.ToString();
                 string role = row.Cells["role_name"].Value.ToString();
+                string status = row.Cells["status"].Value.ToString();
+                checkBoxStatus.Checked = status == "Active";
                 if (role.Equals("admin", StringComparison.OrdinalIgnoreCase))
                 {
                     cmbRole.SelectedIndex = 0;

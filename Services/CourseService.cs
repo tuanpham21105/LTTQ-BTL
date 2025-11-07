@@ -29,9 +29,9 @@ namespace prj_LTTQ_BTL.Services
         {
             return _courseRepository.GetCourses(page, pageSize);
         }
-        public void UpdateCourse(Guid id, string name, string description, int numberOfLessons, decimal fee)
+        public void UpdateCourse(Guid id, string name, string description, int numberOfLessons, decimal fee, string status)
         {
-            _courseRepository.UpdateCourse(id, name, description, numberOfLessons, fee);
+            _courseRepository.UpdateCourse(id, name, description, numberOfLessons, fee, status);
         }
         public void DeleteCourse(Guid id)
         {
