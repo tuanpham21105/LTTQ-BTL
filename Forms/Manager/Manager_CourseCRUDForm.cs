@@ -78,7 +78,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
             {
                 dgvCourses.Columns["fee"].HeaderText = "Học Phí";
             }
-
+            if (dgvCourses.Columns.Contains("status"))
+            {
+                dgvCourses.Columns["status"].HeaderText = "Trạng thái";
+            }
             int totalRecords = GetTotalCourseCount();
             _totalPages = (int)Math.Ceiling((double)totalRecords / PageSize);
 
@@ -131,11 +134,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 return;
             }
 
-            var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa khóa học này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa khóa học này? (Trạng thái sẽ chuyển thành 'Inactive')", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (confirmResult == DialogResult.Yes)
             {
                 _courseService.DeleteCourse(_selectedCourseId.Value);
-                MessageBox.Show("Xóa khóa học thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Khóa học đã được chuyển sang trạng thái 'Inactive'.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadCourses();
                 InitializeButtonStates();
             }
@@ -149,7 +152,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 string description = txtDescription.Text.Trim();
                 int numberOfLessons = int.Parse(txtLessons.Text.Trim());
                 decimal fee = decimal.Parse(txtFee.Text.Trim());
-
+                string status = checkBoxStatus.Checked ? "Enrolled" : "Cancelled";
                 if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(description) || numberOfLessons <= 0 || fee <= 0)
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin hợp lệ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -165,7 +168,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 }
                 else
                 {
-                    _courseService.UpdateCourse(_selectedCourseId.Value, name, description, numberOfLessons, fee);
+                    _courseService.UpdateCourse(_selectedCourseId.Value, name, description, numberOfLessons, fee, status);
                     MessageBox.Show("Cập nhật khóa học thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
@@ -203,7 +206,9 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-
+            string keyword = txtSearch.Text.Trim();
+            DataTable searchResults = _courseService.SearchCourses(keyword);
+            dgvCourses.DataSource = searchResults;
         }
 
         private void dgvCourses_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -217,6 +222,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 txtDescription.Text = row.Cells["description"].Value.ToString();
                 txtLessons.Text = row.Cells["number_of_lessons"].Value.ToString();
                 txtFee.Text = row.Cells["fee"].Value.ToString();
+                checkBoxStatus.Checked = row.Cells["status"].Value.ToString() == "Enrolled";
 
                 btnEdit.Enabled = true;
                 btnDelete.Enabled = true;
@@ -224,6 +230,11 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 btnSave.Enabled = false;
                 btnCancel.Enabled = true;
             }
+        }
+
+        private void Manager_CourseCRUDForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

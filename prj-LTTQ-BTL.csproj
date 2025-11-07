@@ -217,6 +217,7 @@
     <Compile Include="Data\repository\BaseRepository.cs" />
     <Compile Include="Data\repository\CourseRepository.cs" />
     <Compile Include="Data\repository\DashboardRepository.cs" />
+    <Compile Include="Data\repository\EnrollmentRepository.cs" />
     <Compile Include="Data\repository\StudentRepository.cs" />
     <Compile Include="Data\repository\TeacherRepository.cs" />
     <Compile Include="Data\repository\UserRepository.cs" />
@@ -370,6 +371,7 @@
     <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\CourseService.cs" />
     <Compile Include="Services\DashboardService.cs" />
+    <Compile Include="Services\EnrollmentService.cs" />
     <Compile Include="Services\StudentMenuServices.cs" />
     <Compile Include="Services\StudentService.cs" />
     <Compile Include="Services\TeacherService.cs" />
@@ -377,6 +379,7 @@
     <Compile Include="Utils\DropDownMenu.cs" />
     <Compile Include="Utils\FormUtils.cs" />
     <Compile Include="Utils\Logout.cs" />
+    <Compile Include="Utils\ValidateUtils.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -516,6 +519,15 @@
     <Content Include="Images\schedule.png" />
     <Content Include="Images\school.png" />
     <Content Include="Images\settings.png" />
+    <Content Include="Images\Student\classroom.png" />
+    <Content Include="Images\Student\exam.png" />
+    <Content Include="Images\Student\graduate-hat - Copy.png" />
+    <Content Include="Images\Student\graduate-hat.png" />
+    <Content Include="Images\Student\owl.png" />
+    <Content Include="Images\Student\power-button.png" />
+    <Content Include="Images\Student\receipt.png" />
+    <Content Include="Images\Student\schedule.png" />
+    <Content Include="Images\Student\user.png" />
     <Content Include="Images\teachings.png" />
     <Content Include="LTTQ_BTL_DB.sql" />
     <Content Include="obj\Debug\prj-LTTQ-BTL.csproj.FileListAbsolute.txt" />

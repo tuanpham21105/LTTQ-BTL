@@ -52,6 +52,7 @@ namespace prj_LTTQ_BTL.Data.Repository
                             u.username,
                             u.password,
                             u.role_name,
+                            u.status,
                             ISNULL(s.full_name, t.full_name) AS full_name,
                             ISNULL(s.email, t.email) AS email,
                             ISNULL(s.phone_number, t.phone_number) AS phone_number,
@@ -75,6 +76,7 @@ namespace prj_LTTQ_BTL.Data.Repository
                             u.username,
                             u.password,
                             u.role_name,
+                            u.status,
                             ISNULL(s.full_name, t.full_name) AS full_name,
                             ISNULL(s.email, t.email) AS email,
                             ISNULL(s.phone_number, t.phone_number) AS phone_number,
@@ -115,13 +117,14 @@ namespace prj_LTTQ_BTL.Data.Repository
             }
             return GetDataTable(query);
         }
-        public void UpdateUser(Guid id, string username, string password, string roleName)
+        public void UpdateUser(Guid id, string username, string password, string roleName, string status)
         {
             string query = $@"
                 UPDATE [User]
                 SET username = '{username}',
                     [password] = '{password}',
                     role_name = '{roleName}',
+                    status = '{status}',
                     update_at = GETDATE()
                 WHERE id = '{id}'
             ";
@@ -129,7 +132,12 @@ namespace prj_LTTQ_BTL.Data.Repository
         }
         public void DeleteUser(Guid id)
         {
-            string query = $"DELETE FROM [User] WHERE id = '{id}'";
+            string query = $@"
+                UPDATE [User]
+                SET status = 'Inactive',
+                    update_at = GETDATE()
+                WHERE id = '{id}'
+            ";
             UpdateData(query);
         }
         public DataRow GetUserByUsername(string username)

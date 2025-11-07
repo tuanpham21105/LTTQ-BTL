@@ -33,6 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel22 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel23 = new Guna.UI2.WinForms.Guna2Panel();
+            this.checkBoxStatus = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.label14 = new AntdUI.Label();
             this.guna2Panel18 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel21 = new Guna.UI2.WinForms.Guna2Panel();
             this.dtpStartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -82,6 +86,8 @@
             this.label1 = new AntdUI.Label();
             this.panelMain.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
+            this.guna2Panel22.SuspendLayout();
+            this.guna2Panel23.SuspendLayout();
             this.guna2Panel18.SuspendLayout();
             this.guna2Panel21.SuspendLayout();
             this.guna2Panel16.SuspendLayout();
@@ -121,7 +127,9 @@
             // 
             // guna2Panel6
             // 
+            this.guna2Panel6.AutoSize = true;
             this.guna2Panel6.BackColor = System.Drawing.Color.White;
+            this.guna2Panel6.Controls.Add(this.guna2Panel22);
             this.guna2Panel6.Controls.Add(this.guna2Panel18);
             this.guna2Panel6.Controls.Add(this.guna2Panel16);
             this.guna2Panel6.Controls.Add(this.guna2Panel14);
@@ -137,6 +145,52 @@
             this.guna2Panel6.Padding = new System.Windows.Forms.Padding(7, 6, 7, 0);
             this.guna2Panel6.Size = new System.Drawing.Size(844, 415);
             this.guna2Panel6.TabIndex = 9;
+            // 
+            // guna2Panel22
+            // 
+            this.guna2Panel22.Controls.Add(this.guna2Panel23);
+            this.guna2Panel22.Controls.Add(this.label14);
+            this.guna2Panel22.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel22.Location = new System.Drawing.Point(10, 562);
+            this.guna2Panel22.Name = "guna2Panel22";
+            this.guna2Panel22.Size = new System.Drawing.Size(1272, 69);
+            this.guna2Panel22.TabIndex = 25;
+            // 
+            // guna2Panel23
+            // 
+            this.guna2Panel23.Controls.Add(this.checkBoxStatus);
+            this.guna2Panel23.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2Panel23.Location = new System.Drawing.Point(480, 0);
+            this.guna2Panel23.Name = "guna2Panel23";
+            this.guna2Panel23.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.guna2Panel23.Size = new System.Drawing.Size(792, 69);
+            this.guna2Panel23.TabIndex = 3;
+            // 
+            // checkBoxStatus
+            // 
+            this.checkBoxStatus.AutoSize = true;
+            this.checkBoxStatus.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.checkBoxStatus.CheckedState.BorderRadius = 0;
+            this.checkBoxStatus.CheckedState.BorderThickness = 0;
+            this.checkBoxStatus.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.checkBoxStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.checkBoxStatus.Location = new System.Drawing.Point(4, 23);
+            this.checkBoxStatus.Name = "checkBoxStatus";
+            this.checkBoxStatus.Size = new System.Drawing.Size(22, 21);
+            this.checkBoxStatus.TabIndex = 0;
+            this.checkBoxStatus.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.checkBoxStatus.UncheckedState.BorderRadius = 0;
+            this.checkBoxStatus.UncheckedState.BorderThickness = 0;
+            this.checkBoxStatus.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // label14
+            // 
+            this.label14.AutoSizeMode = AntdUI.TAutoSize.Auto;
+            this.label14.Location = new System.Drawing.Point(31, 23);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(72, 19);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Trạng thái";
             // 
             // guna2Panel18
             // 
@@ -887,7 +941,12 @@
             this.Text = "Manager_TeacherCRUDForm";
             this.Load += new System.EventHandler(this.Manager_TeacherCRUDForm_Load);
             this.panelMain.ResumeLayout(false);
+            this.panelMain.PerformLayout();
             this.guna2Panel6.ResumeLayout(false);
+            this.guna2Panel22.ResumeLayout(false);
+            this.guna2Panel22.PerformLayout();
+            this.guna2Panel23.ResumeLayout(false);
+            this.guna2Panel23.PerformLayout();
             this.guna2Panel18.ResumeLayout(false);
             this.guna2Panel18.PerformLayout();
             this.guna2Panel21.ResumeLayout(false);
@@ -974,5 +1033,9 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSpecialization;
         private AntdUI.Label label3;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpStartDate;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel22;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel23;
+        private Guna.UI2.WinForms.Guna2CheckBox checkBoxStatus;
+        private AntdUI.Label label14;
     }
 }

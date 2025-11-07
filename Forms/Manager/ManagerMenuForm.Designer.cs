@@ -50,7 +50,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnStudentScore = new Guna.UI2.WinForms.Guna2Button();
             this.btnStudentAttendance = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnStudentCourse = new Guna.UI2.WinForms.Guna2Button();
             this.btnStudentList = new Guna.UI2.WinForms.Guna2Button();
             this.btnStudent = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
@@ -288,7 +288,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelStudent.Controls.Add(this.btnStudentScore);
             this.panelStudent.Controls.Add(this.btnStudentAttendance);
             this.panelStudent.Controls.Add(this.guna2Button3);
-            this.panelStudent.Controls.Add(this.guna2Button2);
+            this.panelStudent.Controls.Add(this.btnStudentCourse);
             this.panelStudent.Controls.Add(this.btnStudentList);
             this.panelStudent.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelStudent.Location = new System.Drawing.Point(13, 177);
@@ -629,7 +629,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
         private Guna.UI2.WinForms.Guna2Button btnStudentList;
         private Guna.UI2.WinForms.Guna2Button btnStudentAttendance;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnStudentCourse;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Button btnCourse;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
