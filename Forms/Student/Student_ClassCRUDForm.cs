@@ -25,7 +25,7 @@ namespace prj_LTTQ_BTL.Forms.Student
 
         private void InitializeEvent()
         {
-            FormUtils.FillGunaDgv(dgvClassList, dataProcessor.GetDataTable($"select Class.* from Class inner join ClassAssignment on Class.id = ClassAssignment.class_id where ClassAssignment.student_id = '{GlobalData.Id}'"));
+            FormUtils.FillGunaDgv(dgvClassList, dataProcessor.GetDataTable($"select Class.* from Class inner join ClassAssignment on Class.id = ClassAssignment.class_id where ClassAssignment.student_id = '{GlobalData.Id}' and Class.status = 'Active'"));
         }
 
         private void Student_ClassCRUDForm_Load(object sender, EventArgs e)

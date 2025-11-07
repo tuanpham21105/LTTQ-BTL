@@ -22,7 +22,7 @@ namespace prj_LTTQ_BTL.Forms.Student
         public Student_ScoreInforForm()
         {
             InitializeComponent();
-            comboboxClasses.DataSource = dataProcessor.GetDataTable($"select Class.* from Class inner join ClassAssignment on Class.id = ClassAssignment.class_id where ClassAssignment.student_id = '{GlobalData.Id}'");
+            comboboxClasses.DataSource = dataProcessor.GetDataTable($"select Class.* from Class inner join ClassAssignment on Class.id = ClassAssignment.class_id where ClassAssignment.student_id = '{GlobalData.Id}' and Class.status = 'Active'");
             comboboxClasses.DisplayMember = "name";
             comboboxClasses.ValueMember = "id";
             comboboxClasses.SelectedIndex = -1;

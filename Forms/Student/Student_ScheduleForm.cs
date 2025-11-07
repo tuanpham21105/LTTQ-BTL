@@ -28,13 +28,15 @@ namespace prj_LTTQ_BTL.Forms.Student
         private void Student_ScheduleForm_Load(object sender, EventArgs e)
         {
             allSchedule = dataProcessor.GetDataTable(
-                $"select sc.* " +
-                $"from Schedule sc " +
-                $"inner join ClassAssignment ca " +
-                $"on sc.class_id = ca.class_id " +
-                $"inner join Student st " +
-                $"on st.id = ca.student_id" +
-                $" where st.id = '{GlobalData.Id}'"
+                $"select sc.* " + 
+                $"from Schedule sc " + 
+                $"inner join ClassAssignment ca " + 
+                $"on sc.class_id = ca.class_id " + 
+                $"inner join Student st " + 
+                $"on st.id = ca.student_id " + 
+                $"inner join Class c " + 
+                $"on c.id = ca.class_id " +
+                $"where st.id = '{GlobalData.Id}' and c.status = 'Active'"
             );
 
             SetWeekSchedule(DateTime.Now);
