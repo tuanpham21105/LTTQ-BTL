@@ -126,7 +126,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
                 if (paymentData == null || paymentData.Rows.Count == 0)
                 {
-                    MessageBox.Show("Không có dữ liệu để xuất.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Không có dữ liệu để xuất.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 using (SaveFileDialog saveFileDialog = new SaveFileDialog())
@@ -368,7 +368,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
                 if (enrollmentData == null || enrollmentData.Rows.Count == 0)
                 {
-                    MessageBox.Show("Không có dữ liệu để xuất.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Không có dữ liệu để xuất.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 using (SaveFileDialog saveFileDialog = new SaveFileDialog())
@@ -594,7 +594,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
                 if (attendanceData == null || attendanceData.Rows.Count == 0)
                 {
-                    MessageBox.Show("Không có dữ liệu để xuất.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Không có dữ liệu để xuất.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 using (SaveFileDialog saveFileDialog = new SaveFileDialog())
@@ -689,7 +689,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
                 if (scoreData == null || scoreData.Rows.Count == 0)
                 {
-                    MessageBox.Show("Không có dữ liệu để xuất.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Không có dữ liệu để xuất.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 using (SaveFileDialog saveFileDialog = new SaveFileDialog())

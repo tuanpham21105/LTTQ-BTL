@@ -48,14 +48,15 @@ namespace prj_LTTQ_BTL.Data.repository
             return GetDataTable(query);
         }
 
-        public void UpdateCourse(Guid id, string name, string description, int numberOfLessons, decimal fee)
+        public void UpdateCourse(Guid id, string name, string description, int numberOfLessons, decimal fee, string status)
         {
             string query = $@"
                 UPDATE Course
                 SET name = N'{name}',
                     description = N'{description}',
                     number_of_lessons = {numberOfLessons},
-                    fee = {fee}
+                    fee = {fee},
+                    status = '{status}'
                 WHERE id = '{id}'
             ";
             UpdateData(query);
@@ -63,11 +64,19 @@ namespace prj_LTTQ_BTL.Data.repository
 
         public void DeleteCourse(Guid id)
         {
-            string deleteClassesQuery = $"DELETE FROM Class WHERE course_id = '{id}'";
-            UpdateData(deleteClassesQuery);
+            string updateClassesQuery = $@"
+                UPDATE Class
+                SET status = 'Inactive'
+                WHERE course_id = '{id}'
+            ";
+            UpdateData(updateClassesQuery);
 
-            string query = $"DELETE FROM Course WHERE id = '{id}'";
-            UpdateData(query);
+            string updateCourseQuery = $@"
+                UPDATE Course
+                SET status = 'Inactive'
+                WHERE id = '{id}'
+            ";
+            UpdateData(updateCourseQuery);
         }
 
         public DataTable SearchCourses(string keyword)

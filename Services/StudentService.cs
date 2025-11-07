@@ -27,9 +27,9 @@ namespace prj_LTTQ_BTL.Services
         {
             return _studentRepository.GetAllStudents(pageNumber, pageSize);
         }
-        public void UpdateStudent(Guid id, string fullName, DateTime birthDate, string gender, string phoneNumber, string email, string address)
+        public void UpdateStudent(Guid id, string fullName, DateTime birthDate, string gender, string phoneNumber, string email, string address, string status)
         {
-            _studentRepository.UpdateStudent(id, fullName, birthDate, gender, phoneNumber, email, address);
+            _studentRepository.UpdateStudent(id, fullName, birthDate, gender, phoneNumber, email, address, status);
         }
         public void DeleteStudent(Guid id)
         {

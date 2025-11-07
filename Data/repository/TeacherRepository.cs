@@ -10,7 +10,6 @@ namespace prj_LTTQ_BTL.Data.repository
 {
     internal class TeacherRepository: BaseRepository
     {
-        // Create a new teacher
         public void CreateTeacher(Guid id, string fullName, string specialization, string qualification, string phoneNumber, string email, string address, DateTime startDate)
         {
             string query = $@"
@@ -19,37 +18,70 @@ namespace prj_LTTQ_BTL.Data.repository
             ";
             UpdateData(query);
         }
-        // Read a teacher by ID
         public DataRow GetTeacherById(Guid id)
         {
-            string query = $"SELECT * FROM Teacher WHERE id = '{id}'";
+            string query = $@"
+                SELECT 
+                    t.id,
+                    t.full_name,
+                    t.specialization,
+                    t.qualification,
+                    t.phone_number,
+                    t.email,
+                    t.address,
+                    t.start_date,
+                    u.status
+                FROM Teacher t
+                JOIN [User] u ON t.id = u.id
+                WHERE t.id = '{id}'";
             DataTable result = GetDataTable(query);
             return result.Rows.Count > 0 ? result.Rows[0] : null;
         }
-        // Read all teachers
         public DataTable GetAllTeachers(int pageNumber, int pageSize)
         {
             string query;
 
             if (pageNumber == -1)
             {
-                query = "SELECT * FROM Teacher ORDER BY full_name";
+                query = @"
+                    SELECT 
+                        t.id,
+                        t.full_name,
+                        t.specialization,
+                        t.qualification,
+                        t.phone_number,
+                        t.email,
+                        t.address,
+                        t.start_date,
+                        u.status
+                    FROM Teacher t
+                    JOIN [User] u ON t.id = u.id
+                    ORDER BY t.full_name";
             }
             else
             {
                 int offset = (pageNumber - 1) * pageSize;
                 query = $@"
-                    SELECT *
-                    FROM Teacher
-                    ORDER BY full_name
+                    SELECT 
+                        t.id,
+                        t.full_name,
+                        t.specialization,
+                        t.qualification,
+                        t.phone_number,
+                        t.email,
+                        t.address,
+                        t.start_date,
+                        u.status
+                    FROM Teacher t
+                    JOIN [User] u ON t.id = u.id
+                    ORDER BY t.full_name
                     OFFSET {offset} ROWS
-                    FETCH NEXT {pageSize} ROWS ONLY
-                ";
+                    FETCH NEXT {pageSize} ROWS ONLY";
             }
+
             return GetDataTable(query);
         }
-        // Update a teacher
-        public void UpdateTeacher(Guid id, string fullName, string specialization, string qualification, string phoneNumber, string email, string address, DateTime startDate)
+        public void UpdateTeacher(Guid id, string fullName, string specialization, string qualification, string phoneNumber, string email, string address, DateTime startDate, string status)
         {
             string query = $@"
                 UPDATE Teacher
@@ -60,28 +92,47 @@ namespace prj_LTTQ_BTL.Data.repository
                     email = '{email}',
                     address = N'{address}',
                     start_date = '{startDate:yyyy-MM-dd}'
-                WHERE id = '{id}'
+                WHERE id = '{id}';
+
+                UPDATE [User]
+                SET status = '{status}',
+                    update_at = GETDATE()
+                WHERE id = '{id}';
             ";
             UpdateData(query);
         }
         public void DeleteTeacher(Guid id)
         {
-            string query = $"DELETE FROM Teacher WHERE id = '{id}'";
+            string query = $@"
+                UPDATE [User]
+                SET status = 'Inactive',
+                    update_at = GETDATE()
+                WHERE id = '{id}'
+            ";
             UpdateData(query);
         }
-        // Search teachers by keyword
         public DataTable SearchTeachers(string keyword)
         {
             string query = $@"
-                SELECT *
-                FROM Teacher
-                WHERE full_name LIKE N'%{keyword}%' OR
-                      specialization LIKE N'%{keyword}%' OR
-                      qualification LIKE N'%{keyword}%' OR
-                      phone_number LIKE '%{keyword}%' OR
-                      email LIKE '%{keyword}%' OR
-                      address LIKE N'%{keyword}%'
-            ";
+                SELECT 
+                    t.id,
+                    t.full_name,
+                    t.specialization,
+                    t.qualification,
+                    t.phone_number,
+                    t.email,
+                    t.address,
+                    t.start_date,
+                    u.status
+                FROM Teacher t
+                JOIN [User] u ON t.id = u.id
+                WHERE t.full_name LIKE N'%{keyword}%' OR
+                      t.specialization LIKE N'%{keyword}%' OR
+                      t.qualification LIKE N'%{keyword}%' OR
+                      t.phone_number LIKE '%{keyword}%' OR
+                      t.email LIKE '%{keyword}%' OR
+                      t.address LIKE N'%{keyword}%'
+                ORDER BY t.full_name";
             return GetDataTable(query);
         }
 
