@@ -24,6 +24,8 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
         private void Manager_StudentAttendanceCRUDForm_Load(object sender, EventArgs e)
         {
+            dgvStudent.AutoGenerateColumns = false;
+
             DataTable classes = dataProcessor.GetDataTable($"select * from Class");
             comboboxClasses.DataSource = classes;
             comboboxClasses.DisplayMember = "name";
@@ -58,7 +60,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
                 return;
             }
 
-            dgvStudent.DataSource = dataProcessor.GetDataTable($"select Student.* from Student inner join ClassAssignment on ClassAssignment.student_id = Student.id where ClassAssignment.class_id = '{classId}'");
+            dgvStudent.DataSource = dataProcessor.GetDataTable($"select Student.*, Attendance.status from Student inner join ClassAssignment on ClassAssignment.student_id = Student.id left join Attendance on Attendance.schedule_id = '{comboboxSchedules.SelectedValue.ToString()}' and Attendance.student_id = Student.id where ClassAssignment.class_id = '{classId}'");
 
             SetStudentDetails();
             
@@ -157,18 +159,18 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
             foreach (string keyword in keywords)
             {
-                sStudents = dataProcessor.GetDataTable($"select * from Student inner join ClassAssignment on ClassAssignment.student_id = Student.id and ClassAssignment.class_id = '{classId}' where full_name collate Latin1_General_CI_AI like '%{keyword}%'");
+                sStudents = dataProcessor.GetDataTable($"select Student.*, Attendance.status from Student inner join ClassAssignment on ClassAssignment.student_id = Student.id and ClassAssignment.class_id = '{classId}' left join Attendance on Attendance.schedule_id = '{comboboxSchedules.SelectedValue.ToString()}' and Attendance.student_id = Student.id where full_name collate Latin1_General_CI_AI like '%{keyword}%'");
                 sStudents.PrimaryKey = new DataColumn[] { sStudents.Columns["id"] };
                 searchStudents.PrimaryKey = new DataColumn[] { searchStudents.Columns["id"] };
                 searchStudents.Merge(sStudents, false);
 
-                sStudents = dataProcessor.GetDataTable($"select * from Student inner join ClassAssignment on ClassAssignment.student_id = Student.id and ClassAssignment.class_id = '{classId}' where email collate Latin1_General_CI_AI like '%{keyword}%'");
+                sStudents = dataProcessor.GetDataTable($"select Student.*, Attendance.status from Student inner join ClassAssignment on ClassAssignment.student_id = Student.id and ClassAssignment.class_id = '{classId}' left join Attendance on Attendance.schedule_id = '{comboboxSchedules.SelectedValue.ToString()}' and Attendance.student_id = Student.id where email collate Latin1_General_CI_AI like '%{keyword}%'");
                 searchStudents.Merge(sStudents, false);
 
-                sStudents = dataProcessor.GetDataTable($"select * from Student inner join ClassAssignment on ClassAssignment.student_id = Student.id and ClassAssignment.class_id = '{classId}' where address collate Latin1_General_CI_AI like '%{keyword}%'");
+                sStudents = dataProcessor.GetDataTable($"select Student.*, Attendance.status from Student inner join ClassAssignment on ClassAssignment.student_id = Student.id and ClassAssignment.class_id = '{classId}' left join Attendance on Attendance.schedule_id = '{comboboxSchedules.SelectedValue.ToString()}' and Attendance.student_id = Student.id where address collate Latin1_General_CI_AI like '%{keyword}%'");
                 searchStudents.Merge(sStudents, false);
 
-                sStudents = dataProcessor.GetDataTable($"select * from Student inner join ClassAssignment on ClassAssignment.student_id = Student.id and ClassAssignment.class_id = '{classId}' where phone_number collate Latin1_General_CI_AI like '%{keyword}%'");
+                sStudents = dataProcessor.GetDataTable($"select Student.*, Attendance.status from Student inner join ClassAssignment on ClassAssignment.student_id = Student.id and ClassAssignment.class_id = '{classId}' left join Attendance on Attendance.schedule_id = '{comboboxSchedules.SelectedValue.ToString()}' and Attendance.student_id = Student.id where phone_number collate Latin1_General_CI_AI like '%{keyword}%'");
                 searchStudents.Merge(sStudents, false);
             }
 
@@ -346,6 +348,8 @@ namespace prj_LTTQ_BTL.Forms.Manager
             }
 
             SetScheduleDetails();
+
+            txtSearchStudent_TextChanged(null, null);
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
