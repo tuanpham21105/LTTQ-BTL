@@ -100,20 +100,6 @@ namespace prj_LTTQ_BTL.Forms.Manager
         private void btnEditPicture_Click(object sender, EventArgs e)
         {
 
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
-                openFileDialog.Title = "Chọn ảnh";
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    _selectedImagePath = openFileDialog.FileName;
-                    picUser.Image = Image.FromFile(_selectedImagePath);
-                }
-            }
-            ToggleInfor(true);
-            btnSave.Visible = true;
-            btnEdit.Visible = false;
         }
         private void avatarBtn_Click(object sender, EventArgs e)
         {

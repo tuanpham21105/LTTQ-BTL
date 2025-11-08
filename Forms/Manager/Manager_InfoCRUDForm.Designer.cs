@@ -36,6 +36,7 @@
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.panelInfor = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.avatarBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.picUser = new Guna.UI2.WinForms.Guna2PictureBox();
             this.tblInfo = new System.Windows.Forms.TableLayoutPanel();
@@ -49,7 +50,6 @@
             this.label2 = new AntdUI.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new AntdUI.Label();
-            this.avatarBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.panelButtons.SuspendLayout();
             this.panelInfor.SuspendLayout();
@@ -104,7 +104,7 @@
             this.btnEditPicture.Size = new System.Drawing.Size(104, 37);
             this.btnEditPicture.TabIndex = 2;
             this.btnEditPicture.Text = "Chỉnh ảnh";
-            this.btnEditPicture.Click += new System.EventHandler(this.btnEditPicture_Click);
+            this.btnEditPicture.Click += new System.EventHandler(this.avatarBtn_Click);
             // 
             // btnEdit
             // 
@@ -179,6 +179,24 @@
             this.guna2Panel4.Padding = new System.Windows.Forms.Padding(8);
             this.guna2Panel4.Size = new System.Drawing.Size(766, 335);
             this.guna2Panel4.TabIndex = 19;
+            // 
+            // avatarBtn
+            // 
+            this.avatarBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.avatarBtn.BorderRadius = 5;
+            this.avatarBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.avatarBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.avatarBtn.ForeColor = System.Drawing.Color.White;
+            this.avatarBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.avatarBtn.Location = new System.Drawing.Point(690, 108);
+            this.avatarBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.avatarBtn.Name = "avatarBtn";
+            this.avatarBtn.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.avatarBtn.Size = new System.Drawing.Size(74, 37);
+            this.avatarBtn.TabIndex = 23;
+            this.avatarBtn.Text = "Ảnh";
+            this.avatarBtn.Visible = false;
+            this.avatarBtn.Click += new System.EventHandler(this.avatarBtn_Click);
             // 
             // guna2TextBox1
             // 
@@ -399,23 +417,6 @@
             this.label1.Size = new System.Drawing.Size(178, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin quản lý";
-            // 
-            // avatarBtn
-            // 
-            this.avatarBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.avatarBtn.BorderRadius = 5;
-            this.avatarBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.avatarBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.avatarBtn.ForeColor = System.Drawing.Color.White;
-            this.avatarBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.avatarBtn.Location = new System.Drawing.Point(350, 150);
-            this.avatarBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.avatarBtn.Name = "avatarBtn";
-            this.avatarBtn.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.avatarBtn.Size = new System.Drawing.Size(67, 35);
-            this.avatarBtn.TabIndex = 23;
-            this.avatarBtn.Text = "Ảnh";
-            this.avatarBtn.Click += new System.EventHandler(this.avatarBtn_Click);
             // 
             // Manager_InfoCRUDForm
             // 

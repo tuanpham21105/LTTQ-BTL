@@ -415,9 +415,9 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
             dgvHoaDon.Enabled = true;
 
-            checkBoxPaid.Enabled = false;
-            checkBoxPending.Enabled = false;
-            checkBoxCancelled.Enabled = false;
+            checkBoxPaid.Enabled = true;
+            checkBoxPending.Enabled = true;
+            checkBoxCancelled.Enabled = true;
 
             txtMaHoaDon.Enabled = false;
 
