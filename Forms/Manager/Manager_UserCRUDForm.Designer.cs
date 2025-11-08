@@ -173,7 +173,7 @@
             this.guna2Panel6.Controls.Add(this.panelUsername);
             this.guna2Panel6.Controls.Add(this.guna2Panel19);
             this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel6.Location = new System.Drawing.Point(0, 656);
+            this.guna2Panel6.Location = new System.Drawing.Point(0, 611);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Padding = new System.Windows.Forms.Padding(10, 9, 10, 0);
             this.guna2Panel6.Size = new System.Drawing.Size(1244, 1012);
@@ -916,7 +916,7 @@
             this.guna2Panel5.Controls.Add(this.btnPrev);
             this.guna2Panel5.Controls.Add(this.btnNext);
             this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel5.Location = new System.Drawing.Point(0, 610);
+            this.guna2Panel5.Location = new System.Drawing.Point(0, 565);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(1244, 46);
             this.guna2Panel5.TabIndex = 9;
@@ -1083,7 +1083,7 @@
             this.guna2Panel3.Location = new System.Drawing.Point(0, 68);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Padding = new System.Windows.Forms.Padding(0, 9, 0, 9);
-            this.guna2Panel3.Size = new System.Drawing.Size(1244, 542);
+            this.guna2Panel3.Size = new System.Drawing.Size(1244, 497);
             this.guna2Panel3.TabIndex = 7;
             // 
             // dgvUsers
@@ -1119,7 +1119,7 @@
             this.dgvUsers.RowHeadersVisible = false;
             this.dgvUsers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvUsers.RowTemplate.Height = 28;
-            this.dgvUsers.Size = new System.Drawing.Size(1244, 524);
+            this.dgvUsers.Size = new System.Drawing.Size(1244, 479);
             this.dgvUsers.TabIndex = 3;
             this.dgvUsers.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvUsers.ThemeStyle.AlternatingRowsStyle.Font = null;

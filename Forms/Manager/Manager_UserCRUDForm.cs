@@ -31,7 +31,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
         }
         private void LoadUsers()
         {
-            DataTable users = _userService.GetAllUsersJoin(1, 10);
+            DataTable users = _userService.GetAllUsersJoin(_currentPage, PageSize);
             dgvUsers.DataSource = users;
 
             if (dgvUsers.Columns.Contains("id"))
@@ -66,7 +66,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             {
                 dgvUsers.Columns["status"].HeaderText = "Trạng thái";
             }
-            int totalRecords = users.Rows.Count;
+            int totalRecords = _userService.GetAllUsersJoin(-1, 10).Rows.Count;
             _totalPages = (int)Math.Ceiling((double)totalRecords / PageSize);
 
             lblPageInfo.Text = $"Trang {_currentPage} / {_totalPages}";
