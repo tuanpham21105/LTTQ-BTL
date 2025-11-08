@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using DotNetEnv;
 using prj_LTTQ_BTL.Forms;
+using prj_LTTQ_BTL.Forms.Manager;
 using prj_LTTQ_BTL.Forms.Student;
 
 namespace prj_LTTQ_BTL
@@ -16,9 +15,10 @@ namespace prj_LTTQ_BTL
         [STAThread]
         static void Main()
         {
+            Env.Load();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StudentMenuForm());
+            Application.Run(new FormLogin());
         }
     }
 }

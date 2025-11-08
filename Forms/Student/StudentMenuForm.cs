@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using AntdUI.Svg;
 using Guna.UI2.WinForms;
 using prj_LTTQ_BTL.Data;
+using prj_LTTQ_BTL.Forms.Manager;
 using prj_LTTQ_BTL.Services;
 using prj_LTTQ_BTL.Utils;
 
@@ -19,6 +20,8 @@ namespace prj_LTTQ_BTL.Forms.Student
 {
     public partial class StudentMenuForm : Form
     {
+        private DataProcessor dataProcessor = new DataProcessor();
+
         private Form activeForm = null;
 
         public StudentMenuForm()
@@ -32,74 +35,98 @@ namespace prj_LTTQ_BTL.Forms.Student
 
             btnTTHV.Click += (s, e) =>
             {
-                SidebarBtn_Click(btnTTHV, "Thông tin học viên");
+                SidebarBtn_Click(btnTTHV);
             };
 
             btnLH.Click += (s, e) =>
             {
-                SidebarBtn_Click(btnLH, "Lớp học");
+                SidebarBtn_Click(btnLH);
             };
 
-            btnDKLH.Click += (s, e) =>
+            btnLichHoc.Click += (s, e) =>
             {
-                SidebarBtn_Click(btnDKLH, "Đăng ký lớp học");
+                SidebarBtn_Click(btnLichHoc);
             };
 
             btnKH.Click += (s, e) =>
             {
-                SidebarBtn_Click(btnKH, "Khóa học");
+                SidebarBtn_Click(btnKH);
             };
 
-            btnDSGV.Click += (s, e) =>
+            btnDiemSo.Click += (s, e) =>
             {
-                SidebarBtn_Click(btnDSGV, "Danh sách giảng viên");
+                SidebarBtn_Click(btnDiemSo);
             };
 
             btnHP.Click += (s, e) =>
             {
-                SidebarBtn_Click(btnHP, "Học phí");
+                SidebarBtn_Click(btnHP);
+            };
+            btnTest.Click += (s, e) =>
+            {
+                SidebarBtn_Click(btnTest);
             };
         }
 
         private void StudentMenuForm_Load(object sender, EventArgs e)
         {
+            string hocvienname = dataProcessor.GetDataTable($"select full_name from Student where id = '{GlobalData.Id}'").Rows[0]["full_name"].ToString();
 
+            lblXinChao.Text = "Xin chào " + hocvienname;
         }
 
-        private void SidebarBtn_Click(Guna2Button btn, string formType)
+        private void SidebarBtn_Click(Guna2Button btn)
         {
-            btnTTHV.BackColor = Color.Transparent;
-            btnLH.BackColor = Color.Transparent;
-            btnDKLH.BackColor = Color.Transparent;
-            btnKH.BackColor = Color.Transparent;
-            btnDSGV.BackColor = Color.Transparent;
-            btnHP.BackColor = Color.Transparent;
+            btnTTHV.FillColor = Color.Transparent;
+            btnLH.FillColor = Color.Transparent;
+            btnLichHoc.FillColor = Color.Transparent;
+            btnKH.FillColor = Color.Transparent;
+            btnDiemSo.FillColor = Color.Transparent;
+            btnHP.FillColor = Color.Transparent;
 
-            btn.BackColor = secondaryColor;
+            btn.FillColor = secondaryColor;
 
             if (activeForm != null)
             {
                 activeForm.Close();
             }
 
-            switch (formType)
+            switch (btn.Text)
             {
                 case "Thông tin học viên":
+                    activeForm = new Student_StudentInforForm();
                     break;
-                case "Lớp học":
+                case "Lớp học của học viên":
+                    activeForm = new Student_ClassCRUDForm();
                     break;
-                case "Đăng ký lớp học":
+                case "Lịch học":
+                    activeForm = new Student_ScheduleForm();
                     break;
                 case "Khóa học":
                     activeForm = new Student_CourseCRUDForm();
                     break;
-                case "Danh sách giảng viên":
+                case "Điểm số":
+                    activeForm = new Student_ScoreInforForm();
                     break;
                 case "Học phí":
+                    activeForm = new Student_PaymentForm();
+                    break;
+                case "Test":
+                    activeForm = new Manager_PaymentCRUDForm();
                     break;
             }
 
             FormUtils.OpenChildForm(panelMain, activeForm);
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Logout.PerformLogout(this);
         }
     }
 }
