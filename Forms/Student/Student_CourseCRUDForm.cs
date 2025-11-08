@@ -165,7 +165,7 @@ namespace prj_LTTQ_BTL.Forms.Student
                 Dock = DockStyle.Top
             };
 
-            // ✅ DataGridView hiển thị danh sách Class
+            //  DataGridView hiển thị danh sách Class
             dgvClasses = CreateStyledDataGridView();
             dgvClasses.Columns.Add("id", "Class Id");
             dgvClasses.Columns.Add("name", "Class Name");

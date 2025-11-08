@@ -41,9 +41,9 @@ namespace prj_LTTQ_BTL.Teacher
                 if (string.IsNullOrEmpty(teacherId)) return;
 
                 string query = $@"
-            SELECT full_name
-            FROM Teacher
-            WHERE id = '{teacherId}'";
+                SELECT full_name
+                FROM Teacher
+                WHERE id = '{teacherId}'";
 
                 DataTable dt = dtBase.GetDataTable(query);
                 if (dt.Rows.Count > 0)
