@@ -297,7 +297,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             string studentId = dgvStudent.CurrentRow.Cells["id"].Value.ToString();
             string classId = comboboxClasses.SelectedValue.ToString();
 
-            dataProcessor.UpdateData($"insert into Score values('{studentId}', '{classId}', {txtDiemSo.Text}, '{dateNgayKT.Value.Year.ToString() + "-" + dateNgayKT.Value.Month.ToString() + "-" + dateNgayKT.Value.Day.ToString() + " " + dateNgayKT.Value.Hour.ToString() + ":" + dateNgayKT.Value.Minute.ToString() + ":00"}', N'{txtTenBaiKT.Text}')");
+            dataProcessor.UpdateData($"insert into Score(student_id, class_id, score, created_date, name) values('{studentId}', '{classId}', {txtDiemSo.Text}, '{dateNgayKT.Value:yyyy-MM-dd HH:mm}', N'{txtTenBaiKT.Text}')");
 
             SetStudentScoreBoard();
         }

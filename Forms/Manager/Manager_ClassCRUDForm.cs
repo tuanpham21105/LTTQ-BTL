@@ -538,7 +538,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
             if (panelLichHocMoi.Visible)
             {
-                if (!CreateLichHoc()) return;ad
+                if (!CreateLichHoc()) return;
             }
 
             ResetDgvClass();

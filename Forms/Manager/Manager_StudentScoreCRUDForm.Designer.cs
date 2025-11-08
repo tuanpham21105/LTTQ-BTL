@@ -224,7 +224,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 98);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.guna2Panel3.Padding = new System.Windows.Forms.Padding(10);
             this.guna2Panel3.Size = new System.Drawing.Size(783, 212);
             this.guna2Panel3.TabIndex = 18;
             // 
@@ -233,7 +233,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Panel6.Controls.Add(this.dgvStudent);
             this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel6.Location = new System.Drawing.Point(10, 52);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
             this.guna2Panel6.Size = new System.Drawing.Size(763, 150);
@@ -278,7 +278,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.dgvStudent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvStudent.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.dgvStudent.Location = new System.Drawing.Point(0, 6);
-            this.dgvStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvStudent.Margin = new System.Windows.Forms.Padding(2);
             this.dgvStudent.MultiSelect = false;
             this.dgvStudent.Name = "dgvStudent";
             this.dgvStudent.ReadOnly = true;
@@ -409,7 +409,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 10);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -497,9 +497,9 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelGraph.CustomizableEdges.TopRight = false;
             this.panelGraph.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelGraph.Location = new System.Drawing.Point(0, 1010);
-            this.panelGraph.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelGraph.Margin = new System.Windows.Forms.Padding(2);
             this.panelGraph.Name = "panelGraph";
-            this.panelGraph.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panelGraph.Padding = new System.Windows.Forms.Padding(10);
             this.panelGraph.Size = new System.Drawing.Size(783, 361);
             this.panelGraph.TabIndex = 26;
             // 
@@ -544,7 +544,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelInfor.Location = new System.Drawing.Point(0, 883);
             this.panelInfor.Margin = new System.Windows.Forms.Padding(0, 6, 0, 0);
             this.panelInfor.Name = "panelInfor";
-            this.panelInfor.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panelInfor.Padding = new System.Windows.Forms.Padding(10);
             this.panelInfor.Size = new System.Drawing.Size(783, 127);
             this.panelInfor.TabIndex = 25;
             // 
@@ -607,7 +607,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.labelTotalNumbers.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.labelTotalNumbers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.labelTotalNumbers.Location = new System.Drawing.Point(131, 33);
-            this.labelTotalNumbers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelTotalNumbers.Margin = new System.Windows.Forms.Padding(2);
             this.labelTotalNumbers.Name = "labelTotalNumbers";
             this.labelTotalNumbers.Size = new System.Drawing.Size(630, 25);
             this.labelTotalNumbers.TabIndex = 5;
@@ -619,7 +619,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.label6.Location = new System.Drawing.Point(131, 2);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.label6.Margin = new System.Windows.Forms.Padding(2);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(630, 27);
             this.label6.TabIndex = 4;
@@ -632,7 +632,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.labelNumbers.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.labelNumbers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.labelNumbers.Location = new System.Drawing.Point(119, 33);
-            this.labelNumbers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelNumbers.Margin = new System.Windows.Forms.Padding(2);
             this.labelNumbers.Name = "labelNumbers";
             this.labelNumbers.Size = new System.Drawing.Size(8, 25);
             this.labelNumbers.TabIndex = 3;
@@ -646,7 +646,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.labelAverage.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.labelAverage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.labelAverage.Location = new System.Drawing.Point(119, 2);
-            this.labelAverage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelAverage.Margin = new System.Windows.Forms.Padding(2);
             this.labelAverage.Name = "labelAverage";
             this.labelAverage.Size = new System.Drawing.Size(8, 27);
             this.labelAverage.TabIndex = 2;
@@ -682,7 +682,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Panel4.Controls.Add(this.guna2Panel5);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel4.Location = new System.Drawing.Point(0, 829);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.guna2Panel4.Size = new System.Drawing.Size(783, 54);
@@ -768,7 +768,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
             this.label8.Location = new System.Drawing.Point(2, 65);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.label8.Margin = new System.Windows.Forms.Padding(2);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(226, 36);
             this.label8.TabIndex = 5;
@@ -802,7 +802,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
             this.label7.Location = new System.Drawing.Point(2, 35);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.label7.Margin = new System.Windows.Forms.Padding(2);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(226, 26);
             this.label7.TabIndex = 3;
@@ -852,7 +852,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.dateNgayKT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateNgayKT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateNgayKT.Location = new System.Drawing.Point(232, 65);
-            this.dateNgayKT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateNgayKT.Margin = new System.Windows.Forms.Padding(2);
             this.dateNgayKT.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateNgayKT.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateNgayKT.Name = "dateNgayKT";
@@ -1030,7 +1030,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelButtons.FillColor = System.Drawing.Color.White;
             this.panelButtons.Location = new System.Drawing.Point(7, 416);
-            this.panelButtons.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelButtons.Margin = new System.Windows.Forms.Padding(2);
             this.panelButtons.Name = "panelButtons";
             this.panelButtons.Padding = new System.Windows.Forms.Padding(0, 4, 9, 4);
             this.panelButtons.Size = new System.Drawing.Size(769, 43);
