@@ -499,10 +499,10 @@ namespace prj_LTTQ_BTL.Forms.Manager
                     }
                     else
                     {
-                        presentPercentage = (double)present / total * 100;
-                        absentPercentage = (double)absent / total * 100;
-                        latePercentage = (double)late / total * 100;
-                        excusedPercentage = (double)excused / total * 100;
+                        presentPercentage = Math.Round((double)present / total * 100, 2);
+                        absentPercentage = Math.Round((double)absent / total * 100, 2);
+                        latePercentage = Math.Round((double)late / total * 100, 2);
+                        excusedPercentage = Math.Round((double)excused / total * 100, 2);
                     }
 
                     var presentPoint = presentSeries.Points.AddXY(className, presentPercentage);
