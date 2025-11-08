@@ -10,6 +10,8 @@ using System.Windows.Controls;
 using System.Windows.Forms;
 using prj_LTTQ_BTL.Data;
 using prj_LTTQ_BTL.Utils;
+using Excel = Microsoft.Office.Interop.Excel;
+
 
 namespace prj_LTTQ_BTL.Forms.Manager
 {
@@ -69,7 +71,40 @@ namespace prj_LTTQ_BTL.Forms.Manager
 
             txtSearchPayment_TextChanged(sender, e);
         }
+        private void ExportToExcel(DataTable dataTable, string filePath)
+        {
+            try
+            {
+                Excel.Application excelApp = new Excel.Application();
+                excelApp.Visible = false;
+                Excel.Workbook workbook = excelApp.Workbooks.Add(Type.Missing);
+                Excel.Worksheet worksheet = (Excel.Worksheet)workbook.Sheets[1];
+                worksheet.Name = "Exported Data";
 
+                for (int i = 0; i < dataTable.Columns.Count; i++)
+                {
+                    worksheet.Cells[1, i + 1] = dataTable.Columns[i].ColumnName;
+                }
+
+                for (int i = 0; i < dataTable.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dataTable.Columns.Count; j++)
+                    {
+                        worksheet.Cells[i + 2, j + 1] = dataTable.Rows[i][j].ToString();
+                    }
+                }
+                worksheet.Columns.ColumnWidth = 30;
+                workbook.SaveAs(filePath);
+                workbook.Close();
+                excelApp.Quit();
+
+                MessageBox.Show("Xuất dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi xuất dữ liệu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void SetEmptyAll()
         {
             txtMaHoaDon.Text = "";
@@ -621,6 +656,21 @@ namespace prj_LTTQ_BTL.Forms.Manager
             }
 
             txtSearchPayment_TextChanged(sender, e);
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Excel Files|*.xlsx";
+                saveFileDialog.Title = "Lưu file Excel";
+                saveFileDialog.FileName = "PaymentReport.xlsx";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    ExportToExcel(dataProcessor.GetDataTable($"select * from Payment"), saveFileDialog.FileName);
+                }
+            }
         }
     }
 }

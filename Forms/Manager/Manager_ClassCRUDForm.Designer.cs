@@ -360,7 +360,7 @@
             this.guna2Panel17.Location = new System.Drawing.Point(0, 77);
             this.guna2Panel17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel17.Name = "guna2Panel17";
-            this.guna2Panel17.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.guna2Panel17.Padding = new System.Windows.Forms.Padding(15);
             this.guna2Panel17.Size = new System.Drawing.Size(1174, 312);
             this.guna2Panel17.TabIndex = 5;
             // 

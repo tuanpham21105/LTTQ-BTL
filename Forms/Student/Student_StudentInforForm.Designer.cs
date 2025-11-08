@@ -95,11 +95,10 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 10);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 15);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.guna2Panel1.Size = new System.Drawing.Size(694, 41);
+            this.guna2Panel1.Padding = new System.Windows.Forms.Padding(22, 0, 22, 0);
+            this.guna2Panel1.Size = new System.Drawing.Size(1040, 63);
             this.guna2Panel1.TabIndex = 7;
             // 
             // label1
@@ -109,10 +108,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.label1.Location = new System.Drawing.Point(15, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2);
+            this.label1.Location = new System.Drawing.Point(22, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 41);
+            this.label1.Size = new System.Drawing.Size(282, 63);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin học viên";
             // 
@@ -126,11 +124,10 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelInfor.Controls.Add(this.guna2Panel4);
             this.panelInfor.Controls.Add(this.guna2Panel2);
             this.panelInfor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelInfor.Location = new System.Drawing.Point(0, 51);
-            this.panelInfor.Margin = new System.Windows.Forms.Padding(2);
+            this.panelInfor.Location = new System.Drawing.Point(0, 78);
             this.panelInfor.Name = "panelInfor";
-            this.panelInfor.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.panelInfor.Size = new System.Drawing.Size(694, 618);
+            this.panelInfor.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
+            this.panelInfor.Size = new System.Drawing.Size(1040, 948);
             this.panelInfor.TabIndex = 15;
             // 
             // guna2Panel5
@@ -145,11 +142,10 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.guna2Panel5.CustomizableEdges.TopRight = false;
             this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel5.FillColor = System.Drawing.Color.White;
-            this.guna2Panel5.Location = new System.Drawing.Point(0, 410);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel5.Location = new System.Drawing.Point(0, 630);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Padding = new System.Windows.Forms.Padding(8);
-            this.guna2Panel5.Size = new System.Drawing.Size(694, 208);
+            this.guna2Panel5.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.guna2Panel5.Size = new System.Drawing.Size(1040, 318);
             this.guna2Panel5.TabIndex = 21;
             // 
             // tableLayoutPanel1
@@ -172,17 +168,16 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.tableLayoutPanel1.Controls.Add(this.txtEmail, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtAddress, 1, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 8);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(678, 192);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1016, 294);
             this.tableLayoutPanel1.TabIndex = 21;
             // 
             // label9
@@ -190,10 +185,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(2, 160);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(3, 245);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(165, 32);
+            this.label9.Size = new System.Drawing.Size(248, 49);
             this.label9.TabIndex = 19;
             this.label9.Text = "Địa chỉ:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -216,10 +210,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.comboboxGender.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.comboboxGender.Location = new System.Drawing.Point(171, 66);
-            this.comboboxGender.Margin = new System.Windows.Forms.Padding(2);
+            this.comboboxGender.Location = new System.Drawing.Point(257, 101);
             this.comboboxGender.Name = "comboboxGender";
-            this.comboboxGender.Size = new System.Drawing.Size(505, 30);
+            this.comboboxGender.Size = new System.Drawing.Size(756, 30);
             this.comboboxGender.TabIndex = 17;
             // 
             // label4
@@ -227,10 +220,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(2, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 32);
+            this.label4.Size = new System.Drawing.Size(248, 49);
             this.label4.TabIndex = 6;
             this.label4.Text = "Họ và tên:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -245,12 +237,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtName.Enabled = false;
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.txtName.Location = new System.Drawing.Point(171, 3);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtName.Location = new System.Drawing.Point(257, 5);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtName.Name = "txtName";
             this.txtName.PlaceholderText = "Họ và tên học viên";
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(505, 26);
+            this.txtName.Size = new System.Drawing.Size(756, 39);
             this.txtName.TabIndex = 7;
             // 
             // label5
@@ -258,10 +250,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(2, 32);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(3, 49);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(165, 32);
+            this.label5.Size = new System.Drawing.Size(248, 49);
             this.label5.TabIndex = 8;
             this.label5.Text = "Ngày sinh:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -278,12 +269,11 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.dateBirthDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateBirthDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
             this.dateBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateBirthDate.Location = new System.Drawing.Point(171, 34);
-            this.dateBirthDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dateBirthDate.Location = new System.Drawing.Point(257, 52);
             this.dateBirthDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateBirthDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateBirthDate.Name = "dateBirthDate";
-            this.dateBirthDate.Size = new System.Drawing.Size(505, 28);
+            this.dateBirthDate.Size = new System.Drawing.Size(756, 43);
             this.dateBirthDate.TabIndex = 9;
             this.dateBirthDate.Value = new System.DateTime(2025, 11, 1, 17, 36, 18, 594);
             // 
@@ -292,10 +282,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(2, 64);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(3, 98);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(165, 32);
+            this.label6.Size = new System.Drawing.Size(248, 49);
             this.label6.TabIndex = 10;
             this.label6.Text = "Giới tính:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -305,10 +294,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(2, 96);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(3, 147);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(165, 32);
+            this.label7.Size = new System.Drawing.Size(248, 49);
             this.label7.TabIndex = 12;
             this.label7.Text = "Số điện thoại:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -323,12 +311,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtSdt.Enabled = false;
             this.txtSdt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSdt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.txtSdt.Location = new System.Drawing.Point(171, 99);
-            this.txtSdt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtSdt.Location = new System.Drawing.Point(257, 152);
+            this.txtSdt.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtSdt.Name = "txtSdt";
             this.txtSdt.PlaceholderText = "Số điện thoại";
             this.txtSdt.SelectedText = "";
-            this.txtSdt.Size = new System.Drawing.Size(505, 26);
+            this.txtSdt.Size = new System.Drawing.Size(756, 39);
             this.txtSdt.TabIndex = 13;
             // 
             // label8
@@ -336,10 +324,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(2, 128);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(3, 196);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(165, 32);
+            this.label8.Size = new System.Drawing.Size(248, 49);
             this.label8.TabIndex = 14;
             this.label8.Text = "Email:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -354,12 +341,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtEmail.Enabled = false;
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.txtEmail.Location = new System.Drawing.Point(171, 131);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtEmail.Location = new System.Drawing.Point(257, 201);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PlaceholderText = "Địa chỉ email";
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(505, 26);
+            this.txtEmail.Size = new System.Drawing.Size(756, 39);
             this.txtEmail.TabIndex = 15;
             // 
             // txtAddress
@@ -372,12 +359,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtAddress.Enabled = false;
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.txtAddress.Location = new System.Drawing.Point(171, 163);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtAddress.Location = new System.Drawing.Point(257, 250);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PlaceholderText = "Địa chỉ";
             this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(505, 26);
+            this.txtAddress.Size = new System.Drawing.Size(756, 39);
             this.txtAddress.TabIndex = 18;
             // 
             // guna2Panel3
@@ -387,11 +374,10 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.guna2Panel3.BorderThickness = 1;
             this.guna2Panel3.Controls.Add(this.label3);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 369);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 567);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.guna2Panel3.Size = new System.Drawing.Size(694, 41);
+            this.guna2Panel3.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.guna2Panel3.Size = new System.Drawing.Size(1040, 63);
             this.guna2Panel3.TabIndex = 20;
             // 
             // label3
@@ -401,10 +387,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label3.Dock = System.Windows.Forms.DockStyle.Left;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.label3.Location = new System.Drawing.Point(15, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(2);
+            this.label3.Location = new System.Drawing.Point(22, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 41);
+            this.label3.Size = new System.Drawing.Size(204, 63);
             this.label3.TabIndex = 1;
             this.label3.Text = "Thông tin cá nhân";
             // 
@@ -417,11 +402,10 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.guna2Panel4.Controls.Add(this.tblInfo);
             this.guna2Panel4.Controls.Add(this.guna2Panel6);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel4.Location = new System.Drawing.Point(0, 51);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel4.Location = new System.Drawing.Point(0, 78);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Padding = new System.Windows.Forms.Padding(8);
-            this.guna2Panel4.Size = new System.Drawing.Size(694, 318);
+            this.guna2Panel4.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.guna2Panel4.Size = new System.Drawing.Size(1040, 489);
             this.guna2Panel4.TabIndex = 19;
             // 
             // tblInfo
@@ -438,15 +422,14 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.tblInfo.Controls.Add(this.lblPassword, 0, 2);
             this.tblInfo.Controls.Add(this.txtPassword, 1, 2);
             this.tblInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tblInfo.Location = new System.Drawing.Point(8, 214);
-            this.tblInfo.Margin = new System.Windows.Forms.Padding(2);
+            this.tblInfo.Location = new System.Drawing.Point(12, 330);
             this.tblInfo.Name = "tblInfo";
             this.tblInfo.RowCount = 3;
-            this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tblInfo.Size = new System.Drawing.Size(678, 96);
+            this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tblInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tblInfo.Size = new System.Drawing.Size(1016, 147);
             this.tblInfo.TabIndex = 22;
             // 
             // txtId
@@ -460,13 +443,13 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtId.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.txtId.Location = new System.Drawing.Point(171, 3);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtId.Location = new System.Drawing.Point(257, 5);
+            this.txtId.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtId.Name = "txtId";
             this.txtId.PlaceholderText = "ID";
             this.txtId.ReadOnly = true;
             this.txtId.SelectedText = "";
-            this.txtId.Size = new System.Drawing.Size(505, 26);
+            this.txtId.Size = new System.Drawing.Size(756, 39);
             this.txtId.TabIndex = 2;
             // 
             // lblId
@@ -474,10 +457,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblId.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblId.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.lblId.ForeColor = System.Drawing.Color.Black;
-            this.lblId.Location = new System.Drawing.Point(2, 0);
-            this.lblId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblId.Location = new System.Drawing.Point(3, 0);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(165, 32);
+            this.lblId.Size = new System.Drawing.Size(248, 49);
             this.lblId.TabIndex = 0;
             this.lblId.Text = "ID:";
             this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -487,10 +469,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblUsername.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.lblUsername.ForeColor = System.Drawing.Color.Black;
-            this.lblUsername.Location = new System.Drawing.Point(2, 32);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsername.Location = new System.Drawing.Point(3, 49);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(165, 32);
+            this.lblUsername.Size = new System.Drawing.Size(248, 49);
             this.lblUsername.TabIndex = 2;
             this.lblUsername.Text = "Tên đăng nhập:";
             this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -505,12 +486,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtUsername.Enabled = false;
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.txtUsername.Location = new System.Drawing.Point(171, 35);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtUsername.Location = new System.Drawing.Point(257, 54);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PlaceholderText = "Username";
             this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(505, 26);
+            this.txtUsername.Size = new System.Drawing.Size(756, 39);
             this.txtUsername.TabIndex = 3;
             // 
             // lblPassword
@@ -518,10 +499,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.lblPassword.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.lblPassword.ForeColor = System.Drawing.Color.Black;
-            this.lblPassword.Location = new System.Drawing.Point(2, 64);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPassword.Location = new System.Drawing.Point(3, 98);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(165, 32);
+            this.lblPassword.Size = new System.Drawing.Size(248, 49);
             this.lblPassword.TabIndex = 4;
             this.lblPassword.Text = "Mật khẩu:";
             this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -535,14 +515,14 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.txtPassword.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.txtPassword.Location = new System.Drawing.Point(171, 67);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPassword.Location = new System.Drawing.Point(257, 103);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
             this.txtPassword.PlaceholderText = "Password";
             this.txtPassword.ReadOnly = true;
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(505, 26);
+            this.txtPassword.Size = new System.Drawing.Size(756, 39);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -552,9 +532,10 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.guna2Panel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel6.Controls.Add(this.tableLayoutPanel2);
             this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel6.Location = new System.Drawing.Point(8, 8);
+            this.guna2Panel6.Location = new System.Drawing.Point(12, 12);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(678, 206);
+            this.guna2Panel6.Size = new System.Drawing.Size(1016, 318);
             this.guna2Panel6.TabIndex = 21;
             // 
             // tableLayoutPanel2
@@ -562,16 +543,17 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.tableLayoutPanel2.AutoSize = true;
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 225F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.00001F));
             this.tableLayoutPanel2.Controls.Add(this.avatarBtn, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.avatar, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(678, 206);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1016, 318);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // avatarBtn
@@ -582,11 +564,10 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.avatarBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.avatarBtn.ForeColor = System.Drawing.Color.White;
             this.avatarBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.avatarBtn.Location = new System.Drawing.Point(609, 169);
-            this.avatarBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.avatarBtn.Location = new System.Drawing.Point(913, 261);
             this.avatarBtn.Name = "avatarBtn";
-            this.avatarBtn.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.avatarBtn.Size = new System.Drawing.Size(67, 35);
+            this.avatarBtn.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.avatarBtn.Size = new System.Drawing.Size(100, 54);
             this.avatarBtn.TabIndex = 4;
             this.avatarBtn.Text = "Ảnh";
             this.avatarBtn.Click += new System.EventHandler(this.avatarBtn_Click);
@@ -595,11 +576,12 @@ namespace prj_LTTQ_BTL.Forms.Student
             // 
             this.avatar.Image = ((System.Drawing.Image)(resources.GetObject("avatar.Image")));
             this.avatar.InitialImage = ((System.Drawing.Image)(resources.GetObject("avatar.InitialImage")));
-            this.avatar.Location = new System.Drawing.Point(266, 3);
-            this.avatar.MaximumSize = new System.Drawing.Size(150, 200);
-            this.avatar.MinimumSize = new System.Drawing.Size(150, 200);
+            this.avatar.Location = new System.Drawing.Point(399, 5);
+            this.avatar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.avatar.MaximumSize = new System.Drawing.Size(225, 308);
+            this.avatar.MinimumSize = new System.Drawing.Size(225, 308);
             this.avatar.Name = "avatar";
-            this.avatar.Size = new System.Drawing.Size(150, 200);
+            this.avatar.Size = new System.Drawing.Size(225, 308);
             this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.avatar.TabIndex = 5;
             this.avatar.TabStop = false;
@@ -615,11 +597,10 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.guna2Panel2.CustomizableEdges.BottomRight = false;
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 10);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 15);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.guna2Panel2.Size = new System.Drawing.Size(694, 41);
+            this.guna2Panel2.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.guna2Panel2.Size = new System.Drawing.Size(1040, 63);
             this.guna2Panel2.TabIndex = 18;
             // 
             // label2
@@ -629,10 +610,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.label2.Dock = System.Windows.Forms.DockStyle.Left;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.label2.Location = new System.Drawing.Point(15, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(2);
+            this.label2.Location = new System.Drawing.Point(22, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 41);
+            this.label2.Size = new System.Drawing.Size(223, 63);
             this.label2.TabIndex = 1;
             this.label2.Text = "Thông tin tài khoản";
             // 
@@ -645,10 +625,9 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelMain.Controls.Add(this.guna2Panel1);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(2);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.panelMain.Size = new System.Drawing.Size(711, 438);
+            this.panelMain.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
+            this.panelMain.Size = new System.Drawing.Size(1066, 674);
             this.panelMain.TabIndex = 0;
             // 
             // panelButtons
@@ -657,11 +636,10 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.panelButtons.Controls.Add(this.btnEdit);
             this.panelButtons.Controls.Add(this.btnSave);
             this.panelButtons.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelButtons.Location = new System.Drawing.Point(0, 669);
-            this.panelButtons.Margin = new System.Windows.Forms.Padding(2);
+            this.panelButtons.Location = new System.Drawing.Point(0, 1026);
             this.panelButtons.Name = "panelButtons";
-            this.panelButtons.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            this.panelButtons.Size = new System.Drawing.Size(694, 45);
+            this.panelButtons.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.panelButtons.Size = new System.Drawing.Size(1040, 69);
             this.panelButtons.TabIndex = 21;
             // 
             // btnEdit
@@ -673,13 +651,13 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.btnEdit.Location = new System.Drawing.Point(523, 4);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEdit.Location = new System.Drawing.Point(809, 6);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.btnEdit.Size = new System.Drawing.Size(103, 37);
+            this.btnEdit.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.btnEdit.Size = new System.Drawing.Size(142, 57);
             this.btnEdit.TabIndex = 0;
             this.btnEdit.Text = "Chỉnh sửa";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnSave
             // 
@@ -690,22 +668,21 @@ namespace prj_LTTQ_BTL.Forms.Student
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.btnSave.Location = new System.Drawing.Point(626, 4);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Location = new System.Drawing.Point(951, 6);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.btnSave.Size = new System.Drawing.Size(68, 37);
+            this.btnSave.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.btnSave.Size = new System.Drawing.Size(89, 57);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Lưu";
             this.btnSave.Visible = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // Student_StudentInforForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 438);
+            this.ClientSize = new System.Drawing.Size(1066, 674);
             this.Controls.Add(this.panelMain);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Student_StudentInforForm";
             this.Text = "Student_StudentInforForm";
             this.Load += new System.EventHandler(this.Student_StudentInforForm_Load);

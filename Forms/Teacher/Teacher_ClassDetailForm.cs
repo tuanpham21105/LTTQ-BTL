@@ -1,10 +1,11 @@
 ﻿using prj_LTTQ_BTL.Data;
 using System;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace prj_LTTQ_BTL.Forms.Teacher
 {
@@ -32,22 +33,22 @@ namespace prj_LTTQ_BTL.Forms.Teacher
         private void LoadClassInfoFromDB()
         {
             string query = $@"
-        SELECT 
+            SELECT 
             C.name AS ClassName,
             CR.name AS CourseName,
             T.full_name AS TeacherName,
             CONVERT(VARCHAR(10), C.start_date, 103) AS StartDate,
             COUNT(CA.student_id) AS StudentCount,
             CASE 
-                WHEN C.start_date <= GETDATE() THEN N'Đang học'
-                ELSE N'Chưa bắt đầu'
+            WHEN C.start_date <= GETDATE() THEN N'Đang học'
+            ELSE N'Chưa bắt đầu'
             END AS TrangThai
-        FROM Class C
-        JOIN Course CR ON C.course_id = CR.id
-        LEFT JOIN Teacher T ON T.id = C.teacher_id
-        LEFT JOIN ClassAssignment CA ON C.id = CA.class_id
-        WHERE C.id = '{classId}'
-        GROUP BY C.name, CR.name, T.full_name, C.start_date;";
+            FROM Class C
+            JOIN Course CR ON C.course_id = CR.id
+            LEFT JOIN Teacher T ON T.id = C.teacher_id
+            LEFT JOIN ClassAssignment CA ON C.id = CA.class_id
+            WHERE C.id = '{classId}'
+            GROUP BY C.name, CR.name, T.full_name, C.start_date;";
 
             DataTable dt = dtBase.GetDataTable(query);
 
@@ -97,17 +98,17 @@ namespace prj_LTTQ_BTL.Forms.Teacher
         private void LoadStudents()
         {
             string query = $@"
-                SELECT 
-                    S.full_name AS [Họ tên],
-                    CONVERT(VARCHAR(10), S.birth_date, 103) AS [Ngày sinh],
-                    S.gender AS [Giới tính],
-                    S.phone_number AS [Số điện thoại],
-                    S.email AS [Email],
-                    S.address AS [Địa chỉ]
-                FROM ClassAssignment CA
-                JOIN Student S ON CA.student_id = S.id
-                WHERE CA.class_id = '{classId}'
-                ORDER BY S.full_name;";
+            SELECT 
+            S.full_name AS [Họ tên],
+            CONVERT(VARCHAR(10), S.birth_date, 103) AS [Ngày sinh],
+            S.gender AS [Giới tính],
+            S.phone_number AS [Số điện thoại],
+            S.email AS [Email],
+            S.address AS [Địa chỉ]
+            FROM ClassAssignment CA
+            JOIN Student S ON CA.student_id = S.id
+            WHERE CA.class_id = '{classId}'
+            ORDER BY S.full_name;";
 
             DataTable dt = dtBase.GetDataTable(query);
             dgvStudents.DataSource = null;
@@ -124,31 +125,31 @@ namespace prj_LTTQ_BTL.Forms.Teacher
             string keyword = txtSearchStudent.Text.Trim();
 
             string query = string.IsNullOrEmpty(keyword)
-                ? $@"
-                    SELECT 
-                        S.full_name AS [Họ tên],
-                        CONVERT(VARCHAR(10), S.birth_date, 103) AS [Ngày sinh],
-                        S.gender AS [Giới tính],
-                        S.phone_number AS [Số điện thoại],
-                        S.email AS [Email],
-                        S.address AS [Địa chỉ]
-                    FROM ClassAssignment CA
-                    JOIN Student S ON CA.student_id = S.id
-                    WHERE CA.class_id = '{classId}'
-                    ORDER BY S.full_name;"
-                : $@"
-                    SELECT 
-                        S.full_name AS [Họ tên],
-                        CONVERT(VARCHAR(10), S.birth_date, 103) AS [Ngày sinh],
-                        S.gender AS [Giới tính],
-                        S.phone_number AS [Số điện thoại],
-                        S.email AS [Email],
-                        S.address AS [Địa chỉ]
-                    FROM ClassAssignment CA
-                    JOIN Student S ON CA.student_id = S.id
-                    WHERE CA.class_id = '{classId}'
-                          AND S.full_name LIKE N'%{keyword}%'
-                    ORDER BY S.full_name;";
+            ? $@"
+            SELECT 
+            S.full_name AS [Họ tên],
+            CONVERT(VARCHAR(10), S.birth_date, 103) AS [Ngày sinh],
+            S.gender AS [Giới tính],
+            S.phone_number AS [Số điện thoại],
+            S.email AS [Email],
+            S.address AS [Địa chỉ]
+            FROM ClassAssignment CA
+            JOIN Student S ON CA.student_id = S.id
+            WHERE CA.class_id = '{classId}'
+            ORDER BY S.full_name;"
+            : $@"
+            SELECT 
+            S.full_name AS [Họ tên],
+            CONVERT(VARCHAR(10), S.birth_date, 103) AS [Ngày sinh],
+            S.gender AS [Giới tính],
+            S.phone_number AS [Số điện thoại],
+            S.email AS [Email],
+            S.address AS [Địa chỉ]
+            FROM ClassAssignment CA
+            JOIN Student S ON CA.student_id = S.id
+            WHERE CA.class_id = '{classId}'
+            AND S.full_name LIKE N'%{keyword}%'
+            ORDER BY S.full_name;";
 
             DataTable dt = dtBase.GetDataTable(query);
             dgvStudents.DataSource = null;
@@ -173,9 +174,9 @@ namespace prj_LTTQ_BTL.Forms.Teacher
 
             
             string query = $@"
-        SELECT session_date, start_time, room
-        FROM Schedule
-        WHERE class_id = '{classId}'";
+            SELECT session_date, start_time, room
+            FROM Schedule
+            WHERE class_id = '{classId}'";
             DataTable dt = dtBase.GetDataTable(query);
 
             foreach (DataRow row in dt.Rows)
@@ -244,13 +245,13 @@ namespace prj_LTTQ_BTL.Forms.Teacher
         {
              
             string query = $@"
-SELECT 
-    CONVERT(VARCHAR(10), session_date, 103) AS NgayHoc,
-    session_date
-FROM Schedule
-WHERE class_id = '{classId}'
-GROUP BY session_date
-ORDER BY session_date";
+            SELECT 
+            CONVERT(VARCHAR(10), session_date, 103) AS NgayHoc,
+            session_date
+            FROM Schedule
+            WHERE class_id = '{classId}'
+            GROUP BY session_date
+            ORDER BY session_date";
 
             DataTable dt = dtBase.GetDataTable(query);
 
@@ -266,13 +267,13 @@ ORDER BY session_date";
         {
              
             string query = $@"
-SELECT 
-    CONVERT(VARCHAR(5), start_time, 108) AS BuoiHoc,
-    start_time
-FROM Schedule
-WHERE class_id = '{classId}'
-GROUP BY start_time
-ORDER BY start_time";
+            SELECT 
+            CONVERT(VARCHAR(5), start_time, 108) AS BuoiHoc,
+            start_time
+            FROM Schedule
+            WHERE class_id = '{classId}'
+            GROUP BY start_time
+            ORDER BY start_time";
 
             DataTable dt = dtBase.GetDataTable(query);
 
@@ -302,19 +303,19 @@ ORDER BY start_time";
 
              
             string query = $@"
-        SELECT 
+            SELECT 
             S.id AS [Mã HV],
             S.full_name AS [Họ và tên],
             ISNULL(A.note, N'') AS [Ghi chú],
             A.status
-        FROM ClassAssignment CA
-        JOIN Student S ON S.id = CA.student_id
-        LEFT JOIN Schedule SCH ON SCH.class_id = CA.class_id
-        LEFT JOIN Attendance A ON A.student_id = S.id AND A.schedule_id = SCH.id
-        WHERE CA.class_id = '{classId}' 
-          AND CONVERT(date, SCH.session_date) = '{formattedDate}'
-          AND CONVERT(VARCHAR(5), SCH.start_time, 108) = '{selectedTime}'
-        ORDER BY S.full_name;";
+            FROM ClassAssignment CA
+            JOIN Student S ON S.id = CA.student_id
+            LEFT JOIN Schedule SCH ON SCH.class_id = CA.class_id
+            LEFT JOIN Attendance A ON A.student_id = S.id AND A.schedule_id = SCH.id
+            WHERE CA.class_id = '{classId}' 
+            AND CONVERT(date, SCH.session_date) = '{formattedDate}'
+            AND CONVERT(VARCHAR(5), SCH.start_time, 108) = '{selectedTime}'
+            ORDER BY S.full_name;";
 
             DataTable dt = dtBase.GetDataTable(query);
             dgvAttendance.DataSource = dt;
@@ -403,7 +404,7 @@ ORDER BY start_time";
             {
                 if (cboSessionDate.SelectedValue == null)
                 {
-                    MessageBox.Show("⚠️ Vui lòng chọn ngày học!", "Thông báo");
+                    MessageBox.Show(" Vui lòng chọn ngày học!", "Thông báo");
                     return;
                 }
 
@@ -413,12 +414,12 @@ ORDER BY start_time";
 
                  
                 string querySchedule = $@"
-            SELECT TOP 1 id FROM Schedule
-            WHERE class_id = '{classId}' AND session_date = '{formattedDate}'";
+                SELECT TOP 1 id FROM Schedule
+                WHERE class_id = '{classId}' AND session_date = '{formattedDate}'";
                 DataTable dtSchedule = dtBase.GetDataTable(querySchedule);
                 if (dtSchedule.Rows.Count == 0)
                 {
-                    MessageBox.Show("⚠️ Không tìm thấy buổi học cho ngày này!", "Thông báo");
+                    MessageBox.Show(" Không tìm thấy buổi học cho ngày này!", "Thông báo");
                     return;
                 }
                 string scheduleId = dtSchedule.Rows[0]["id"].ToString();
@@ -440,7 +441,7 @@ ORDER BY start_time";
                     bool hasAnyChecked = present || absent || late || excused;
                     if (!hasAnyChecked)
                     {
-                        MessageBox.Show($"⚠️ Học viên '{row.Cells["Họ và tên"].Value}' chưa được chọn trạng thái điểm danh!", "Thông báo");
+                        MessageBox.Show($" Học viên '{row.Cells["Họ và tên"].Value}' chưa được chọn trạng thái điểm danh!", "Thông báo");
                         return;  
                     }
                     string status = "absent";  
@@ -450,36 +451,36 @@ ORDER BY start_time";
                     else if (excused) status = "excused";
 
                     string cmd = $@"
-                IF EXISTS (SELECT * FROM Attendance WHERE student_id='{studentId}' AND schedule_id='{scheduleId}')
+                    IF EXISTS (SELECT * FROM Attendance WHERE student_id='{studentId}' AND schedule_id='{scheduleId}')
                     UPDATE Attendance 
                     SET status='{status}', note=N'{note}'
                     WHERE student_id='{studentId}' AND schedule_id='{scheduleId}'
-                ELSE
+                    ELSE
                     INSERT INTO Attendance (student_id, schedule_id, status, note)
                     VALUES ('{studentId}', '{scheduleId}', '{status}', N'{note}')";
 
                     dtBase.UpdateData(cmd);
                 }
 
-                MessageBox.Show("✅ Lưu điểm danh thành công!", "Thông báo");
+                MessageBox.Show(" Lưu điểm danh thành công!", "Thông báo");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("❌ Lỗi khi lưu điểm danh:\n" + ex.Message, "Lỗi");
+                MessageBox.Show(" Lỗi khi lưu điểm danh:\n" + ex.Message, "Lỗi");
             }
         }
         private void LoadScores()
         {
             string query = $@"
-        SELECT 
+            SELECT 
             S.id AS [Mã HV],
             S.full_name AS [Họ và tên],
             ISNULL(Sc.score, 0) AS [Điểm]
-        FROM ClassAssignment CA
-        JOIN Student S ON S.id = CA.student_id
-        LEFT JOIN Score Sc ON Sc.student_id = S.id AND Sc.class_id = CA.class_id
-        WHERE CA.class_id = '{classId}'
-        ORDER BY S.full_name;";
+            FROM ClassAssignment CA
+            JOIN Student S ON S.id = CA.student_id
+            LEFT JOIN Score Sc ON Sc.student_id = S.id AND Sc.class_id = CA.class_id
+            WHERE CA.class_id = '{classId}'
+            ORDER BY S.full_name;";
 
             DataTable dt = dtBase.GetDataTable(query);
             dgvScores.DataSource = dt;
@@ -516,30 +517,122 @@ ORDER BY start_time";
                  
                 if (!decimal.TryParse(scoreValue, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out decimal score))
                 {
-                    MessageBox.Show($"⚠️ Điểm của học viên {row.Cells["Họ và tên"].Value} không hợp lệ!", "Lỗi");
+                    MessageBox.Show($" Điểm của học viên {row.Cells["Họ và tên"].Value} không hợp lệ!", "Lỗi");
                     return;
                 }
 
                 if (score < 0 || score > 10)
                 {
-                    MessageBox.Show($"⚠️ Điểm của học viên {row.Cells["Họ và tên"].Value} phải nằm trong khoảng 0–10!", "Lỗi");
+                    MessageBox.Show($" Điểm của học viên {row.Cells["Họ và tên"].Value} phải nằm trong khoảng 0–10!", "Lỗi");
                     return;
                 }
 
                  
-                string cmd = $@"
-            IF EXISTS (SELECT * FROM Score WHERE student_id='{studentId}' AND class_id='{classId}')
-                UPDATE Score 
-                SET score = {score.ToString(System.Globalization.CultureInfo.InvariantCulture)}, created_date = GETDATE()
-                WHERE student_id='{studentId}' AND class_id='{classId}'
-            ELSE
-                INSERT INTO Score (student_id, class_id, score, created_date)
-                VALUES ('{studentId}', '{classId}', {score.ToString(System.Globalization.CultureInfo.InvariantCulture)}, GETDATE())";
+                    string cmd = $@"
+                    IF EXISTS (SELECT * FROM Score WHERE student_id='{studentId}' AND class_id='{classId}')
+                    UPDATE Score 
+                    SET score = {score.ToString(System.Globalization.CultureInfo.InvariantCulture)}, created_date = GETDATE()
+                    WHERE student_id='{studentId}' AND class_id='{classId}'
+                    ELSE
+                    INSERT INTO Score (student_id, class_id, score, created_date)
+                    VALUES ('{studentId}', '{classId}', {score.ToString(System.Globalization.CultureInfo.InvariantCulture)}, GETDATE())";
 
                 dtBase.UpdateData(cmd);
             }
 
-            MessageBox.Show("✅ Lưu điểm thành công!", "Thông báo");
+            MessageBox.Show(" Lưu điểm thành công!", "Thông báo");
+        }
+        private void ExportDataGridViewToExcel(DataGridView dgv, string title)
+        {
+            try
+            {
+                if (dgv.Rows.Count == 0)
+                {
+                    MessageBox.Show(" Không có dữ liệu để xuất!", "Thông báo");
+                    return;
+                }
+
+                Excel.Application excelApp = new Excel.Application();
+                excelApp.Visible = false;
+                Excel.Workbook workbook = excelApp.Workbooks.Add(Missing.Value);
+                Excel.Worksheet sheet = (Excel.Worksheet)workbook.ActiveSheet;
+                sheet.Name = "Export";
+
+                sheet.Cells[1, 1] = title;
+                Excel.Range titleRange = sheet.get_Range("A1", "A1");
+                titleRange.Font.Bold = true;
+                titleRange.Font.Size = 16;
+                titleRange.Font.Color = Color.Blue;
+                titleRange.EntireRow.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+
+                for (int i = 0; i < dgv.Columns.Count; i++)
+                {
+                    sheet.Cells[3, i + 1] = dgv.Columns[i].HeaderText;
+                    Excel.Range headerCell = sheet.Cells[3, i + 1];
+                    headerCell.Font.Bold = true;
+                    headerCell.Interior.Color = ColorTranslator.ToOle(Color.LightBlue);
+                    headerCell.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                }
+
+                for (int i = 0; i < dgv.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dgv.Columns.Count; j++)
+                    {
+                        var cellValue = dgv.Rows[i].Cells[j].Value;
+                        string output = "";
+
+                        if (dgv.Columns[j] is DataGridViewCheckBoxColumn)
+                        {
+                            bool isChecked = Convert.ToBoolean(cellValue ?? false);
+                            output = isChecked ? "X" : "";
+                        }
+                        else
+                        {
+                            output = cellValue?.ToString() ?? "";
+                        }
+
+                        sheet.Cells[i + 4, j + 1] = output;
+                        var dataCell = sheet.Cells[i + 4, j + 1];
+                        dataCell.Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+                        dataCell.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+                    }
+                }
+
+                Excel.Range usedRange = sheet.UsedRange;
+                usedRange.Columns.AutoFit();
+                usedRange.Rows.AutoFit();
+
+                SaveFileDialog sfd = new SaveFileDialog
+                {
+                    Filter = "Excel Files (*.xlsx)|*.xlsx",
+                    FileName = $"{title}_{DateTime.Now:yyyyMMdd_HHmm}.xlsx"
+                };
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    workbook.SaveAs(sfd.FileName);
+                    workbook.Close();
+                    excelApp.Quit();
+                    MessageBox.Show(" Xuất dữ liệu thành công!", "Thông báo");
+                }
+                else
+                {
+                    workbook.Close(false);
+                    excelApp.Quit();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(" Lỗi khi xuất Excel:\n" + ex.Message, "Lỗi");
+            }
+        }
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            ExportDataGridViewToExcel(dgvAttendance, $"DiemDanh_{className}");
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            ExportDataGridViewToExcel(dgvScores, $"Diem_{className}");
         }
     }
 }

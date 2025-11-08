@@ -168,7 +168,7 @@
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
             this.panelMain.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.panelMain.Size = new System.Drawing.Size(1397, 1907);
+            this.panelMain.Size = new System.Drawing.Size(1397, 1570);
             this.panelMain.TabIndex = 0;
             // 
             // guna2Panel26
@@ -1180,7 +1180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1397, 1907);
+            this.ClientSize = new System.Drawing.Size(1397, 1570);
             this.Controls.Add(this.panelMain);
             this.Name = "Manager_DashboardForm";
             this.Text = "Manager_DashboardForm";

@@ -73,6 +73,8 @@ namespace prj_LTTQ_BTL.Forms.Student
             string hocvienname = dataProcessor.GetDataTable($"select full_name from Student where id = '{GlobalData.Id}'").Rows[0]["full_name"].ToString();
 
             lblXinChao.Text = "Xin chào " + hocvienname;
+
+            SidebarBtn_Click(btnTTHV);
         }
 
         private void SidebarBtn_Click(Guna2Button btn)

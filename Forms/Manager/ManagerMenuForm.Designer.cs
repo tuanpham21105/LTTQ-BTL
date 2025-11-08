@@ -47,6 +47,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnTeacher = new Guna.UI2.WinForms.Guna2Button();
             this.panelStudent = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnStudentClass = new Guna.UI2.WinForms.Guna2Button();
             this.btnStudentScore = new Guna.UI2.WinForms.Guna2Button();
             this.btnStudentAttendance = new Guna.UI2.WinForms.Guna2Button();
             this.btnStudentCourse = new Guna.UI2.WinForms.Guna2Button();
@@ -63,7 +64,6 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnStudentClass = new Guna.UI2.WinForms.Guna2Button();
             this.panelSideBar.SuspendLayout();
             this.panelStudent.SuspendLayout();
             this.panelBrand.SuspendLayout();
@@ -299,6 +299,27 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelStudent.Size = new System.Drawing.Size(356, 258);
             this.panelStudent.TabIndex = 18;
             this.panelStudent.Visible = false;
+            // 
+            // btnStudentClass
+            // 
+            this.btnStudentClass.BorderRadius = 8;
+            this.btnStudentClass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStudentClass.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStudentClass.FillColor = System.Drawing.Color.Transparent;
+            this.btnStudentClass.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnStudentClass.ForeColor = System.Drawing.Color.White;
+            this.btnStudentClass.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
+            this.btnStudentClass.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnStudentClass.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStudentClass.Location = new System.Drawing.Point(30, 209);
+            this.btnStudentClass.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.btnStudentClass.Name = "btnStudentClass";
+            this.btnStudentClass.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnStudentClass.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.btnStudentClass.Size = new System.Drawing.Size(326, 49);
+            this.btnStudentClass.TabIndex = 24;
+            this.btnStudentClass.Text = "Ghi danh trong lớp";
+            this.btnStudentClass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnStudentScore
             // 
@@ -548,6 +569,7 @@ namespace prj_LTTQ_BTL.Forms.Manager
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
@@ -570,27 +592,6 @@ namespace prj_LTTQ_BTL.Forms.Manager
             this.panelMain.Size = new System.Drawing.Size(1116, 882);
             this.panelMain.TabIndex = 0;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
-            // 
-            // btnStudentClass
-            // 
-            this.btnStudentClass.BorderRadius = 8;
-            this.btnStudentClass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStudentClass.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStudentClass.FillColor = System.Drawing.Color.Transparent;
-            this.btnStudentClass.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnStudentClass.ForeColor = System.Drawing.Color.White;
-            this.btnStudentClass.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(136)))), ((int)(((byte)(216)))));
-            this.btnStudentClass.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnStudentClass.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnStudentClass.Location = new System.Drawing.Point(30, 209);
-            this.btnStudentClass.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
-            this.btnStudentClass.Name = "btnStudentClass";
-            this.btnStudentClass.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnStudentClass.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.btnStudentClass.Size = new System.Drawing.Size(326, 49);
-            this.btnStudentClass.TabIndex = 24;
-            this.btnStudentClass.Text = "Ghi danh trong lớp";
-            this.btnStudentClass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // ManagerMenuForm
             // 
